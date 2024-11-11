@@ -77,6 +77,9 @@ function playMusic() {
     setAlbumAndAudio(randomKey, randomValue);
     firstClickMusic = false;
     audio2.src = randomValue;
+    // set display to inline
+    btn = document.getElementById("newMusic");
+    btn.style.display = "inline";
   }
 
   if (!audio2.paused) {
