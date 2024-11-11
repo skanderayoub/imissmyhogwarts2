@@ -8,7 +8,7 @@ function playSound() {
     }
 }
 
-fetch('./paths.json')
+fetch('https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/paths.json')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
