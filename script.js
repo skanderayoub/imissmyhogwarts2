@@ -97,8 +97,15 @@ function setCharacterAndAudio(randomKey, randomValue) {
 function setAlbumAndAudio(randomKey, randomValue) {
   let album = document.getElementById("p2");
   let audio = document.getElementById("a2");
-  album.innerHTML = "Musique: " + randomKey;  
-  audio.innerHTML = "Audio: " + randomValue; 
+  album.innerHTML = "Musique: " + randomKey; 
+  let regex = /\/([^\/]+)\.mp3$/;
+  let match = randomValue.match(regex);
+  
+  if (match[1]) {
+    // Step 2: Unquote the extracted text
+    let extractedText = decodeURIComponent(match[1]);
+    audio.innerHTML = "Audio: " + extractedText;
+  }   
 } 
 
 // Step 4: Fetch the data, then set up button event listener for dynamic random value selection
