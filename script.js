@@ -133,12 +133,17 @@ fetchAudioData().then(() => {
         const playButton = document.getElementById("playButton");
         const audio = document.getElementById("audio");
         const playMusicButton = document.getElementById("playButton2");
+        const playNewMusicButton = document.getElementById("newMusic");
 
         playMusicButton.addEventListener("click", () => {
           playMusic();
         });
 
         playMusicButton.addEventListener("ended", () => {
+          playNewMusic();
+        });
+
+        playNewMusicButton.addEventListener("click", () => {
           playNewMusic();
         });
 
