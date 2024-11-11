@@ -1,6 +1,7 @@
 let jsonData;
 let musicData;
 let firstClick = true;
+let firstClickMusic = true;
 
 // Step 1: Fetch the data asynchronously and store it in jsonData
 async function fetchAudioData() {
@@ -71,10 +72,27 @@ function playNewSound() {
 }
 
 function playMusic() {
-  let audio = document.getElementById("audio2");
+  if (firstClickMusic) {
+    const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
+    setAlbumAndAudio(randomKey, randomValue);
+    firstClickMusic = false;
+    audio.src = randomValue;
+  }
+
+  if (!audio.paused) {
+    audio.pause();
+  } else {
+    audio.play();
+  }
+}
+
+function playNewMusic() {
+  let audio = document.getElementById("audio");
   const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
   setAlbumAndAudio(randomKey, randomValue);
   audio.src = randomValue; // Set the audio source to the random value (e.g., audio URL)
+
+  // Play the audio
   audio.play();
 }
 
@@ -121,7 +139,7 @@ fetchAudioData().then(() => {
         });
 
         playMusicButton.addEventListener("ended", () => {
-          playMusic();
+          playNewMusic();
         });
 
         // Add event listener to the button to play sound on click
