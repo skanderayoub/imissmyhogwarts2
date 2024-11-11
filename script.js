@@ -87,7 +87,7 @@ function playMusic() {
 }
 
 function playNewMusic() {
-  let audio = document.getElementById("audio");
+  let audio = document.getElementById("audio2");
   const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
   setAlbumAndAudio(randomKey, randomValue);
   audio.src = randomValue; // Set the audio source to the random value (e.g., audio URL)
