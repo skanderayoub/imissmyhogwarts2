@@ -76,13 +76,13 @@ function playMusic() {
     const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
     setAlbumAndAudio(randomKey, randomValue);
     firstClickMusic = false;
-    audio.src = randomValue;
+    audio2.src = randomValue;
   }
 
-  if (!audio.paused) {
-    audio.pause();
+  if (!audio2.paused) {
+    audio2.pause();
   } else {
-    audio.play();
+    audio2.play();
   }
 }
 
@@ -134,12 +134,13 @@ fetchAudioData().then(() => {
         const audio = document.getElementById("audio");
         const playMusicButton = document.getElementById("playButton2");
         const playNewMusicButton = document.getElementById("newMusic");
+        const audio2 = document.getElementById("audio2");
 
         playMusicButton.addEventListener("click", () => {
           playMusic();
         });
 
-        playMusicButton.addEventListener("ended", () => {
+        audio2.addEventListener("ended", () => {
           playNewMusic();
         });
 
