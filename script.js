@@ -120,6 +120,10 @@ fetchAudioData().then(() => {
           playMusic();
         });
 
+        playMusicButton.addEventListener("ended", () => {
+          playMusic();
+        });
+
         // Add event listener to the button to play sound on click
         playButton.addEventListener("click", () => {
           // Get a new random value when the button is clicked and start playing
