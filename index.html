@@ -9,8 +9,23 @@
 </head>
 <body>
     <h1>Hi</h1>
-    <button class="btn" id="btn" onclick="playSound()">Click me</button>
-    <audio id="audio" src="https://archive.org/download/hogwarts-legacy-voice-files/Abraham%20Ronen.rar/Abraham%20Ronen%2Fabrahamronen_10666.wav"></audio>
+    <div class="character-sound">
+        <p id="p">Personnage: </p>
+        <p id="a">Audio: </p>
+        <button id="playButton">Play Sound</button>
+        <audio id="audio"></audio>
+        <p id="s">status: </p>
+    </div>
+
+    <div class="music-sound">
+        <p id="p2">Musique: </p>
+        <p id="a2">Audio: </p>
+        <button id="playButton2">Play Sound</button>
+        <audio id="audio2" src="https://kappa.vgmsite.com/soundtracks/hogwarts-legacy-original-video-game-soundtrack-2023/oammioezxw/01.%20Overture%20to%20the%20Unwritten%20%28from%20Hogwarts%20Legacy%29.mp3"></audio>
+        <p id="s2">status: </p>
+    </div>
+    
+
 
     <script src="script.js"></script>
 </body>
