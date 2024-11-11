@@ -58,8 +58,6 @@ function playSound() {
   } else {
     audio.play();
   }
-  let status = document.getElementById("s");
-  status.innerHTML = audio.paused ? "Status: Paused" : "Status: Playing";
 }
 
 function playNewSound() {
