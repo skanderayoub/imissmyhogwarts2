@@ -10,11 +10,33 @@
     <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <style>
+
+    </style>
 </head>
 
 <body>
     <div class="px-4 py-5 my-3 text-center">
         <h1 id="h1" class="display-1 text-warning">i miss my Hogwarts</h1>
+    </div>
+
+    <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                    Accordion Item #1
+                </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body scrollable-list">
+                    <ul class="list-group checkbox-grid" id="checkboxList">
+                        <!-- Checkboxes will be inserted here by JavaScript -->
+                    </ul>
+                </div>>
+            </div>
+        </div>
     </div>
 
     <div class="container px-4 py-5" id="featured-3">
@@ -40,7 +62,7 @@
                     <p class="text-primary" id="p2">Musique:</p>
                     <p class="text-primary" id="a2">Audio:</p>
                     <button class="audio paused" id="playButton2"></button>
-                    
+
                     <audio id="audio2"></audio>
                     <button type="button" class="audio next" id="newMusic">
                     </button>
@@ -49,7 +71,8 @@
         </div>
     </div>
 
-    <select id="backgroundSelect" class="form-select form-select-sm" aria-label="Small select example" style="width: 150px; font-size: 12px;">
+    <select id="backgroundSelect" class="form-select form-select-sm" aria-label="Small select example"
+        style="width: 150px; font-size: 12px;">
         <option value="0" selected>Zero</option>
         <option value="1">One</option>
         <option value="2">Two</option>

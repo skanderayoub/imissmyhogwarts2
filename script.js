@@ -124,13 +124,41 @@ fetchWallpaperData().then(() => {
       if (jsonData) {
         fetchMusicData().then(() => {
           if (musicData) {    
-            // Get the button and audio elements
             const playButton = document.getElementById("playButton");
             const audioSound = document.getElementById("audio");
             const playMusicButton = document.getElementById("playButton2");
             const playNewMusicButton = document.getElementById("newMusic");
             const audioMusic = document.getElementById("audio2");
             const backgroundSelect = document.getElementById('backgroundSelect');
+
+            const checkboxList = document.getElementById('checkboxList');
+
+              // Iterate over the keys in the dictionary and create checkbox items
+              Object.keys(jsonData).forEach((key, index) => {
+              // Create a new list item
+              const listItem = document.createElement('li');
+              listItem.className = 'list-group-item';
+        
+              // Create the checkbox input
+              const checkbox = document.createElement('input');
+              checkbox.type = 'checkbox';
+              checkbox.className = 'form-check-input me-1';
+              checkbox.id = `checkbox${index}`;
+              checkbox.value = key;
+        
+              // Create the label for the checkbox
+              const label = document.createElement('label');
+              label.className = 'form-check-label';
+              label.htmlFor = `checkbox${index}`;
+              label.textContent = key;
+        
+              // Append the checkbox and label to the list item
+              listItem.appendChild(checkbox);
+              listItem.appendChild(label);
+        
+              // Append the list item to the list
+              checkboxList.appendChild(listItem);
+            });
 
             backgroundSelect.addEventListener('change', () => {
               let selectedValue = backgroundSelect.value;
