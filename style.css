@@ -11,3 +11,26 @@ body {
 h1 {
     font-family: 'Harry Potter', sans-serif;
 }
+
+button[class~="audio"]{
+	appearance:auto;
+	height:15px;
+	width:15px;
+	cursor:pointer;
+	border:none;
+	background:transparent;
+	background-size: 15px;
+}
+
+button[class~="paused"] {
+    background-image:url(https://img.icons8.com/android/24/000000/play.png);
+}
+
+button[class~="playing"] {
+    background-image:url(https://img.icons8.com/android/24/000000/pause.png);
+}
+
+button[class~="next"] {
+    background-image:url(https://img.icons8.com/android/24/000000/end.png);
+}
+

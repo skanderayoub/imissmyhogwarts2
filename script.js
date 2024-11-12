@@ -45,63 +45,41 @@ function getRandomKeyAndValue(data) {
 }
 
 // Step 3: Play a sound based on the random value (assuming it's a valid URL or audio path)
-function playSound() {
-  let audio = document.getElementById("audio");
-  if (firstClick) {
-    const { randomKey, randomValue } = getRandomKeyAndValue(jsonData);
-    setCharacterAndAudio(randomKey, randomValue);
-    firstClick = false;
+function playSound(data, audio, btn, click, type) {
+  if (click) {
+    const { randomKey, randomValue } = getRandomKeyAndValue(data);
+    setKeyAndAudio(randomKey, randomValue, type);
     audio.src = randomValue;
-  }
+  }  
 
   if (!audio.paused) {
     audio.pause();
+    btn.className = "audio paused";
   } else {
     audio.play();
+    //audio.controls = true;
+    btn.className = "audio playing";
   }
 }
 
-function playNewSound() {
-  let audio = document.getElementById("audio");
-  const { randomKey, randomValue } = getRandomKeyAndValue(jsonData);
-  setCharacterAndAudio(randomKey, randomValue);
+function playNewSound(data, audio, type) {
+  const { randomKey, randomValue } = getRandomKeyAndValue(data);
+  setKeyAndAudio(randomKey, randomValue, type);
   audio.src = randomValue; // Set the audio source to the random value (e.g., audio URL)
 
   // Play the audio
   audio.play();
 }
 
-function playMusic() {
-  if (firstClickMusic) {
-    const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
+function setKeyAndAudio(randomKey, randomValue, type) {
+  if (type === "sound") {
+    setCharacterAndAudio(randomKey, randomValue);
+  } else if (type === "music") {
     setAlbumAndAudio(randomKey, randomValue);
-    firstClickMusic = false;
-    audio2.src = randomValue;
-    // set display to inline
-    btn = document.getElementById("newMusic");
-    btn.style.display = "inline";
   }
-
-  if (!audio2.paused) {
-    audio2.pause();
-  } else {
-    audio2.play();
-  }
-}
-
-function playNewMusic() {
-  let audio = document.getElementById("audio2");
-  const { randomKey, randomValue } = getRandomKeyAndValue(musicData);
-  setAlbumAndAudio(randomKey, randomValue);
-  audio.src = randomValue; // Set the audio source to the random value (e.g., audio URL)
-
-  // Play the audio
-  audio.play();
-}
-
+} 
 function setCharacterAndAudio(randomKey, randomValue) {
   let character = document.getElementById("p");
-  let audio = document.getElementById("a");
   character.innerHTML = "Personnage: " + randomKey;  
   let regex = /\/([^\/]+)\.wav$/;
   let match = randomValue.match(regex);
@@ -110,8 +88,8 @@ function setCharacterAndAudio(randomKey, randomValue) {
     // Step 2: Unquote the extracted text
     let extractedText = decodeURIComponent(match[1]);
     a.innerHTML = "Audio: " + extractedText;
-  }  
-} 
+  }
+}  
 
 function setAlbumAndAudio(randomKey, randomValue) {
   let album = document.getElementById("p2");
@@ -134,34 +112,38 @@ fetchAudioData().then(() => {
       if (musicData) {    
         // Get the button and audio elements
         const playButton = document.getElementById("playButton");
-        const audio = document.getElementById("audio");
+        const audioSound = document.getElementById("audio");
         const playMusicButton = document.getElementById("playButton2");
         const playNewMusicButton = document.getElementById("newMusic");
-        const audio2 = document.getElementById("audio2");
+        const audioMusic = document.getElementById("audio2");
 
         playMusicButton.addEventListener("click", () => {
-          playMusic();
+          playSound(musicData, audioMusic, playMusicButton, firstClickMusic, "music");
+          if (firstClickMusic) {
+            firstClickMusic = false;
+            playNewMusicButton.style.display = "inline"; 
+          }
         });
 
-        audio2.addEventListener("ended", () => {
-          playNewMusic();
+        audioMusic.addEventListener("ended", () => {
+          playNewSound(musicData, audioMusic, "music");
         });
 
         playNewMusicButton.addEventListener("click", () => {
-          playNewMusic();
+          playNewSound(musicData, audioMusic, "music");
         });
 
-        // Add event listener to the button to play sound on click
         playButton.addEventListener("click", () => {
-          // Get a new random value when the button is clicked and start playing
-          
-          playSound();
+          playSound(jsonData, audioSound, playButton, firstClick, "sound");
+          if (firstClick) {
+            firstClick = false;
+          }
         });
 
         // Listen for when the current audio ends, and play a new sound
-        audio.addEventListener('ended', () => {
+        audioSound.addEventListener('ended', () => {
           // When the audio ends, get a new random sound and play it
-          playNewSound();
+          playNewSound(jsonData, audioSound, "sound");
         });
       }
     });
