@@ -6,6 +6,7 @@ body {
     background-image: url("assets/1302540.png");
     background-repeat: no-repeat;
     background-size: cover;
+    transition: ease-in-out 1s;
 }
 
 h1 {
@@ -33,4 +34,3 @@ button[class~="playing"] {
 button[class~="next"] {
     background-image:url(https://img.icons8.com/android/24/000000/end.png);
 }
-

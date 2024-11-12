@@ -1,5 +1,6 @@
 let jsonData;
 let musicData;
+let wallpaperData;
 let firstClick = true;
 let firstClickMusic = true;
 
@@ -30,7 +31,19 @@ async function fetchMusicData() {
   }
 }
 
-// Step 2: Get a random key-value pair from jsonData
+async function fetchWallpaperData() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json');
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    wallpaperData = data;  
+  } catch (error) {
+    console.error('There has been a problem with your fetch operation:', error);
+  }
+}
+
 function getRandomKeyAndValue(data) {
   const keys = Object.keys(data);
   const randomKey = keys[Math.floor(Math.random() * keys.length)];
@@ -44,7 +57,6 @@ function getRandomKeyAndValue(data) {
   return { randomKey, randomValue };
 }
 
-// Step 3: Play a sound based on the random value (assuming it's a valid URL or audio path)
 function playSound(data, audio, btn, click, type) {
   if (click) {
     const { randomKey, randomValue } = getRandomKeyAndValue(data);
@@ -85,7 +97,7 @@ function setCharacterAndAudio(randomKey, randomValue) {
   let match = randomValue.match(regex);
   
   if (match[1]) {
-    // Step 2: Unquote the extracted text
+    // Unquote the extracted text
     let extractedText = decodeURIComponent(match[1]);
     a.innerHTML = "Audio: " + extractedText;
   }
@@ -106,44 +118,54 @@ function setAlbumAndAudio(randomKey, randomValue) {
 } 
 
 // Step 4: Fetch the data, then set up button event listener for dynamic random value selection
-fetchAudioData().then(() => {
-  if (jsonData) {
-    fetchMusicData().then(() => {
-      if (musicData) {    
-        // Get the button and audio elements
-        const playButton = document.getElementById("playButton");
-        const audioSound = document.getElementById("audio");
-        const playMusicButton = document.getElementById("playButton2");
-        const playNewMusicButton = document.getElementById("newMusic");
-        const audioMusic = document.getElementById("audio2");
+fetchWallpaperData().then(() => {
+  if (wallpaperData) {
+    fetchAudioData().then(() => {
+      if (jsonData) {
+        fetchMusicData().then(() => {
+          if (musicData) {    
+            // Get the button and audio elements
+            const playButton = document.getElementById("playButton");
+            const audioSound = document.getElementById("audio");
+            const playMusicButton = document.getElementById("playButton2");
+            const playNewMusicButton = document.getElementById("newMusic");
+            const audioMusic = document.getElementById("audio2");
+            const backgroundSelect = document.getElementById('backgroundSelect');
 
-        playMusicButton.addEventListener("click", () => {
-          playSound(musicData, audioMusic, playMusicButton, firstClickMusic, "music");
-          if (firstClickMusic) {
-            firstClickMusic = false;
-            playNewMusicButton.style.display = "inline"; 
+            backgroundSelect.addEventListener('change', () => {
+              let selectedValue = backgroundSelect.value;
+              document.body.style.backgroundImage = "url('" + wallpaperData[selectedValue] + "')";
+            });
+
+            playMusicButton.addEventListener("click", () => {
+              playSound(musicData, audioMusic, playMusicButton, firstClickMusic, "music");
+              if (firstClickMusic) {
+                firstClickMusic = false;
+                playNewMusicButton.style.display = "inline"; 
+              }
+            });
+
+            audioMusic.addEventListener("ended", () => {
+              playNewSound(musicData, audioMusic, "music");
+            });
+
+            playNewMusicButton.addEventListener("click", () => {
+              playNewSound(musicData, audioMusic, "music");
+            });
+
+            playButton.addEventListener("click", () => {
+              playSound(jsonData, audioSound, playButton, firstClick, "sound");
+              if (firstClick) {
+                firstClick = false;
+              }
+            });
+
+            // Listen for when the current audio ends, and play a new sound
+            audioSound.addEventListener('ended', () => {
+              // When the audio ends, get a new random sound and play it
+              playNewSound(jsonData, audioSound, "sound");
+            });
           }
-        });
-
-        audioMusic.addEventListener("ended", () => {
-          playNewSound(musicData, audioMusic, "music");
-        });
-
-        playNewMusicButton.addEventListener("click", () => {
-          playNewSound(musicData, audioMusic, "music");
-        });
-
-        playButton.addEventListener("click", () => {
-          playSound(jsonData, audioSound, playButton, firstClick, "sound");
-          if (firstClick) {
-            firstClick = false;
-          }
-        });
-
-        // Listen for when the current audio ends, and play a new sound
-        audioSound.addEventListener('ended', () => {
-          // When the audio ends, get a new random sound and play it
-          playNewSound(jsonData, audioSound, "sound");
         });
       }
     });
