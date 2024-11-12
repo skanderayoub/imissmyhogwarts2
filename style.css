@@ -5,3 +5,9 @@ button {
 #newMusic { /* set invisible */
     display: none;
 }
+
+body {
+    background-image: url("assets/1302540.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
