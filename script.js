@@ -132,6 +132,13 @@ fetchWallpaperData().then(() => {
             const backgroundSelect = document.getElementById('backgroundSelect');
 
             const checkboxList = document.getElementById('checkboxList');
+            
+            bgImg = new Image();
+            bgImg.src = "assets/1302540.png";
+            bgImg.onload = function() {
+              document.body.style.display = "block";
+            }
+
 
               // Iterate over the keys in the dictionary and create checkbox items
               Object.keys(jsonData).forEach((key, index) => {

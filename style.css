@@ -23,10 +23,14 @@ ul.list-group-item {
 }
 
 body {
+    display: none;
     background-image: url("assets/1302540.png");
     background-repeat: no-repeat;
     background-size: cover;
     transition: ease-in-out 1s;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 h1 {
