@@ -38,9 +38,16 @@ async function fetchMusicData() {
 
 async function fetchWallpaperData() {
   try {
-    const response = await fetch(
-      "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json"
-    );
+    if (screenWidth < 600) {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers_phone.json"
+      );
+    } else {
+      const response = await fetch(
+        "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json"
+      );
+    }
+    
     if (!response.ok) {
       throw new Error("Network response was not ok");
     }
