@@ -151,7 +151,9 @@ fetchWallpaperData().then(() => {
             const audioMusic = document.getElementById("audio2");
             const backgroundSelect =
               document.getElementById("backgroundSelect");
-            const checkboxList = document.getElementById("checkboxList");
+            const checkboxList = document.getElementById("checkboxList");7
+            let selectedCheckboxes;
+            let newData;
 
             bgImg = new Image();
             bgImg.src = "assets/1302540.png";
@@ -208,8 +210,11 @@ fetchWallpaperData().then(() => {
 
             // Listen for changes to the checkboxes and console.log the selected values
             checkboxList.addEventListener('change', () => {
-              const selectedCheckboxes = getSelectedCheckboxes();
-              console.log(selectedCheckboxes);
+              selectedCheckboxes = getSelectedCheckboxes();
+              newData = Object.fromEntries(
+                Object.entries(jsonData).filter(([key]) => selectedCheckboxes.includes(key))
+              );
+              console.log(newData);
             });
 
             backgroundSelect.addEventListener("change", () => {
@@ -240,8 +245,8 @@ fetchWallpaperData().then(() => {
               playNewSound(musicData, audioMusic, "music");
             });
 
-            playButton.addEventListener("click", () => {
-              playSound(jsonData, audioSound, playButton, firstClick, "sound");
+            playButton.addEventListener("click", () => {                        
+              playSound(newData, audioSound, playButton, firstClick, "sound");
               if (firstClick) {
                 firstClick = false;
               }
@@ -250,7 +255,7 @@ fetchWallpaperData().then(() => {
             // Listen for when the current audio ends, and play a new sound
             audioSound.addEventListener("ended", () => {
               // When the audio ends, get a new random sound and play it
-              playNewSound(jsonData, audioSound, "sound");
+              playNewSound(newData, audioSound, "sound");
             });
           }
         });
