@@ -39,20 +39,25 @@ async function fetchMusicData() {
 async function fetchWallpaperData() {
   try {
     if (screenWidth < 600) {
+      console.log("phone");
       const response = await fetch(
         "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers_phone.json"
       );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      wallpaperData = data;
     } else {
       const response = await fetch(
         "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json"
       );
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      const data = await response.json();
+      wallpaperData = data;
     }
-    
-    if (!response.ok) {
-      throw new Error("Network response was not ok");
-    }
-    const data = await response.json();
-    wallpaperData = data;
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
   }
@@ -138,7 +143,7 @@ fetchWallpaperData().then(() => {
       if (jsonData) {
         fetchMusicData().then(() => {
           if (musicData) {
-            console.log(screenWidth);
+            console.log(wallpaperData);
             const playButton = document.getElementById("playButton");
             const audioSound = document.getElementById("audio");
             const playMusicButton = document.getElementById("playButton2");
@@ -146,7 +151,6 @@ fetchWallpaperData().then(() => {
             const audioMusic = document.getElementById("audio2");
             const backgroundSelect =
               document.getElementById("backgroundSelect");
-
             const checkboxList = document.getElementById("checkboxList");
 
             bgImg = new Image();
@@ -161,6 +165,14 @@ fetchWallpaperData().then(() => {
                 //console.log("revelio");
               });
             };
+
+            let bgNum = wallpaperData.length;
+            for (let i = 0; i < bgNum; i++) {
+              let option = document.createElement("option");
+              option.text = wallpaperData[i].substring(wallpaperData[i].lastIndexOf('/') + 1).replace(".png", "");
+              option.value = i;
+              backgroundSelect.add(option);
+            }
 
             // Iterate over the keys in the dictionary and create checkbox items
             Object.keys(jsonData).forEach((key, index) => {
