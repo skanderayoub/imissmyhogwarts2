@@ -3,44 +3,51 @@ let musicData;
 let wallpaperData;
 let firstClick = true;
 let firstClickMusic = true;
+let screenWidth = window.innerWidth;
 
 // Step 1: Fetch the data asynchronously and store it in jsonData
 async function fetchAudioData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/links.json');
+    const response = await fetch(
+      "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/links.json"
+    );
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const data = await response.json();
     jsonData = data; // Set jsonData here for global access
   } catch (error) {
-    console.error('There has been a problem with your fetch operation:', error);
+    console.error("There has been a problem with your fetch operation:", error);
   }
 }
 
 async function fetchMusicData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/music.json');
+    const response = await fetch(
+      "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/music.json"
+    );
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    musicData = data; // Set jsonData here for global access    
+    musicData = data; // Set jsonData here for global access
   } catch (error) {
-    console.error('There has been a problem with your fetch operation:', error);
+    console.error("There has been a problem with your fetch operation:", error);
   }
 }
 
 async function fetchWallpaperData() {
   try {
-    const response = await fetch('https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json');
+    const response = await fetch(
+      "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/wallpapers.json"
+    );
     if (!response.ok) {
-      throw new Error('Network response was not ok');
+      throw new Error("Network response was not ok");
     }
     const data = await response.json();
-    wallpaperData = data;  
+    wallpaperData = data;
   } catch (error) {
-    console.error('There has been a problem with your fetch operation:', error);
+    console.error("There has been a problem with your fetch operation:", error);
   }
 }
 
@@ -62,7 +69,7 @@ function playSound(data, audio, btn, click, type) {
     const { randomKey, randomValue } = getRandomKeyAndValue(data);
     setKeyAndAudio(randomKey, randomValue, type);
     audio.src = randomValue;
-  }  
+  }
 
   if (!audio.paused) {
     audio.pause();
@@ -89,33 +96,33 @@ function setKeyAndAudio(randomKey, randomValue, type) {
   } else if (type === "music") {
     setAlbumAndAudio(randomKey, randomValue);
   }
-} 
+}
 function setCharacterAndAudio(randomKey, randomValue) {
   let character = document.getElementById("p");
-  character.innerHTML = "Personnage: " + randomKey;  
+  character.innerHTML = "Personnage: " + randomKey;
   let regex = /\/([^\/]+)\.wav$/;
   let match = randomValue.match(regex);
-  
+
   if (match[1]) {
     // Unquote the extracted text
     let extractedText = decodeURIComponent(match[1]);
     a.innerHTML = "Audio: " + extractedText;
   }
-}  
+}
 
 function setAlbumAndAudio(randomKey, randomValue) {
   let album = document.getElementById("p2");
   let audio = document.getElementById("a2");
-  album.innerHTML = "Musique: " + randomKey; 
+  album.innerHTML = "Musique: " + randomKey;
   let regex = /\/([^\/]+)\.mp3$/;
   let match = randomValue.match(regex);
-  
+
   if (match[1]) {
     // Step 2: Unquote the extracted text
     let extractedText = decodeURIComponent(match[1]);
     audio.innerHTML = "Audio: " + extractedText;
-  }   
-} 
+  }
+}
 
 // Step 4: Fetch the data, then set up button event listener for dynamic random value selection
 fetchWallpaperData().then(() => {
@@ -123,60 +130,86 @@ fetchWallpaperData().then(() => {
     fetchAudioData().then(() => {
       if (jsonData) {
         fetchMusicData().then(() => {
-          if (musicData) {    
+          if (musicData) {
+            console.log(screenWidth);
             const playButton = document.getElementById("playButton");
             const audioSound = document.getElementById("audio");
             const playMusicButton = document.getElementById("playButton2");
             const playNewMusicButton = document.getElementById("newMusic");
             const audioMusic = document.getElementById("audio2");
-            const backgroundSelect = document.getElementById('backgroundSelect');
+            const backgroundSelect =
+              document.getElementById("backgroundSelect");
 
-            const checkboxList = document.getElementById('checkboxList');
-            
+            const checkboxList = document.getElementById("checkboxList");
+
             bgImg = new Image();
             bgImg.src = "assets/1302540.png";
-            bgImg.onload = function() {
+            let revelio = new Audio();
+            revelio.src =
+              "https://archive.org/download/hogwarts-legacy-voice-files/Player%20%28Female%29.rar/Player%20%28Female%29%2Fplayerfemale_00429.wav";
+            bgImg.onload = function () {
               document.body.style.display = "block";
-            }
+              document.body.addEventListener("mousemove", () => {
+                //revelio.play();
+                //console.log("revelio");
+              });
+            };
 
-
-              // Iterate over the keys in the dictionary and create checkbox items
-              Object.keys(jsonData).forEach((key, index) => {
+            // Iterate over the keys in the dictionary and create checkbox items
+            Object.keys(jsonData).forEach((key, index) => {
               // Create a new list item
-              const listItem = document.createElement('li');
-              listItem.className = 'list-group-item';
-        
+              const listItem = document.createElement("li");
+              listItem.className = "list-group-item";
+
               // Create the checkbox input
-              const checkbox = document.createElement('input');
-              checkbox.type = 'checkbox';
-              checkbox.className = 'form-check-input me-1';
+              const checkbox = document.createElement("input");
+              checkbox.type = "checkbox";
+              checkbox.className = "form-check-input me-1";
               checkbox.id = `checkbox${index}`;
               checkbox.value = key;
-        
+
               // Create the label for the checkbox
-              const label = document.createElement('label');
-              label.className = 'form-check-label';
+              const label = document.createElement("label");
+              label.className = "form-check-label";
               label.htmlFor = `checkbox${index}`;
               label.textContent = key;
-        
+
               // Append the checkbox and label to the list item
               listItem.appendChild(checkbox);
               listItem.appendChild(label);
-        
+
               // Append the list item to the list
               checkboxList.appendChild(listItem);
             });
 
-            backgroundSelect.addEventListener('change', () => {
+            // get all selected checkboxes
+            function getSelectedCheckboxes() {
+              return Array.from(checkboxList.querySelectorAll('input[type="checkbox"]:checked')).map((checkbox) => checkbox.value);
+            }
+
+            // Listen for changes to the checkboxes and console.log the selected values
+            checkboxList.addEventListener('change', () => {
+              const selectedCheckboxes = getSelectedCheckboxes();
+              console.log(selectedCheckboxes);
+            });
+
+            backgroundSelect.addEventListener("change", () => {
               let selectedValue = backgroundSelect.value;
-              document.body.style.backgroundImage = "url('" + wallpaperData[selectedValue] + "')";
+              document.body.style.backgroundImage =
+                "url('" + wallpaperData[selectedValue] + "')";
             });
 
             playMusicButton.addEventListener("click", () => {
-              playSound(musicData, audioMusic, playMusicButton, firstClickMusic, "music");
+              playSound(
+                musicData,
+                audioMusic,
+                playMusicButton,
+                firstClickMusic,
+                "music"
+              );
               if (firstClickMusic) {
                 firstClickMusic = false;
-                playNewMusicButton.style.display = "inline"; 
+                playNewMusicButton.style.display = "inline";
               }
             });
 
@@ -196,7 +229,7 @@ fetchWallpaperData().then(() => {
             });
 
             // Listen for when the current audio ends, and play a new sound
-            audioSound.addEventListener('ended', () => {
+            audioSound.addEventListener("ended", () => {
               // When the audio ends, get a new random sound and play it
               playNewSound(jsonData, audioSound, "sound");
             });
