@@ -1,67 +1,233 @@
-.scrollable-list {
-    max-height: 300px; /* Set a fixed height for the scrollable container */
-    overflow-y: auto; /* Enable vertical scrolling */
-}
-
-.accordion {
-    /* Make it take 1/3 of the page */
-    width: auto;
-}
-
-ul.checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}
-
-ul.list-group-item {
-    display: flex;
-    align-items: center;
-}
-
-#newMusic { /* set invisible */
-    display: none;
-}
-
 body {
     display: none;
     background-image: url("assets/1302540.png");
-    background-repeat: no-repeat;
     background-size: cover;
-    transition: ease-in-out 1s;
-    background-repeat: no-repeat;
     background-attachment: fixed;
+    background-position: center;
     min-height: 100vh;
+    color: #f4e4bc;
+    font-family: 'Harry Potter', sans-serif;
+    overflow-x: hidden;
+    transition: background-image 1s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {
     body {
         background-image: url("assets/phone/dark.png");
     }
-    
 }
 
-h1 {
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.title {
+    text-align: center;
+    font-size: 3rem;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px #000;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.accordion {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.accordion-item {
+    background: transparent;
+    border: none;
+}
+
+.accordion-button {
+    background: #2c2c2c;
+    color: #FFD700;
     font-family: 'Harry Potter', sans-serif;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px #000;
+    transition: all 0.3s ease;
 }
 
-button[class~="audio"]{
-	appearance:auto;
-	height:15px;
-	width:15px;
-	cursor:pointer;
-	border: 1px solid #000;
-	background:transparent;
-	background-size: 15px;
+.accordion-button:not(.collapsed) {
+    background: #4B0082;
+    color: #fff;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #FFD700;
+}
+
+.accordion-body {
+    background: rgba(0, 0, 0, 0.8);
+    color: #f4e4bc;
+    padding: 1.5rem;
+}
+
+.character-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.character-card {
+    background: #2c2c2c;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 0.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.character-card.selected {
+    border-color: #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}
+
+.character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.character-card.gryffindor {
+    border-color: #7F0909;
+    background: linear-gradient(145deg, #7F0909, #FFC107);
+}
+
+.character-card.hufflepuff {
+    border-color: #EEE117;
+    background: linear-gradient(145deg, #EEE117, #000000);
+}
+
+.character-card.ravenclaw {
+    border-color: #0E1A40;
+    background: linear-gradient(145deg, #0E1A40, #946B2D);
+}
+
+.character-card.slytherin {
+    border-color: #1A472A;
+    background: linear-gradient(145deg, #1A472A, #AAAAAA);
+}
+
+.character-card span {
+    color: #f4e4bc;
+    font-size: 1rem;
+    font-family: 'Harry Potter', sans-serif;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.audio-controls {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.audio-controls p#p,
+.audio-controls p#a,
+.audio-controls p#p2,
+.audio-controls p#a2 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    font-family: 'Harry Potter', sans-serif;
+    color: #FFD700;
+    text-shadow: 2px 2px 4px #000;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.volume-slider {
+    width: 100px;
+    accent-color: #FFD700;
+    background: #2c2c2c;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+    margin: 0 0.5rem;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.volume-slider:hover {
+    box-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+button[class~="audio"] {
+    appearance: none;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 2px solid #FFD700;
+    background: transparent;
+    background-size: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+button[class~="audio"]:hover {
+    background-color: #FFD700;
+    transform: scale(1.1);
 }
 
 button[class~="paused"] {
-    background-image:url(https://img.icons8.com/android/24/000000/play.png);
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/play.png);
 }
 
 button[class~="playing"] {
-    background-image:url(https://img.icons8.com/android/24/000000/pause.png);
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/pause.png);
 }
 
 button[class~="next"] {
-    background-image:url(https://img.icons8.com/android/24/000000/end.png);
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/end.png);
+}
+
+button[class~="prev"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/rewind.png);
+}
+
+button[class~="mute"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/mute.png);
+}
+
+button[class~="unmute"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/speaker.png);
+}
+
+button[class~="shuffle"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/shuffle.png);
+}
+
+button[class~="shuffle-active"] {
+    background-color: #4B0082;
+    border-color: #fff;
+}
+
+.form-select {
+    background: #2c2c2c;
+    color: #f4e4bc;
+    border: 2px solid #FFD700;
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.form-select:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
 }
