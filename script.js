@@ -182,7 +182,10 @@ function createSparkle(x, y) {
 
 async function initialize() {
     await Promise.all([fetchWallpaperData(), fetchAudioData(), fetchMusicData(), fetchCursorData()]);
-    if (!wallpaperData || !jsonData || !musicData || !cursorData) return;
+    if (!wallpaperData || !jsonData || !musicData || !cursorData) {
+        console.error("Failed to load required data:", { wallpaperData, jsonData, musicData, cursorData });
+        return;
+    }
 
     const playButton = document.getElementById("playButton");
     const audioSound = document.getElementById("audio");
@@ -202,6 +205,25 @@ async function initialize() {
     const cursorSelect = document.getElementById("cursorSelect");
     let selectedCharacters = [];
     let newData = jsonData;
+
+    // Set up tab navigation first
+    const tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`Tab button clicked: ${button.dataset.tab}`);
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            const targetTab = document.getElementById(button.dataset.tab);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+                console.log(`Switched to tab: ${button.dataset.tab}`);
+            } else {
+                console.error(`Tab content not found for: ${button.dataset.tab}`);
+            }
+        });
+    });
 
     cursorData.forEach(cursor => {
         const option = document.createElement("option");
@@ -261,11 +283,26 @@ async function initialize() {
         musicSelect.appendChild(optgroup);
     });
 
-    function updateCursorStyle(cursorValue) {
+    async function updateCursorStyle(cursorValue) {
         const root = document.documentElement;
-        let cursorUrl = `url('assets/cursors/${cursorValue}/cursor.cur')`;
+        const cursorUrl = `url('assets/cursors/${cursorValue}/cursor.cur')`;
         const pointerUrl = `url('assets/cursors/${cursorValue}/pointer.cur')`;
         try {
+            // Preload cursor images to check if they exist
+            const cursorImg = new Image();
+            const pointerImg = new Image();
+            cursorImg.src = `assets/cursors/${cursorValue}/cursor.cur`;
+            pointerImg.src = `assets/cursors/${cursorValue}/pointer.cur`;
+            await Promise.all([
+                new Promise((resolve, reject) => {
+                    cursorImg.onload = resolve;
+                    cursorImg.onerror = () => reject(new Error(`Failed to load cursor: ${cursorUrl}`));
+                }),
+                new Promise((resolve, reject) => {
+                    pointerImg.onload = resolve;
+                    pointerImg.onerror = () => reject(new Error(`Failed to load pointer: ${pointerUrl}`));
+                })
+            ]);
             root.style.setProperty('--cursor-url', cursorUrl);
             root.style.setProperty('--pointer-url', pointerUrl);
             console.log(`Cursor updated to: ${cursorUrl}, Pointer: ${pointerUrl}`);
@@ -274,13 +311,27 @@ async function initialize() {
             setTimeout(() => document.body.style.cursor = cursorUrl + ' 0 0, auto', 0);
         } catch (error) {
             console.error(`Error updating cursor to ${cursorValue}:`, error);
-            // Fallback to default wand PNG
-            root.style.setProperty('--cursor-url', `url('assets/wand.png')`);
-            root.style.setProperty('--pointer-url', `url('assets/wand.png')`);
+            // Fallback to wand.png or default
+            const fallbackUrl = `url('assets/wand.png')`;
+            root.style.setProperty('--cursor-url', fallbackUrl);
+            root.style.setProperty('--pointer-url', fallbackUrl);
+            console.warn(`Fell back to: ${fallbackUrl}`);
+            // Ultimate fallback to browser default if wand.png fails
+            if (!(await new Promise(resolve => {
+                const img = new Image();
+                img.src = 'assets/wand.png';
+                img.onload = () => resolve(true);
+                img.onerror = () => resolve(false);
+            }))) {
+                root.style.setProperty('--cursor-url', 'default');
+                root.style.setProperty('--pointer-url', 'pointer');
+                console.warn("Ultimate fallback to browser default cursors");
+            }
         }
     }
 
     cursorSelect.addEventListener("change", () => {
+        console.log(`Cursor selected: ${cursorSelect.value}`);
         updateCursorStyle(cursorSelect.value);
     });
 
@@ -409,22 +460,6 @@ async function initialize() {
             createSparkle(e.clientX, e.clientY);
             window.lastSparkle = now;
         }
-    });
-
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', () => {
-            console.log(`Tab button clicked: ${button.dataset.tab}`);
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            const targetTab = document.getElementById(button.dataset.tab);
-            if (targetTab) {
-                targetTab.classList.remove('hidden');
-                console.log(`Switched to tab: ${button.dataset.tab}`);
-            } else {
-                console.error(`Tab content not found for: ${button.dataset.tab}`);
-            }
-        });
     });
 
     updateCursorStyle(cursorSelect.value);

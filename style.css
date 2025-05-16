@@ -132,9 +132,9 @@ button[class~="shuffle-active"] {
 }
 
 #particles {
-    background: url('https://i.imgur.com/3r8aE3q.png') repeat;
-    opacity: 0.1;
-    animation: sparkle 20s linear infinite;
+    background: url('assets/particles.png') repeat;
+    opacity: 0.05;
+    animation: sparkle 30s linear infinite;
 }
 
 .sparkle {
