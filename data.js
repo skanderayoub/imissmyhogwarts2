@@ -72,22 +72,37 @@ export async function fetchCursorData() {
 
 export async function fetchCharacterLoreData() {
     try {
-        const response = await fetch("https://hp-api.onrender.com/api/characters");
-        if (!response.ok) throw new Error("Network response was not ok");
-        return await response.json();
+        const response = await fetch('./characters.json');
+        if (!response.ok) throw new Error('Failed to fetch characters.json');
+        const data = await response.json();
+        return data;
     } catch (error) {
-        console.error("Error fetching character lore data:", error);
+        console.error('Error fetching characters:', error);
         return [];
     }
 }
 
 export async function fetchSpellsData() {
     try {
-        const response = await fetch("https://hp-api.onrender.com/api/spells");
-        if (!response.ok) throw new Error("Network response was not ok");
-        return await response.json();
+        const response = await fetch('./spells.json');
+        if (!response.ok) throw new Error('Failed to fetch spells.json');
+        const data = await response.json();
+        return data;
     } catch (error) {
-        console.error("Error fetching spells data:", error);
+        console.error('Error fetching spells:', error);
+        return [];
+    }
+}
+
+export async function fetchSpellCategories() {
+    try {
+        const response = await fetch('./spells.json');
+        if (!response.ok) throw new Error('Failed to fetch spells.json for categories');
+        const data = await response.json();
+        const categories = [...new Set(data.map(spell => spell.attributes.category).filter(category => category))];
+        return categories.sort();
+    } catch (error) {
+        console.error('Error fetching spell categories:', error);
         return [];
     }
 }

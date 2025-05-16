@@ -4,48 +4,37 @@ body {
     --cursor-url: url("assets/cursors/Dobby/cursor.cur");
     --pointer-url: url("assets/cursors/Dobby/pointer.cur");
     cursor: var(--cursor-url) 0 0, auto;
-    transition: background-color 0.5s ease, color 0.5s ease;
-    /* Hotspot at 0 0 for default cursor */
+    transition: background-color 0.5s ease, background-image 0.5s ease, color 0.5s ease;
 }
 
 .theme-gryffindor {
     --primary-color: #7f0909;
     --secondary-color: #ffc107;
-    --gradient: linear-gradient(145deg,
-            rgba(127, 9, 9, 0.7),
-            rgba(255, 193, 7, 0.7));
+    --gradient: linear-gradient(145deg, rgba(127, 9, 9, 0.7), rgba(255, 193, 7, 0.7));
 }
 
 .theme-hufflepuff {
     --primary-color: #eee117;
     --secondary-color: #000000;
-    --gradient: linear-gradient(145deg,
-            rgba(238, 225, 23, 0.7),
-            rgba(0, 0, 0, 0.7));
+    --gradient: linear-gradient(145deg, rgba(238, 225, 23, 0.7), rgba(0, 0, 0, 0.7));
 }
 
 .theme-ravenclaw {
     --primary-color: #0e1a40;
     --secondary-color: #946b2d;
-    --gradient: linear-gradient(145deg,
-            rgba(14, 26, 64, 0.7),
-            rgba(148, 107, 45, 0.7));
+    --gradient: linear-gradient(145deg, rgba(14, 26, 64, 0.7), rgba(148, 107, 45, 0.7));
 }
 
 .theme-slytherin {
     --primary-color: #1a472a;
     --secondary-color: #aaaaaa;
-    --gradient: linear-gradient(145deg,
-            rgba(26, 71, 42, 0.7),
-            rgba(170, 170, 170, 0.7));
+    --gradient: linear-gradient(145deg, rgba(26, 71, 42, 0.7), rgba(170, 170, 170, 0.7));
 }
 
 .theme-hogwarts {
     --primary-color: #ffd700;
     --secondary-color: #4b0082;
-    --gradient: linear-gradient(145deg,
-            rgba(0, 0, 0, 0.7),
-            rgba(75, 0, 130, 0.7));
+    --gradient: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(75, 0, 130, 0.7));
 }
 
 .container,
@@ -94,10 +83,10 @@ select:focus {
     padding: 0.5rem;
     text-align: center;
     cursor: var(--pointer-url) 4 4, pointer;
-    /* Smaller hotspot for pointer */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
+    height: fit-content;
 }
 
 .character-card:hover {
@@ -107,9 +96,19 @@ select:focus {
 
 .character-card span {
     color: #f4e4bc;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     font-family: "Harry Potter", sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    overflow-wrap: break-word;
+}
+
+#characterList .character-card span,
+#spellList .character-card span {
+    font-size: 0.65rem;
+}
+
+#characterLoreList, #spellList {
+    overflow: visible !important;
 }
 
 button[class~="audio"] {
@@ -118,7 +117,6 @@ button[class~="audio"] {
     background-repeat: no-repeat;
     border: 2px solid;
     cursor: var(--pointer-url) 4 4, pointer;
-    /* Smaller hotspot for audio buttons */
 }
 
 button[class~="paused"] {
@@ -171,42 +169,13 @@ button[class~="shuffle-active"] {
 }
 
 @keyframes sparkleFade {
-    0% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    100% {
-        opacity: 0;
-        transform: scale(0.3) translateY(-10px);
-    }
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(0.3) translateY(-10px); }
 }
 
 @keyframes sparkle {
-    0% {
-        background-position: 0 0;
-    }
-
-    100% {
-        background-position: 1000px 1000px;
-    }
-}
-
-@media (max-width: 640px) {
-    .character-card span {
-        font-size: 0.8rem;
-    }
-
-    .audio-controls button {
-        width: 2rem;
-        height: 2rem;
-        background-size: 16px;
-    }
-
-    .tab-button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
+    0% { background-position: 0 0; }
+    100% { background-position: 1000px 1000px; }
 }
 
 .floating-candle {
@@ -221,13 +190,16 @@ button[class~="shuffle-active"] {
 }
 
 @keyframes floatCandle {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100px); opacity: 0; }
+}
 
-    100% {
-        transform: translateY(-100px);
-        opacity: 0;
+@media (max-width: 640px) {
+    .character-card span {
+        font-size: 0.65rem;
+    }
+    #characterList .character-card span,
+    #spellList .character-card span {
+        font-size: 0.6rem;
     }
 }
