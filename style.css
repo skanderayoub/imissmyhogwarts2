@@ -1,6 +1,61 @@
 body {
-    background-image: url('./assets/1302540.png');
+    background-image: url('https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
     font-family: 'Cinzel', serif;
+    --cursor-url: url('assets/cursors/dumbledore/cursor.cur');
+    --pointer-url: url('assets/cursors/dumbledore/pointer.cur');
+    cursor: var(--cursor-url) 0 0, auto;
+}
+
+.theme-gryffindor {
+    --primary-color: #7F0909;
+    --secondary-color: #FFC107;
+    --gradient: linear-gradient(145deg, rgba(127, 9, 9, 0.7), rgba(255, 193, 7, 0.7));
+}
+
+.theme-hufflepuff {
+    --primary-color: #EEE117;
+    --secondary-color: #000000;
+    --gradient: linear-gradient(145deg, rgba(238, 225, 23, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.theme-ravenclaw {
+    --primary-color: #0E1A40;
+    --secondary-color: #946B2D;
+    --gradient: linear-gradient(145deg, rgba(14, 26, 64, 0.7), rgba(148, 107, 45, 0.7));
+}
+
+.theme-slytherin {
+    --primary-color: #1A472A;
+    --secondary-color: #AAAAAA;
+    --gradient: linear-gradient(145deg, rgba(26, 71, 42, 0.7), rgba(170, 170, 170, 0.7));
+}
+
+.theme-hogwarts {
+    --primary-color: #FFD700;
+    --secondary-color: #4B0082;
+    --gradient: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(75, 0, 130, 0.7));
+}
+
+.container, .tab-content, .character-card, button[class~="audio"], .tab-button, select {
+    border-color: var(--primary-color);
+}
+
+.tab-button.active, button[class~="audio"]:hover, .tab-button:hover, select:focus {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+}
+
+.character-card, .tab-content {
+    background: var(--gradient);
+}
+
+#musicProgress {
+    background-color: var(--primary-color);
+}
+
+.character-card.selected {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 20px var(--secondary-color);
 }
 
 .font-harry-potter {
@@ -11,19 +66,13 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.tab-button.active {
-    background-color: #DAA520;
-    color: #1A1A1A;
-    border-color: #FFD700;
-}
-
 .character-card {
     background: rgba(0, 0, 0, 0.6);
-    border: 2px solid transparent;
+    border: 2px solid;
     border-radius: 8px;
     padding: 0.5rem;
     text-align: center;
-    cursor: pointer;
+    cursor: var(--pointer-url) 0 0, pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -32,31 +81,6 @@ body {
 .character-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
-}
-
-.character-card.selected {
-    border-color: #FFD700;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7);
-}
-
-.character-card.gryffindor {
-    border-color: #7F0909;
-    background: linear-gradient(145deg, rgba(127, 9, 9, 0.7), rgba(255, 193, 7, 0.7));
-}
-
-.character-card.hufflepuff {
-    border-color: #EEE117;
-    background: linear-gradient(145deg, rgba(238, 225, 23, 0.7), rgba(0, 0, 0, 0.7));
-}
-
-.character-card.ravenclaw {
-    border-color: #0E1A40;
-    background: linear-gradient(145deg, rgba(14, 26, 64, 0.7), rgba(148, 107, 45, 0.7));
-}
-
-.character-card.slytherin {
-    border-color: #1A472A;
-    background: linear-gradient(145deg, rgba(26, 71, 42, 0.7), rgba(170, 170, 170, 0.7));
 }
 
 .character-card span {
@@ -70,6 +94,8 @@ button[class~="audio"] {
     background-size: 20px;
     background-position: center;
     background-repeat: no-repeat;
+    border: 2px solid;
+    cursor: var(--pointer-url) 0 0, pointer;
 }
 
 button[class~="paused"] {
@@ -101,7 +127,7 @@ button[class~="shuffle"] {
 }
 
 button[class~="shuffle-active"] {
-    background-color: #4B0082;
+    background-color: var(--secondary-color);
     border-color: #FFFFFF;
 }
 
@@ -109,6 +135,27 @@ button[class~="shuffle-active"] {
     background: url('https://i.imgur.com/3r8aE3q.png') repeat;
     opacity: 0.1;
     animation: sparkle 20s linear infinite;
+}
+
+.sparkle {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: sparkleFade 0.8s ease-out forwards;
+}
+
+@keyframes sparkleFade {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-10px);
+    }
 }
 
 @keyframes sparkle {

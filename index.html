@@ -9,22 +9,33 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel">
+<body class="min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-hogwarts">
     <div id="particles" class="absolute inset-0 pointer-events-none"></div>
     <div class="container mx-auto px-4 py-8 max-w-4xl">
         <h1 class="text-4xl md:text-5xl text-center text-yellow-400 font-harry-potter mb-8 text-shadow-lg">
             I Miss My Hogwarts
         </h1>
+        <div class="flex justify-center space-x-4 mb-6">
+            <select id="themeSelect" class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
+                <option value="hogwarts">Hogwarts</option>
+                <option value="gryffindor">Gryffindor</option>
+                <option value="hufflepuff">Hufflepuff</option>
+                <option value="ravenclaw">Ravenclaw</option>
+                <option value="slytherin">Slytherin</option>
+            </select>
+            <select id="cursorSelect" class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
+                <option value="dumbledore">Dumbledore</option>
+                <option value="dobby">Dobby</option>
+            </select>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <!-- Tab Navigation -->
             <div class="flex justify-center md:col-span-3">
-                <button class="tab-button active px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 border-2 border-yellow-400 rounded-lg text-yellow-200 hover:bg-yellow-400 hover:text-gray-900 transition-all" data-tab="voices">Voices</button>
-                <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 border-2 border-yellow-400 rounded-lg text-yellow-200 hover:bg-yellow-400 hover:text-gray-900 transition-all" data-tab="music">Music</button>
-                <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 border-2 border-yellow-400 rounded-lg text-yellow-200 hover:bg-yellow-400 hover:text-gray-900 transition-all" data-tab="background">Ambiance</button>
+                <button class="tab-button active px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="voices">Voices</button>
+                <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="music">Music</button>
+                <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="background">Ambiance</button>
             </div>
         </div>
-        <!-- Voices Section -->
-        <div id="voices" class="tab-content bg-gray-900 bg-opacity-80 border-2 border-yellow-400 rounded-xl p-6 shadow-lg">
+        <div id="voices" class="tab-content bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Voices of Hogwarts</h2>
             <div id="characterList" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 max-h-80 overflow-y-auto p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
             <div class="audio-controls mt-6 text-center">
@@ -32,39 +43,37 @@
                 <p id="a" class="text-lg text-yellow-200 mb-4"><span class="font-bold">Audio:</span> None</p>
                 <div class="flex justify-center items-center space-x-4">
                     <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1" class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Voice Volume">
-                    <button id="voiceMute" class="audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Mute/Unmute Voice"></button>
-                    <button id="playButton" class="audio paused w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Play/Pause Voice"></button>
+                    <button id="voiceMute" class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Mute/Unmute Voice"></button>
+                    <button id="playButton" class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Play/Pause Voice"></button>
                 </div>
                 <audio id="audio"></audio>
             </div>
         </div>
-        <!-- Music Section -->
-        <div id="music" class="tab-content hidden bg-gray-900 bg-opacity-80 border-2 border-yellow-400 rounded-xl p-6 shadow-lg">
+        <div id="music" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Music of the Wizarding World</h2>
-            <select id="musicSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 border-2 border-yellow-400 rounded-lg p-2 mb-4 focus:outline-none focus:border-yellow-600">
+            <select id="musicSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
                 <option value="">Choose a Track</option>
             </select>
             <div class="audio-controls text-center">
                 <p id="p2" class="text-lg text-yellow-200 mb-2"><span class="font-bold">Musique:</span> Select a track</p>
                 <p id="a2" class="text-lg text-yellow-200 mb-4"><span class="font-bold">Audio:</span> None</p>
                 <div class="relative w-64 mx-auto h-2 bg-gray-700 rounded-full mb-4">
-                    <div id="musicProgress" class="absolute h-full bg-yellow-400 rounded-full" style="width: 0%"></div>
+                    <div id="musicProgress" class="absolute h-full rounded-full" style="width: 0%"></div>
                 </div>
                 <div class="flex justify-center items-center space-x-4">
                     <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1" class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Music Volume">
-                    <button id="musicMute" class="audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Mute/Unmute Music"></button>
-                    <button id="prevMusic" class="audio prev w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Previous Track"></button>
-                    <button id="playButton2" class="audio paused w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Play/Pause Music"></button>
-                    <button id="nextMusic" class="audio next w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Next Track"></button>
-                    <button id="shuffleMusic" class="audio shuffle w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all" title="Toggle Shuffle"></button>
+                    <button id="musicMute" class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Mute/Unmute Music"></button>
+                    <button id="prevMusic" class="audio prev w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Previous Track"></button>
+                    <button id="playButton2" class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Play/Pause Music"></button>
+                    <button id="nextMusic" class="audio next w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Next Track"></button>
+                    <button id="shuffleMusic" class="audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Toggle Shuffle"></button>
                 </div>
                 <audio id="audio2"></audio>
             </div>
         </div>
-        <!-- Background Section -->
-        <div id="background" class="tab-content hidden bg-gray-900 bg-opacity-80 border-2 border-yellow-400 rounded-xl p-6 shadow-lg">
+        <div id="background" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Hogwarts Ambiance</h2>
-            <select id="backgroundSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 border-2 border-yellow-400 rounded-lg p-2 focus:outline-none focus:border-yellow-600">
+            <select id="backgroundSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
                 <option value="">Choose a Background</option>
             </select>
         </div>

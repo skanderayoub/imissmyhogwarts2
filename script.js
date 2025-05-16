@@ -97,10 +97,10 @@ function playSound(data, audio, btn, click, type) {
     }
     if (!audio.paused) {
         audio.pause();
-        btn.className = "audio paused w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+        btn.className = "audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
     } else {
         audio.play();
-        btn.className = "audio playing w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+        btn.className = "audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
     }
 }
 
@@ -121,7 +121,7 @@ function playMusicTrack(index, audio, btn) {
     setKeyAndAudio(track.album, track.url, "music");
     audio.src = track.url;
     audio.play();
-    btn.className = "audio playing w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+    btn.className = "audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
 }
 
 function setKeyAndAudio(key, value, type) {
@@ -157,12 +157,14 @@ function setAlbumAndAudio(album, url) {
     }
 }
 
-const houseMapping = {
-    "Gryffindor Student": "gryffindor",
-    "Hufflepuff Student": "hufflepuff",
-    "Ravenclaw Student": "ravenclaw",
-    "Slytherin Student": "slytherin",
-};
+function createSparkle(x, y) {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.left = `${x}px`;
+    sparkle.style.top = `${y}px`;
+    document.body.appendChild(sparkle);
+    setTimeout(() => sparkle.remove(), 800);
+}
 
 async function initialize() {
     await Promise.all([fetchWallpaperData(), fetchAudioData(), fetchMusicData()]);
@@ -182,8 +184,22 @@ async function initialize() {
     const musicProgress = document.getElementById("musicProgress");
     const backgroundSelect = document.getElementById("backgroundSelect");
     const characterList = document.getElementById("characterList");
+    const themeSelect = document.getElementById("themeSelect");
+    const cursorSelect = document.getElementById("cursorSelect");
     let selectedCharacters = [];
     let newData = jsonData;
+
+    const cursorStyles = [
+        { value: "dumbledore", name: "Dumbledore" },
+        { value: "dobby", name: "Dobby" },
+    ];
+
+    cursorStyles.forEach(style => {
+        const option = document.createElement("option");
+        option.value = style.value;
+        option.text = style.name;
+        cursorSelect.appendChild(option);
+    });
 
     const bgImg = new Image();
     bgImg.src = screenWidth < 600 ? "assets/phone/dark.png" : "https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80";
@@ -200,7 +216,7 @@ async function initialize() {
 
     Object.keys(jsonData).forEach((key) => {
         const card = document.createElement("div");
-        card.className = `character-card ${houseMapping[key] || ''}`;
+        card.className = "character-card";
         card.dataset.character = key;
         const span = document.createElement("span");
         span.textContent = key;
@@ -236,6 +252,16 @@ async function initialize() {
         musicSelect.appendChild(optgroup);
     });
 
+    function updateCursorStyle(cursorValue) {
+        const root = document.documentElement;
+        root.style.setProperty('--cursor-url', `url('assets/cursors/${cursorValue}/cursor.cur')`);
+        root.style.setProperty('--pointer-url', `url('assets/cursors/${cursorValue}/pointer.cur')`);
+    }
+
+    cursorSelect.addEventListener("change", () => {
+        updateCursorStyle(cursorSelect.value);
+    });
+
     musicSelect.addEventListener("change", () => {
         const index = parseInt(musicSelect.value);
         if (!isNaN(index)) {
@@ -251,7 +277,7 @@ async function initialize() {
         audioSound.volume = voiceVolume.value;
         if (audioSound.volume > 0) {
             audioSound.muted = false;
-            voiceMute.className = "audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            voiceMute.className = "audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
             voiceVolume.classList.remove("muted");
         }
     });
@@ -259,8 +285,8 @@ async function initialize() {
     voiceMute.addEventListener("click", () => {
         audioSound.muted = !audioSound.muted;
         voiceMute.className = audioSound.muted
-            ? "audio unmute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all"
-            : "audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            ? "audio unmute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+            : "audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
         voiceVolume.classList.toggle("muted", audioSound.muted);
         if (audioSound.muted) audioSound.volume = 0;
         else audioSound.volume = voiceVolume.value || 1;
@@ -270,7 +296,7 @@ async function initialize() {
         audioMusic.volume = musicVolume.value;
         if (audioMusic.volume > 0) {
             audioMusic.muted = false;
-            musicMute.className = "audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            musicMute.className = "audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
             musicVolume.classList.remove("muted");
         }
     });
@@ -278,8 +304,8 @@ async function initialize() {
     musicMute.addEventListener("click", () => {
         audioMusic.muted = !audioMusic.muted;
         musicMute.className = audioMusic.muted
-            ? "audio unmute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all"
-            : "audio mute w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            ? "audio unmute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+            : "audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
         musicVolume.classList.toggle("muted", audioMusic.muted);
         if (audioMusic.muted) audioMusic.volume = 0;
         else audioMusic.volume = musicVolume.value || 1;
@@ -299,10 +325,10 @@ async function initialize() {
             musicSelect.value = index;
         } else if (!audioMusic.paused) {
             audioMusic.pause();
-            playMusicButton.className = "audio paused w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            playMusicButton.className = "audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
         } else {
             audioMusic.play();
-            playMusicButton.className = "audio playing w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            playMusicButton.className = "audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
         }
         firstClickMusic = false;
         nextMusicButton.style.display = "inline-block";
@@ -325,8 +351,8 @@ async function initialize() {
     shuffleMusicButton.addEventListener("click", () => {
         shuffleMode = !shuffleMode;
         shuffleMusicButton.className = shuffleMode
-            ? "audio shuffle shuffle-active w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all"
-            : "audio shuffle w-10 h-10 bg-gray-800 border-2 border-yellow-400 rounded-full hover:bg-yellow-400 hover:border-gray-900 transition-all";
+            ? "audio shuffle shuffle-active w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+            : "audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all";
     });
 
     audioMusic.addEventListener("ended", () => {
@@ -351,15 +377,19 @@ async function initialize() {
         }
     });
 
-    // Tab navigation
-    document.querySelectorAll('.tab-button').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
-            document.getElementById(button.dataset.tab).classList.remove('hidden');
-        });
+    themeSelect.addEventListener("change", () => {
+        document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${themeSelect.value}`;
     });
+
+    document.addEventListener('mousemove', (e) => {
+        const now = Date.now();
+        if (!window.lastSparkle || now - window.lastSparkle > 50) {
+            createSparkle(e.clientX, e.clientY);
+            window.lastSparkle = now;
+        }
+    });
+
+    updateCursorStyle(cursorSelect.value);
 }
 
 initialize();
