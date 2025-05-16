@@ -83,57 +83,72 @@
                 <p class="text-lg text-yellow-200 mb-4">
                     <span class="font-bold">Lore:</span> Explore the magical world of Hogwarts through its iconic characters, spells, and potions.
                 </p>
-                <div class="flex flex-col gap-8">
+                <div class="flex flex-col gap-4">
                     <div>
-                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">Characters</h3>
-                        <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                            <input type="text" id="characterSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search characters...">
-                            <select id="loreFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                <option value="all">All Characters</option>
-                                <option value="Gryffindor">Gryffindor</option>
-                                <option value="Hufflepuff">Hufflepuff</option>
-                                <option value="Ravenclaw">Ravenclaw</option>
-                                <option value="Slytherin">Slytherin</option>
-                            </select>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-harry-potter text-yellow-400">Characters</h3>
+                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="characters">Collapse</button>
                         </div>
-                        <div id="characterLoreList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                        <div class="flex justify-center space-x-4 mt-4">
-                            <button id="prevPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                            <button id="nextPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                        <div id="characters-content" class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="characterSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search characters...">
+                                <select id="loreFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Characters</option>
+                                    <option value="Gryffindor">Gryffindor</option>
+                                    <option value="Hufflepuff">Hufflepuff</option>
+                                    <option value="Ravenclaw">Ravenclaw</option>
+                                    <option value="Slytherin">Slytherin</option>
+                                </select>
+                            </div>
+                            <div id="characterLoreList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
+                                <button id="nextPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                            </div>
+                            <div id="characterDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                         </div>
-                        <div id="characterDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">Spells</h3>
-                        <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                            <input type="text" id="spellSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search spells...">
-                            <select id="spellFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                <option value="all">All Spells</option>
-                                <!-- Categories populated by JS -->
-                            </select>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-harry-potter text-yellow-400">Spells</h3>
+                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="spells">Collapse</button>
                         </div>
-                        <div id="spellList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                        <div class="flex justify-center space-x-4 mt-4">
-                            <button id="prevSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                            <button id="nextSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                        <div id="spells-content" class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="spellSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search spells...">
+                                <select id="spellFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Spells</option>
+                                    <!-- Categories populated by JS -->
+                                </select>
+                            </div>
+                            <div id="spellList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
+                                <button id="nextSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                            </div>
+                            <div id="spellDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                         </div>
-                        <div id="spellDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                     </div>
                     <div>
-                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">Potions</h3>
-                        <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                            <input type="text" id="potionSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search potions...">
-                            <select id="potionFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                <option value="all">All Potions</option>
-                                <!-- Categories populated by JS -->
-                            </select>
+                        <div class="flex items-center justify-between">
+                            <h3 class="text-xl font-harry-potter text-yellow-400">Potions</h3>
+                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="potions">Collapse</button>
                         </div>
-                        <div id="potionList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                        <div class="flex justify-center space-x-4 mt-4">
-                            <button id="prevPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                            <button id="nextPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                        <div id="potions-content" class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="potionSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search potions...">
+                                <select id="potionFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Potions</option>
+                                    <!-- Categories populated by JS -->
+                                </select>
+                            </div>
+                            <div id="potionList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
+                                <button id="nextPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                            </div>
+                            <div id="potionDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                         </div>
-                        <div id="potionDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
                     </div>
                 </div>
                 <p class="text-lg text-yellow-200 mt-6">

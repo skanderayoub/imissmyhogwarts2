@@ -42,6 +42,7 @@ body {
 .character-card,
 button[class~="audio"],
 .tab-button,
+.toggle-button,
 select {
     border-color: var(--primary-color);
 }
@@ -49,6 +50,7 @@ select {
 .tab-button.active,
 button[class~="audio"]:hover,
 .tab-button:hover,
+.toggle-button:hover,
 select:focus {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -151,6 +153,24 @@ button[class~="shuffle"] {
 button[class~="shuffle-active"] {
     background-color: var(--secondary-color);
     border-color: #ffffff;
+}
+
+.toggle-button {
+    font-size: 0.9rem;
+    cursor: var(--pointer-url) 4 4, pointer;
+    transition: background-color 0.3s ease;
+}
+
+.category-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 1000px; /* Adjust based on content size */
+    opacity: 1;
+    overflow: hidden;
+}
+
+.category-content.collapsed {
+    max-height: 0;
+    opacity: 0;
 }
 
 #particles {
