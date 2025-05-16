@@ -106,3 +106,28 @@ export async function fetchSpellCategories() {
         return [];
     }
 }
+
+export async function fetchPotionsData() {
+    try {
+        const response = await fetch('./potions.json');
+        if (!response.ok) throw new Error('Failed to fetch potions.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching potions:', error);
+        return [];
+    }
+}
+
+export async function fetchPotionDifficulties() {
+    try {
+        const response = await fetch('./potions.json');
+        if (!response.ok) throw new Error('Failed to fetch potions.json for difficulties');
+        const data = await response.json();
+        const difficulties = [...new Set(data.map(potion => potion.attributes.difficulty).filter(difficulty => difficulty))];
+        return difficulties.sort();
+    } catch (error) {
+        console.error('Error fetching potion difficulties:', error);
+        return [];
+    }
+}

@@ -1,0 +1,3530 @@
+[
+  {
+    "id": "6635368f-eed6-4229-8671-08945646e583",
+    "type": "potion",
+    "attributes": {
+      "slug": "ageing-potion",
+      "characteristics": "Green",
+      "difficulty": "Advanced",
+      "effect": "Aged drinker temporarily",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/51/Ageing_Potion_PM.png",
+      "inventors": null,
+      "ingredients": "Newt spleens, Bananas, An orange snake, A green leaf",
+      "manufacturers": null,
+      "name": "Ageing Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Ageing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/6635368f-eed6-4229-8671-08945646e583"
+    }
+  },
+  {
+    "id": "3aaebd81-b8d7-483b-8667-7a1b624c4313",
+    "type": "potion",
+    "attributes": {
+      "slug": "alihotsy-draught",
+      "characteristics": "Blue fumes and colour",
+      "difficulty": null,
+      "effect": "Uncontrollable laughter",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/4/46/Alihotsy_Draught.png",
+      "inventors": null,
+      "ingredients": "Alihotsy",
+      "manufacturers": null,
+      "name": "Alihotsy Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Alihotsy_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/3aaebd81-b8d7-483b-8667-7a1b624c4313"
+    }
+  },
+  {
+    "id": "f3c49c80-5853-4bb3-b769-71aba6e20e46",
+    "type": "potion",
+    "attributes": {
+      "slug": "amortentia",
+      "characteristics": "Mother-of-pearl sheen, Spiralling steam, Scent was multi-faceted and varied based on what the person liked",
+      "difficulty": "Advanced",
+      "effect": "Love potion that caused a powerful infatuation or obsession in the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/4/4f/B6C9M1_cropped_Amortentia.png",
+      "inventors": null,
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "Amortentia",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Amortentia"
+    },
+    "links": {
+      "self": "/v1/potions/f3c49c80-5853-4bb3-b769-71aba6e20e46"
+    }
+  },
+  {
+    "id": "39af44b0-153e-481c-9b38-2ea2585708bd",
+    "type": "potion",
+    "attributes": {
+      "slug": "angel-s-trumpet-draught",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c8/Angels_Trumpet_Draught.JPG",
+      "inventors": null,
+      "ingredients": "Angel's Trumpet",
+      "manufacturers": null,
+      "name": "Angel's Trumpet Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Angel's_Trumpet_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/39af44b0-153e-481c-9b38-2ea2585708bd"
+    }
+  },
+  {
+    "id": "99f39f45-0182-4480-bf54-82333ed5d8cc",
+    "type": "potion",
+    "attributes": {
+      "slug": "antidote",
+      "characteristics": "Varies",
+      "difficulty": "Varies",
+      "effect": "Reversed poisons",
+      "image": null,
+      "inventors": "Varies",
+      "ingredients": "Varies (Mandrake was common component)",
+      "manufacturers": "Varies",
+      "name": "Antidote",
+      "side_effects": "Varies",
+      "time": "Varies",
+      "wiki": "https://harrypotter.fandom.com/wiki/Antidote"
+    },
+    "links": {
+      "self": "/v1/potions/99f39f45-0182-4480-bf54-82333ed5d8cc"
+    }
+  },
+  {
+    "id": "884260c0-956a-4b0c-ba8a-611df1fdebd2",
+    "type": "potion",
+    "attributes": {
+      "slug": "antidote-to-common-poisons",
+      "characteristics": "Teal-coloured",
+      "difficulty": "Beginner to Moderate",
+      "effect": "Counteracted the effects of common poisons",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/96/Antidote-to-common-poisons.png",
+      "inventors": null,
+      "ingredients": "1 Bezoar, 2 measures of Standard Ingredient, 1 pinch of powdered unicorn horn, 2 mistletoe berries",
+      "manufacturers": null,
+      "name": "Antidote to Common Poisons",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Antidote_to_Common_Poisons"
+    },
+    "links": {
+      "self": "/v1/potions/884260c0-956a-4b0c-ba8a-611df1fdebd2"
+    }
+  },
+  {
+    "id": "88d9ac07-1e58-4538-8f7e-d317f28cfc37",
+    "type": "potion",
+    "attributes": {
+      "slug": "antidote-to-uncommon-poisons",
+      "characteristics": "Green in colour",
+      "difficulty": "Moderate",
+      "effect": "Cures the effects of minor poisons",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/bd/Antidote_to_Uncommon_Poisons.png",
+      "inventors": null,
+      "ingredients": "Fire Seeds, Powdered graphorn horn, Billywig stings, Chizpurfle carapaces",
+      "manufacturers": null,
+      "name": "Antidote to Uncommon Poisons",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Antidote_to_Uncommon_Poisons"
+    },
+    "links": {
+      "self": "/v1/potions/88d9ac07-1e58-4538-8f7e-d317f28cfc37"
+    }
+  },
+  {
+    "id": "312840a2-e3b2-4b09-a910-0ebc348af7f5",
+    "type": "potion",
+    "attributes": {
+      "slug": "antidote-to-veritaserum",
+      "characteristics": null,
+      "difficulty": "Advanced",
+      "effect": "Countered the effect of Veritaserum",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3e/Antidote_to_Veritaserum_HM.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Antidote to Veritaserum",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Antidote_to_Veritaserum"
+    },
+    "links": {
+      "self": "/v1/potions/312840a2-e3b2-4b09-a910-0ebc348af7f5"
+    }
+  },
+  {
+    "id": "4a47ea34-3865-47cd-9ef8-812579f8f0f9",
+    "type": "potion",
+    "attributes": {
+      "slug": "anti-paralysis-potion",
+      "characteristics": "Pink in colour",
+      "difficulty": null,
+      "effect": "Cured paralysis",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/aa/Anti-Paralysis_Potion.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Anti-Paralysis Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Anti-Paralysis_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/4a47ea34-3865-47cd-9ef8-812579f8f0f9"
+    }
+  },
+  {
+    "id": "4c1ebf0e-32b0-400c-b811-358ef74e62d2",
+    "type": "potion",
+    "attributes": {
+      "slug": "armadillo-bile-mixture",
+      "characteristics": "Most likely corrosive",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0a/Armadillo_Bile_Mixture.jpg",
+      "inventors": null,
+      "ingredients": "Bat wings, Armadillo bile, Wormwood, Armotentia, Acromantula venom, Aconite, Water (likely)",
+      "manufacturers": null,
+      "name": "Armadillo Bile Mixture",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Armadillo_Bile_Mixture"
+    },
+    "links": {
+      "self": "/v1/potions/4c1ebf0e-32b0-400c-b811-358ef74e62d2"
+    }
+  },
+  {
+    "id": "2bf4c7e7-0505-4e06-84ac-7a4d3d385a1a",
+    "type": "potion",
+    "attributes": {
+      "slug": "babbling-beverage",
+      "characteristics": "Red or yellow in colour, Smelt like bubblegum",
+      "difficulty": "Moderate to Ordinary Wizarding Level",
+      "effect": "Caused the drinker to speak nonsense",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5d/HM_y3_Babbling_Beverage.png",
+      "inventors": null,
+      "ingredients": "Valerian sprigs, Aconite, Dittany",
+      "manufacturers": null,
+      "name": "Babbling Beverage",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Babbling_Beverage"
+    },
+    "links": {
+      "self": "/v1/potions/2bf4c7e7-0505-4e06-84ac-7a4d3d385a1a"
+    }
+  },
+  {
+    "id": "59021ade-1376-40e3-b593-47e5e8c3d15c",
+    "type": "potion",
+    "attributes": {
+      "slug": "baneberry-potion",
+      "characteristics": "Blood red",
+      "difficulty": null,
+      "effect": "Poison",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/93/Baneberry_Potion.JPG",
+      "inventors": null,
+      "ingredients": "Baneberry",
+      "manufacturers": null,
+      "name": "Baneberry Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Baneberry_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/59021ade-1376-40e3-b593-47e5e8c3d15c"
+    }
+  },
+  {
+    "id": "6606064b-823f-4bdb-9fdb-d3d8d8c1a5be",
+    "type": "potion",
+    "attributes": {
+      "slug": "baruffio-s-brain-elixir",
+      "characteristics": "Green in colour",
+      "difficulty": null,
+      "effect": "Allegedly increases one's brain power",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8d/Baruffio%E2%80%99s_Brain_Elixir_HM.png",
+      "inventors": "Baruffio",
+      "ingredients": "Leaping Toadstools, Frog brains, Runespoor eggs, Powdered dragon claw, Oil",
+      "manufacturers": null,
+      "name": "Baruffio's Brain Elixir",
+      "side_effects": "Possibly harmful mental side effects if brewed incorrectly",
+      "time": "Twelve hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Baruffio's_Brain_Elixir"
+    },
+    "links": {
+      "self": "/v1/potions/6606064b-823f-4bdb-9fdb-d3d8d8c1a5be"
+    }
+  },
+  {
+    "id": "81d50af2-fc8c-4f7f-85b7-6d883c841f43",
+    "type": "potion",
+    "attributes": {
+      "slug": "beautification-potion",
+      "characteristics": "Changes colour, Emits multi-colour bubbles",
+      "difficulty": "Moderate",
+      "effect": "Enhances the attractiveness of the drinker's physical appearance",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8b/Beautification_Potion_Bottle.png",
+      "inventors": "Zygmunt Budge, Sacharissa Tugwood",
+      "ingredients": "Fairy wings, Morning dew, Rose Petals, Lady's Mantle, Unicorn hair, Ginger roots, Boomslang skin",
+      "manufacturers": null,
+      "name": "Beautification Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Beautification_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/81d50af2-fc8c-4f7f-85b7-6d883c841f43"
+    }
+  },
+  {
+    "id": "9e69e818-0eb7-45f9-9f3d-051db4cc36f9",
+    "type": "potion",
+    "attributes": {
+      "slug": "befuddlement-draught",
+      "characteristics": "Dark green or red or purple in colour",
+      "difficulty": "Ordinary Wizarding Level",
+      "effect": "Recklessness",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d3/BefuddlementDraughtHM.png",
+      "inventors": null,
+      "ingredients": "Scurvy grass, Lovage, Sneezewort, Frog brains, Oil",
+      "manufacturers": null,
+      "name": "Befuddlement Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Befuddlement_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/9e69e818-0eb7-45f9-9f3d-051db4cc36f9"
+    }
+  },
+  {
+    "id": "c5b7766d-8066-46df-9869-e60fdec33f4e",
+    "type": "potion",
+    "attributes": {
+      "slug": "blood-replenishing-potion",
+      "characteristics": "Dark red in colour",
+      "difficulty": null,
+      "effect": "Replenished lost blood",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/4/49/BloodReplenishingPotionHM.png",
+      "inventors": null,
+      "ingredients": "Standard potioning water, Powdered unicorn horn, Stewed Mandrake",
+      "manufacturers": null,
+      "name": "Blood-Replenishing Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Blood-Replenishing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/c5b7766d-8066-46df-9869-e60fdec33f4e"
+    }
+  },
+  {
+    "id": "b54d0add-5686-4ddc-8510-500a3499bdb6",
+    "type": "potion",
+    "attributes": {
+      "slug": "bloodroot-poison",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/eb/Bloodroot_Poison.jpg",
+      "inventors": null,
+      "ingredients": "Bloodroot",
+      "manufacturers": null,
+      "name": "Bloodroot Poison",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Bloodroot_Poison"
+    },
+    "links": {
+      "self": "/v1/potions/b54d0add-5686-4ddc-8510-500a3499bdb6"
+    }
+  },
+  {
+    "id": "7d8a1ea5-1cd5-41b9-94d5-10b8e20cc89c",
+    "type": "potion",
+    "attributes": {
+      "slug": "bruise-removal-paste",
+      "characteristics": "Thick, yellow paste",
+      "difficulty": null,
+      "effect": "Healed bruises in an hour",
+      "image": null,
+      "inventors": "Fred and George Weasley",
+      "ingredients": null,
+      "manufacturers": "Fred and George Weasley",
+      "name": "Bruise removal paste",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Bruise_removal_paste"
+    },
+    "links": {
+      "self": "/v1/potions/7d8a1ea5-1cd5-41b9-94d5-10b8e20cc89c"
+    }
+  },
+  {
+    "id": "ff66ddb7-7740-4cba-b93c-a46866490dfb",
+    "type": "potion",
+    "attributes": {
+      "slug": "bulgeye-potion",
+      "characteristics": "Emerald green in colour",
+      "difficulty": null,
+      "effect": "Causes eyes to bulge (presumably)",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/25/Bulgeye.JPG",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Bulgeye Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Bulgeye_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/ff66ddb7-7740-4cba-b93c-a46866490dfb"
+    }
+  },
+  {
+    "id": "c73ed657-6c69-45e9-878f-50de60c6a3f2",
+    "type": "potion",
+    "attributes": {
+      "slug": "bundimun-pomade",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Hair care",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/86/BoxofBezoars.jpg",
+      "inventors": null,
+      "ingredients": "Bundimun Secretion (most likely)",
+      "manufacturers": "E. M. L. Potions Co.",
+      "name": "Bundimum Pomade",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Bundimun_Pomade"
+    },
+    "links": {
+      "self": "/v1/potions/c73ed657-6c69-45e9-878f-50de60c6a3f2"
+    }
+  },
+  {
+    "id": "9360cf62-3120-46ab-bce6-adbbff73d2c0",
+    "type": "potion",
+    "attributes": {
+      "slug": "bundimun-secretion",
+      "characteristics": "Lime green in colour, Emits vapours",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/Ooze.JPG",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Bundimun Secretion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Bundimun_Secretion"
+    },
+    "links": {
+      "self": "/v1/potions/9360cf62-3120-46ab-bce6-adbbff73d2c0"
+    }
+  },
+  {
+    "id": "06be07a9-aca7-4e92-a4bc-f56b670254b7",
+    "type": "potion",
+    "attributes": {
+      "slug": "burn-healing-paste",
+      "characteristics": "Orange in colour, Thick consistency",
+      "difficulty": null,
+      "effect": "Healed burns",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Burn-healing paste",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Burn-Healing_Paste"
+    },
+    "links": {
+      "self": "/v1/potions/06be07a9-aca7-4e92-a4bc-f56b670254b7"
+    }
+  },
+  {
+    "id": "7d609763-8fe9-42df-bd87-35bd1379e488",
+    "type": "potion",
+    "attributes": {
+      "slug": "burning-bitterroot-balm",
+      "characteristics": "Blue-coloured",
+      "difficulty": null,
+      "effect": "Soothing",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/bc/Burning_Bitterroot_Balm.jpg",
+      "inventors": null,
+      "ingredients": "Bitter root",
+      "manufacturers": null,
+      "name": "Burning Bitterroot Balm",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Burning_Bitterroot_Balm"
+    },
+    "links": {
+      "self": "/v1/potions/7d609763-8fe9-42df-bd87-35bd1379e488"
+    }
+  },
+  {
+    "id": "f131fa3c-8b3b-4451-9fcf-35dd17a65baf",
+    "type": "potion",
+    "attributes": {
+      "slug": "calming-draught",
+      "characteristics": "Blue or brown in colour",
+      "difficulty": "Moderate to Advanced",
+      "effect": "Calms the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/06/HM_y4_Calming_Draught.png",
+      "inventors": null,
+      "ingredients": "Lavender, Crocodile heart, Peppermint",
+      "manufacturers": null,
+      "name": "Calming Draught",
+      "side_effects": "Unpleasant results if consumed by certain animals, Burning mouth sensation, watery eyes or uncontrollable sobbing if too much peppermint oil added",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Calming_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/f131fa3c-8b3b-4451-9fcf-35dd17a65baf"
+    }
+  },
+  {
+    "id": "ab8c0fa2-bab7-4504-9351-0adee2e9f21e",
+    "type": "potion",
+    "attributes": {
+      "slug": "caxambu-style-borborygmus-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Provoked stomach growling",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8a/Caxambu_Style_Borborygmus_Potion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": "Apothecary Department",
+      "name": "Caxambu Style Borborygmus Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Caxambu_Style_Borborygmus_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/ab8c0fa2-bab7-4504-9351-0adee2e9f21e"
+    }
+  },
+  {
+    "id": "f0030988-37f9-403f-9eee-f43d00849fff",
+    "type": "potion",
+    "attributes": {
+      "slug": "cheese-based-potions",
+      "characteristics": "Yellow in colour",
+      "difficulty": "Advanced",
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/39/Cheese_Based_Potion_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Cheese",
+      "manufacturers": null,
+      "name": "Cheese-Based Potions",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Cheese-Based_Potions"
+    },
+    "links": {
+      "self": "/v1/potions/f0030988-37f9-403f-9eee-f43d00849fff"
+    }
+  },
+  {
+    "id": "61d4d4e3-95f1-4152-a2a9-5767f2741da2",
+    "type": "potion",
+    "attributes": {
+      "slug": "chelidonium-miniscula",
+      "characteristics": "Dark yellow in colour",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e3/Chelidonium_Miniscula.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Chelidonium Miniscula",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Chelidonium_Miniscula"
+    },
+    "links": {
+      "self": "/v1/potions/61d4d4e3-95f1-4152-a2a9-5767f2741da2"
+    }
+  },
+  {
+    "id": "2bee0c78-fc5b-42d6-90ac-db3406970bcd",
+    "type": "potion",
+    "attributes": {
+      "slug": "confidence-boosting-brew",
+      "characteristics": "Grey-green",
+      "difficulty": null,
+      "effect": "Made the drinker more confident",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fe/Confidence_boosting_brew_MA.png",
+      "inventors": "Daniel Page",
+      "ingredients": "Those of the Invigoration Draught, Those of the Wit-Sharpening Potion, A few other ingredients",
+      "manufacturers": "Daniel Page",
+      "name": "Confidence boosting brew",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Confidence_boosting_brew"
+    },
+    "links": {
+      "self": "/v1/potions/2bee0c78-fc5b-42d6-90ac-db3406970bcd"
+    }
+  },
+  {
+    "id": "959688a6-8d83-4ed2-8ffb-218518102b3d",
+    "type": "potion",
+    "attributes": {
+      "slug": "confusing-concoction",
+      "characteristics": null,
+      "difficulty": "Moderate to advanced",
+      "effect": "Confusion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d6/Confusing_Concoction.jpeg",
+      "inventors": null,
+      "ingredients": "Scurvy grass, Lovage, Sneezewort",
+      "manufacturers": null,
+      "name": "Confusing Concotion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Confusing_Concoction"
+    },
+    "links": {
+      "self": "/v1/potions/959688a6-8d83-4ed2-8ffb-218518102b3d"
+    }
+  },
+  {
+    "id": "5b2e252d-ac49-4582-9df0-fc8df926e034",
+    "type": "potion",
+    "attributes": {
+      "slug": "contortion-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Induced contortion",
+      "image": null,
+      "inventors": "William Weasley (possibly), Jacob's sibling (possibly)",
+      "ingredients": "Spine of Lionfish",
+      "manufacturers": null,
+      "name": "Contortion Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Contortion_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/5b2e252d-ac49-4582-9df0-fc8df926e034"
+    }
+  },
+  {
+    "id": "68865870-7db1-424c-a08b-efde527a400c",
+    "type": "potion",
+    "attributes": {
+      "slug": "cough-potion",
+      "characteristics": null,
+      "difficulty": "Advanced",
+      "effect": "Cured coughing",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6e/Cough_Potion_HM_Icon.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Cough Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Cough_potion"
+    },
+    "links": {
+      "self": "/v1/potions/68865870-7db1-424c-a08b-efde527a400c"
+    }
+  },
+  {
+    "id": "ee6db35f-d6d2-4544-9f3b-996d551c3c88",
+    "type": "potion",
+    "attributes": {
+      "slug": "cupid-crystals",
+      "characteristics": "Light pink colour",
+      "difficulty": null,
+      "effect": "Causes the drinker to become infatuated with the giver of the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/03/Cupid_Crystals.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "Cupid Crystals",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Cupid_Crystals"
+    },
+    "links": {
+      "self": "/v1/potions/ee6db35f-d6d2-4544-9f3b-996d551c3c88"
+    }
+  },
+  {
+    "id": "51df5090-d2b8-409a-bfb0-01f914c3180b",
+    "type": "potion",
+    "attributes": {
+      "slug": "cure-for-boils",
+      "characteristics": "Blue in colour, Emits pink smoke when completed",
+      "difficulty": "Beginner",
+      "effect": "Removes boils",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2e/Cure_for_Boils.png",
+      "inventors": null,
+      "ingredients": "6 snake fangs, 4 horned slugs, 2 porcupine quills, Dried nettles, Pungous Onions, Flobberworm Mucus, Ginger root, Shrake spines",
+      "manufacturers": null,
+      "name": "Cure for Boils",
+      "side_effects": "Caused nasty boils to erupt on skin if brewed badly",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Cure_for_Boils"
+    },
+    "links": {
+      "self": "/v1/potions/51df5090-d2b8-409a-bfb0-01f914c3180b"
+    }
+  },
+  {
+    "id": "9398b7b4-332a-4943-970d-1490d2bfc0f9",
+    "type": "potion",
+    "attributes": {
+      "slug": "dawdle-draught",
+      "characteristics": "Orange in colour",
+      "difficulty": null,
+      "effect": "Helps deal with Traces",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b6/Dawdle_Draught.png",
+      "inventors": null,
+      "ingredients": "Valerian root, Sopophorous bean, Butterscotch, Hermit crab shell",
+      "manufacturers": null,
+      "name": "Dawdle Draught",
+      "side_effects": null,
+      "time": "Six hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Dawdle_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/9398b7b4-332a-4943-970d-1490d2bfc0f9"
+    }
+  },
+  {
+    "id": "c90618c6-cfee-4063-914e-c32f1cb592ca",
+    "type": "potion",
+    "attributes": {
+      "slug": "death-cap-draught",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/7/7f/Death-Cap_Draught.JPG",
+      "inventors": null,
+      "ingredients": "Death-Cap",
+      "manufacturers": null,
+      "name": "Death-Cap Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Death-Cap_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/c90618c6-cfee-4063-914e-c32f1cb592ca"
+    }
+  },
+  {
+    "id": "d4da1a25-1f6f-4dff-aab5-ffd93120a0d9",
+    "type": "potion",
+    "attributes": {
+      "slug": "death-potion",
+      "characteristics": "Black in colour",
+      "difficulty": null,
+      "effect": "Highly corrosive, death on contact",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3d/Death_Potion_FB1.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": "Magical Congress of the United States of America (presumably)",
+      "name": "Death potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Death_potion"
+    },
+    "links": {
+      "self": "/v1/potions/d4da1a25-1f6f-4dff-aab5-ffd93120a0d9"
+    }
+  },
+  {
+    "id": "d3193018-b558-4a44-9e41-3073f4a49ad7",
+    "type": "potion",
+    "attributes": {
+      "slug": "deflating-draught",
+      "characteristics": "Green in colour",
+      "difficulty": "Ordinary Wizarding Level",
+      "effect": "Deflated the target",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9b/Deflating_Draught_HM.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Deflating Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Deflating_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/d3193018-b558-4a44-9e41-3073f4a49ad7"
+    }
+  },
+  {
+    "id": "3fc4ba1f-6ccd-45cb-8afd-b6d1e22b6ce3",
+    "type": "potion",
+    "attributes": {
+      "slug": "developing-solution",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Develops moving photographs",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Developing solution",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Developing_solution"
+    },
+    "links": {
+      "self": "/v1/potions/3fc4ba1f-6ccd-45cb-8afd-b6d1e22b6ce3"
+    }
+  },
+  {
+    "id": "a808aa09-3d7e-42dd-807a-b59e7795e52c",
+    "type": "potion",
+    "attributes": {
+      "slug": "dizziness-draught",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Dizziness",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/37/Dizziness_Draught.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Dizziness Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dizziness_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/a808aa09-3d7e-42dd-807a-b59e7795e52c"
+    }
+  },
+  {
+    "id": "2f7ce794-9974-4c50-a228-990ed3567c56",
+    "type": "potion",
+    "attributes": {
+      "slug": "dogbane-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Poisonous to dogs (possibly)",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e9/Dogbane_Potion.png",
+      "inventors": null,
+      "ingredients": "Dogbane (possibly)",
+      "manufacturers": null,
+      "name": "Dogbane Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dogbane_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/2f7ce794-9974-4c50-a228-990ed3567c56"
+    }
+  },
+  {
+    "id": "669507c9-a5d9-4966-8ab8-8fad2d2c919b",
+    "type": "potion",
+    "attributes": {
+      "slug": "dogbreath-potion",
+      "characteristics": "Purple-coloured",
+      "difficulty": null,
+      "effect": "Gives drinker fiery breath",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/68/Dogbreath_Potion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Dogbreath Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dogbreath_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/669507c9-a5d9-4966-8ab8-8fad2d2c919b"
+    }
+  },
+  {
+    "id": "94499341-05d0-4e20-b322-2f66ab49ba5c",
+    "type": "potion",
+    "attributes": {
+      "slug": "doxycide",
+      "characteristics": "Black in colour, Typically delivered as a spray",
+      "difficulty": "Moderate",
+      "effect": "Temporarily stunned Doxies so that the pests could be removed from a home",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d1/Doxycide-potion-part-2.png",
+      "inventors": "Zygmunt Budge",
+      "ingredients": "Bundimun Ooze, Streeler shells, Dragon liver, Hemlock essence, Tormentil tincture, Cowbane essence",
+      "manufacturers": null,
+      "name": "Doxycide",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Doxycide"
+    },
+    "links": {
+      "self": "/v1/potions/94499341-05d0-4e20-b322-2f66ab49ba5c"
+    }
+  },
+  {
+    "id": "5fbc4fd2-5bc7-4e02-879d-cc4ded620c57",
+    "type": "potion",
+    "attributes": {
+      "slug": "dragon-dung-fertiliser",
+      "characteristics": "Light green in colour",
+      "difficulty": "Moderate/Advanced",
+      "effect": "Promotes the growth of plants",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/7/70/Dragon_dung_fertiliser.JPG",
+      "inventors": null,
+      "ingredients": "Sloth brain, 7 pieces of Dragon dung, Stewed Mandrake, 2 rat spleens, Toasted dragonfly thoraxes, 3 Flying Seahorses",
+      "manufacturers": null,
+      "name": "Dragon dung fertiliser",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dragon_dung_Fertiliser"
+    },
+    "links": {
+      "self": "/v1/potions/5fbc4fd2-5bc7-4e02-879d-cc4ded620c57"
+    }
+  },
+  {
+    "id": "39c397f1-5946-48b7-9d79-7f2062caf530",
+    "type": "potion",
+    "attributes": {
+      "slug": "dragon-poison",
+      "characteristics": "Dark green in colour",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/92/Dragon_Poison.JPG",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Dragon Poison",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dragon_Poison"
+    },
+    "links": {
+      "self": "/v1/potions/39c397f1-5946-48b7-9d79-7f2062caf530"
+    }
+  },
+  {
+    "id": "99118b83-a40e-4049-b02f-1f3c458ed3e4",
+    "type": "potion",
+    "attributes": {
+      "slug": "dragon-tonic",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Cures sick dragons",
+      "image": null,
+      "inventors": null,
+      "ingredients": "1 Eagle owl feather, 3 Peacock feathers, 3 Giant Purple Toad warts",
+      "manufacturers": null,
+      "name": "Dragon Tonic",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dragon_Tonic"
+    },
+    "links": {
+      "self": "/v1/potions/99118b83-a40e-4049-b02f-1f3c458ed3e4"
+    }
+  },
+  {
+    "id": "3a153620-1a39-49a3-af3e-2361664bd399",
+    "type": "potion",
+    "attributes": {
+      "slug": "draught-of-living-death",
+      "characteristics": "Turned pale lilac colour then clear",
+      "difficulty": "Advanced",
+      "effect": "Caused the drinker to fall into a deep, death-like slumber",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e8/Draught_of_living_death.gif",
+      "inventors": null,
+      "ingredients": "Standard potioning water, Powdered Root of Asphodel, Infusion of Wormwood, Valerian root, A Sopophorous Bean, A Sloth brain, Moondew, Flower head",
+      "manufacturers": null,
+      "name": "Draught of Living Death",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Draught_of_Living_Death"
+    },
+    "links": {
+      "self": "/v1/potions/3a153620-1a39-49a3-af3e-2361664bd399"
+    }
+  },
+  {
+    "id": "16a28c67-2de2-4a69-bb52-eb213241add3",
+    "type": "potion",
+    "attributes": {
+      "slug": "draught-of-peace",
+      "characteristics": "Emitted light silver vapour, Turquoise blue in colour",
+      "difficulty": "Advanced",
+      "effect": "Relieved anxiety",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/cf/Draught_of_Peace_HM.png",
+      "inventors": null,
+      "ingredients": "Powdered moonstone, Syrup of Hellebore, Stewed Mandrake, Powdered unicorn horn, Powdered porcupine quills, Standard potioning water",
+      "manufacturers": null,
+      "name": "Draught of Peace",
+      "side_effects": "Overdoing the ingredients may have resulted in a long or irreversible sleep",
+      "time": "90 minutes",
+      "wiki": "https://harrypotter.fandom.com/wiki/Draught_of_Peace"
+    },
+    "links": {
+      "self": "/v1/potions/16a28c67-2de2-4a69-bb52-eb213241add3"
+    }
+  },
+  {
+    "id": "b1b356b5-32e4-4e27-9103-2058ad739e8d",
+    "type": "potion",
+    "attributes": {
+      "slug": "drowsiness-draught",
+      "characteristics": "Produces light purple steam",
+      "difficulty": null,
+      "effect": "Induces drowsiness",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/94/Drowsiness_Draught.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Drowsiness Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Drowsiness_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/b1b356b5-32e4-4e27-9103-2058ad739e8d"
+    }
+  },
+  {
+    "id": "d4a934f0-b4ea-4744-b2e5-0c8de73a5b6f",
+    "type": "potion",
+    "attributes": {
+      "slug": "dr-ubbly-s-oblivious-unction",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Healed wounds left by negative thoughts",
+      "image": null,
+      "inventors": "Dr Ubbly (presumably)",
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Dr Ubbly's Oblivious Unction",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Dr_Ubbly's_Oblivious_Unction"
+    },
+    "links": {
+      "self": "/v1/potions/d4a934f0-b4ea-4744-b2e5-0c8de73a5b6f"
+    }
+  },
+  {
+    "id": "531f6775-78e5-41ff-b6b9-2cb42cff82e0",
+    "type": "potion",
+    "attributes": {
+      "slug": "edurus-potion",
+      "characteristics": "Gold in colour",
+      "difficulty": null,
+      "effect": "Gave the drinker rocky skin",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9b/Edurus_Potion.png",
+      "inventors": null,
+      "ingredients": "1 batch of Ashwinder eggs, 1 piece of mongrel fur",
+      "manufacturers": null,
+      "name": "Edurus Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Edurus_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/531f6775-78e5-41ff-b6b9-2cb42cff82e0"
+    }
+  },
+  {
+    "id": "e45a5aab-39c7-4f33-a07a-f7630faab49e",
+    "type": "potion",
+    "attributes": {
+      "slug": "elixir-7",
+      "characteristics": "Deep brown in colour",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5e/Elixir_7.png",
+      "inventors": null,
+      "ingredients": "Alcohol",
+      "manufacturers": null,
+      "name": "Elixir 7",
+      "side_effects": "Unknown side effects from more than five drops",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Elixir_7"
+    },
+    "links": {
+      "self": "/v1/potions/e45a5aab-39c7-4f33-a07a-f7630faab49e"
+    }
+  },
+  {
+    "id": "5a07f4fd-47bc-4be3-8674-bb999d917dcb",
+    "type": "potion",
+    "attributes": {
+      "slug": "elixir-of-life",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Immortality",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/25/Elixir_of_Life.jpg",
+      "inventors": "Nicolas Flamel (by inventing the Philosopher's Stone)",
+      "ingredients": null,
+      "manufacturers": "The Philosopher's Stone",
+      "name": "Elixir of Life",
+      "side_effects": "Drinker became dependent upon advanced age",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Elixir_of_Life"
+    },
+    "links": {
+      "self": "/v1/potions/5a07f4fd-47bc-4be3-8674-bb999d917dcb"
+    }
+  },
+  {
+    "id": "ced1b06c-473b-40f5-b688-0baa776c1052",
+    "type": "potion",
+    "attributes": {
+      "slug": "elixir-to-induce-euphoria",
+      "characteristics": "Sunshine yellow in colour, Emits rainbow when finished",
+      "difficulty": "Advanced",
+      "effect": "Induces happiness",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/65/Elixir_to_Induce_Euphoria.png",
+      "inventors": null,
+      "ingredients": "Shrivelfig, Porcupine quills, Peppermint sprigs, Sopophorous beans, Wormwood",
+      "manufacturers": null,
+      "name": "Elixir to Induce Euphoria",
+      "side_effects": "Excessive singing, Nose-tweaking",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Elixir_to_Induce_Euphoria"
+    },
+    "links": {
+      "self": "/v1/potions/ced1b06c-473b-40f5-b688-0baa776c1052"
+    }
+  },
+  {
+    "id": "fc1dbbcf-b41f-4eb6-9af5-bc4e0b038fad",
+    "type": "potion",
+    "attributes": {
+      "slug": "emerald-potion",
+      "characteristics": "Emerald green in colour, Glows phosphorescently",
+      "difficulty": null,
+      "effect": "Induced extreme fear, delirium, intense stomach pain and thirst in the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/4/4c/Emerald_Potion.webp",
+      "inventors": "Lord Voldemort (quite possibly)",
+      "ingredients": null,
+      "manufacturers": "Lord Voldemort (quite possibly)",
+      "name": "Emerald Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Emerald_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/fc1dbbcf-b41f-4eb6-9af5-bc4e0b038fad"
+    }
+  },
+  {
+    "id": "8903515c-55c5-4281-9ccf-ab4b8cf3f678",
+    "type": "potion",
+    "attributes": {
+      "slug": "erumpent-potion",
+      "characteristics": "Green or orange in colour",
+      "difficulty": "Ordinary Wizarding Level",
+      "effect": "Explodes when touched",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3a/ErumpentPotionHM.png",
+      "inventors": null,
+      "ingredients": "Erumpent horn (presumably), Erumpent tail (presumably), Exploding Fluid (presumably)",
+      "manufacturers": null,
+      "name": "Erumpent Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Erumpent_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/8903515c-55c5-4281-9ccf-ab4b8cf3f678"
+    }
+  },
+  {
+    "id": "e405fe44-6ede-4d3a-adce-8438b0aac301",
+    "type": "potion",
+    "attributes": {
+      "slug": "essence-of-insanity",
+      "characteristics": "Green in colour",
+      "difficulty": "Advanced",
+      "effect": "Mental instability",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a7/Essence_of_Insanity_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Frog brains, Beetle eyes",
+      "manufacturers": null,
+      "name": "Essence of Insanity",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Essence_of_Insanity"
+    },
+    "links": {
+      "self": "/v1/potions/e405fe44-6ede-4d3a-adce-8438b0aac301"
+    }
+  },
+  {
+    "id": "229f8a6d-ef9d-4a52-83eb-69e263404c30",
+    "type": "potion",
+    "attributes": {
+      "slug": "everklena",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Supposedly cleaned, but actually spawned mould and grime",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fd/Everklena.jpg",
+      "inventors": "Erica Stainwright",
+      "ingredients": null,
+      "manufacturers": "Erica Stainwright",
+      "name": "Everklena",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Everklena"
+    },
+    "links": {
+      "self": "/v1/potions/229f8a6d-ef9d-4a52-83eb-69e263404c30"
+    }
+  },
+  {
+    "id": "6661a9b8-3147-47de-bd2c-ae84bb2a9606",
+    "type": "potion",
+    "attributes": {
+      "slug": "everlasting-elixirs",
+      "characteristics": "Blue in colour",
+      "difficulty": "Advanced",
+      "effect": "Permanent magical effects",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/7/7f/Everlasting_Elixir_HM_Icon.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Everlasting Elixirs",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Everlasting_Elixirs"
+    },
+    "links": {
+      "self": "/v1/potions/6661a9b8-3147-47de-bd2c-ae84bb2a9606"
+    }
+  },
+  {
+    "id": "92086b0a-a7d3-4760-aa60-4a17c07e687d",
+    "type": "potion",
+    "attributes": {
+      "slug": "exploding-potion",
+      "characteristics": "Acid-green or blue in colour",
+      "difficulty": null,
+      "effect": "Volatile mixture",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6c/Exploding_Fluid.jpg",
+      "inventors": null,
+      "ingredients": "An ice pop, A red spider, Flowers",
+      "manufacturers": null,
+      "name": "Exploding Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Exploding_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/92086b0a-a7d3-4760-aa60-4a17c07e687d"
+    }
+  },
+  {
+    "id": "5e1a8a7b-383a-43f4-81a6-6b85fedb3fc9",
+    "type": "potion",
+    "attributes": {
+      "slug": "exstimulo-potion",
+      "characteristics": "Sky blue in colour",
+      "difficulty": "Beginner",
+      "effect": "Increased the spell power of a single spell cast",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e5/Exstimulo_Potion.png",
+      "inventors": null,
+      "ingredients": "Re'em blood, Granian hair, Snowdrop, Bitter root",
+      "manufacturers": null,
+      "name": "Exstimulo Potion",
+      "side_effects": null,
+      "time": "Two hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Exstimulo_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/5e1a8a7b-383a-43f4-81a6-6b85fedb3fc9"
+    }
+  },
+  {
+    "id": "b1ee95a7-8cf7-4f2f-a44b-6d004ca58d08",
+    "type": "potion",
+    "attributes": {
+      "slug": "fake-protective-potions",
+      "characteristics": "Fraudulent solutions",
+      "difficulty": null,
+      "effect": "Supposedly protect the drinker from the effects of dark magic (likely useless)",
+      "image": null,
+      "inventors": null,
+      "ingredients": "Bubotuber Pus, Gravy",
+      "manufacturers": null,
+      "name": "Fake protective potions",
+      "side_effects": "Likely harmful side effects",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fake_protective_potions"
+    },
+    "links": {
+      "self": "/v1/potions/b1ee95a7-8cf7-4f2f-a44b-6d004ca58d08"
+    }
+  },
+  {
+    "id": "cc86e68e-2782-4c47-aa9e-92afd962d4f4",
+    "type": "potion",
+    "attributes": {
+      "slug": "fatiguing-fusion",
+      "characteristics": "Green-coloured smoke",
+      "difficulty": null,
+      "effect": "Causes fatigue",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fc/Fatiguing_Fusion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Fatiguing Fusion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fatiguing_Fusion"
+    },
+    "links": {
+      "self": "/v1/potions/cc86e68e-2782-4c47-aa9e-92afd962d4f4"
+    }
+  },
+  {
+    "id": "6f1febcd-38e3-48ed-9c6e-303e8da78459",
+    "type": "potion",
+    "attributes": {
+      "slug": "felix-felicis",
+      "characteristics": "Molten gold in colour, Droplets leap like goldfish above potion's surface when in cauldron",
+      "difficulty": "Advanced",
+      "effect": "Makes the drinker lucky",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/84/Felix_Felicis_Phial_HBP.png",
+      "inventors": "Zygmunt Budge",
+      "ingredients": "Ashwinder egg, Squill bulb, Murtlap tentacles, Tincture of thyme, Occamy eggshell, Powdered common rue",
+      "manufacturers": null,
+      "name": "Felix Felicis",
+      "side_effects": "Giddiness and recklessness with overuse, Extremely toxic in large quantities, Highly disastrous if brewed incorrectly",
+      "time": "Six months",
+      "wiki": "https://harrypotter.fandom.com/wiki/Felix_Felicis"
+    },
+    "links": {
+      "self": "/v1/potions/6f1febcd-38e3-48ed-9c6e-303e8da78459"
+    }
+  },
+  {
+    "id": "45f719c1-efce-43e0-b462-4590b1a30d76",
+    "type": "potion",
+    "attributes": {
+      "slug": "fergus-fungal-budge",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Treated ringworm, fungicide",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d0/Fergus_Fungal_Budge.JPG",
+      "inventors": null,
+      "ingredients": "Onion juice, Jewelweed, Neem oil",
+      "manufacturers": null,
+      "name": "Fergus Fungal Budge",
+      "side_effects": "Potential negative side effects if used by house-elves",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fergus_Fungal_Budge"
+    },
+    "links": {
+      "self": "/v1/potions/45f719c1-efce-43e0-b462-4590b1a30d76"
+    }
+  },
+  {
+    "id": "c9548651-ac3b-4694-83ab-76feb312e240",
+    "type": "potion",
+    "attributes": {
+      "slug": "fire-breathing-potion",
+      "characteristics": "Fiery orange in colour",
+      "difficulty": null,
+      "effect": "Makes a human breath fire",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/66/HM_y2_Fire-Breathing_Potion.png",
+      "inventors": null,
+      "ingredients": "Mint, Valerian Sprigs, Fire Seeds, Powdered dragon horn, Lavender",
+      "manufacturers": null,
+      "name": "Fire-Breathing Potion",
+      "side_effects": "Can burn skin",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fire-Breathing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/c9548651-ac3b-4694-83ab-76feb312e240"
+    }
+  },
+  {
+    "id": "e0fab861-812c-4dea-90a6-7bf080ca0cdb",
+    "type": "potion",
+    "attributes": {
+      "slug": "fire-protection-potion",
+      "characteristics": "Blue in colour",
+      "difficulty": "Beginner",
+      "effect": "Protects drinker from fire",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8e/HM_y2_Fire_Protection_Potion.png",
+      "inventors": null,
+      "ingredients": "Bursting mushrooms, Salamander blood, Wartcap powder",
+      "manufacturers": null,
+      "name": "Fire-Protection Potion",
+      "side_effects": "Sensation of ice flooding body",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fire_Protection_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/e0fab861-812c-4dea-90a6-7bf080ca0cdb"
+    }
+  },
+  {
+    "id": "0d449911-9e0b-450b-a428-293a8d18ee9c",
+    "type": "potion",
+    "attributes": {
+      "slug": "first-love-beguiling-bubbles",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Causes the drinker to become infatuated with the giver of the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f9/Beguiling_Bubbles.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "First Love Beguiling Bubbles",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/First_Love_Beguiling_Bubbles"
+    },
+    "links": {
+      "self": "/v1/potions/0d449911-9e0b-450b-a428-293a8d18ee9c"
+    }
+  },
+  {
+    "id": "8f124b7d-d566-429b-a420-3fd4129614dc",
+    "type": "potion",
+    "attributes": {
+      "slug": "flesh-eating-slug-repellent",
+      "characteristics": "Water-clear in colour",
+      "difficulty": null,
+      "effect": "Repels Flesh-Eating Slugs",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/ba/Flesh-eating-slug-repellent-lrg.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Flesh-Eating Slug Repellent",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Flesh-Eating_Slug_Repellent"
+    },
+    "links": {
+      "self": "/v1/potions/8f124b7d-d566-429b-a420-3fd4129614dc"
+    }
+  },
+  {
+    "id": "e3b909ea-21f2-4b29-8143-fca5fd55b3c3",
+    "type": "potion",
+    "attributes": {
+      "slug": "focus-potion",
+      "characteristics": "Blue in colour",
+      "difficulty": null,
+      "effect": "Reduced cooldown effect of spells cast",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e8/Focus_Potion_HL.png",
+      "inventors": null,
+      "ingredients": "Three lacewing flies, One fluxweed stem, One Dugbog tongue",
+      "manufacturers": null,
+      "name": "Focus Potion",
+      "side_effects": null,
+      "time": "1 minute",
+      "wiki": "https://harrypotter.fandom.com/wiki/Focus_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/e3b909ea-21f2-4b29-8143-fca5fd55b3c3"
+    }
+  },
+  {
+    "id": "d7d2aae9-b363-4495-8e35-3e04e655e1f3",
+    "type": "potion",
+    "attributes": {
+      "slug": "forgetfulness-potion",
+      "characteristics": "Orange in colour",
+      "difficulty": "Beginner",
+      "effect": "Memory loss",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/aa/Forgetfulness-potion.png",
+      "inventors": null,
+      "ingredients": "2 drops of Lethe River Water, 2 valerian sprigs, 2 measures of Standard Ingredient, 4 mistletoe berries",
+      "manufacturers": null,
+      "name": "Forgetfulness Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Forgetfulness_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/d7d2aae9-b363-4495-8e35-3e04e655e1f3"
+    }
+  },
+  {
+    "id": "d8ca1792-c293-4d32-8805-089efc0edfc7",
+    "type": "potion",
+    "attributes": {
+      "slug": "frog-parts-mixture",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/dd/Frog_Parts_Mixture.jpg",
+      "inventors": null,
+      "ingredients": "Frog parts",
+      "manufacturers": null,
+      "name": "Frog Parts Mixture",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Frog_Parts_Mixture"
+    },
+    "links": {
+      "self": "/v1/potions/d8ca1792-c293-4d32-8805-089efc0edfc7"
+    }
+  },
+  {
+    "id": "865b6ee6-01ae-493a-aae2-3058b78ecb50",
+    "type": "potion",
+    "attributes": {
+      "slug": "fungiface-potion",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Causes the drinker's face to break out in fungi",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/ca/Fungiface_Potion.JPG",
+      "inventors": null,
+      "ingredients": "Fungi (presumably)",
+      "manufacturers": null,
+      "name": "Fungiface Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Fungiface_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/865b6ee6-01ae-493a-aae2-3058b78ecb50"
+    }
+  },
+  {
+    "id": "6842b6d1-d612-4034-8ca2-dcdf06d0ff4d",
+    "type": "potion",
+    "attributes": {
+      "slug": "garrotting-gas",
+      "characteristics": "Colourless",
+      "difficulty": "Advanced",
+      "effect": "Causes choking, possibly suffocation",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/32/Garrotting_Gas_HM.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Garrotting Gas",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Garrotting_Gas"
+    },
+    "links": {
+      "self": "/v1/potions/6842b6d1-d612-4034-8ca2-dcdf06d0ff4d"
+    }
+  },
+  {
+    "id": "736afff7-6132-40d6-a77e-aa21cbb9cef4",
+    "type": "potion",
+    "attributes": {
+      "slug": "germinating-potion",
+      "characteristics": "Green in colour",
+      "difficulty": null,
+      "effect": "Germinated plants",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fe/Germinating_Potion_MA.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Germinating Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Germinating_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/736afff7-6132-40d6-a77e-aa21cbb9cef4"
+    }
+  },
+  {
+    "id": "dff7c01c-3cd9-4b94-81ec-28727ac017e0",
+    "type": "potion",
+    "attributes": {
+      "slug": "girding-potion",
+      "characteristics": "Green or red in colour, Foul odour",
+      "difficulty": "Moderate",
+      "effect": "Prolonged endurance",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/02/Girding_Potion_HBPG.png",
+      "inventors": null,
+      "ingredients": "Dragonfly thoraxes, Flying Seahorses, Doxy eggs, Fairy wings",
+      "manufacturers": null,
+      "name": "Girding Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Girding_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/dff7c01c-3cd9-4b94-81ec-28727ac017e0"
+    }
+  },
+  {
+    "id": "7e8879ec-7d67-4268-83f6-b0beef43075e",
+    "type": "potion",
+    "attributes": {
+      "slug": "thick-golden-potion",
+      "characteristics": "Golden in colour",
+      "difficulty": null,
+      "effect": "Healing, curse quarantining",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/ad/Thick-golden-potion.webp",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Golden potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Thick_golden_potion"
+    },
+    "links": {
+      "self": "/v1/potions/7e8879ec-7d67-4268-83f6-b0beef43075e"
+    }
+  },
+  {
+    "id": "9153fcd9-d3d1-42ce-8b83-b994560ee0fd",
+    "type": "potion",
+    "attributes": {
+      "slug": "grand-pepperup-potion",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Relieved and/or cured cold symptoms",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/Grand_Pepperup_Potion.jpg",
+      "inventors": "Glover Hipworth (possibly)",
+      "ingredients": "Octopus Powder, Bicorn horn, Mandrake Root",
+      "manufacturers": null,
+      "name": "Grand Pepperup Potion",
+      "side_effects": "Caused steam to come out of the drinker's ears for a few hours",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Grand_Pepperup_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/9153fcd9-d3d1-42ce-8b83-b994560ee0fd"
+    }
+  },
+  {
+    "id": "8e6561b5-4788-403b-8d16-0f47a81dac24",
+    "type": "potion",
+    "attributes": {
+      "slug": "grand-wiggenweld-potion",
+      "characteristics": "Green in colour",
+      "difficulty": "Beginner",
+      "effect": "Heals injuries, restores stamina",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/26/Grand_Wiggenweld_Potion.jpg",
+      "inventors": null,
+      "ingredients": "Octopus Powder, Unicorn horn, Wolfsbane",
+      "manufacturers": null,
+      "name": "Grand Wiggenweld Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Grand_Wiggenweld_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/8e6561b5-4788-403b-8d16-0f47a81dac24"
+    }
+  },
+  {
+    "id": "034b0e33-7885-4121-ba1f-aba484f78da3",
+    "type": "potion",
+    "attributes": {
+      "slug": "gregory-s-unctuous-unction",
+      "characteristics": "Green in colour",
+      "difficulty": null,
+      "effect": "Made the drinker think the one who gave them the potion was their best friend",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0a/Gregory%27s_Unctuous_Unction.jpg",
+      "inventors": "Gregory the Smarmy",
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Gregory's Unctuous Unction",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Gregory's_Unctuous_Unction"
+    },
+    "links": {
+      "self": "/v1/potions/034b0e33-7885-4121-ba1f-aba484f78da3"
+    }
+  },
+  {
+    "id": "f22b585a-336e-4a5d-87f4-8bdbc33ee687",
+    "type": "potion",
+    "attributes": {
+      "slug": "hair-dyeing-potion",
+      "characteristics": "It takes the colour(s) of the used shell(s).",
+      "difficulty": "Beginner",
+      "effect": "Changed the colour of the drinker's hair",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b3/Hair-Dyeing_Potion_MA.png",
+      "inventors": null,
+      "ingredients": "Standard potioning water, Dried nettles, Powdered fireball spikes, Streeler shells",
+      "manufacturers": null,
+      "name": "Hair-Dyeing Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Hair-Dyeing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/f22b585a-336e-4a5d-87f4-8bdbc33ee687"
+    }
+  },
+  {
+    "id": "bfac30dd-b562-4961-b826-f5563be4636c",
+    "type": "potion",
+    "attributes": {
+      "slug": "hair-raising-potion",
+      "characteristics": "Green in colour",
+      "difficulty": "Beginner to Ordinary Wizarding Level",
+      "effect": "Raises hair up on end",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/bb/Hair_Raising_Potion_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Rat tails, Porcupine quills, Billywig stings, Oil",
+      "manufacturers": null,
+      "name": "Hair-Raising Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Hair-Raising_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/bfac30dd-b562-4961-b826-f5563be4636c"
+    }
+  },
+  {
+    "id": "5ac34322-a673-4479-91fe-d5f2eed13784",
+    "type": "potion",
+    "attributes": {
+      "slug": "hate-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Revealed the worst traits of a person to the drinker",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Hate Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Hate_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/5ac34322-a673-4479-91fe-d5f2eed13784"
+    }
+  },
+  {
+    "id": "4b1f51c4-e86a-4bce-ade8-551dbf25cc97",
+    "type": "potion",
+    "attributes": {
+      "slug": "healing-potion",
+      "characteristics": "Blood red in colour",
+      "difficulty": "Beginner",
+      "effect": "Healing, replenishes lost health and stamina to the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/ec/Healing_Potion_WU.png",
+      "inventors": null,
+      "ingredients": "Wormwood, Bubotuber pus, Dittany, Dragon liver, Unicorn tail hair, Standard potioning water",
+      "manufacturers": null,
+      "name": "Healing Potion",
+      "side_effects": null,
+      "time": "Two hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Healing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/4b1f51c4-e86a-4bce-ade8-551dbf25cc97"
+    }
+  },
+  {
+    "id": "a51ca07a-ec42-4ead-b827-4e08b30cb66a",
+    "type": "potion",
+    "attributes": {
+      "slug": "heartbreak-teardrops",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Causes the drinker to become infatuated with the giver of the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/ff/HeartbreakTeardrops.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "Heartbreak Teardrops",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Heartbreak_Teardrops"
+    },
+    "links": {
+      "self": "/v1/potions/a51ca07a-ec42-4ead-b827-4e08b30cb66a"
+    }
+  },
+  {
+    "id": "0f7fe307-3471-4319-bfff-b1da44c3cf5f",
+    "type": "potion",
+    "attributes": {
+      "slug": "herbicide-potion",
+      "characteristics": "Green in colour, Disgusting taste",
+      "difficulty": "Beginner to advanced",
+      "effect": "Killed or damaged plants",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d0/Herbicide.png",
+      "inventors": null,
+      "ingredients": "Flobberworm Mucus, Horklump juice, Lionfish spines, Standard Ingredient",
+      "manufacturers": null,
+      "name": "Herbicide Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Herbicide_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/0f7fe307-3471-4319-bfff-b1da44c3cf5f"
+    }
+  },
+  {
+    "id": "904a3316-f8d1-4c86-9423-ebb002e867b8",
+    "type": "potion",
+    "attributes": {
+      "slug": "hiccoughing-solution",
+      "characteristics": "Yellow in colour",
+      "difficulty": null,
+      "effect": "Presumably causes hiccoughs",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/92/HiccoughingSolution.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Hiccoughing Solution",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Hiccoughing_Solution"
+    },
+    "links": {
+      "self": "/v1/potions/904a3316-f8d1-4c86-9423-ebb002e867b8"
+    }
+  },
+  {
+    "id": "bbafd0e2-c788-4137-b916-02dd59323ec9",
+    "type": "potion",
+    "attributes": {
+      "slug": "invigoration-draught",
+      "characteristics": "Orange or blue in colour",
+      "difficulty": "Ordinary Wizarding Level",
+      "effect": "Energised the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/98/Invigoration-draught.png",
+      "inventors": null,
+      "ingredients": "Alihotsy leaves, Dried billywig stings, Peppermint, Stewed Mandrake, Infusion of Wormwood, Honeywater, Vervain infusion, Scurvy grass, Lovage, Standard potioning water",
+      "manufacturers": null,
+      "name": "Invigoration Draught",
+      "side_effects": null,
+      "time": "Three hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Invigoration_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/bbafd0e2-c788-4137-b916-02dd59323ec9"
+    }
+  },
+  {
+    "id": "700057d9-2f02-486c-808e-351f65fe5511",
+    "type": "potion",
+    "attributes": {
+      "slug": "invisibility-potion",
+      "characteristics": "Silver or light pink in colour, Very bubbly",
+      "difficulty": "Moderate",
+      "effect": "Temporary invisibility",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a5/Invisibility_Potion_HL.png",
+      "inventors": null,
+      "ingredients": "Cherries, Chicken, Spiders, 1 Leaping Toadstool cap, 1 knotgrass sprig, 1 troll bogey, Acromantula venom, Tincture of Demiguise, Pearl Dust, Standard potioning water",
+      "manufacturers": null,
+      "name": "Invisibility Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Invisibility_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/700057d9-2f02-486c-808e-351f65fe5511"
+    }
+  },
+  {
+    "id": "1da20ad2-d925-413f-b9f8-9e48c2308e6a",
+    "type": "potion",
+    "attributes": {
+      "slug": "jawbind-potion",
+      "characteristics": "Blue in colour and misty",
+      "difficulty": null,
+      "effect": "Caused lockjaw",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3e/Jawbind_Potion.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Jawbind potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Jawbind_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/1da20ad2-d925-413f-b9f8-9e48c2308e6a"
+    }
+  },
+  {
+    "id": "b8b46780-d2c0-4298-9c83-366edf35ef42",
+    "type": "potion",
+    "attributes": {
+      "slug": "kissing-concoction",
+      "characteristics": "Clear in colour",
+      "difficulty": null,
+      "effect": "Causes the drinker to become infatuated with the giver of the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e0/KissingConcoction.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "Kissing Concoction",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Kissing_Concoction"
+    },
+    "links": {
+      "self": "/v1/potions/b8b46780-d2c0-4298-9c83-366edf35ef42"
+    }
+  },
+  {
+    "id": "4b94cf88-bb68-42b2-b11d-383896cec46a",
+    "type": "potion",
+    "attributes": {
+      "slug": "laugh-inducing-potion",
+      "characteristics": "Red-coloured when finished",
+      "difficulty": null,
+      "effect": "Provoked uncontrollable laughter",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/da/Laugh-inducing_Potion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Laugh-inducing Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Laugh-inducing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/4b94cf88-bb68-42b2-b11d-383896cec46a"
+    }
+  },
+  {
+    "id": "0afebb45-6fb2-420b-89b8-b897f7b265ac",
+    "type": "potion",
+    "attributes": {
+      "slug": "laxative-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Laxative",
+      "image": null,
+      "inventors": null,
+      "ingredients": "Two scrumples of an unknown ingredient, An ingredient used in a furnace, Agrimonia",
+      "manufacturers": null,
+      "name": "Laxative Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Laxative_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/0afebb45-6fb2-420b-89b8-b897f7b265ac"
+    }
+  },
+  {
+    "id": "9a955a1f-ef97-4124-b0b6-957ad2493751",
+    "type": "potion",
+    "attributes": {
+      "slug": "love-potion",
+      "characteristics": "Pink in colour",
+      "difficulty": "Advanced",
+      "effect": "Infatuation with whoever offered the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/39/Bottle-of-love-potion-lrg.png",
+      "inventors": "Laverne de Montmorency, Fred Weasley, George Weasley",
+      "ingredients": "Ashwinder eggs, Rose thorns, Peppermint, Powdered Moonstone, Pearl Dust, Rose Petals",
+      "manufacturers": null,
+      "name": "Love potion",
+      "side_effects": "Embarrassment on the part of the drinker",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Love_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/9a955a1f-ef97-4124-b0b6-957ad2493751"
+    }
+  },
+  {
+    "id": "4908850f-f9b8-43b8-8896-a7bce289f3fa",
+    "type": "potion",
+    "attributes": {
+      "slug": "love-potion-antidote",
+      "characteristics": "Clear, colourless",
+      "difficulty": null,
+      "effect": "Served as an antidote for love potions",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9a/Love_Potion_Antidote.jpg",
+      "inventors": null,
+      "ingredients": "Liquorice roots, Castor oil, Extract of Gurdyroot",
+      "manufacturers": null,
+      "name": "Love Potion Antidote",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Love_Potion_Antidote"
+    },
+    "links": {
+      "self": "/v1/potions/4908850f-f9b8-43b8-8896-a7bce289f3fa"
+    }
+  },
+  {
+    "id": "fc50ed32-85b8-49e2-874e-6d9745f785b2",
+    "type": "potion",
+    "attributes": {
+      "slug": "madame-glossy-s-silver-polish",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Polished silver objects",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/df/Madame_Glossy%27s_Silver_Polish.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": "Madame Glossy's Finest Cleaning Products Ltd.",
+      "name": "Madame Glossy's Silver Polish",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Madame_Glossy's_Silver_Polish"
+    },
+    "links": {
+      "self": "/v1/potions/fc50ed32-85b8-49e2-874e-6d9745f785b2"
+    }
+  },
+  {
+    "id": "0fddd113-bd95-44f8-8ed7-425fbd49f1e7",
+    "type": "potion",
+    "attributes": {
+      "slug": "malevolent-mixture",
+      "characteristics": "Purple in colour",
+      "difficulty": null,
+      "effect": "Poison or other foul effects (most likely)",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/bd/Malevolent_Mixture.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Malevolent Mixture",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Malevolent_Mixture"
+    },
+    "links": {
+      "self": "/v1/potions/0fddd113-bd95-44f8-8ed7-425fbd49f1e7"
+    }
+  },
+  {
+    "id": "471d9b85-556a-4173-a417-e87fec3efce5",
+    "type": "potion",
+    "attributes": {
+      "slug": "mandrake-restorative-draught",
+      "characteristics": "Green in colour",
+      "difficulty": "Advanced",
+      "effect": "Returned transfigured or cursed individuals to their original state",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/88/Mandrake_Restorative_Draught_HM_icon.png",
+      "inventors": null,
+      "ingredients": "Stewed Mandrake",
+      "manufacturers": null,
+      "name": "Mandrake Restorative Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Mandrake_Restorative_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/471d9b85-556a-4173-a417-e87fec3efce5"
+    }
+  },
+  {
+    "id": "8031dd9d-03bf-4f16-9623-99559135fcbe",
+    "type": "potion",
+    "attributes": {
+      "slug": "manegro-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Rapid hair growth",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e0/Manegro_Potion.JPG",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Manegro Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Manegro_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/8031dd9d-03bf-4f16-9623-99559135fcbe"
+    }
+  },
+  {
+    "id": "9bf38eb6-5df0-44ad-8662-f0847093c235",
+    "type": "potion",
+    "attributes": {
+      "slug": "maxima-potion",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Temporarily increased the spell power of the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/90/Maxima_Potion.png",
+      "inventors": null,
+      "ingredients": "Leech juice, 1 spider fang",
+      "manufacturers": null,
+      "name": "Maxima Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Maxima_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/9bf38eb6-5df0-44ad-8662-f0847093c235"
+    }
+  },
+  {
+    "id": "16f1b870-e50b-4451-8add-ae5bb2e04df8",
+    "type": "potion",
+    "attributes": {
+      "slug": "maximum-turbo-farts-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Excessive flatulence",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/30/MaximumTurboFartsPotion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Maximum Turbo Farts Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Maximum_Turbo_Farts_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/16f1b870-e50b-4451-8add-ae5bb2e04df8"
+    }
+  },
+  {
+    "id": "f2062b9b-adf3-42f6-a894-54a290246010",
+    "type": "potion",
+    "attributes": {
+      "slug": "memory-potion",
+      "characteristics": "Golden in colour",
+      "difficulty": "Advanced",
+      "effect": "Enhanced the drinker's memory",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/07/Memory_Potion_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Jobberknoll feathers, Stewed Mandrake, Powdered Sage, Galanthus Nivalis, Alihotsy, Peppermint, Eel eyes",
+      "manufacturers": null,
+      "name": "Memory Potion",
+      "side_effects": null,
+      "time": "Two minutes and fifteen seconds",
+      "wiki": "https://harrypotter.fandom.com/wiki/Memory_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/f2062b9b-adf3-42f6-a894-54a290246010"
+    }
+  },
+  {
+    "id": "f7404939-1f1c-4638-ac78-82f561770efe",
+    "type": "potion",
+    "attributes": {
+      "slug": "moonseed-poison",
+      "characteristics": "Silver in colour",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6b/Moonseed_Poison.JPG",
+      "inventors": null,
+      "ingredients": "Moonseed",
+      "manufacturers": null,
+      "name": "Moonseed Poison",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Moonseed_Poison"
+    },
+    "links": {
+      "self": "/v1/potions/f7404939-1f1c-4638-ac78-82f561770efe"
+    }
+  },
+  {
+    "id": "679c1950-94e8-431b-9d62-d2a789cd57d3",
+    "type": "potion",
+    "attributes": {
+      "slug": "mopsus-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Gives seer-like powers (possibly), Gives telekinetic powers (possibly)",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/4/4a/MopsusPotion.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Mopsus Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Mopsus_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/679c1950-94e8-431b-9d62-d2a789cd57d3"
+    }
+  },
+  {
+    "id": "697ae896-4483-4c6f-8e81-cfc138919da5",
+    "type": "potion",
+    "attributes": {
+      "slug": "mouth-itching-antidote",
+      "characteristics": "Pale green in colour",
+      "difficulty": null,
+      "effect": "Cured mouth itching",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fa/Mouth_Itching_Antidote.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Mouth Itching Antidote",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Mouth_Itching_Antidote"
+    },
+    "links": {
+      "self": "/v1/potions/697ae896-4483-4c6f-8e81-cfc138919da5"
+    }
+  },
+  {
+    "id": "7b0bd432-e9d8-4fc8-a79d-ddeaefb6e6f2",
+    "type": "potion",
+    "attributes": {
+      "slug": "mrs-scower-s-all-purpose-magical-mess-remover",
+      "characteristics": "Strong acrid odour",
+      "difficulty": null,
+      "effect": "Cleans stains",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/53/Mrs_Scower%27s_All_Purpose_Magical_Mess_Remover.jpg",
+      "inventors": "Mrs Skower (presumably) (after 1492)",
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Mrs Skower's All-Purpose Magical Mess Remover",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Mrs_Scower's_All-Purpose_Magical_Mess_Remover"
+    },
+    "links": {
+      "self": "/v1/potions/7b0bd432-e9d8-4fc8-a79d-ddeaefb6e6f2"
+    }
+  },
+  {
+    "id": "65fd426f-a367-4dfd-94f6-9771b05d9bbc",
+    "type": "potion",
+    "attributes": {
+      "slug": "muffling-draught",
+      "characteristics": "Produced blue-coloured fumes",
+      "difficulty": null,
+      "effect": "Prevented inhaler from speaking",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/ed/Muffling_Draught.JPG",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Muffling Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Muffling_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/65fd426f-a367-4dfd-94f6-9771b05d9bbc"
+    }
+  },
+  {
+    "id": "a0b30f78-ed78-4ebb-91de-e9748431e19f",
+    "type": "potion",
+    "attributes": {
+      "slug": "murtlap-essence",
+      "characteristics": "Blue in colour",
+      "difficulty": null,
+      "effect": "Soothes and heals cuts and abrasions",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b6/Murtlap_Essence.jpg",
+      "inventors": null,
+      "ingredients": "Murtlap tentacles",
+      "manufacturers": null,
+      "name": "Murtlap Essence",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Murtlap_Essence"
+    },
+    "links": {
+      "self": "/v1/potions/a0b30f78-ed78-4ebb-91de-e9748431e19f"
+    }
+  },
+  {
+    "id": "79f10d8f-50f6-4fa1-ace5-29ed5f4e0529",
+    "type": "potion",
+    "attributes": {
+      "slug": "narglecide",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Killed Nargles",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Narglecide",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Narglecide"
+    },
+    "links": {
+      "self": "/v1/potions/79f10d8f-50f6-4fa1-ace5-29ed5f4e0529"
+    }
+  },
+  {
+    "id": "2f6ac1ce-64f2-41b5-9c59-8fb3a3ca1d86",
+    "type": "potion",
+    "attributes": {
+      "slug": "noxious-poison",
+      "characteristics": "Green-coloured smoke",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/99/Noxious_Poison_TCG.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Noxious Poison",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Noxious_Poison"
+    },
+    "links": {
+      "self": "/v1/potions/2f6ac1ce-64f2-41b5-9c59-8fb3a3ca1d86"
+    }
+  },
+  {
+    "id": "9d80b325-c9b4-408f-8050-3403fbd93a13",
+    "type": "potion",
+    "attributes": {
+      "slug": "oculus-potion",
+      "characteristics": "Orange in colour",
+      "difficulty": "Moderate",
+      "effect": "Restored sight, Counteracted the Conjunctivitis Curse",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8a/Oculus_Potion_HBPG.png",
+      "inventors": null,
+      "ingredients": "Infusion of Wormwood, Stewed Mandrake, Ground unicorn horn, Unidentified blue powder",
+      "manufacturers": null,
+      "name": "Oculus Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Oculus_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/9d80b325-c9b4-408f-8050-3403fbd93a13"
+    }
+  },
+  {
+    "id": "85a5ff70-7a22-46f7-8ed6-536111e4376b",
+    "type": "potion",
+    "attributes": {
+      "slug": "pepperup-elixir",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/21/PepperupElixir.jpg",
+      "inventors": null,
+      "ingredients": "46% Alcohol",
+      "manufacturers": null,
+      "name": "Pepperup Elixir",
+      "side_effects": "Possible negative side-effects from more than 7\\21 drops per potion",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Pepperup_Elixir"
+    },
+    "links": {
+      "self": "/v1/potions/85a5ff70-7a22-46f7-8ed6-536111e4376b"
+    }
+  },
+  {
+    "id": "464dad0a-1553-4a91-8c79-0c6b2047568b",
+    "type": "potion",
+    "attributes": {
+      "slug": "pepperup-potion",
+      "characteristics": "Red in colour",
+      "difficulty": "Moderate",
+      "effect": "Cured common cold, Warmed up recipient",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/26/PepperupPotionHM.png",
+      "inventors": "Glover Hipworth",
+      "ingredients": "Bicorn horn, Mandrake root, Jewelweed",
+      "manufacturers": null,
+      "name": "Pepperup Potion",
+      "side_effects": "Steam emitted from drinker's ears",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Pepperup_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/464dad0a-1553-4a91-8c79-0c6b2047568b"
+    }
+  },
+  {
+    "id": "13df516c-2c85-4945-a655-29ae9f130cd6",
+    "type": "potion",
+    "attributes": {
+      "slug": "polyjuice-potion",
+      "characteristics": "Thick and mud-like, Bubbles slowly, Taste and colour varied depending on the person being turned into",
+      "difficulty": "Advanced",
+      "effect": "Allowed a human drinker to temporarily assume the form of another person",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/1/1b/B2C12M2_Polyjuice_Potion_ready.jpg",
+      "inventors": null,
+      "ingredients": "Lacewing flies (stewed for 21 days), Leeches, Powdered bicorn horn, Knotgrass, Fluxweed (picked at full moon), Shredded boomslang skin, A bit of the person one wanted to turn into (typically hair or toenails), Standard potioning water",
+      "manufacturers": null,
+      "name": "Polyjuice Potion",
+      "side_effects": "Attempts to transform into animals or part-humans would not reverse automatically",
+      "time": "One month",
+      "wiki": "https://harrypotter.fandom.com/wiki/Polyjuice_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/13df516c-2c85-4945-a655-29ae9f130cd6"
+    }
+  },
+  {
+    "id": "059b0ca5-4858-41ee-b1bf-8a8e6df2e360",
+    "type": "potion",
+    "attributes": {
+      "slug": "pomfrey-s-pick-me-up",
+      "characteristics": "Emerald-green colour",
+      "difficulty": null,
+      "effect": "A restorative, tonic or bracer",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/65/Pomfrey%27s_Pick-Me-Up.jpg",
+      "inventors": "Poppy Pomfrey (most likely)",
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Pomfrey's Pick-Me-Up",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Pomfrey's_Pick-Me-Up"
+    },
+    "links": {
+      "self": "/v1/potions/059b0ca5-4858-41ee-b1bf-8a8e6df2e360"
+    }
+  },
+  {
+    "id": "dedd52bd-e4ee-44d1-9905-2544e0fd3992",
+    "type": "potion",
+    "attributes": {
+      "slug": "pompion-potion",
+      "characteristics": "Orange-coloured",
+      "difficulty": "Beginner",
+      "effect": "Turns the drinker's head into a pumpkin",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0f/Pumpkin-head_potion.jpg",
+      "inventors": null,
+      "ingredients": "Flitterby Moth, Bouncing Bulb, Foxglove",
+      "manufacturers": null,
+      "name": "Pompion Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Pompion_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/dedd52bd-e4ee-44d1-9905-2544e0fd3992"
+    }
+  },
+  {
+    "id": "16286eb2-842f-47ab-b1bb-85dbc78afc9c",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-n-07",
+      "characteristics": "Experimental mixture (possibly)",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/07/Potion_N._07.png",
+      "inventors": null,
+      "ingredients": "Powdered Lionfish, Essence of Venomous Tentacula",
+      "manufacturers": null,
+      "name": "Potion № 07",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_N._07"
+    },
+    "links": {
+      "self": "/v1/potions/16286eb2-842f-47ab-b1bb-85dbc78afc9c"
+    }
+  },
+  {
+    "id": "0fc4e218-5089-4f70-bea5-f1f93f0c9266",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-no-113",
+      "characteristics": "Experimental mixture (possibly), Brown in colour",
+      "difficulty": null,
+      "effect": "Extremely Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/7/78/Potion_No._113.jpg",
+      "inventors": null,
+      "ingredients": "Jobberknoll feathers, Syrup of Arnica",
+      "manufacturers": null,
+      "name": "Potion № 113",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_No._113"
+    },
+    "links": {
+      "self": "/v1/potions/0fc4e218-5089-4f70-bea5-f1f93f0c9266"
+    }
+  },
+  {
+    "id": "af794b22-a910-4504-b0f5-1eca66096565",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-no-86",
+      "characteristics": "Black in colour",
+      "difficulty": null,
+      "effect": "Poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9f/Potion_N.86.jpg",
+      "inventors": null,
+      "ingredients": "Powdered moonstone, Syrup of Hellebore",
+      "manufacturers": null,
+      "name": "Potion № 86",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_No._86"
+    },
+    "links": {
+      "self": "/v1/potions/af794b22-a910-4504-b0f5-1eca66096565"
+    }
+  },
+  {
+    "id": "0c10e2b8-67e2-448a-a3c4-69bb4924ec24",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-for-dreamless-sleep",
+      "characteristics": "Purple in colour",
+      "difficulty": "Advanced",
+      "effect": "Drowsiness, dreamless sleep",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f6/Potion_for_Dreamless_Sleep_PM.png",
+      "inventors": null,
+      "ingredients": "Wormwood, Lavender",
+      "manufacturers": null,
+      "name": "Potion for Dreamless Sleep",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_for_Dreamless_Sleep"
+    },
+    "links": {
+      "self": "/v1/potions/0c10e2b8-67e2-448a-a3c4-69bb4924ec24"
+    }
+  },
+  {
+    "id": "0618f48b-cbc2-4b9a-8123-c57c4a164246",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-n-220",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Potion N. 220",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_N._220"
+    },
+    "links": {
+      "self": "/v1/potions/0618f48b-cbc2-4b9a-8123-c57c4a164246"
+    }
+  },
+  {
+    "id": "4c2cf36d-69f7-4b7c-be76-d365ce538f08",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-no-329",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fc/Potion_No._329.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": "Hogwarts Apothecary Department",
+      "name": "Potion No. 329",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_No._329"
+    },
+    "links": {
+      "self": "/v1/potions/4c2cf36d-69f7-4b7c-be76-d365ce538f08"
+    }
+  },
+  {
+    "id": "24cd4620-d4e9-4f3b-afe1-861fbf679ccf",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-of-all-potential",
+      "characteristics": null,
+      "difficulty": "Advanced",
+      "effect": "Realises all that is best in us",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a5/PotionOfAllPotential.png",
+      "inventors": "Hogwarts potions champion (under influence of Felix Felicis)",
+      "ingredients": "Pritcher's Porritch, Witch's Ganglion, Niffler's Fancy, Thaumatagoria",
+      "manufacturers": null,
+      "name": "Potion of All Potential",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_of_All_Potential"
+    },
+    "links": {
+      "self": "/v1/potions/24cd4620-d4e9-4f3b-afe1-861fbf679ccf"
+    }
+  },
+  {
+    "id": "77eeef69-fd44-4c9b-a5fd-db023f68c7d2",
+    "type": "potion",
+    "attributes": {
+      "slug": "potion-of-invisibility",
+      "characteristics": "Pink in colour",
+      "difficulty": null,
+      "effect": "Temporary invisibility",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/fc/Potion_of_Invisibility_MA.png",
+      "inventors": null,
+      "ingredients": "Pearl Dust, Acromantula venom, Tincture of Demiguise",
+      "manufacturers": null,
+      "name": "Potion of Invisibility",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Potion_of_Invisibility"
+    },
+    "links": {
+      "self": "/v1/potions/77eeef69-fd44-4c9b-a5fd-db023f68c7d2"
+    }
+  },
+  {
+    "id": "8c840ea2-ba4e-46c0-b040-a3e12f5528ee",
+    "type": "potion",
+    "attributes": {
+      "slug": "quodpot-solution",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Prevents Quods from exploding",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Quodpot solution",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Quodpot_solution"
+    },
+    "links": {
+      "self": "/v1/potions/8c840ea2-ba4e-46c0-b040-a3e12f5528ee"
+    }
+  },
+  {
+    "id": "ff09f72a-b92f-405d-bb4c-021e79be1a84",
+    "type": "potion",
+    "attributes": {
+      "slug": "rano-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Rano Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Rano_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/ff09f72a-b92f-405d-bb4c-021e79be1a84"
+    }
+  },
+  {
+    "id": "4ee3345a-27a5-4cf6-8810-c5a370f47b13",
+    "type": "potion",
+    "attributes": {
+      "slug": "rat-spleen-mixture",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/eb/Rat_Spleen_Mixture.jpg",
+      "inventors": null,
+      "ingredients": "Rat spleen (15 fl.oz), Kneazle hair (09 fl.oz), Avocado skin (14 fl.oz), Shrake spikes (28 fl.oz), Knotgrass (34 fl.oz), Gurdyroot (39 fl.oz)",
+      "manufacturers": null,
+      "name": "Rat Spleen Mixture",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Rat_Spleen_Mixture"
+    },
+    "links": {
+      "self": "/v1/potions/4ee3345a-27a5-4cf6-8810-c5a370f47b13"
+    }
+  },
+  {
+    "id": "b500c169-2e30-4027-b1c1-5bc08710da12",
+    "type": "potion",
+    "attributes": {
+      "slug": "rat-tonic",
+      "characteristics": "Green or red in colour",
+      "difficulty": "Advanced",
+      "effect": "Healed rats",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/0f/Rat-tonic-lrg.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Rat Tonic",
+      "side_effects": "Abnormal growth of the rat if too much was drunk by rat",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Rat_tonic"
+    },
+    "links": {
+      "self": "/v1/potions/b500c169-2e30-4027-b1c1-5bc08710da12"
+    }
+  },
+  {
+    "id": "259d9690-6830-4bea-a426-893c56c155d4",
+    "type": "potion",
+    "attributes": {
+      "slug": "regeneration-potion",
+      "characteristics": "Fiery sparks when begun, Poisonous blue when the bone is added, Burning red when the flesh is added, Blinding white becoming steam when blood is added",
+      "difficulty": "Advanced",
+      "effect": "Restoring a disfigured wizard to their true and whole physical form",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/85/Rebirth_of_Voldemort_GIF.gif",
+      "inventors": null,
+      "ingredients": "Bone of the father, Flesh of a servant, Blood of an enemy",
+      "manufacturers": null,
+      "name": "Regeneration potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Regeneration_potion"
+    },
+    "links": {
+      "self": "/v1/potions/259d9690-6830-4bea-a426-893c56c155d4"
+    }
+  },
+  {
+    "id": "2c0c8a15-0ded-49b4-9015-42f963363cb4",
+    "type": "potion",
+    "attributes": {
+      "slug": "regerminating-potion",
+      "characteristics": "Green or golden in colour",
+      "difficulty": "Advanced",
+      "effect": "Germinated plants",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f1/Regerminating_Potion_HM_Icon.png",
+      "inventors": "Tilden Toots",
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Regerminating Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Regerminating_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/2c0c8a15-0ded-49b4-9015-42f963363cb4"
+    }
+  },
+  {
+    "id": "0d66f622-8400-4ba8-9367-1d326f326822",
+    "type": "potion",
+    "attributes": {
+      "slug": "replenishing-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Replenishes something",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/56/ReplenishingPotion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": "Hogwarts Apothecary Dept.",
+      "name": "Replenishing Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Replenishing_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/0d66f622-8400-4ba8-9367-1d326f326822"
+    }
+  },
+  {
+    "id": "56b010de-ca01-46a6-9f30-f790f96fd9d4",
+    "type": "potion",
+    "attributes": {
+      "slug": "restoration-potion",
+      "characteristics": "Purple-coloured",
+      "difficulty": null,
+      "effect": "Reverted spell effects on objects or creatures",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/f/f1/Restoration_Potion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Restoration Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Restoration_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/56b010de-ca01-46a6-9f30-f790f96fd9d4"
+    }
+  },
+  {
+    "id": "eb1c3fe6-8487-43ce-b71f-59c11187c888",
+    "type": "potion",
+    "attributes": {
+      "slug": "revive-potion",
+      "characteristics": "Red",
+      "difficulty": null,
+      "effect": "Awakened victim",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/85/RevivePotion.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Revive Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Revive_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/eb1c3fe6-8487-43ce-b71f-59c11187c888"
+    }
+  },
+  {
+    "id": "56c32a03-4fc1-4c7f-b27b-774544cad2e0",
+    "type": "potion",
+    "attributes": {
+      "slug": "rudimentary-body-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Helped restore non-corporeal wizards to rudimentary bodies/sustained rudimentary bodies",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b9/Voldemort%27s_rudimentary_body_%28concept_artwork_for_HP4_movie%29.jpg",
+      "inventors": null,
+      "ingredients": "Nagini's venom, Unicorn blood",
+      "manufacturers": null,
+      "name": "Rudimentary body potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Rudimentary_body_potion"
+    },
+    "links": {
+      "self": "/v1/potions/56c32a03-4fc1-4c7f-b27b-774544cad2e0"
+    }
+  },
+  {
+    "id": "f630d95b-1483-4df9-b9a3-01e111141bdb",
+    "type": "potion",
+    "attributes": {
+      "slug": "scintillation-solution",
+      "characteristics": "Turquoise in colour, Sparkling upon completion",
+      "difficulty": "Advanced",
+      "effect": "Could make objects shine",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/dd/Scintillation_Solution_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Powdered unicorn horn, Runespoor eggs, Oil",
+      "manufacturers": null,
+      "name": "Scintillation Solution",
+      "side_effects": null,
+      "time": "Two hours and fifty minutes",
+      "wiki": "https://harrypotter.fandom.com/wiki/Scintillation_Solution"
+    },
+    "links": {
+      "self": "/v1/potions/f630d95b-1483-4df9-b9a3-01e111141bdb"
+    }
+  },
+  {
+    "id": "b02c7466-d480-41fb-b595-69c5dee18d6d",
+    "type": "potion",
+    "attributes": {
+      "slug": "screaming-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Induced screaming",
+      "image": null,
+      "inventors": "William Weasley (possibly), Jacob's sibling (possibly)",
+      "ingredients": "Spine of Lionfish",
+      "manufacturers": null,
+      "name": "Screaming Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Screaming_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/b02c7466-d480-41fb-b595-69c5dee18d6d"
+    }
+  },
+  {
+    "id": "4762bce5-d99c-4d55-8fde-0becbd53fa34",
+    "type": "potion",
+    "attributes": {
+      "slug": "screaming-snakes-hair-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Hair turned into screaming snakes (presumed)",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/56/ReplenishingPotion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Screaming Snakes Hair Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Screaming_Snakes_Hair_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/4762bce5-d99c-4d55-8fde-0becbd53fa34"
+    }
+  },
+  {
+    "id": "6f9ec9d3-5cd8-4f90-8054-dc3082826758",
+    "type": "potion",
+    "attributes": {
+      "slug": "shrinking-solution",
+      "characteristics": "Acid green in colour",
+      "difficulty": "Moderate",
+      "effect": "Causes living beings to shrink to a smaller form",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/95/Shrinking-solution-part-2.png",
+      "inventors": "Zygmunt Budge",
+      "ingredients": "Minced daisy roots, Peeled Shrivelfig, Sliced caterpillars, One rat spleen, A dash of leech juice, A splash of cowbane, Wormwood",
+      "manufacturers": null,
+      "name": "Shrinking Solution",
+      "side_effects": "Poisonous if brewed incorrectly",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Shrinking_Solution"
+    },
+    "links": {
+      "self": "/v1/potions/6f9ec9d3-5cd8-4f90-8054-dc3082826758"
+    }
+  },
+  {
+    "id": "66bab960-3c7d-4a50-8a00-d7b92d89c85c",
+    "type": "potion",
+    "attributes": {
+      "slug": "skele-gro",
+      "characteristics": "Smoked when poured, Vile taste, Burned on the way down, Yellow in colour",
+      "difficulty": "Moderate",
+      "effect": "Restored bones",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6e/Skele-gro.png",
+      "inventors": "Linfred of Stinchcombe (original version)",
+      "ingredients": "1 Chinese Chomping Cabbage, 3 puffer-fish, 5 scarab beetles, 1 Fanged Geranium, 1 arm bone, 1 red spider",
+      "manufacturers": "Rubens Winikus and Company Inc.",
+      "name": "Skele-Gro",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Skele-Gro"
+    },
+    "links": {
+      "self": "/v1/potions/66bab960-3c7d-4a50-8a00-d7b92d89c85c"
+    }
+  },
+  {
+    "id": "bdfdc5c8-37c3-49d5-9961-b7e59c2bde5a",
+    "type": "potion",
+    "attributes": {
+      "slug": "sleekeazy-s-hair-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Makes hair more manageable",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c6/SleekeasysHairPotion2.jpg",
+      "inventors": "Fleamont Potter",
+      "ingredients": "Gomas Barbadensis, Asian Dragon Hair, Petroleum Jelly",
+      "manufacturers": null,
+      "name": "Sleekeazy's Hair Potion",
+      "side_effects": "Unique results for redheads",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Sleekeazy's_Hair_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/bdfdc5c8-37c3-49d5-9961-b7e59c2bde5a"
+    }
+  },
+  {
+    "id": "fa6d9728-886a-4505-aa5d-b74ea6955db5",
+    "type": "potion",
+    "attributes": {
+      "slug": "sleeping-draught",
+      "characteristics": "Dark purple",
+      "difficulty": "Beginner to Advanced",
+      "effect": "Make the drinker quickly fall into a deep but temporary sleep",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/23/Sleeping_Draught_HM_icon.png",
+      "inventors": null,
+      "ingredients": "4 sprigs of Lavender, 6 measures of Standard Ingredient, 2 blobs of Flobberworm Mucus, 4 Valerian sprigs, Wormwood, Powdered Asphodel petals, Flobberworm Mucus, Sopophorous bean, Valerian sprigs, Nettle essence",
+      "manufacturers": null,
+      "name": "Sleeping Draught",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Sleeping_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/fa6d9728-886a-4505-aa5d-b74ea6955db5"
+    }
+  },
+  {
+    "id": "e79da280-e5c2-49da-b3d0-7bf1e36a1748",
+    "type": "potion",
+    "attributes": {
+      "slug": "snuffling-potion",
+      "characteristics": "Clear smoke upon completion",
+      "difficulty": null,
+      "effect": "Enhances the drinker sense of smell",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/Snuffling_Potion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Snuffling Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Snuffling_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/e79da280-e5c2-49da-b3d0-7bf1e36a1748"
+    }
+  },
+  {
+    "id": "c862e219-7645-46d1-a143-4fed74f255b0",
+    "type": "potion",
+    "attributes": {
+      "slug": "solution-078",
+      "characteristics": "Muddy-brown colour",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/5/5e/Solution_078.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Solution 078",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Solution_078"
+    },
+    "links": {
+      "self": "/v1/potions/c862e219-7645-46d1-a143-4fed74f255b0"
+    }
+  },
+  {
+    "id": "7c2e2224-7ecd-4e2b-9ae4-ddf502d3517a",
+    "type": "potion",
+    "attributes": {
+      "slug": "solution-125",
+      "characteristics": "Muddy-brown colour",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e6/Solution_125.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Solution 125",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Solution_125"
+    },
+    "links": {
+      "self": "/v1/potions/7c2e2224-7ecd-4e2b-9ae4-ddf502d3517a"
+    }
+  },
+  {
+    "id": "097bfe95-b377-4b61-8bba-a3523c92de2e",
+    "type": "potion",
+    "attributes": {
+      "slug": "stamina-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Boosted stamina",
+      "image": null,
+      "inventors": "William Weasley (possibly), Jacob's sibling (possibly)",
+      "ingredients": "Spine of Lionfish",
+      "manufacturers": null,
+      "name": "Stamina Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Stamina_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/097bfe95-b377-4b61-8bba-a3523c92de2e"
+    }
+  },
+  {
+    "id": "71014a76-9dcc-40b0-9bb6-91192b954829",
+    "type": "potion",
+    "attributes": {
+      "slug": "star-grass-salve",
+      "characteristics": "Greenish substance",
+      "difficulty": null,
+      "effect": "Healing; soothing injuries",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/7/78/Star_Grass_Salve.JPG",
+      "inventors": null,
+      "ingredients": "Star Grass",
+      "manufacturers": null,
+      "name": "Star Grass Salve",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Star_Grass_Salve"
+    },
+    "links": {
+      "self": "/v1/potions/71014a76-9dcc-40b0-9bb6-91192b954829"
+    }
+  },
+  {
+    "id": "f565be6f-84d3-46e2-b441-3c7a58b972d9",
+    "type": "potion",
+    "attributes": {
+      "slug": "strengthening-solution",
+      "characteristics": "Turquoise in colour",
+      "difficulty": "Beginner to advanced",
+      "effect": "Superhuman strength",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/04/HM_y2_Strengthening_Solution.png",
+      "inventors": null,
+      "ingredients": "Salamander blood, Powdered Griffin claw",
+      "manufacturers": null,
+      "name": "Strengthening Solution",
+      "side_effects": null,
+      "time": "Two days",
+      "wiki": "https://harrypotter.fandom.com/wiki/Strengthening_Solution"
+    },
+    "links": {
+      "self": "/v1/potions/f565be6f-84d3-46e2-b441-3c7a58b972d9"
+    }
+  },
+  {
+    "id": "49f454f0-1d60-4df1-861d-e12ef5c98133",
+    "type": "potion",
+    "attributes": {
+      "slug": "strength-potion",
+      "characteristics": "Orange in colour",
+      "difficulty": "Beginner",
+      "effect": "Superhuman strength",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2a/Strength_Potion_LEGOY2.gif",
+      "inventors": null,
+      "ingredients": "Fanged Geranium, Arm bone, Snake fang",
+      "manufacturers": null,
+      "name": "Strength Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Strength_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/49f454f0-1d60-4df1-861d-e12ef5c98133"
+    }
+  },
+  {
+    "id": "252c9f92-f3dd-4b3e-8915-6d9ab892429c",
+    "type": "potion",
+    "attributes": {
+      "slug": "strong-exstimulo-potion",
+      "characteristics": "Electric blue in colour",
+      "difficulty": "Beginner",
+      "effect": "Strongly boosted the spell-casting power of the drinker for four spell casts",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a7/Strong_Exstimulo_Potion_WU.png",
+      "inventors": null,
+      "ingredients": "Bitter root, Snowdrop, Abraxan hair, Re'em blood",
+      "manufacturers": null,
+      "name": "Strong Exstimulo Potion",
+      "side_effects": null,
+      "time": "Four hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Strong_Exstimulo_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/252c9f92-f3dd-4b3e-8915-6d9ab892429c"
+    }
+  },
+  {
+    "id": "07076ea9-9c8c-4ec9-857a-98d7db66b0f8",
+    "type": "potion",
+    "attributes": {
+      "slug": "strong-invigoration-draught",
+      "characteristics": "Fiery orange in colour",
+      "difficulty": "Advanced",
+      "effect": "Significantly boosts the energy and focus of the drinker",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/3/3a/Strong_Invigoration_Draught_WU.png",
+      "inventors": null,
+      "ingredients": "Honeywater, Vervain infusion, Scurvy grass, Sneezewort",
+      "manufacturers": null,
+      "name": "Strong Invigoration Draught",
+      "side_effects": null,
+      "time": "Six hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Strong_Invigoration_Draught"
+    },
+    "links": {
+      "self": "/v1/potions/07076ea9-9c8c-4ec9-857a-98d7db66b0f8"
+    }
+  },
+  {
+    "id": "6b4f2037-465a-4cc0-bf42-5cea96592e9c",
+    "type": "potion",
+    "attributes": {
+      "slug": "stupid-potion",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Loss of intelligence (most likely)",
+      "image": null,
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Stupid Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Stupid_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/6b4f2037-465a-4cc0-bf42-5cea96592e9c"
+    }
+  },
+  {
+    "id": "41f6345c-b7fb-44b1-8a90-8a80ac513fe1",
+    "type": "potion",
+    "attributes": {
+      "slug": "swelling-solution",
+      "characteristics": "Yellow in colour",
+      "difficulty": "Beginner",
+      "effect": "Caused enlargement on contact",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/ad/Swelling_Solution_PM.png",
+      "inventors": null,
+      "ingredients": "Puffer-fish eyes, Dried nettles, Bat spleens",
+      "manufacturers": null,
+      "name": "Swelling Solution",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Swelling_Solution"
+    },
+    "links": {
+      "self": "/v1/potions/41f6345c-b7fb-44b1-8a90-8a80ac513fe1"
+    }
+  },
+  {
+    "id": "39082343-3e41-465c-9491-c442d2b28b9e",
+    "type": "potion",
+    "attributes": {
+      "slug": "ten-second-pimple-vanisher",
+      "characteristics": "Pink in colour",
+      "difficulty": null,
+      "effect": "Treats boils, pimples, blackheads and acne",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/25/Ten-Second_Pimple_Vanisher.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": null,
+      "manufacturers": "Weasleys' Wizard Wheezes",
+      "name": "Ten-Second Pimple Vanisher",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Ten-Second_Pimple_Vanisher"
+    },
+    "links": {
+      "self": "/v1/potions/39082343-3e41-465c-9491-c442d2b28b9e"
+    }
+  },
+  {
+    "id": "bcefcb52-92e9-4193-8453-5d3ae6218d36",
+    "type": "potion",
+    "attributes": {
+      "slug": "thunderbrew",
+      "characteristics": "Purple in colour",
+      "difficulty": null,
+      "effect": "Created a storm around the drinker for a short period of time",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/8/8b/Thunderbrew.png",
+      "inventors": null,
+      "ingredients": "Leech juice, Shrivelfig, Stench of the Dead",
+      "manufacturers": "J. Pippin at J. Pippin's Potions (1890s)",
+      "name": "Thunderbrew",
+      "side_effects": null,
+      "time": "1 minute and 30 seconds",
+      "wiki": "https://harrypotter.fandom.com/wiki/Thunderbrew"
+    },
+    "links": {
+      "self": "/v1/potions/bcefcb52-92e9-4193-8453-5d3ae6218d36"
+    }
+  },
+  {
+    "id": "788decea-127e-4853-bd9b-ee41a33612e8",
+    "type": "potion",
+    "attributes": {
+      "slug": "tolipan-blemish-blitzer",
+      "characteristics": "White in colour, Thick paste consistency",
+      "difficulty": null,
+      "effect": "Treated acne",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c1/TolipanBlemishBlitzer.png",
+      "inventors": null,
+      "ingredients": "Dragon claw",
+      "manufacturers": null,
+      "name": "Tolipan Blemish Blitzer",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Tolipan_Blemish_Blitzer"
+    },
+    "links": {
+      "self": "/v1/potions/788decea-127e-4853-bd9b-ee41a33612e8"
+    }
+  },
+  {
+    "id": "e62404f9-7751-4f8b-8794-9032d4e6caa7",
+    "type": "potion",
+    "attributes": {
+      "slug": "tonic-for-trace-detection",
+      "characteristics": "Pink in colour",
+      "difficulty": "Beginner",
+      "effect": "Increased mental perception of Trace magic in the world",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b4/Tonic_for_Trace_Detection_WU.png",
+      "inventors": null,
+      "ingredients": "Baneberry, Bulbadox juice, Angel's Trumpet, Erumpent horn",
+      "manufacturers": null,
+      "name": "Tonic for Trace Detection",
+      "side_effects": null,
+      "time": "Seven hours",
+      "wiki": "https://harrypotter.fandom.com/wiki/Tonic_for_Trace_Detection"
+    },
+    "links": {
+      "self": "/v1/potions/e62404f9-7751-4f8b-8794-9032d4e6caa7"
+    }
+  },
+  {
+    "id": "9e5e02fb-6ed8-4ab7-98f1-56f572fcf180",
+    "type": "potion",
+    "attributes": {
+      "slug": "truth-serum",
+      "characteristics": null,
+      "difficulty": null,
+      "effect": "Forced the drinker to tell the truth",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/d/d9/Veritaserum.jpg",
+      "inventors": null,
+      "ingredients": "Jobberknoll feathers",
+      "manufacturers": null,
+      "name": "Truth Serum",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Truth_Serum"
+    },
+    "links": {
+      "self": "/v1/potions/9e5e02fb-6ed8-4ab7-98f1-56f572fcf180"
+    }
+  },
+  {
+    "id": "edec8ee9-13e4-4a2b-a8c7-95ceef9b4281",
+    "type": "potion",
+    "attributes": {
+      "slug": "twilight-moonbeams",
+      "characteristics": "Red in colour",
+      "difficulty": null,
+      "effect": "Caused the drinker to become infatuated with the giver of the potion",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/b/b7/TwilightMoonbeams.jpg",
+      "inventors": "Fred and George Weasley",
+      "ingredients": "Pearl Dust",
+      "manufacturers": null,
+      "name": "Twilight Moonbeams",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Twilight_Moonbeams"
+    },
+    "links": {
+      "self": "/v1/potions/edec8ee9-13e4-4a2b-a8c7-95ceef9b4281"
+    }
+  },
+  {
+    "id": "21d259ea-1474-4634-8b71-0921c328d8d8",
+    "type": "potion",
+    "attributes": {
+      "slug": "venomous-tentacula-juice",
+      "characteristics": "Water clear, The insides of the one who drank it felt like they were 'burning', The skin colour of who drank it became purple",
+      "difficulty": null,
+      "effect": null,
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/c/c2/Venomous_Tentacular_Juice.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Venomous Tentacula juice",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Venomous_Tentacula_juice"
+    },
+    "links": {
+      "self": "/v1/potions/21d259ea-1474-4634-8b71-0921c328d8d8"
+    }
+  },
+  {
+    "id": "bcda187b-5cc0-4d95-aca1-335e13523965",
+    "type": "potion",
+    "attributes": {
+      "slug": "veritaserum",
+      "characteristics": "Clear and odourless like water",
+      "difficulty": "Advanced",
+      "effect": "Forced drinker to speak the truth",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/Truth_sperum.gif",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Veritaserum",
+      "side_effects": null,
+      "time": "One lunar cycle (about 28 days)",
+      "wiki": "https://harrypotter.fandom.com/wiki/Veritaserum"
+    },
+    "links": {
+      "self": "/v1/potions/bcda187b-5cc0-4d95-aca1-335e13523965"
+    }
+  },
+  {
+    "id": "a49bf5ab-916d-4342-8aab-0184d12cd813",
+    "type": "potion",
+    "attributes": {
+      "slug": "vitamix-potion",
+      "characteristics": "Blue in colour",
+      "difficulty": "Beginner",
+      "effect": "Burst of energy",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/2a/Vitamix_Potion.PNG",
+      "inventors": null,
+      "ingredients": "Infusion of wormwood, Powdered root of asphodel, Monkshood",
+      "manufacturers": null,
+      "name": "Vitamix Potion",
+      "side_effects": "Unfortunate but unknown",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Vitamix_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/a49bf5ab-916d-4342-8aab-0184d12cd813"
+    }
+  },
+  {
+    "id": "8bd2f159-bfc6-4c0a-a664-2a8856fa275f",
+    "type": "potion",
+    "attributes": {
+      "slug": "volubilis-potion",
+      "characteristics": "Yellow-coloured when finished",
+      "difficulty": "Beginner",
+      "effect": "Altered the drinker's voice",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/e/e5/Volubilis_Potion.jpg",
+      "inventors": null,
+      "ingredients": "Honeywater, Mint sprigs, Stewed Mandrake, Syrup of Hellebore",
+      "manufacturers": null,
+      "name": "Volubilis Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Volubilis_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/8bd2f159-bfc6-4c0a-a664-2a8856fa275f"
+    }
+  },
+  {
+    "id": "4b342eee-ba5f-495d-b825-1ec377a0d2d6",
+    "type": "potion",
+    "attributes": {
+      "slug": "weakness-potion",
+      "characteristics": "Yellowish in colour",
+      "difficulty": null,
+      "effect": "Fumes cause weakness",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/1/16/WeaknessPotion.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Weakness Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Weakness_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/4b342eee-ba5f-495d-b825-1ec377a0d2d6"
+    }
+  },
+  {
+    "id": "8160f3b5-2e83-4862-847e-632883518708",
+    "type": "potion",
+    "attributes": {
+      "slug": "weedosoros",
+      "characteristics": "Deep purple in colour",
+      "difficulty": "Moderate",
+      "effect": "Highly poisonous",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/6b/Weedosoros.jpg",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Weedosoros",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Weedosoros"
+    },
+    "links": {
+      "self": "/v1/potions/8160f3b5-2e83-4862-847e-632883518708"
+    }
+  },
+  {
+    "id": "b53c3ae8-7634-4663-b727-b55d910beefc",
+    "type": "potion",
+    "attributes": {
+      "slug": "wideye-potion",
+      "characteristics": "Blue/green in colour",
+      "difficulty": "Beginner to Moderate",
+      "effect": "Awakened victim, Prevented sleeping",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/9/9f/Wideye-or-awakening-potion.png",
+      "inventors": null,
+      "ingredients": "6 snake fangs, 4 measures of Standard Ingredient, 6 dried Billywig stings, 2 sprigs of Wolfsbane",
+      "manufacturers": null,
+      "name": "Wideye Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Wideye_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/b53c3ae8-7634-4663-b727-b55d910beefc"
+    }
+  },
+  {
+    "id": "3ef1ee54-cef0-4e1a-a5f1-4590f7a3078d",
+    "type": "potion",
+    "attributes": {
+      "slug": "wiggenweld-potion",
+      "characteristics": "Green, red, purple, pink or blue in colour",
+      "difficulty": "Beginner",
+      "effect": "Healed injuries and replenished stamina, Antidote to sleeping potions",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/6/64/Wiggenweld_Potion_HM.png",
+      "inventors": null,
+      "ingredients": "Wiggentree bark, Moly, Dittany, Horklump juice, 2 drops of Flobberworm Mucus, 7 Chizpurfle fangs, Billywig sting slime, A sprig of mint, Boom Berry juice, One stewed Mandrake, Drops of Honeywater, Sloth brain Mucus, Moondew drops, Salamander blood, 10 Lionfish spines, Unicorn horn, Wolfsbane",
+      "manufacturers": null,
+      "name": "Wiggenweld Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Wiggenweld_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/3ef1ee54-cef0-4e1a-a5f1-4590f7a3078d"
+    }
+  },
+  {
+    "id": "d8445cd0-c9a8-4afe-855f-fbd189c5cae6",
+    "type": "potion",
+    "attributes": {
+      "slug": "wit-sharpening-potion",
+      "characteristics": "Green, white or purple in colour",
+      "difficulty": "Moderate to Ordinary Wizarding Level",
+      "effect": "Improved intellect",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/2/21/Wit-Sharpening_Potion_HM_Icon.png",
+      "inventors": null,
+      "ingredients": "Ground scarab beetles, Cut ginger roots, Armadillo bile, Newt spleens",
+      "manufacturers": null,
+      "name": "Wit-Sharpening Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Wit-Sharpening_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/d8445cd0-c9a8-4afe-855f-fbd189c5cae6"
+    }
+  },
+  {
+    "id": "17c0bff1-ffa3-45e1-a5c6-a883ba6861c4",
+    "type": "potion",
+    "attributes": {
+      "slug": "wolfsbane-potion",
+      "characteristics": "Blue smoke, Unpleasant taste, Rendered useless with sugar",
+      "difficulty": "Advanced",
+      "effect": "Allowed werewolves to keep their minds post-transformation",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/0/01/PA_C8.jpg",
+      "inventors": "Damocles Belby",
+      "ingredients": "17 wolfsbane leaves, Juice of 2 Mandrake leaves, 3 drops of dragon blood, 1 powdered moonstone, 2 drops of Syrup of Hellebore, 3 Murtlap tentacles, Juice of 7 Sopophorous Beans, 1 Occamy egg",
+      "manufacturers": null,
+      "name": "Wolfsbane Potion",
+      "side_effects": "Harmful side effects to health if potion tampered with",
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Wolfsbane_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/17c0bff1-ffa3-45e1-a5c6-a883ba6861c4"
+    }
+  },
+  {
+    "id": "d20bbf85-666f-48b3-82b8-2cf301411c29",
+    "type": "potion",
+    "attributes": {
+      "slug": "wound-cleaning-potion",
+      "characteristics": "Purple liquid, Smoked on contact, Stung on contact",
+      "difficulty": "Advanced",
+      "effect": "Antiseptic, cleaned wounds",
+      "image": "https://static.wikia.nocookie.net/harrypotter/images/a/a0/WoundCleaningPotionHM.png",
+      "inventors": null,
+      "ingredients": null,
+      "manufacturers": null,
+      "name": "Wound-Cleaning Potion",
+      "side_effects": null,
+      "time": null,
+      "wiki": "https://harrypotter.fandom.com/wiki/Wound-Cleaning_Potion"
+    },
+    "links": {
+      "self": "/v1/potions/d20bbf85-666f-48b3-82b8-2cf301411c29"
+    }
+  }
+]

@@ -7,3 +7,18 @@ avada kedavra: 340 / 440
 sebastiansallow_11236 : sebastian avada
 sorting hat: 1027-1030 / 1035-1038 / 1043-1050
 Lady/fatlady_10042
+
+
+Sorting hat:
+sortinghat_10023, sortinghat_10040, sortinghat_10041, sortinghat_10055 : you are clever (hard question par ex)
+sortinghat_10024, sortinghat_10054 : brave at heart, daring,
+sortinghat_10025, sortinghat_10056 : dont give up easily, loyalty to a friend delayed your arrival
+sortinghat_10026, sortinghat_10043, sortinghat_10052 : sense of ambition, eagerness for power
+
+gryffindor: sortinghat_10027, sortinghat_10038, sortinghat_10047
+ravenclaw:  sortinghat_10028, sortinghat_10037, sortinghat_10048
+hufflepuff: sortinghat_10029, sortinghat_10036, sortinghat_10049
+slythertin: sortinghat_10030, sortinghat_10035, sortinghat_100450
+
+intro: sortinghat_10051
+sortinghat_10053: doubting

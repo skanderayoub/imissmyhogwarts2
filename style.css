@@ -103,11 +103,12 @@ select:focus {
 }
 
 #characterList .character-card span,
-#spellList .character-card span {
+#spellList .character-card span,
+#potionList .character-card span {
     font-size: 0.65rem;
 }
 
-#characterLoreList, #spellList {
+#characterLoreList, #spellList, #potionList {
     overflow: visible !important;
 }
 
@@ -199,7 +200,8 @@ button[class~="shuffle-active"] {
         font-size: 0.65rem;
     }
     #characterList .character-card span,
-    #spellList .character-card span {
+    #spellList .character-card span,
+    #potionList .character-card span {
         font-size: 0.6rem;
     }
 }

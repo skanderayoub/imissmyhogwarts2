@@ -6,6 +6,8 @@ import {
     fetchCharacterLoreData,
     fetchSpellsData,
     fetchSpellCategories,
+    fetchPotionsData,
+    fetchPotionDifficulties,
 } from './data.js';
 import {
     getNextTrack,
@@ -28,12 +30,16 @@ window.shuffleMode = false;
 window.trackList = [];
 window.characterLoreData = [];
 window.spellsData = [];
+window.potionsData = [];
 window.currentCharacterPage = 0;
 window.currentSpellPage = 0;
+window.currentPotionPage = 0;
 window.charactersPerPage = 9;
 window.spellsPerPage = 12;
+window.potionsPerPage = 12;
 window.characterSearchQuery = '';
 window.spellSearchQuery = '';
+window.potionSearchQuery = '';
 
 function getHouseCrest(house) {
     switch (house) {
@@ -84,6 +90,23 @@ function filterSpells(category, searchQuery) {
         const query = searchQuery.toLowerCase();
         filtered = filtered.filter(spell =>
             spell.attributes.name.toLowerCase().includes(query)
+        );
+    }
+
+    return filtered;
+}
+
+function filterPotions(difficulty, searchQuery) {
+    let filtered = window.potionsData;
+
+    if (difficulty !== 'all') {
+        filtered = filtered.filter(potion => potion.attributes.difficulty === difficulty);
+    }
+
+    if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        filtered = filtered.filter(potion =>
+            potion.attributes.name.toLowerCase().includes(query)
         );
     }
 
@@ -205,8 +228,68 @@ function renderSpellList(page, category, searchQuery) {
     nextSpellPage.disabled = end >= filteredSpells.length;
 }
 
+function renderPotionList(page, difficulty, searchQuery) {
+    const potionList = document.getElementById('potionList');
+    const potionDetails = document.getElementById('potionDetails');
+    potionList.innerHTML = '';
+    potionDetails.classList.add('hidden');
+    const filteredPotions = filterPotions(difficulty, searchQuery);
+    const start = page * window.potionsPerPage;
+    const end = start + window.potionsPerPage;
+    const paginatedPotions = filteredPotions.slice(start, end);
+
+    paginatedPotions.forEach((potion) => {
+        const card = document.createElement('div');
+        card.className = 'character-card cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 transition-all p-2 rounded-lg';
+        card.dataset.potion = potion.attributes.name;
+        const content = document.createElement('div');
+        content.className = 'flex flex-col items-center';
+        content.innerHTML = `
+      <span class="text-center text-xs font-harry-potter text-yellow-200">${potion.attributes.name}</span>
+    `;
+        card.appendChild(content);
+        card.addEventListener('click', () => {
+            document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
+            card.classList.add('selected');
+            potionDetails.classList.remove('hidden');
+            const imageHtml = potion.attributes.image ? `<img src="${potion.attributes.image}" alt="${potion.attributes.name}" class="w-64 h-64 object-contain rounded-lg mb-4" />` : '';
+            const details = [];
+            if (isNonEmpty(potion.attributes.name))
+                details.push(`<p class="mb-2"><span class="font-bold">Potion:</span> ${potion.attributes.name}</p>`);
+            if (isNonEmpty(potion.attributes.characteristics))
+                details.push(`<p class="mb-2"><span class="font-bold">Characteristics:</span> ${potion.attributes.characteristics}</p>`);
+            if (isNonEmpty(potion.attributes.difficulty))
+                details.push(`<p class="mb-2"><span class="font-bold">Difficulty:</span> ${potion.attributes.difficulty}</p>`);
+            if (isNonEmpty(potion.attributes.effect))
+                details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${potion.attributes.effect}</p>`);
+            if (isNonEmpty(potion.attributes.inventors))
+                details.push(`<p class="mb-2"><span class="font-bold">Inventors:</span> ${potion.attributes.inventors}</p>`);
+            if (isNonEmpty(potion.attributes.ingredients))
+                details.push(`<p class="mb-2"><span class="font-bold">Ingredients:</span> ${potion.attributes.ingredients}</p>`);
+            if (isNonEmpty(potion.attributes.manufacturers))
+                details.push(`<p class="mb-2"><span class="font-bold">Manufacturers:</span> ${potion.attributes.manufacturers}</p>`);
+            if (isNonEmpty(potion.attributes.side_effects))
+                details.push(`<p class="mb-2"><span class="font-bold">Side Effects:</span> ${potion.attributes.side_effects}</p>`);
+            if (isNonEmpty(potion.attributes.time))
+                details.push(`<p class="mb-2"><span class="font-bold">Time:</span> ${potion.attributes.time}</p>`);
+            potionDetails.innerHTML = `
+        <div class="flex flex-col items-center p-4">
+          ${imageHtml}
+          ${details.join('')}
+        </div>
+      `;
+        });
+        potionList.appendChild(card);
+    });
+
+    const prevPotionPage = document.getElementById('prevPotionPage');
+    const nextPotionPage = document.getElementById('nextPotionPage');
+    prevPotionPage.disabled = page === 0;
+    nextPotionPage.disabled = end >= filteredPotions.length;
+}
+
 async function initialize() {
-    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories] = await Promise.all([
+    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties] = await Promise.all([
         fetchAudioData(),
         fetchMusicData(),
         fetchWallpaperData(window.screenWidth),
@@ -214,6 +297,8 @@ async function initialize() {
         fetchCharacterLoreData(),
         fetchSpellsData(),
         fetchSpellCategories(),
+        fetchPotionsData(),
+        fetchPotionDifficulties(),
     ]);
 
     window.jsonData = audioData;
@@ -223,6 +308,7 @@ async function initialize() {
     window.cursorData = cursorData;
     window.characterLoreData = characterLoreData;
     window.spellsData = spellsData;
+    window.potionsData = potionsData;
 
     if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData) {
         console.error("Failed to load required data:", {
@@ -252,12 +338,16 @@ async function initialize() {
     const cursorSelect = document.getElementById('cursorSelect');
     const loreFilter = document.getElementById('loreFilter');
     const spellFilter = document.getElementById('spellFilter');
+    const potionFilter = document.getElementById('potionFilter');
     const characterSearch = document.getElementById('characterSearch');
     const spellSearch = document.getElementById('spellSearch');
+    const potionSearch = document.getElementById('potionSearch');
     const prevPage = document.getElementById('prevPage');
     const nextPage = document.getElementById('nextPage');
     const prevSpellPage = document.getElementById('prevSpellPage');
     const nextSpellPage = document.getElementById('nextSpellPage');
+    const prevPotionPage = document.getElementById('prevPotionPage');
+    const nextPotionPage = document.getElementById('nextPotionPage');
     let selectedCharacters = [];
     let newData = window.jsonData;
 
@@ -282,6 +372,7 @@ async function initialize() {
                 if (button.dataset.tab === 'lore-games') {
                     renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
                     renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
+                    renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
                 }
             } else {
                 console.error(`Tab content not found for: ${button.dataset.tab}`);
@@ -301,6 +392,13 @@ async function initialize() {
         option.value = category;
         option.text = category;
         spellFilter.appendChild(option);
+    });
+
+    potionDifficulties.forEach((difficulty) => {
+        const option = document.createElement('option');
+        option.value = difficulty;
+        option.text = difficulty;
+        potionFilter.appendChild(option);
     });
 
     const bgImg = new Image();
@@ -378,6 +476,11 @@ async function initialize() {
         renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
     });
 
+    potionFilter.addEventListener('change', () => {
+        window.currentPotionPage = 0;
+        renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
+    });
+
     characterSearch.addEventListener('input', () => {
         window.characterSearchQuery = characterSearch.value.trim();
         window.currentCharacterPage = 0;
@@ -388,6 +491,12 @@ async function initialize() {
         window.spellSearchQuery = spellSearch.value.trim();
         window.currentSpellPage = 0;
         renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
+    });
+
+    potionSearch.addEventListener('input', () => {
+        window.potionSearchQuery = potionSearch.value.trim();
+        window.currentPotionPage = 0;
+        renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
     });
 
     prevPage.addEventListener('click', () => {
@@ -417,6 +526,21 @@ async function initialize() {
         if ((window.currentSpellPage + 1) * window.spellsPerPage < filteredSpells.length) {
             window.currentSpellPage++;
             renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
+        }
+    });
+
+    prevPotionPage.addEventListener('click', () => {
+        if (window.currentPotionPage > 0) {
+            window.currentPotionPage--;
+            renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
+        }
+    });
+
+    nextPotionPage.addEventListener('click', () => {
+        const filteredPotions = filterPotions(potionFilter.value, window.potionSearchQuery);
+        if ((window.currentPotionPage + 1) * window.potionsPerPage < filteredPotions.length) {
+            window.currentPotionPage++;
+            renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
         }
     });
 
@@ -559,6 +683,7 @@ async function initialize() {
     updateCursorStyle(cursorSelect.value);
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
     renderSpellList(window.currentSpellPage, 'all', '');
+    renderPotionList(window.currentPotionPage, 'all', '');
 }
 
 initialize();
