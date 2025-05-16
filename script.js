@@ -1,6 +1,7 @@
 let jsonData;
 let musicData;
 let wallpaperData;
+let cursorData;
 let firstClick = true;
 let firstClickMusic = true;
 let screenWidth = window.innerWidth;
@@ -58,6 +59,19 @@ async function fetchWallpaperData() {
         wallpaperData = await response.json();
     } catch (error) {
         console.error("Error fetching wallpaper data:", error);
+    }
+}
+
+async function fetchCursorData() {
+    try {
+        const response = await fetch(
+            "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/cursors.json"
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
+        cursorData = await response.json();
+    } catch (error) {
+        console.error("Error fetching cursor data:", error);
+        cursorData = ["dumbledore"];
     }
 }
 
@@ -167,8 +181,8 @@ function createSparkle(x, y) {
 }
 
 async function initialize() {
-    await Promise.all([fetchWallpaperData(), fetchAudioData(), fetchMusicData()]);
-    if (!wallpaperData || !jsonData || !musicData) return;
+    await Promise.all([fetchWallpaperData(), fetchAudioData(), fetchMusicData(), fetchCursorData()]);
+    if (!wallpaperData || !jsonData || !musicData || !cursorData) return;
 
     const playButton = document.getElementById("playButton");
     const audioSound = document.getElementById("audio");
@@ -189,15 +203,10 @@ async function initialize() {
     let selectedCharacters = [];
     let newData = jsonData;
 
-    const cursorStyles = [
-        { value: "dumbledore", name: "Dumbledore" },
-        { value: "dobby", name: "Dobby" },
-    ];
-
-    cursorStyles.forEach(style => {
+    cursorData.forEach(cursor => {
         const option = document.createElement("option");
-        option.value = style.value;
-        option.text = style.name;
+        option.value = cursor;
+        option.text = cursor.charAt(0).toUpperCase() + cursor.slice(1);
         cursorSelect.appendChild(option);
     });
 
@@ -254,8 +263,21 @@ async function initialize() {
 
     function updateCursorStyle(cursorValue) {
         const root = document.documentElement;
-        root.style.setProperty('--cursor-url', `url('assets/cursors/${cursorValue}/cursor.cur')`);
-        root.style.setProperty('--pointer-url', `url('assets/cursors/${cursorValue}/pointer.cur')`);
+        let cursorUrl = `url('assets/cursors/${cursorValue}/cursor.cur')`;
+        const pointerUrl = `url('assets/cursors/${cursorValue}/pointer.cur')`;
+        try {
+            root.style.setProperty('--cursor-url', cursorUrl);
+            root.style.setProperty('--pointer-url', pointerUrl);
+            console.log(`Cursor updated to: ${cursorUrl}, Pointer: ${pointerUrl}`);
+            // Force style refresh
+            document.body.style.cursor = 'auto';
+            setTimeout(() => document.body.style.cursor = cursorUrl + ' 0 0, auto', 0);
+        } catch (error) {
+            console.error(`Error updating cursor to ${cursorValue}:`, error);
+            // Fallback to default wand PNG
+            root.style.setProperty('--cursor-url', `url('assets/wand.png')`);
+            root.style.setProperty('--pointer-url', `url('assets/wand.png')`);
+        }
     }
 
     cursorSelect.addEventListener("change", () => {
@@ -387,6 +409,22 @@ async function initialize() {
             createSparkle(e.clientX, e.clientY);
             window.lastSparkle = now;
         }
+    });
+
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', () => {
+            console.log(`Tab button clicked: ${button.dataset.tab}`);
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+            const targetTab = document.getElementById(button.dataset.tab);
+            if (targetTab) {
+                targetTab.classList.remove('hidden');
+                console.log(`Switched to tab: ${button.dataset.tab}`);
+            } else {
+                console.error(`Tab content not found for: ${button.dataset.tab}`);
+            }
+        });
     });
 
     updateCursorStyle(cursorSelect.value);
