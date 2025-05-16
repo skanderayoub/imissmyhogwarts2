@@ -24,7 +24,7 @@
                 <option value="slytherin">Slytherin</option>
             </select>
             <select id="cursorSelect" class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
-                
+                <!-- Options populated by JS -->
             </select>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -32,6 +32,7 @@
                 <button class="tab-button active px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="voices">Voices</button>
                 <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="music">Music</button>
                 <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="background">Ambiance</button>
+                <button class="tab-button px-4 py-2 mx-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all" data-tab="lore-games">Lore & Games</button>
             </div>
         </div>
         <div id="voices" class="tab-content bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
@@ -76,7 +77,58 @@
                 <option value="">Choose a Background</option>
             </select>
         </div>
+        <div id="lore-games" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Lore & Games</h2>
+            <div class="text-center">
+                <p class="text-lg text-yellow-200 mb-4">
+                    <span class="font-bold">Lore:</span> Explore the magical world of Hogwarts through its iconic characters and spells.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1">
+                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-2">Characters</h3>
+                        <select id="loreFilter" class="w-full bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
+                            <option value="all">All Characters</option>
+                            <option value="student">Students</option>
+                            <option value="staff">Staff</option>
+                            <option value="Gryffindor">Gryffindor</option>
+                            <option value="Hufflepuff">Hufflepuff</option>
+                            <option value="Ravenclaw">Ravenclaw</option>
+                            <option value="Slytherin">Slytherin</option>
+                        </select>
+                        <div id="characterLoreList" class="grid grid-cols-2 gap-4 max-h-80 overflow-y-auto p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <button id="prevPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all">Previous</button>
+                            <button id="nextPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all">Next</button>
+                        </div>
+                        <div id="characterDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-2">Spells</h3>
+                        <select id="spellFilter" class="w-full bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
+                            <option value="all">All Spells</option>
+                            <option value="Charm">Charm</option>
+                            <option value="Spell">Spell</option>
+                            <option value="Curse">Curse</option>
+                            <option value="Jinx">Jinx</option>
+                            <option value="Hex">Hex</option>
+                            <option value="Healing Spell">Healing Spell</option>
+                            <option value="Transfiguration">Transfiguration</option>
+                            <option value="Counter Spell">Counter Spell</option>
+                        </select>
+                        <div id="spellList" class="grid grid-cols-2 gap-4 max-h-80 overflow-y-auto p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                        <div class="flex justify-center space-x-4 mt-4">
+                            <button id="prevSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all">Previous</button>
+                            <button id="nextSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all">Next</button>
+                        </div>
+                        <div id="spellDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
+                    </div>
+                </div>
+                <p class="text-lg text-yellow-200 mt-4">
+                    <span class="font-bold">Games:</span> Challenge your wizarding skills! Coming soon: Quidditch matches, potion-making puzzles, and spell-casting duels to test your magical prowess.
+                </p>
+            </div>
+        </div>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>
