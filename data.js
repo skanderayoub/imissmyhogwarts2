@@ -131,3 +131,16 @@ export async function fetchPotionDifficulties() {
         return [];
     }
 }
+
+export async function fetchFunnyAudioData() {
+    try {
+        const response = await fetch(
+            "https://raw.githubusercontent.com/skanderayoub/imissmyhogwarts2/refs/heads/main/audio.json"
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching audio data:", error);
+        return null;
+    }
+}

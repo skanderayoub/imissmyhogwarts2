@@ -8,6 +8,7 @@ import {
     fetchSpellCategories,
     fetchPotionsData,
     fetchPotionDifficulties,
+    fetchFunnyAudioData,
 } from './data.js';
 import {
     getNextTrack,
@@ -41,6 +42,7 @@ window.potionsPerPage = 12;
 window.characterSearchQuery = '';
 window.spellSearchQuery = '';
 window.potionSearchQuery = '';
+window.currentFunnyVoiceIndex = 0; // Track current funny voice
 
 function getHouseCrest(house) {
     switch (house) {
@@ -304,7 +306,7 @@ function toggleCategory(category) {
 }
 
 async function initialize() {
-    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties] = await Promise.all([
+    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio] = await Promise.all([
         fetchAudioData(),
         fetchMusicData(),
         fetchWallpaperData(window.screenWidth),
@@ -314,6 +316,7 @@ async function initialize() {
         fetchSpellCategories(),
         fetchPotionsData(),
         fetchPotionDifficulties(),
+        fetchFunnyAudioData(),
     ]);
 
     window.jsonData = audioData;
@@ -324,6 +327,7 @@ async function initialize() {
     window.characterLoreData = characterLoreData;
     window.spellsData = spellsData;
     window.potionsData = potionsData;
+    window.funnyAudio = funnyAudio;
 
     if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData) {
         console.error("Failed to load required data:", {
@@ -339,6 +343,10 @@ async function initialize() {
     const audioSound = document.getElementById('audio');
     const voiceVolume = document.getElementById('voiceVolume');
     const voiceMute = document.getElementById('voiceMute');
+    const playAllVoices = document.getElementById('playAllVoices');
+    const funnyVoicesAudio = document.getElementById('funnyVoicesAudio');
+    const funnyVoiceVolume = document.getElementById('funnyVoiceVolume');
+    const funnyVoiceMute = document.getElementById('funnyVoiceMute');
     const playMusicButton = document.getElementById('playButton2');
     const prevMusicButton = document.getElementById('prevMusic');
     const nextMusicButton = document.getElementById('nextMusic');
@@ -383,8 +391,60 @@ async function initialize() {
     };
     bgImg.onerror = () => {
         console.error(`Failed to load background image: ${defaultBackground}`);
-        document.body.style.display = 'block'; // Show page even if image fails
+        document.body.style.display = 'block';
     };
+
+    // Funny Voices Playback Logic
+    let isPlayingFunnyVoices = false;
+    const funnyVoiceUrls = window.funnyAudio; // audio.json is an array of URLs
+    playAllVoices.addEventListener('click', () => {
+        if (!isPlayingFunnyVoices) {
+            // Start playing
+            isPlayingFunnyVoices = true;
+            playAllVoices.className = 'audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
+            if (!funnyVoicesAudio.src || funnyVoicesAudio.paused) {
+                // Start from current index
+                funnyVoicesAudio.src = funnyVoiceUrls[window.currentFunnyVoiceIndex];
+                funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
+            } else {
+                // Resume if paused
+                funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
+            }
+        } else {
+            // Pause
+            isPlayingFunnyVoices = false;
+            playAllVoices.className = 'audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
+            funnyVoicesAudio.pause();
+        }
+    });
+
+    funnyVoicesAudio.addEventListener('ended', () => {
+        if (isPlayingFunnyVoices) {
+            // Move to next voice, loop back to start
+            window.currentFunnyVoiceIndex = (window.currentFunnyVoiceIndex + 1) % funnyVoiceUrls.length;
+            funnyVoicesAudio.src = funnyVoiceUrls[window.currentFunnyVoiceIndex];
+            funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
+        }
+    });
+
+    funnyVoiceVolume.addEventListener('input', () => {
+        funnyVoicesAudio.volume = funnyVoiceVolume.value;
+        if (funnyVoicesAudio.volume > 0) {
+            funnyVoicesAudio.muted = false;
+            funnyVoiceMute.className = 'audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
+            funnyVoiceVolume.classList.remove('muted');
+        }
+    });
+
+    funnyVoiceMute.addEventListener('click', () => {
+        funnyVoicesAudio.muted = !funnyVoicesAudio.muted;
+        funnyVoiceMute.className = funnyVoicesAudio.muted
+            ? 'audio unmute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all'
+            : 'audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
+        funnyVoiceVolume.classList.toggle('muted', funnyVoicesAudio.muted);
+        if (funnyVoicesAudio.muted) funnyVoicesAudio.volume = 0;
+        else funnyVoicesAudio.volume = funnyVoiceVolume.value || 1;
+    });
 
     const tabButtons = document.querySelectorAll('.tab-button');
     tabButtons.forEach((button) => {
@@ -717,7 +777,7 @@ async function initialize() {
     renderSpellList(window.currentSpellPage, 'all', '');
     renderPotionList(window.currentPotionPage, 'all', '');
 
-    // Check if Lore & Games tab is active on load (unlikely, but for robustness)
+    // Check if Lore & Games tab is active on load
     const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');
     if (loreGamesTab.classList.contains('active')) {
         document.getElementById('lore-games').classList.remove('hidden');
