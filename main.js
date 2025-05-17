@@ -44,6 +44,9 @@ window.characterSearchQuery = '';
 window.spellSearchQuery = '';
 window.potionSearchQuery = '';
 window.currentFunnyVoiceIndex = 0;
+window.voiceSearchQuery = '';
+window.newData = null;
+window.selectedCharacters = []; // New global variable to track selected characters
 
 function getHouseCrest(house) {
     switch (house) {
@@ -147,6 +150,64 @@ function filterPotions(difficulty, searchQuery) {
     }
 
     return filtered;
+}
+
+function filterVoices(searchQuery) {
+    let filtered = Object.keys(window.jsonData);
+
+    if (searchQuery) {
+        const query = searchQuery.toLowerCase();
+        filtered = filtered.filter(key => {
+            const character = window.characterLoreData.find(c => c.attributes.name === key);
+            return key.toLowerCase().includes(query) ||
+                   (character && (character.attributes.alias_names || []).some(alias => alias.toLowerCase().includes(query)));
+        });
+    }
+
+    return filtered;
+}
+
+function renderVoiceList(searchQuery) {
+    const characterList = document.getElementById('characterList');
+    characterList.innerHTML = '';
+    const filteredCharacters = filterVoices(searchQuery);
+
+    filteredCharacters.forEach((key) => {
+        const character = window.characterLoreData.find(c => c.attributes.name === key);
+        const card = document.createElement('div');
+        card.className = `character-card cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 transition-all p-2 rounded-lg ${window.selectedCharacters.includes(key) ? 'selected' : ''}`;
+        card.dataset.character = key;
+        const content = document.createElement('div');
+        content.className = 'flex flex-col items-center';
+        const imageSrc = character ? (character.attributes.image || getHouseCrest(character.attributes.house)) : getHouseCrest('Hogwarts');
+        content.innerHTML = `
+            <img src="${imageSrc}" alt="${key} crest" class="w-12 h-12 object-contain rounded-full mb-1" />
+            <span class="text-center text-xs font-harry-potter text-yellow-200">${key}</span>
+        `;
+        card.appendChild(content);
+        card.addEventListener('click', () => {
+            const index = window.selectedCharacters.indexOf(key);
+            if (index === -1) {
+                window.selectedCharacters.push(key);
+                card.classList.add('selected');
+            } else {
+                window.selectedCharacters.splice(index, 1);
+                card.classList.remove('selected');
+            }
+            window.newData = Object.fromEntries(
+                Object.entries(window.jsonData).filter(([key]) =>
+                    window.selectedCharacters.includes(key)
+                )
+            );
+            if (window.selectedCharacters.length === 0) {
+                window.newData = window.jsonData; // Reset to full jsonData if no characters selected
+            }
+            document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> ${window.selectedCharacters.join(', ') || 'Select a character'}`;
+        });
+        characterList.appendChild(card);
+    });
+
+    setEqualCardHeights('characterList');
 }
 
 function renderCharacterLoreList(page, filterValue, searchQuery) {
@@ -305,7 +366,6 @@ function renderPotionList(page, difficulty, searchQuery) {
             if (isNonEmpty(potion.attributes.effect))
                 details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${potion.attributes.effect}</p>`);
             if (isNonEmpty(potion.attributes.inventors))
-                console.log(potion.attributes.inventors.length);
                 details.push(formatAsList(potion.attributes.inventors, 'Inventors'));
             if (isNonEmpty(potion.attributes.ingredients))
                 details.push(formatAsList(potion.attributes.ingredients, 'Ingredients'));
@@ -372,6 +432,7 @@ async function initialize() {
     window.spellsData = spellsData;
     window.potionsData = potionsData;
     window.funnyAudio = funnyAudio;
+    window.newData = audioData;
 
     if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData) {
         console.error("Failed to load required data:", {
@@ -409,6 +470,7 @@ async function initialize() {
     const characterSearch = document.getElementById('characterSearch');
     const spellSearch = document.getElementById('spellSearch');
     const potionSearch = document.getElementById('potionSearch');
+    const voiceSearch = document.getElementById('voiceSearch');
     const prevPage = document.getElementById('prevPage');
     const nextPage = document.getElementById('nextPage');
     const prevSpellPage = document.getElementById('prevSpellPage');
@@ -416,8 +478,6 @@ async function initialize() {
     const prevPotionPage = document.getElementById('prevPotionPage');
     const nextPotionPage = document.getElementById('nextPotionPage');
     const toggleButtons = document.querySelectorAll('.toggle-button');
-    let selectedCharacters = [];
-    let newData = window.jsonData;
 
     if (window.screenWidth < 600) {
         cursorSelect.style.display = 'none';
@@ -508,6 +568,8 @@ async function initialize() {
                     if (!gamesContent.classList.contains('collapsed')) {
                         startQuiz();
                     }
+                } else if (button.dataset.tab === 'voices') {
+                    renderVoiceList(window.voiceSearchQuery);
                 }
             } else {
                 console.error(`Tab content not found for: ${button.dataset.tab}`);
@@ -545,51 +607,9 @@ async function initialize() {
         backgroundSelect.appendChild(option);
     });
 
-    Object.keys(window.jsonData).forEach((key) => {
-        const card = document.createElement('div');
-        card.className = 'character-card cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 transition-all p-2 rounded-lg';
-        card.dataset.character = key;
-        const content = document.createElement('div');
-        content.className = 'flex flex-col items-center';
-        content.innerHTML = `
-            <span class="text-center text-xs font-harry-potter text-yellow-200">${key}</span>
-        `;
-        card.appendChild(content);
-        card.addEventListener('click', () => {
-            card.classList.toggle('selected');
-            selectedCharacters = Array.from(
-                characterList.querySelectorAll('.character-card.selected')
-            ).map((card) => card.dataset.character);
-            newData = Object.fromEntries(
-                Object.entries(window.jsonData).filter(([key]) =>
-                    selectedCharacters.includes(key)
-                )
-            );
-        });
-        characterList.appendChild(card);
-    });
-
-    Object.entries(window.musicData).forEach(([album, tracks]) => {
-        const optgroup = document.createElement('optgroup');
-        optgroup.label = album;
-        const sortedTracks = tracks
-            .map((url) => {
-                const regex = /\/(\d+)\.\s*([^\/]+)\.mp3$/;
-                const match = url.match(regex);
-                const trackNumber = match ? parseInt(match[1]) : Infinity;
-                const trackName = match
-                    ? decodeURIComponent(match[2])
-                    : url.split('/').pop();
-                return { url, trackNumber, trackName };
-            })
-            .sort((a, b) => a.trackNumber - b.trackNumber);
-        sortedTracks.forEach(({ url, trackName }) => {
-            const option = document.createElement('option');
-            option.text = trackName;
-            option.value = window.trackList.findIndex((t) => t.url === url);
-            optgroup.appendChild(option);
-        });
-        musicSelect.appendChild(optgroup);
+    voiceSearch.addEventListener('input', () => {
+        window.voiceSearchQuery = voiceSearch.value.trim();
+        renderVoiceList(window.voiceSearchQuery);
     });
 
     loreFilter.addEventListener('change', () => {
@@ -785,12 +805,12 @@ async function initialize() {
     });
 
     playButton.addEventListener('click', () => {
-        playSound(newData, audioSound, playButton, window.firstClick, 'sound');
+        playSound(window.newData, audioSound, playButton, window.firstClick, 'sound');
         if (window.firstClick) window.firstClick = false;
     });
 
     audioSound.addEventListener('ended', () => {
-        playNewSound(newData, audioSound, 'sound');
+        playNewSound(window.newData, audioSound, 'sound');
     });
 
     backgroundSelect.addEventListener('change', () => {
@@ -816,6 +836,7 @@ async function initialize() {
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
     renderSpellList(window.currentSpellPage, 'all', '');
     renderPotionList(window.currentPotionPage, 'all', '');
+    renderVoiceList(''); // Initial render of voice list
 
     // Check if Lore & Games tab is active on load
     const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');

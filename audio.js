@@ -20,6 +20,7 @@ export function getPreviousTrack(currentTrackIndex, trackList, shuffleMode) {
 }
 
 export function playSound(data, audio, btn, click, type) {
+    console.log("playSound", data);
     if (!data || Object.keys(data).length === 0) {
         alert("Please select at least one character!");
         return;
