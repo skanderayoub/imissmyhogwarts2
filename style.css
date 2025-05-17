@@ -44,7 +44,8 @@ button[class~="audio"],
 .toggle-button,
 .quiz-answer,
 .answer-btn,
-select {
+select, 
+.audio-controls-button {
     border-color: var(--primary-color);
 }
 
@@ -54,7 +55,8 @@ button[class~="audio"]:hover,
 .toggle-button:hover,
 .quiz-answer:hover,
 .answer-btn:hover,
-select:focus {
+select:focus,
+.audio-controls-button:hover {
     background-color: var(--primary-color);
     color: #ffffff;
 }
@@ -168,6 +170,12 @@ select:focus {
     border-radius: 8px;
     padding: 1rem;
     margin-top: 1rem;
+}
+
+.audio-controls-button {
+    font-size: 0.9rem;
+    cursor: var(--pointer-url) 4 4, pointer;
+    transition: background-color 0.3s ease;
 }
 
 #characterDetails,

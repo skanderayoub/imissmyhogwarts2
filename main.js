@@ -485,6 +485,7 @@ async function initialize() {
     const prevPotionPage = document.getElementById('prevPotionPage');
     const nextPotionPage = document.getElementById('nextPotionPage');
     const toggleButtons = document.querySelectorAll('.toggle-button');
+    const clearSelectionButton = document.getElementById('clearSelection');
 
     if (window.screenWidth < 600) {
         cursorSelect.style.display = 'none';
@@ -853,6 +854,15 @@ async function initialize() {
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${themeSelect.value}`;
         localStorage.setItem('hogwartsTheme', themeSelect.value);
     });
+
+    // Resets voice selection
+    clearSelection.addEventListener('click', () => {
+        window.selectedCharacters = [];
+        window.newData = window.jsonData;
+        renderVoiceList(window.voiceSearchQuery);
+        document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> Select a character`;
+    });
+
 
     const savedTheme = localStorage.getItem('hogwartsTheme');
     if (savedTheme) {

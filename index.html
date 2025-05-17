@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>I Miss My Hogwarts</title>
-    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body class="min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-hogwarts">
     <div id="particles" class="absolute inset-0 pointer-events-none"></div>
     <div class="container mx-auto px-4 py-8 max-w-4xl">
@@ -16,98 +18,177 @@
             I Miss My Hogwarts
         </h1>
         <div class="flex justify-center space-x-4 mb-6">
-            <select id="themeSelect" class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
+            <select id="themeSelect"
+                class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
                 <option value="hogwarts">Hogwarts</option>
                 <option value="gryffindor">Gryffindor</option>
                 <option value="hufflepuff">Hufflepuff</option>
                 <option value="ravenclaw">Ravenclaw</option>
                 <option value="slytherin">Slytherin</option>
             </select>
-            <select id="cursorSelect" class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
+            <select id="cursorSelect"
+                class="w-48 bg-gray-800 text-yellow-200 border-2 rounded-lg p-2 focus:outline-none">
                 <!-- Options populated by JS -->
             </select>
         </div>
         <div class="grid grid-cols-1 mb-8">
             <div class="flex flex-wrap justify-center gap-2 md:gap-4 md:flex-nowrap">
-                <button class="tab-button active px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4" data-tab="voices">Voices</button>
-                <button class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4" data-tab="music">Music</button>
-                <button class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4" data-tab="background">Ambiance</button>
-                <button class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4" data-tab="lore-games">Lore & Games</button>
+                <button
+                    class="tab-button active px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                    data-tab="voices">
+                    Voices
+                </button>
+                <button
+                    class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                    data-tab="music">
+                    Music
+                </button>
+                <button
+                    class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                    data-tab="background">
+                    Ambiance
+                </button>
+                <button
+                    class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                    data-tab="lore-games">
+                    Lore & Games
+                </button>
             </div>
         </div>
         <div id="voices" class="tab-content bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Voices of Hogwarts</h2>
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                Voices of Hogwarts
+            </h2>
             <div class="flex justify-center mb-4">
                 <label for="voiceSearch" class="sr-only">Search Characters</label>
-                <input id="voiceSearch" type="text" placeholder="Search characters..." class="w-full max-w-md px-3 py-2 border-2 rounded-lg bg-gray-800 bg-opacity-50 text-yellow-200 font-harry-potter text-sm sm:text-base focus:outline-none">
+                <input id="voiceSearch" type="text" placeholder="Search characters..."
+                    class="w-full max-w-md px-3 py-2 border-2 rounded-lg bg-gray-800 bg-opacity-50 text-yellow-200 font-harry-potter text-sm sm:text-base focus:outline-none" />
+                <button
+                    class="ml-1 audio-controls-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                    id="clearSelection">
+                    Clear Selection
+                </button>
             </div>
-            <div id="voiceCharacterList" class="max-h-[300px] overflow-y-auto bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+
+            <div id="voiceCharacterList"
+                class="max-h-[300px] overflow-y-auto bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
                 <div id="characterList" class="grid grid-cols-3 gap-1"></div>
             </div>
-            <div class="audio-controls mt-6 text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
-                <p id="p" class="text-lg text-yellow-200 mb-2"><span class="font-bold">Personnage:</span> Select a character</p>
-                <p id="a" class="text-lg text-yellow-200 mb-4"><span class="font-bold">Audio:</span> None</p>
+            <div
+                class="audio-controls mt-6 text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+                <p id="p" class="text-lg text-yellow-200 mb-2">
+                    <span class="font-bold">Personnage:</span> Select a character
+                </p>
+                <p id="a" class="text-lg text-yellow-200 mb-4">
+                    <span class="font-bold">Audio:</span> None
+                </p>
                 <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1" class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Voice Volume">
-                    <button id="voiceMute" class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Mute/Unmute Voice"></button>
-                    <button id="playButton" class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Play/Pause Voice"></button>
+                    <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1"
+                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Voice Volume" />
+                    <button id="voiceMute"
+                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Mute/Unmute Voice"></button>
+                    <button id="playButton"
+                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Play/Pause Voice"></button>
                 </div>
                 <audio id="audio"></audio>
             </div>
-            <div class="funny-voices-controls mt-6 text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
-                <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">Funny Voices tracking (test)</h3>
+            <div
+                class="funny-voices-controls mt-6 text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+                <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">
+                    Funny Voices tracking (test)
+                </h3>
                 <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="funnyVoiceVolume" min="0" max="1" step="0.01" value="1" class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Funny Voices Volume">
-                    <button id="funnyVoiceMute" class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Mute/Unmute Funny Voices"></button>
-                    <button id="playAllVoices" class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Play/Pause Funny Voices"></button>
+                    <input type="range" id="funnyVoiceVolume" min="0" max="1" step="0.01" value="1"
+                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Funny Voices Volume" />
+                    <button id="funnyVoiceMute"
+                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Mute/Unmute Funny Voices"></button>
+                    <button id="playAllVoices"
+                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Play/Pause Funny Voices"></button>
                 </div>
                 <audio id="funnyVoicesAudio"></audio>
             </div>
         </div>
         <div id="music" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Music of the Wizarding World</h2>
-            <select id="musicSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                Music of the Wizarding World
+            </h2>
+            <select id="musicSelect"
+                class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
                 <option value="">Choose a Track</option>
             </select>
             <div class="audio-controls text-center">
-                <p id="p2" class="text-lg text-yellow-200 mb-2"><span class="font-bold">Musique:</span> Select a track</p>
-                <p id="a2" class="text-lg text-yellow-200 mb-4"><span class="font-bold">Audio:</span> None</p>
+                <p id="p2" class="text-lg text-yellow-200 mb-2">
+                    <span class="font-bold">Musique:</span> Select a track
+                </p>
+                <p id="a2" class="text-lg text-yellow-200 mb-4">
+                    <span class="font-bold">Audio:</span> None
+                </p>
                 <div class="relative w-64 mx-auto h-2 bg-gray-700 rounded-full mb-4">
                     <div id="musicProgress" class="absolute h-full rounded-full" style="width: 0%"></div>
                 </div>
                 <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1" class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Music Volume">
-                    <button id="musicMute" class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Mute/Unmute Music"></button>
-                    <button id="prevMusic" class="audio prev w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Previous Track"></button>
-                    <button id="playButton2" class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Play/Pause Music"></button>
-                    <button id="nextMusic" class="audio next w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Next Track"></button>
-                    <button id="shuffleMusic" class="audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all" title="Toggle Shuffle"></button>
+                    <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1"
+                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Music Volume" />
+                    <button id="musicMute"
+                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Mute/Unmute Music"></button>
+                    <button id="prevMusic"
+                        class="audio prev w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Previous Track"></button>
+                    <button id="playButton2"
+                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Play/Pause Music"></button>
+                    <button id="nextMusic"
+                        class="audio next w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Next Track"></button>
+                    <button id="shuffleMusic"
+                        class="audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                        title="Toggle Shuffle"></button>
                 </div>
                 <audio id="audio2"></audio>
             </div>
         </div>
         <div id="background" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Hogwarts Ambiance</h2>
-            <select id="backgroundSelect" class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                Hogwarts Ambiance
+            </h2>
+            <select id="backgroundSelect"
+                class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
                 <option value="">Choose a Background</option>
             </select>
         </div>
         <div id="lore-games" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">Lore & Games</h2>
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                Lore & Games
+            </h2>
             <div class="text-center">
                 <p class="text-lg text-yellow-200 mb-4">
-                    <span class="font-bold">Lore:</span> Explore the magical world of Hogwarts through its iconic characters, spells, and potions.
+                    <span class="font-bold">Lore:</span> Explore the magical world of
+                    Hogwarts through its iconic characters, spells, and potions.
                 </p>
                 <div class="flex flex-col gap-4">
                     <div>
                         <div class="flex items-center justify-between">
-                            <h3 class="text-xl font-harry-potter text-yellow-400">Characters</h3>
-                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="characters">Collapse</button>
+                            <h3 class="text-xl font-harry-potter text-yellow-400">
+                                Characters
+                            </h3>
+                            <button
+                                class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                                data-category="characters">
+                                Collapse
+                            </button>
                         </div>
                         <div id="characters-content" class="category-content mt-4">
                             <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                <input type="text" id="characterSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search characters...">
-                                <select id="loreFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                <input type="text" id="characterSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search characters..." />
+                                <select id="loreFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
                                     <option value="all">All Characters</option>
                                     <option value="Gryffindor">Gryffindor</option>
                                     <option value="Hufflepuff">Hufflepuff</option>
@@ -115,76 +196,130 @@
                                     <option value="Slytherin">Slytherin</option>
                                 </select>
                             </div>
-                            <div id="characterLoreList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div id="characterLoreList"
+                                class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
                             <div class="flex justify-center space-x-4 mt-4">
-                                <button id="prevPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                                <button id="nextPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                                <button id="prevPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
+                                </button>
                             </div>
-                            <div id="characterDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
+                            <div id="characterDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="flex items-center justify-between">
-                            <h3 class="text-xl font-harry-potter text-yellow-400">Spells</h3>
-                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="spells">Collapse</button>
+                            <h3 class="text-xl font-harry-potter text-yellow-400">
+                                Spells
+                            </h3>
+                            <button
+                                class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                                data-category="spells">
+                                Collapse
+                            </button>
                         </div>
                         <div id="spells-content" class="category-content mt-4">
                             <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                <input type="text" id="spellSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search spells...">
-                                <select id="spellFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                <input type="text" id="spellSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search spells..." />
+                                <select id="spellFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
                                     <option value="all">All Spells</option>
                                     <!-- Categories populated by JS -->
                                 </select>
                             </div>
-                            <div id="spellList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                            <div class="flex justify-center space-x-4 mt-4">
-                                <button id="prevSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                                <button id="nextSpellPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                            <div id="spellList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg">
                             </div>
-                            <div id="spellDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevSpellPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextSpellPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
+                                </button>
+                            </div>
+                            <div id="spellDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="flex items-center justify-between">
-                            <h3 class="text-xl font-harry-potter text-yellow-400">Potions</h3>
-                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="potions">Collapse</button>
+                            <h3 class="text-xl font-harry-potter text-yellow-400">
+                                Potions
+                            </h3>
+                            <button
+                                class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                                data-category="potions">
+                                Collapse
+                            </button>
                         </div>
                         <div id="potions-content" class="category-content mt-4">
                             <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                <input type="text" id="potionSearch" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none" placeholder="Search potions...">
-                                <select id="potionFilter" class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                <input type="text" id="potionSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search potions..." />
+                                <select id="potionFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
                                     <option value="all">All Potions</option>
                                     <!-- Categories populated by JS -->
                                 </select>
                             </div>
-                            <div id="potionList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div id="potionList"
+                                class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
                             <div class="flex justify-center space-x-4 mt-4">
-                                <button id="prevPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Previous</button>
-                                <button id="nextPotionPage" class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">Next</button>
+                                <button id="prevPotionPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextPotionPage"
+                                    class="px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
+                                </button>
                             </div>
-                            <div id="potionDetails" class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg"></div>
+                            <div id="potionDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
+                            </div>
                         </div>
                     </div>
                     <div>
                         <div class="flex items-center justify-between">
                             <h3 class="text-xl font-harry-potter text-yellow-400">Games</h3>
-                            <button class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1" data-category="games">Collapse</button>
+                            <button
+                                class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                                data-category="games">
+                                Collapse
+                            </button>
                         </div>
                         <div id="games-content" class="category-content mt-4">
                             <p class="text-lg text-yellow-200 mb-4">
-                                <span class="font-bold">Sorting Hat Quiz:</span> Answer the Sorting Hat's questions to discover your Hogwarts house with not less than 9720 questions combinations!
+                                <span class="font-bold">Sorting Hat Quiz:</span> Answer the
+                                Sorting Hat's questions to discover your Hogwarts house with
+                                not less than 9720 questions combinations!
                             </p>
                             <div id="sorting-hat-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
                             <div id="quiz-progress" class="mt-4"></div>
                             <div id="quiz-result" class="mt-4"></div>
                             <p class="text-lg text-yellow-200 mb-4 mt-4">
-                                <span class="font-bold">Patronus Quiz:</span> Answer mystical questions to discover your Patronus, the magical guardian that reflects your inner spirit!
+                                <span class="font-bold">Patronus Quiz:</span> Answer mystical
+                                questions to discover your Patronus, the magical guardian that
+                                reflects your inner spirit!
                             </p>
                             <div id="patronus-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
                             <div id="patronus-progress" class="mt-4"></div>
                             <div id="patronus-result" class="mt-4"></div>
                             <p class="text-lg text-yellow-200 mt-4">
-                                <span class="font-bold">More Games:</span> Coming soon: Sorting Hat Quiz enhanced, Wand Quiz, and more!
+                                <span class="font-bold">More Games:</span> Coming soon:
+                                Sorting Hat Quiz enhanced, Wand Quiz, and more!
                             </p>
                         </div>
                     </div>
@@ -195,4 +330,5 @@
     <script type="module" src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 </body>
+
 </html>
