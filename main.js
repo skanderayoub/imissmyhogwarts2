@@ -46,7 +46,7 @@ window.potionSearchQuery = '';
 window.currentFunnyVoiceIndex = 0;
 window.voiceSearchQuery = '';
 window.newData = null;
-window.selectedCharacters = []; // New global variable to track selected characters
+window.selectedCharacters = [];
 
 function getHouseCrest(house) {
     switch (house) {
@@ -90,7 +90,7 @@ function setEqualCardHeights(containerId) {
 function formatAsList(items, label) {
     if (!isNonEmpty(items) || (Array.isArray(items) && items.length === 0)) return '';
     const listItems = Array.isArray(items) ? items : items.split(',').map(item => item.trim());
-    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}:</span> ${listItems[0]}</p>`;
+    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}</span> ${listItems[0]}</p>`;
     return `
         <p class="mb-2"><span class="font-bold">${label}:</span></p>
         <ul class="list-disc list-inside ml-4">
@@ -200,7 +200,7 @@ function renderVoiceList(searchQuery) {
                 )
             );
             if (window.selectedCharacters.length === 0) {
-                window.newData = window.jsonData; // Reset to full jsonData if no characters selected
+                window.newData = window.jsonData;
             }
             document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> ${window.selectedCharacters.join(', ') || 'Select a character'}`;
         });
@@ -483,7 +483,6 @@ async function initialize() {
         cursorSelect.style.display = 'none';
     }
 
-    // Set initial background image based on screen width
     const defaultBackground = window.screenWidth < 600
         ? 'assets/phone/dark.png'
         : './assets/1303125.jpg';
@@ -498,7 +497,6 @@ async function initialize() {
         document.body.style.display = 'block';
     };
 
-    // Funny Voices Playback Logic
     let isPlayingFunnyVoices = false;
     const funnyVoiceUrls = window.funnyAudio;
     playAllVoices.addEventListener('click', () => {
@@ -836,9 +834,8 @@ async function initialize() {
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
     renderSpellList(window.currentSpellPage, 'all', '');
     renderPotionList(window.currentPotionPage, 'all', '');
-    renderVoiceList(''); // Initial render of voice list
+    renderVoiceList('');
 
-    // Check if Lore & Games tab is active on load
     const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');
     if (loreGamesTab.classList.contains('active')) {
         document.getElementById('lore-games').classList.remove('hidden');

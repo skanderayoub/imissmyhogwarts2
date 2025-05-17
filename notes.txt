@@ -1,1 +1,29 @@
 ${spell.attributes.incantation && spell.attributes.incantation.trim() !== '' ? `<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>` : ''}
+
+button[class~="paused"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/play.png);
+}
+
+button[class~="playing"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/pause.png);
+}
+
+button[class~="next"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/end.png);
+}
+
+button[class~="prev"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/rewind.png);
+}
+
+button[class~="mute"] {
+    background-image: url(https://img.icons8.com/?size=100&id=102034&format=png&color=FFFFFF);
+}
+
+button[class~="unmute"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/speaker.png);
+}
+
+button[class~="shuffle"] {
+    background-image: url(https://img.icons8.com/android/24/FFFFFF/shuffle.png);
+}

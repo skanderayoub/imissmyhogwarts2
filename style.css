@@ -127,6 +127,44 @@ select:focus {
     gap: 4px;
 }
 
+#voiceCharacterList {
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
+}
+
+#voiceCharacterList::-webkit-scrollbar {
+    width: 8px;
+}
+
+#voiceCharacterList::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#voiceCharacterList::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+#voiceCharacterList::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+.audio-controls,
+.funny-voices-controls {
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
 #characterDetails, #spellDetails, #potionDetails {
     max-height: 300px;
     overflow-y: auto;
@@ -153,7 +191,7 @@ select:focus {
 
 #characterDetails::-webkit-scrollbar-thumb,
 #spellDetails::-webkit-scrollbar-thumb,
-#potionDetails::-webkit-scrollbar-thumb {
+#potionDetails::-webkit-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
@@ -202,7 +240,7 @@ select:focus {
 }
 
 button[class~="audio"] {
-    background-size: 20px;
+    background-size: 16px;
     background-position: center;
     background-repeat: no-repeat;
     border: 2px solid;
@@ -211,30 +249,37 @@ button[class~="audio"] {
 
 button[class~="paused"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/play.png);
+    background-size: 16px;
 }
 
 button[class~="playing"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/pause.png);
+    background-size: 16px;
 }
 
 button[class~="next"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/end.png);
+    background-size: 16px;
 }
 
 button[class~="prev"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/rewind.png);
+    background-size: 16px;
 }
 
 button[class~="mute"] {
     background-image: url(https://img.icons8.com/?size=100&id=102034&format=png&color=FFFFFF);
+    background-size: 16px;
 }
 
 button[class~="unmute"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/speaker.png);
+    background-size: 16px;
 }
 
 button[class~="shuffle"] {
     background-image: url(https://img.icons8.com/android/24/FFFFFF/shuffle.png);
+    background-size: 16px;
 }
 
 button[class~="shuffle-active"] {
@@ -340,7 +385,7 @@ button[class~="shuffle-active"] {
     #characterDetails ul,
     #spellDetails ul,
     #potionDetails ul {
-        grid-template-columns: 1fr; /* Single column on mobile */
+        grid-template-columns: 1fr;
         font-size: 0.8rem;
     }
     #characterDetails ul li,
