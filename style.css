@@ -91,7 +91,12 @@ select:focus {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+    box-sizing: border-box;
 }
 
 .character-card:hover {
@@ -105,6 +110,9 @@ select:focus {
     font-family: "Harry Potter", sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     overflow-wrap: break-word;
+    white-space: normal;
+    word-break: break-word;
+    width: 100%;
 }
 
 #characterList .character-card span,
@@ -115,6 +123,83 @@ select:focus {
 
 #characterLoreList, #spellList, #potionList {
     overflow: visible !important;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+}
+
+#characterDetails, #spellDetails, #potionDetails {
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
+}
+
+#characterDetails::-webkit-scrollbar,
+#spellDetails::-webkit-scrollbar,
+#potionDetails::-webkit-scrollbar {
+    width: 8px;
+}
+
+#characterDetails::-webkit-scrollbar-track,
+#spellDetails::-webkit-scrollbar-track,
+#potionDetails::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+#characterDetails::-webkit-scrollbar-thumb,
+#spellDetails::-webkit-scrollbar-thumb,
+#potionDetails::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+#characterDetails::-webkit-scrollbar-thumb:hover,
+#spellDetails::-webkit-scrollbar-thumb:hover,
+#potionDetails::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);
+}
+
+#characterDetails ul,
+#spellDetails ul,
+#potionDetails ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+#characterDetails ul li,
+#spellDetails ul li,
+#potionDetails ul li {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    color: #f4e4bc;
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    overflow-wrap: break-word;
+    white-space: normal;
+    position: relative;
+}
+
+#characterDetails ul li::before,
+#spellDetails ul li::before,
+#potionDetails ul li::before {
+    position: absolute;
+    left: -0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary-color);
+    font-size: 0.6rem;
 }
 
 button[class~="audio"] {
@@ -249,5 +334,25 @@ button[class~="shuffle-active"] {
     .flex-wrap {
         flex-direction: column;
         align-items: center;
+    }
+    #characterDetails, #spellDetails, #potionDetails {
+        max-height: 200px;
+    }
+    #characterDetails ul,
+    #spellDetails ul,
+    #potionDetails ul {
+        grid-template-columns: 1fr; /* Single column on mobile */
+        font-size: 0.8rem;
+    }
+    #characterDetails ul li,
+    #spellDetails ul li,
+    #potionDetails ul li {
+        font-size: 0.8rem;
+    }
+    #characterDetails ul li::before,
+    #spellDetails ul li::before,
+    #potionDetails ul li::before {
+        font-size: 0.5rem;
+        left: -0.65rem;
     }
 }

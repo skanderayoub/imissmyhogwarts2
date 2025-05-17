@@ -9,6 +9,7 @@ import {
     fetchPotionsData,
     fetchPotionDifficulties,
     fetchFunnyAudioData,
+    fetchPottermoreData,
 } from './data.js';
 import {
     getNextTrack,
@@ -42,7 +43,7 @@ window.potionsPerPage = 12;
 window.characterSearchQuery = '';
 window.spellSearchQuery = '';
 window.potionSearchQuery = '';
-window.currentFunnyVoiceIndex = 0; // Track current funny voice
+window.currentFunnyVoiceIndex = 0;
 
 function getHouseCrest(house) {
     switch (house) {
@@ -62,6 +63,37 @@ function getHouseCrest(house) {
 function isNonEmpty(value) {
     return value !== null && value !== '' && value !== undefined &&
         (Array.isArray(value) ? value.length > 0 : typeof value !== 'object' || Object.keys(value).length > 0);
+}
+
+function setEqualCardHeights(containerId) {
+    const cards = document.querySelectorAll(`#${containerId} .character-card`);
+    if (cards.length === 0) return;
+
+    // Reset heights to auto to calculate natural height
+    cards.forEach(card => card.style.height = 'auto');
+
+    // Wait for reflow to ensure accurate height calculations
+    setTimeout(() => {
+        // Find the maximum height
+        const maxHeight = Array.from(cards).reduce((max, card) => {
+            return Math.max(max, card.offsetHeight);
+        }, 0);
+
+        // Apply the maximum height to all cards
+        cards.forEach(card => card.style.height = `${maxHeight}px`);
+    }, 0);
+}
+
+function formatAsList(items, label) {
+    if (!isNonEmpty(items) || (Array.isArray(items) && items.length === 0)) return '';
+    const listItems = Array.isArray(items) ? items : items.split(',').map(item => item.trim());
+    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}</span> ${listItems[0]}</p>`;
+    return `
+        <p class="mb-2"><span class="font-bold">${label}:</span></p>
+        <ul class="list-disc list-inside ml-4">
+            ${listItems.map(item => `<li>${item}</li>`).join('')}
+        </ul>
+    `;
 }
 
 function filterCharacters(filterValue, searchQuery) {
@@ -135,9 +167,9 @@ function renderCharacterLoreList(page, filterValue, searchQuery) {
         content.className = 'flex flex-col items-center';
         const imageSrc = character.attributes.image || getHouseCrest(character.attributes.house);
         content.innerHTML = `
-      <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-12 h-12 object-contain rounded-full mb-1" />
-      <span class="text-center text-xs font-harry-potter text-yellow-200">${character.attributes.name}</span>
-    `;
+            <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-12 h-12 object-contain rounded-full mb-1" />
+            <span class="text-center text-xs font-harry-potter text-yellow-200">${character.attributes.name}</span>
+        `;
         card.appendChild(content);
         card.addEventListener('click', () => {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
@@ -145,38 +177,38 @@ function renderCharacterLoreList(page, filterValue, searchQuery) {
             characterDetails.classList.remove('hidden');
             const wandsInfo = character.attributes.wands && character.attributes.wands.length > 0
                 ? character.attributes.wands.map(wand =>
-                    `${wand.wood || 'Unknown'} wood, ${wand.core || 'Unknown'} core${wand.length ? `, ${wand.length} inches` : ''}`
-                ).join('; ')
+                    `${wand.wood || 'Unknown'} wood | ${wand.core || 'Unknown'} core${wand.length ? ` | ${wand.length} inches` : ''}`
+                ).join(', ')
                 : 'Unknown';
             const details = [];
             if (isNonEmpty(character.attributes.name))
                 details.push(`<p class="mb-2"><span class="font-bold">Name:</span> ${character.attributes.name}</p>`);
             if (isNonEmpty(character.attributes.alias_names))
-                details.push(`<p class="mb-2"><span class="font-bold">Alternate Names:</span> ${character.attributes.alias_names.join(', ')}</p>`);
+                details.push(formatAsList(character.attributes.alias_names, 'Alternate Names'));
             if (isNonEmpty(character.attributes.house))
                 details.push(`<p class="mb-2"><span class="font-bold">House:</span> ${character.attributes.house}</p>`);
             if (isNonEmpty(character.attributes.species))
                 details.push(`<p class="mb-2"><span class="font-bold">Species:</span> ${character.attributes.species}</p>`);
             if (isNonEmpty(character.attributes.patronus))
                 details.push(`<p class="mb-2"><span class="font-bold">Patronus:</span> ${character.attributes.patronus}</p>`);
-            if (isNonEmpty(wandsInfo) && wandsInfo !== 'Unknown')
-                details.push(`<p class="mb-2"><span class="font-bold">Wands:</span> ${wandsInfo}</p>`);
+            if (isNonEmpty(character.attributes.wands))
+                details.push(formatAsList(character.attributes.wands, 'Wands'));
             if (isNonEmpty(character.attributes.born))
                 details.push(`<p class="mb-2"><span class="font-bold">Born:</span> ${character.attributes.born}</p>`);
             if (isNonEmpty(character.attributes.romances))
-                details.push(`<p class="mb-2"><span class="font-bold">Romances:</span> ${character.attributes.romances.join(', ')}</p>`);
+                details.push(formatAsList(character.attributes.romances, 'Romances'));
             if (isNonEmpty(character.attributes.titles))
-                details.push(`<p class="mb-2"><span class="font-bold">Titles:</span> ${character.attributes.titles.join(', ')}</p>`);
+                details.push(formatAsList(character.attributes.titles, 'Titles'));
             if (isNonEmpty(character.attributes.jobs))
-                details.push(`<p class="mb-2"><span class="font-bold">Jobs:</span> ${character.attributes.jobs.join(', ')}</p>`);
+                details.push(formatAsList(character.attributes.jobs, 'Jobs'));
             if (isNonEmpty(character.attributes.family_members))
-                details.push(`<p class="mb-2"><span class="font-bold">Family Members:</span> ${character.attributes.family_members.join(', ')}</p>`);
+                details.push(formatAsList(character.attributes.family_members, 'Family Members'));
             characterDetails.innerHTML = `
-        <div class="flex flex-col items-center p-4">
-          <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-24 h-24 object-contain rounded-lg mb-4" />
-          ${details.join('')}
-        </div>
-      `;
+                <div class="flex flex-col items-center p-4">
+                    <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-24 h-24 object-contain rounded-lg mb-4" />
+                    ${details.join('')}
+                </div>
+            `;
         });
         characterLoreList.appendChild(card);
     });
@@ -185,6 +217,7 @@ function renderCharacterLoreList(page, filterValue, searchQuery) {
     const nextPage = document.getElementById('nextPage');
     prevPage.disabled = page === 0;
     nextPage.disabled = end >= filteredCharacters.length;
+    setEqualCardHeights('characterLoreList');
 }
 
 function renderSpellList(page, category, searchQuery) {
@@ -204,25 +237,28 @@ function renderSpellList(page, category, searchQuery) {
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
         content.innerHTML = `
-      <span class="text-center text-xs font-harry-potter text-yellow-200">${spell.attributes.name}</span>
-    `;
+            <span class="text-center text-xs font-harry-potter text-yellow-200">${spell.attributes.name}</span>
+        `;
         card.appendChild(content);
         card.addEventListener('click', () => {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
             spellDetails.classList.remove('hidden');
             const imageHtml = spell.attributes.image ? `<img src="${spell.attributes.image}" alt="${spell.attributes.name}" class="w-64 h-64 object-contain rounded-lg mb-4" />` : '';
+            const details = [];
+            details.push(`<p class="mb-2"><span class="font-bold">Spell:</span> ${spell.attributes.name}</p>`);
+            details.push(`<p class="mb-2"><span class="font-bold">Category:</span> ${spell.attributes.category || 'Unknown'}</p>`);
+            details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${spell.attributes.effect || 'No effect available'}</p>`);
+            if (spell.attributes.incantation && spell.attributes.incantation.trim() !== '')
+                details.push(`<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>`);
+            details.push(`<p class="mb-2"><span class="font-bold">Creator:</span> ${spell.attributes.creator || 'Unknown'}</p>`);
+            details.push(`<p class="mb-2"><span class="font-bold">Light:</span> ${spell.attributes.light || 'Unknown'}</p>`);
             spellDetails.innerHTML = `
-        <div class="flex flex-col items-center p-4">
-          ${imageHtml}
-          <p class="mb-2"><span class="font-bold">Spell:</span> ${spell.attributes.name}</p>
-          <p class="mb-2"><span class="font-bold">Category:</span> ${spell.attributes.category || 'Unknown'}</p>
-          <p class="mb-2"><span class="font-bold">Effect:</span> ${spell.attributes.effect || 'No effect available'}</p>
-          ${spell.attributes.incantation && spell.attributes.incantation.trim() !== '' ? `<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>` : ''}
-          <p class="mb-2"><span class="font-bold">Creator:</span> ${spell.attributes.creator || 'Unknown'}</p>
-          <p class="mb-2"><span class="font-bold">Light:</span> ${spell.attributes.light || 'Unknown'}</p>
-        </div>
-      `;
+                <div class="flex flex-col items-center p-4">
+                    ${imageHtml}
+                    ${details.join('')}
+                </div>
+            `;
         });
         spellList.appendChild(card);
     });
@@ -231,6 +267,7 @@ function renderSpellList(page, category, searchQuery) {
     const nextSpellPage = document.getElementById('nextSpellPage');
     prevSpellPage.disabled = page === 0;
     nextSpellPage.disabled = end >= filteredSpells.length;
+    setEqualCardHeights('spellList');
 }
 
 function renderPotionList(page, difficulty, searchQuery) {
@@ -250,8 +287,8 @@ function renderPotionList(page, difficulty, searchQuery) {
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
         content.innerHTML = `
-      <span class="text-center text-xs font-harry-potter text-yellow-200">${potion.attributes.name}</span>
-    `;
+            <span class="text-center text-xs font-harry-potter text-yellow-200">${potion.attributes.name}</span>
+        `;
         card.appendChild(content);
         card.addEventListener('click', () => {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
@@ -268,21 +305,22 @@ function renderPotionList(page, difficulty, searchQuery) {
             if (isNonEmpty(potion.attributes.effect))
                 details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${potion.attributes.effect}</p>`);
             if (isNonEmpty(potion.attributes.inventors))
-                details.push(`<p class="mb-2"><span class="font-bold">Inventors:</span> ${potion.attributes.inventors.join(', ')}</p>`);
+                console.log(potion.attributes.inventors.length);
+                details.push(formatAsList(potion.attributes.inventors, 'Inventors'));
             if (isNonEmpty(potion.attributes.ingredients))
-                details.push(`<p class="mb-2"><span class="font-bold">Ingredients:</span> ${potion.attributes.ingredients}</p>`);
+                details.push(formatAsList(potion.attributes.ingredients, 'Ingredients'));
             if (isNonEmpty(potion.attributes.manufacturers))
-                details.push(`<p class="mb-2"><span class="font-bold">Manufacturers:</span> ${potion.attributes.manufacturers.join(', ')}</p>`);
+                details.push(formatAsList(potion.attributes.manufacturers, 'Manufacturers'));
             if (isNonEmpty(potion.attributes.side_effects))
                 details.push(`<p class="mb-2"><span class="font-bold">Side Effects:</span> ${potion.attributes.side_effects}</p>`);
             if (isNonEmpty(potion.attributes.time))
                 details.push(`<p class="mb-2"><span class="font-bold">Time:</span> ${potion.attributes.time}</p>`);
             potionDetails.innerHTML = `
-        <div class="flex flex-col items-center p-4">
-          ${imageHtml}
-          ${details.join('')}
-        </div>
-      `;
+                <div class="flex flex-col items-center p-4">
+                    ${imageHtml}
+                    ${details.join('')}
+                </div>
+            `;
         });
         potionList.appendChild(card);
     });
@@ -291,6 +329,7 @@ function renderPotionList(page, difficulty, searchQuery) {
     const nextPotionPage = document.getElementById('nextPotionPage');
     prevPotionPage.disabled = page === 0;
     nextPotionPage.disabled = end >= filteredPotions.length;
+    setEqualCardHeights('potionList');
 }
 
 function toggleCategory(category) {
@@ -301,6 +340,9 @@ function toggleCategory(category) {
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
+        if (category === 'games') {
+            startQuiz();
+        }
     } else {
         content.classList.add('collapsed');
         button.textContent = 'Expand';
@@ -398,24 +440,19 @@ async function initialize() {
 
     // Funny Voices Playback Logic
     let isPlayingFunnyVoices = false;
-    const funnyVoiceUrls = window.funnyAudio; // audio.json is an array of URLs
+    const funnyVoiceUrls = window.funnyAudio;
     playAllVoices.addEventListener('click', () => {
         if (!isPlayingFunnyVoices) {
-            // Start playing
             isPlayingFunnyVoices = true;
-            // Log audio data
             console.log('Funny voices audio data:', funnyVoiceUrls);
             playAllVoices.className = 'audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
             if (!funnyVoicesAudio.src || funnyVoicesAudio.paused) {
-                // Start from current index
                 funnyVoicesAudio.src = funnyVoiceUrls[window.currentFunnyVoiceIndex];
                 funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
             } else {
-                // Resume if paused
                 funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
             }
         } else {
-            // Pause
             isPlayingFunnyVoices = false;
             playAllVoices.className = 'audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
             funnyVoicesAudio.pause();
@@ -424,7 +461,6 @@ async function initialize() {
 
     funnyVoicesAudio.addEventListener('ended', () => {
         if (isPlayingFunnyVoices) {
-            // Move to next voice, loop back to start
             window.currentFunnyVoiceIndex = (window.currentFunnyVoiceIndex + 1) % funnyVoiceUrls.length;
             funnyVoicesAudio.src = funnyVoiceUrls[window.currentFunnyVoiceIndex];
             funnyVoicesAudio.play().catch((e) => console.error('Error playing funny voice:', e));
@@ -506,7 +542,7 @@ async function initialize() {
             .substring(wallpaper.lastIndexOf('/') + 1)
             .replace(/\.(png|jpg)/, '');
         option.value = index;
-        backgroundSelect.add(option);
+        backgroundSelect.appendChild(option);
     });
 
     Object.keys(window.jsonData).forEach((key) => {
@@ -516,8 +552,8 @@ async function initialize() {
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
         content.innerHTML = `
-      <span class="text-center text-xs font-harry-potter text-yellow-200">${key}</span>
-    `;
+            <span class="text-center text-xs font-harry-potter text-yellow-200">${key}</span>
+        `;
         card.appendChild(content);
         card.addEventListener('click', () => {
             card.classList.toggle('selected');
@@ -758,11 +794,11 @@ async function initialize() {
     });
 
     backgroundSelect.addEventListener('change', () => {
-    const selectedValue = backgroundSelect.value;
-    if (selectedValue) {
-        document.body.style.backgroundImage = `url('${window.wallpaperData[selectedValue]}')`;
-    }
-});
+        const selectedValue = backgroundSelect.value;
+        if (selectedValue) {
+            document.body.style.backgroundImage = `url('${window.wallpaperData[selectedValue]}')`;
+        }
+    });
 
     themeSelect.addEventListener('change', () => {
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${themeSelect.value}`;
