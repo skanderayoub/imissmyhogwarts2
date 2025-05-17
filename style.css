@@ -188,7 +188,7 @@ button[class~="shuffle-active"] {
 
 #particles {
     background: url("assets/particles.png") repeat;
-    opacity: 0.05;
+    opacity: 0.1;
     animation: sparkle 30s linear infinite;
 }
 
