@@ -160,7 +160,7 @@ function filterVoices(searchQuery) {
         filtered = filtered.filter(key => {
             const character = window.characterLoreData.find(c => c.attributes.name === key);
             return key.toLowerCase().includes(query) ||
-                   (character && (character.attributes.alias_names || []).some(alias => alias.toLowerCase().includes(query)));
+                (character && (character.attributes.alias_names || []).some(alias => alias.toLowerCase().includes(query)));
         });
     }
 
@@ -396,7 +396,7 @@ function toggleCategory(category) {
     const content = document.getElementById(`${category}-content`);
     const button = document.querySelector(`.toggle-button[data-category="${category}"]`);
     const isCollapsed = content.classList.contains('collapsed');
-    
+
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
@@ -482,6 +482,29 @@ async function initialize() {
     if (window.screenWidth < 600) {
         cursorSelect.style.display = 'none';
     }
+
+    // Populate musicSelect with trackList
+    musicSelect.innerHTML = '<option value="">Choose a Track</option>'; // Reset options
+    const albums = [...new Set(window.trackList.map(track => track.album))]; // Get unique albums
+    albums.forEach(album => {
+        // Create optgroup for each album
+        const optgroup = document.createElement('optgroup');
+        optgroup.label = album;
+        // Add tracks for this album
+        window.trackList
+            .filter(track => track.album === album)
+            .forEach((track, index) => {
+                const option = document.createElement('option');
+                option.value = window.trackList.indexOf(track); // Use global index in trackList
+                const trackName = track.url
+                    .substring(track.url.lastIndexOf('/') + 1)
+                    .replace(/\.(mp3)/, '')
+                    .replace(/^\d+\.\s*/, ''); // Remove track number prefix
+                option.text = decodeURIComponent(trackName); // Display only track name
+                optgroup.appendChild(option);
+            });
+        musicSelect.appendChild(optgroup);
+    });
 
     const defaultBackground = window.screenWidth < 600
         ? 'assets/phone/dark.png'

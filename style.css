@@ -357,6 +357,43 @@ button[class~="shuffle-active"] {
     100% { transform: translateY(-100px); opacity: 0; }
 }
 
+/* Ensure select dropdown matches element width */
+select#musicSelect {
+    width: 100%;
+    max-width: 28rem; /* Matches max-w-md (448px) from Tailwind */
+    position: relative;
+}
+
+/* Style for the dropdown menu (browser-specific) */
+select#musicSelect::-ms-expand {
+    display: none; /* Hide default arrow in IE/Edge */
+}
+
+select#musicSelect {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="%23f4e4bc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+    padding-right: 2rem; /* Space for custom arrow */
+}
+
+/* Ensure optgroup and option elements are styled consistently */
+select#musicSelect optgroup,
+select#musicSelect option {
+    background: #1f2937; /* Matches bg-gray-800 */
+    color: #f4e4bc; /* Matches text-yellow-200 */
+    font-family: "Cinzel", serif;
+    padding: 0.5rem; /* Consistent padding */
+}
+
+/* Webkit-specific dropdown menu width adjustment */
+select#musicSelect:focus::-webkit-listbox {
+    width: 100% !important; /* Attempt to force dropdown width */
+}
+
 @media (max-width: 640px) {
     .character-card span {
         font-size: 0.65rem;
@@ -398,5 +435,8 @@ button[class~="shuffle-active"] {
     #potionDetails ul li::before {
         font-size: 0.5rem;
         left: -0.65rem;
+    }
+    select#musicSelect {
+        max-width: 100%; /* Full width on mobile */
     }
 }
