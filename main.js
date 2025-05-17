@@ -61,6 +61,8 @@ function getHouseCrest(house) {
             return './assets/crests/Ravenclaw.png';
         case 'Slytherin':
             return './assets/crests/Slytherin.png';
+        case 'Legacy':
+            return './assets/crests/Hogwarts-Legacy.png';
         default:
             return './assets/crests/Hogwarts.png';
     }
@@ -182,7 +184,7 @@ function renderVoiceList(searchQuery) {
         card.dataset.character = key;
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
-        const imageSrc = character ? (character.attributes.image || getHouseCrest(character.attributes.house)) : getHouseCrest('Hogwarts');
+        const imageSrc = character ? (character.attributes.image || getHouseCrest(character.attributes.house)) : getHouseCrest('Legacy');
         content.innerHTML = `
             <img src="${imageSrc}" alt="${key} crest" class="w-12 h-12 object-contain rounded-full mb-1" />
             <span class="text-center text-xs font-harry-potter text-yellow-200">${key}</span>
