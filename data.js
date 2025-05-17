@@ -142,3 +142,16 @@ export async function fetchFunnyAudioData() {
         return null;
     }
 }
+
+export async function fetchPottermoreData() {
+    try {
+        const response = await fetch(
+            "./pottermore_data.json"
+        );
+        if (!response.ok) throw new Error("Failed to fetch pottermore_data.json");
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching Pottermore data:", error);
+        return {};
+    }
+}

@@ -384,7 +384,7 @@ async function initialize() {
     // Set initial background image based on screen width
     const defaultBackground = window.screenWidth < 600
         ? 'assets/phone/dark.png'
-        : 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+        : './assets/1303125.jpg';
     const bgImg = new Image();
     bgImg.src = defaultBackground;
     bgImg.onload = () => {

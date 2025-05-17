@@ -1,87 +1,6 @@
-const quizData = [
-    {
-        question: "What quality do you value most in yourself?",
-        answers: [
-            { text: "Courage and bravery", house: "Gryffindor", score: 1 },
-            { text: "Loyalty and hard work", house: "Hufflepuff", score: 1 },
-            { text: "Intelligence and creativity", house: "Ravenclaw", score: 1 },
-            { text: "Ambition and cunning", house: "Slytherin", score: 1 },
-        ],
-    },
-    {
-        question: "How would you face a dangerous situation?",
-        answers: [
-            { text: "Charge in boldly", house: "Gryffindor", score: 1 },
-            { text: "Protect others first", house: "Hufflepuff", score: 1 },
-            { text: "Analyze and plan", house: "Ravenclaw", score: 1 },
-            { text: "Use strategy to gain advantage", house: "Slytherin", score: 1 },
-        ],
-    },
-    {
-        question: "What do you seek in a friend?",
-        answers: [
-            { text: "Someone daring and adventurous", house: "Gryffindor", score: 1 },
-            { text: "Someone kind and trustworthy", house: "Hufflepuff", score: 1 },
-            { text: "Someone witty and knowledgeable", house: "Ravenclaw", score: 1 },
-            { text: "Someone resourceful and determined", house: "Slytherin", score: 1 },
-        ],
-    },
-    {
-        question: "What’s your approach to achieving your goals?",
-        answers: [
-            { text: "Face challenges head-on", house: "Gryffindor", score: 1 },
-            { text: "Work steadily and support others", house: "Hufflepuff", score: 1 },
-            { text: "Research and innovate", house: "Ravenclaw", score: 1 },
-            { text: "Plan carefully and seize opportunities", house: "Slytherin", score: 1 },
-        ],
-    },
-    {
-        question: "Which magical creature would you befriend?",
-        answers: [
-            { text: "Phoenix (bold and loyal)", house: "Gryffindor", score: 1 },
-            { text: "Badger (gentle and persistent)", house: "Hufflepuff", score: 1 },
-            { text: "Raven (wise and observant)", house: "Ravenclaw", score: 1 },
-            { text: "Serpent (clever and elusive)", house: "Slytherin", score: 1 },
-        ],
-    },
-];
+import { fetchPottermoreData } from './data.js';
 
-const houseDescriptions = {
-    Gryffindor: {
-        description: "You belong to Gryffindor, where dwell the brave at heart! Your courage, chivalry, and determination shine, making you a natural leader in the face of adversity.",
-        crest: "./assets/crests/Gryffindor.png",
-        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10027.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10038.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10047.wav"
-        ],
-
-    },
-    Hufflepuff: {
-        description: "You are a Hufflepuff, valued for your loyalty, patience, and hard work! Your kindness and dedication make you a true friend and a steadfast ally.",
-        crest: "./assets/crests/Hufflepuff.png",
-        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10029.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10036.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10049.wav"
-        ],
-    },
-    Ravenclaw: {
-        description: "Welcome to Ravenclaw, home of wit and learning! Your intelligence, creativity, and curiosity drive you to seek knowledge and embrace new ideas.",
-        crest: "./assets/crests/Ravenclaw.png",
-        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10028.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10037.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10048.wav"
-        ],
-    },
-    Slytherin: {
-        description: "Slytherin is your home, where ambition and cunning reign! Your resourcefulness and determination ensure you achieve your goals with strategic flair.",
-        crest: "./assets/crests/Slytherin.png",
-        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10030.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10035.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10050.wav"
-        ],
-    },
-};
-
+let quizData = [];
 let currentQuestionIndex = 0;
 let scores = {
     Gryffindor: 0,
@@ -90,10 +9,94 @@ let scores = {
     Slytherin: 0,
 };
 
+const houseDescriptions = {
+    Gryffindor: {
+        description: "You belong to Gryffindor, where dwell the brave at heart! Your courage, chivalry, and determination shine, making you a natural leader in the face of adversity.",
+        crest: "./assets/crests/Gryffindor.png",
+        sound: [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10027.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10038.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10047.wav"
+        ],
+    },
+    Hufflepuff: {
+        description: "You are a Hufflepuff, valued for your loyalty, patience, and hard work! Your kindness and dedication make you a true friend and a steadfast ally.",
+        crest: "./assets/crests/Hufflepuff.png",
+        sound: [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10029.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10036.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10049.wav"
+        ],
+    },
+    Ravenclaw: {
+        description: "Welcome to Ravenclaw, home of wit and learning! Your intelligence, creativity, and curiosity drive you to seek knowledge and embrace new ideas.",
+        crest: "./assets/crests/Ravenclaw.png",
+        sound: [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10028.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10037.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10048.wav"
+        ],
+    },
+    Slytherin: {
+        description: "Slytherin is your home, where ambition and cunning reign! Your resourcefulness and determination ensure you achieve your goals with strategic flair.",
+        crest: "./assets/crests/Slytherin.png",
+        sound: [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10030.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10035.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10050.wav"
+        ],
+    },
+};
+
+async function loadQuizData() {
+    try {
+        const pottermoreData = await fetchPottermoreData();
+        quizData = [];
+        // Assuming question sets are numbered 1 to 7
+        for (let i = 1; i <= 8; i++) {
+            const questionSet = pottermoreData[i.toString()];
+            if (questionSet) {
+                // Get all questions in the set
+                const questions = Object.values(questionSet);
+                // Pick a random question
+                const randomQuestion = questions[Math.floor(Math.random() * questions.length)];
+                // Format the question for the quiz
+                const formattedQuestion = {
+                    question: randomQuestion.question,
+                    answers: randomQuestion.answers.map((answer, index) => ({
+                        text: answer,
+                        weights: randomQuestion.weights[index]
+                    }))
+                };
+                quizData.push(formattedQuestion);
+            }
+        }
+    } catch (error) {
+        console.error("Failed to load Pottermore data:", error);
+        // Fallback to a default question if data fetch fails
+        quizData = [
+            {
+                question: "What quality do you value most in yourself?",
+                answers: [
+                    { text: "Courage and bravery", weights: { Gryffindor: 100, Hufflepuff: 50, Ravenclaw: 50, Slytherin: 50 } },
+                    { text: "Loyalty and hard work", weights: { Gryffindor: 50, Hufflepuff: 100, Ravenclaw: 50, Slytherin: 50 } },
+                    { text: "Intelligence and creativity", weights: { Gryffindor: 50, Hufflepuff: 50, Ravenclaw: 100, Slytherin: 50 } },
+                    { text: "Ambition and cunning", weights: { Gryffindor: 50, Hufflepuff: 50, Ravenclaw: 50, Slytherin: 100 } },
+                ],
+            }
+        ];
+    }
+}
+
 function startQuiz() {
+    // Set quiz container to visible
+    const quizContainer = document.getElementById('sorting-hat-quiz');
+    quizContainer.classList.remove('hidden');
     currentQuestionIndex = 0;
     scores = { Gryffindor: 0, Hufflepuff: 0, Ravenclaw: 0, Slytherin: 0 };
-    renderQuiz();
+    loadQuizData().then(() => {
+        renderQuiz();
+    });
 }
 
 function renderQuiz() {
@@ -111,14 +114,14 @@ function renderQuiz() {
         <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">${questionData.question}</h3>
         <div class="grid grid-cols-1 gap-2">
             ${questionData.answers
-            .map(
-                (answer, index) => `
+                .map(
+                    (answer, index) => `
                     <button class="quiz-answer bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all p-3 text-left" data-index="${index}">
                         ${answer.text}
                     </button>
                 `
-            )
-            .join('')}
+                )
+                .join('')}
         </div>
     `;
 
@@ -138,7 +141,11 @@ function renderQuiz() {
         button.addEventListener('click', () => {
             const answerIndex = parseInt(button.dataset.index);
             const answer = questionData.answers[answerIndex];
-            scores[answer.house] += answer.score;
+            // Add weights to scores
+            for (const [house, weight] of Object.entries(answer.weights)) {
+                scores[house] += weight;
+            }
+            console.log(`Scores after question ${currentQuestionIndex + 1}:`, scores);
             currentQuestionIndex++;
             renderQuiz();
         });
@@ -165,6 +172,8 @@ function showResult() {
 
     const houseInfo = houseDescriptions[selectedHouse];
     quizContainer.innerHTML = '';
+    // hide quiz container
+    quizContainer.classList.add('hidden');
     progressContainer.innerHTML = '';
     resultContainer.innerHTML = `
         <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">The Sorting Hat Has Spoken!</h3>
@@ -172,6 +181,7 @@ function showResult() {
         <p class="text-lg text-yellow-200 mb-4">${houseInfo.description}</p>
         <button id="restart-quiz" class="bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
     `;
+
     // Play random sound from the selected house
     const audio = new Audio();
     const randomSound = houseInfo.sound[Math.floor(Math.random() * houseInfo.sound.length)];
