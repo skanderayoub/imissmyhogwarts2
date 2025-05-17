@@ -401,6 +401,8 @@ async function initialize() {
         if (!isPlayingFunnyVoices) {
             // Start playing
             isPlayingFunnyVoices = true;
+            // Log audio data
+            console.log('Funny voices audio data:', funnyVoiceUrls);
             playAllVoices.className = 'audio playing w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
             if (!funnyVoicesAudio.src || funnyVoicesAudio.paused) {
                 // Start from current index
