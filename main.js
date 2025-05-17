@@ -92,7 +92,8 @@ function filterSpells(category, searchQuery) {
     if (searchQuery) {
         const query = searchQuery.toLowerCase();
         filtered = filtered.filter(spell =>
-            spell.attributes.name.toLowerCase().includes(query)
+            spell.attributes.name.toLowerCase().includes(query) ||
+            (spell.attributes.incantation && spell.attributes.incantation.toLowerCase().includes(query))
         );
     }
 
@@ -217,6 +218,7 @@ function renderSpellList(page, category, searchQuery) {
           <p class="mb-2"><span class="font-bold">Spell:</span> ${spell.attributes.name}</p>
           <p class="mb-2"><span class="font-bold">Category:</span> ${spell.attributes.category || 'Unknown'}</p>
           <p class="mb-2"><span class="font-bold">Effect:</span> ${spell.attributes.effect || 'No effect available'}</p>
+          ${spell.attributes.incantation && spell.attributes.incantation.trim() !== '' ? `<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>` : ''}
           <p class="mb-2"><span class="font-bold">Creator:</span> ${spell.attributes.creator || 'Unknown'}</p>
           <p class="mb-2"><span class="font-bold">Light:</span> ${spell.attributes.light || 'Unknown'}</p>
         </div>
@@ -755,12 +757,12 @@ async function initialize() {
         playNewSound(newData, audioSound, 'sound');
     });
 
-    backgroundSelect.addEventListener('click', () => {
-        const selectedValue = backgroundSelect.value;
-        if (selectedValue) {
-            document.body.style.backgroundImage = `url('${window.wallpaperData[selectedValue]}')`;
-        }
-    });
+    backgroundSelect.addEventListener('change', () => {
+    const selectedValue = backgroundSelect.value;
+    if (selectedValue) {
+        document.body.style.backgroundImage = `url('${window.wallpaperData[selectedValue]}')`;
+    }
+});
 
     themeSelect.addEventListener('change', () => {
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${themeSelect.value}`;
