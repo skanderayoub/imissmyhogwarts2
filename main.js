@@ -10,6 +10,7 @@ import {
     fetchPotionDifficulties,
     fetchFunnyAudioData,
     fetchPottermoreData,
+    fetchPatronusData,
 } from './data.js';
 import {
     getNextTrack,
@@ -20,6 +21,7 @@ import {
 } from './audio.js';
 import { setupMouseEffects, updateCursorStyle } from './ui.js';
 import { startQuiz } from './sorting-hat.js';
+import { startPatronusQuiz } from './patronus.js';
 
 window.jsonData = null;
 window.musicData = null;
@@ -47,6 +49,7 @@ window.currentFunnyVoiceIndex = 0;
 window.voiceSearchQuery = '';
 window.newData = null;
 window.selectedCharacters = [];
+window.patronusData = null;
 
 function getHouseCrest(house) {
     switch (house) {
@@ -402,6 +405,7 @@ function toggleCategory(category) {
         button.textContent = 'Collapse';
         if (category === 'games') {
             startQuiz();
+            startPatronusQuiz(window.patronusData);
         }
     } else {
         content.classList.add('collapsed');
@@ -410,7 +414,7 @@ function toggleCategory(category) {
 }
 
 async function initialize() {
-    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio] = await Promise.all([
+    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio, patronusData] = await Promise.all([
         fetchAudioData(),
         fetchMusicData(),
         fetchWallpaperData(window.screenWidth),
@@ -421,6 +425,7 @@ async function initialize() {
         fetchPotionsData(),
         fetchPotionDifficulties(),
         fetchFunnyAudioData(),
+        fetchPatronusData(),
     ]);
 
     window.jsonData = audioData;
@@ -433,13 +438,15 @@ async function initialize() {
     window.potionsData = potionsData;
     window.funnyAudio = funnyAudio;
     window.newData = audioData;
+    window.patronusData = patronusData;
 
-    if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData) {
+    if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData || !window.patronusData) {
         console.error("Failed to load required data:", {
             wallpaperData: window.wallpaperData,
             jsonData: window.jsonData,
             musicData: window.musicData,
             cursorData: window.cursorData,
+            patronusData: window.patronusData,
         });
         return;
     }
@@ -588,6 +595,7 @@ async function initialize() {
                     const gamesContent = document.getElementById('games-content');
                     if (!gamesContent.classList.contains('collapsed')) {
                         startQuiz();
+                        startPatronusQuiz(window.patronusData);
                     }
                 } else if (button.dataset.tab === 'voices') {
                     renderVoiceList(window.voiceSearchQuery);

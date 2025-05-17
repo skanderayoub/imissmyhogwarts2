@@ -155,3 +155,15 @@ export async function fetchPottermoreData() {
         return {};
     }
 }
+
+export async function fetchPatronusData() {
+    try {
+        const response = await fetch('./patronus.json');
+        if (!response.ok) throw new Error('Failed to fetch patronus.json');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching patronus data:', error);
+        return { Questions: {}, Answers: {} };
+    }
+}

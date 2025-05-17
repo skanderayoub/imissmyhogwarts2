@@ -43,6 +43,7 @@ button[class~="audio"],
 .tab-button,
 .toggle-button,
 .quiz-answer,
+.answer-btn,
 select {
     border-color: var(--primary-color);
 }
@@ -52,6 +53,7 @@ button[class~="audio"]:hover,
 .tab-button:hover,
 .toggle-button:hover,
 .quiz-answer:hover,
+.answer-btn:hover,
 select:focus {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -63,7 +65,8 @@ select:focus {
 }
 
 #musicProgress,
-#quiz-progress .bg-yellow-400 {
+#quiz-progress .bg-yellow-400,
+#patronus-progress .bg-yellow-400 {
     background-color: var(--primary-color);
 }
 
@@ -120,7 +123,9 @@ select:focus {
     font-size: 0.65rem;
 }
 
-#characterLoreList, #spellList, #potionList {
+#characterLoreList,
+#spellList,
+#potionList {
     overflow: visible !important;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -165,7 +170,9 @@ select:focus {
     margin-top: 1rem;
 }
 
-#characterDetails, #spellDetails, #potionDetails {
+#characterDetails,
+#spellDetails,
+#potionDetails {
     max-height: 300px;
     overflow-y: auto;
     background: rgba(0, 0, 0, 0.6);
@@ -293,13 +300,15 @@ button[class~="shuffle-active"] {
     transition: background-color 0.3s ease;
 }
 
-.quiz-answer {
+.quiz-answer,
+.answer-btn {
     font-size: 1rem;
     cursor: var(--pointer-url) 4 4, pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.quiz-answer:hover {
+.quiz-answer:hover,
+.answer-btn:hover {
     transform: translateY(-2px);
 }
 
@@ -332,13 +341,25 @@ button[class~="shuffle-active"] {
 }
 
 @keyframes sparkleFade {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0.3) translateY(-10px); }
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.3) translateY(-10px);
+    }
 }
 
 @keyframes sparkle {
-    0% { background-position: 0 0; }
-    100% { background-position: 1000px 1000px; }
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 1000px 1000px;
+    }
 }
 
 .floating-candle {
@@ -353,20 +374,29 @@ button[class~="shuffle-active"] {
 }
 
 @keyframes floatCandle {
-    0% { transform: translateY(0); opacity: 1; }
-    100% { transform: translateY(-100px); opacity: 0; }
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
 }
 
 /* Ensure select dropdown matches element width */
 select#musicSelect {
     width: 100%;
-    max-width: 28rem; /* Matches max-w-md (448px) from Tailwind */
+    max-width: 28rem;
+    /* Matches max-w-md (448px) from Tailwind */
     position: relative;
 }
 
 /* Style for the dropdown menu (browser-specific) */
 select#musicSelect::-ms-expand {
-    display: none; /* Hide default arrow in IE/Edge */
+    display: none;
+    /* Hide default arrow in IE/Edge */
 }
 
 select#musicSelect {
@@ -377,66 +407,83 @@ select#musicSelect {
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 12px;
-    padding-right: 2rem; /* Space for custom arrow */
+    padding-right: 2rem;
+    /* Space for custom arrow */
 }
 
 /* Ensure optgroup and option elements are styled consistently */
 select#musicSelect optgroup,
 select#musicSelect option {
-    background: #1f2937; /* Matches bg-gray-800 */
-    color: #f4e4bc; /* Matches text-yellow-200 */
+    background: #1f2937;
+    /* Matches bg-gray-800 */
+    color: #f4e4bc;
+    /* Matches text-yellow-200 */
     font-family: "Cinzel", serif;
-    padding: 0.5rem; /* Consistent padding */
+    padding: 0.5rem;
+    /* Consistent padding */
 }
 
 /* Webkit-specific dropdown menu width adjustment */
 select#musicSelect:focus::-webkit-listbox {
-    width: 100% !important; /* Attempt to force dropdown width */
+    width: 100% !important;
+    /* Attempt to force dropdown width */
 }
 
 @media (max-width: 640px) {
     .character-card span {
         font-size: 0.65rem;
     }
+
     #characterList .character-card span,
     #spellList .character-card span,
     #potionList .character-card span {
         font-size: 0.6rem;
     }
+
     .tab-button {
         width: 100%;
         padding: 0.5rem;
         font-size: 0.85rem;
     }
+
     .quiz-answer {
         font-size: 0.9rem;
         padding: 0.5rem;
     }
+
     .flex-wrap {
         flex-direction: column;
         align-items: center;
     }
-    #characterDetails, #spellDetails, #potionDetails {
+
+    #characterDetails,
+    #spellDetails,
+    #potionDetails {
         max-height: 300px;
     }
+
     #characterDetails ul,
     #spellDetails ul,
     #potionDetails ul {
         grid-template-columns: 1fr;
         font-size: 0.8rem;
     }
+
     #characterDetails ul li,
     #spellDetails ul li,
     #potionDetails ul li {
         font-size: 0.8rem;
     }
+
     #characterDetails ul li::before,
     #spellDetails ul li::before,
     #potionDetails ul li::before {
         font-size: 0.5rem;
         left: -0.65rem;
     }
+
     select#musicSelect {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%;
+        /* Full width on mobile */
     }
 }

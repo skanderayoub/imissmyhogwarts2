@@ -1,0 +1,360 @@
+{
+    "Questions": {
+        "1": {
+            "1": {
+                "Glitter": "Green",
+                "Shine": "Blue",
+                "Glow": "Red"
+            },
+            "2": {
+                "Dream": "Green",
+                "Discover": "Blue",
+                "Dance": "Red"
+            },
+            "3": {
+                "Leaf": "Green",
+                "Thorn": "Blue",
+                "Blade": "Red"
+            },
+            "4": {
+                "Protect": "Green",
+                "Seek": "Blue",
+                "Serve": "Red"
+            },
+            "5": {
+                "Sun": "Green",
+                "Rain": "Blue",
+                "Wind": "Red"
+            }
+        },
+        "2": {
+            "1": {
+                "Sweet": "Green",
+                "Salt": "Blue"
+            },
+            "2": {
+                "Make": "Green",
+                "Improve": "Blue"
+            },
+            "3": {
+                "Smooth": "Green",
+                "Rough": "Blue"
+            },
+            "4": {
+                "Warm": "Green",
+                "Cold": "Blue"
+            },
+            "5": {
+                "Bright": "Green",
+                "Shadow": "Blue"
+            },
+            "6": {
+                "Bone": "Green",
+                "Blood": "Blue"
+            }
+        },
+        "3": {
+            "1": {
+                "Save": "Green",
+                "Lead": "Blue",
+                "Escape": "Red"
+            },
+            "2": {
+                "Play": "Green",
+                "Prowl": "Blue",
+                "Preen": "Red"
+            },
+            "3": {
+                "Feel": "Green",
+                "Think": "Blue",
+                "Sense": "Red"
+            },
+            "4": {
+                "Wood": "Green",
+                "Stone": "Blue",
+                "Earth": "Red"
+            },
+            "5": {
+                "Over": "Green",
+                "Under": "Blue",
+                "Around": "Red"
+            }
+        },
+        "4": {
+            "1": {
+                "Forever": "Green",
+                "Sometime": "Blue"
+            },
+            "2": {
+                "Who": "Green",
+                "Why": "Blue"
+            },
+            "3": {
+                "Safe": "Green",
+                "Free": "Blue"
+            },
+            "4": {
+                "Together": "Green",
+                "Alone": "Blue"
+            },
+            "5": {
+                "Found": "Green",
+                "Lost": "Blue"
+            },
+            "6": {
+                "Speak": "Green",
+                "Silence": "Blue"
+            }
+        },
+        "5": {
+            "1": {
+                "Love": "Green",
+                "Hope": "Blue",
+                "Trust": "Red"
+            },
+            "2": {
+                "White": "Green",
+                "Black": "Blue",
+                "Grey": "Red"
+            },
+            "3": {
+                "Heart": "Green",
+                "Mind": "Blue",
+                "Spirit": "Red"
+            },
+            "4": {
+                "Comfort": "Green",
+                "Advice": "Blue",
+                "Impress": "Red"
+            },
+            "5": {
+                "Watch": "Green",
+                "Listen": "Blue",
+                "Touch": "Red"
+            }
+        },
+        "6": {
+            "1": {
+                "Sharp": "Green",
+                "Sleek": "Blue"
+            },
+            "2": {
+                "Deep": "Green",
+                "High": "Blue"
+            },
+            "3": {
+                "Awake": "Green",
+                "Asleep": "Blue"
+            },
+            "4": {
+                "Frost": "Green",
+                "Dew": "Blue"
+            },
+            "5": {
+                "Ripple": "Green",
+                "Wave": "Blue"
+            },
+            "6": {
+                "Hunt": "Green",
+                "Create": "Blue"
+            }
+        },
+        "7": {
+            "1": {
+                "Myth": "Green",
+                "Legend": "Blue"
+            },
+            "2": {
+                "Serenity": "Green",
+                "Glory": "Blue"
+            },
+            "3": {
+                "Eternal": "Green",
+                "Impossible": "Blue"
+            },
+            "4": {
+                "Enchant": "Green",
+                "Bewitch": "Blue"
+            },
+            "5": {
+                "Charm": "Green",
+                "Jinx": "Blue"
+            }
+        },
+        "Answers": {
+            "Green Green Green Green Green": "Dolphin",
+            "Green Green Green Green Blue": [
+                "Dapple Grey Mare",
+                "Dapple Grey Stallion"
+            ],
+            "Green Green Green Green Red": "Nebelung Cat",
+            "Green Green Green Blue Green": [
+                "White Mare",
+                "White Stallion"
+            ],
+            "Green Green Green Blue Blue": "Bassett Hound",
+            "Green Green Green Blue Red": "Deerhound",
+            "Green Green Blue Green Green": "Black and White Cat",
+            "Green Green Blue Green Blue": "Red Squirrel",
+            "Green Green Blue Green Red": "Husky",
+            "Green Green Blue Blue Green": "Chow Dog",
+            "Green Green Blue Blue Blue": "Wild Boar",
+            "Green Green Blue Blue Red": "Newfoundland",
+            "Green Green Red Green Green": "Tonkinese Cat",
+            "Green Green Red Green Blue": "Badger",
+            "Green Green Red Green Red": "Otter",
+            "Green Green Red Blue Green": "Siberian Cat",
+            "Green Green Red Blue Blue Green": [
+                "Doe",
+                "Stag"
+            ],
+            "Green Green Red Blue Blue Blue": "Lynx",
+            "Red Blue Green Blue Blue": "Weasel",
+            "Green Blue Green Green Green": "Manx Car",
+            "Green Blue Green Green Blue": "Tortoiseshell Cat",
+            "Green Blue Green Green Red": "Borzoi",
+            "Green Blue Green Blue Green": "West Highland Terrier",
+            "Green Blue Green Blue Blue": [
+                "Dun Mare",
+                "Dun Stallion"
+            ],
+            "Green Blue Green Blue Red": "Irish Wolfhound",
+            "Green Blue Blue Green Green": [
+                "Piebald Mare",
+                "Piebald Stallion"
+            ],
+            "Green Blue Blue Green Blue": "Black Swan",
+            "Green Blue Blue Green Red": "Ocicat",
+            "Green Blue Blue Blue Green": "Ginger Cat",
+            "Green Blue Blue Blue Blue": "Mole",
+            "Green Blue Blue Blue Red": "Mastiff",
+            "Green Blue Red Green Green": "Bloodhound",
+            "Green Blue Red Green Blue": "Sphynx Swift",
+            "Green Blue Red Green Red Green": "Eagle Owl",
+            "Green Blue Red Green Red Blue": "Scops Owl",
+            "Green Blue Red Blue Green": "Ibizan Hound",
+            "Green Blue Red Blue Blue": "Robin",
+            "Green Blue Red Blue Red Green": "Brown Owl",
+            "Green Blue Red Blue Red Blue": "Little Owl",
+            "Blue Green Green Green Green": "St. Bernard",
+            "Blue Green Green Green Blue": "Osprey",
+            "Blue Green Green Green Red": "Stoat",
+            "Blue Green Green Blue Green": [
+                "Bay Mare",
+                "Bay Stallion"
+            ],
+            "Blue Green Green Blue Blue": "Marsh Harrier",
+            "Blue Green Green Blue Red": "Pine Marten",
+            "Blue Blue Green Green Red": "Fox",
+            "Blue Green Blue Green Blue": "Rottweiler",
+            "Blue Green Blue Green Red": "Nightjar",
+            "Blue Green Blue Blue Green": "Falcon",
+            "Blue Green Blue Blue Blue": "Wolf",
+            "Blue Green Blue Blue Red": "Adder",
+            "Blue Green Red Green Green": "Wildcat",
+            "Blue Green Red Green Blue": "Blackbird",
+            "Blue Green Red Green Red Green": [
+                "Cheetah",
+                "Python"
+            ],
+            "Blue Green Red Green Red Blue": [
+                "Lynx",
+                "Tiger",
+                "Tigress"
+            ],
+            "Blue Green Red Blue Green": "Mongrel Dog",
+            "Blue Green Red Blue Blue Green": "Great Grey Owl",
+            "Blue Green Red Blue Blue Blue": "Bat",
+            "Blue Green Red Blue Red Green": [
+                "Black Bear",
+                "Rhinoceros"
+            ],
+            "Blue Green Red Blue Red Blue": [
+                "Elephant",
+                "Polar Bear"
+            ],
+            "Blue Blue Green Green Green": "Ragdoll Cat",
+            "Blue Blue Green Green Blue": "Sparrowhawk",
+            "Blue Blue Green Blue Green": "Beagle",
+            "Blue Blue Green Blue Blue": "White Swan",
+            "Blue Blue Green Blue Red": "Wild Rabbit",
+            "Blue Blue Blue Green Green": "Hummingbird",
+            "Blue Blue Blue Green Blue": "Rat",
+            "Blue Blue Blue Green Red": "Pheasant",
+            "Blue Blue Blue Blue Green": "Goshawk",
+            "Blue Blue Blue Blue Blue Green Green": "Thestral",
+            "Blue Blue Blue Blue Blue Green Blue": "Hippogriff",
+            "Blue Blue Blue Blue Blue Blue": "Hyena",
+            "Blue Blue Blue Blue Red": "Eagle",
+            "Blue Blue Red Green Green": [
+                "Chestnut Mare",
+                "Chestnut Stallion"
+            ],
+            "Blue Blue Red Green Blue Green": "Raven",
+            "Blue Blue Red Green Blue Blue": "Snowy Owl",
+            "Blue Blue Red Green Red Green": "Oryx",
+            "Blue Blue Red Green Red Blue": [
+                "Impala",
+                "Vulture",
+                "Albatross"
+            ],
+            "Blue Blue Red Blue Green": "Russian Blue Cat",
+            "Blue Blue Red Blue Blue": "Buzzard",
+            "Blue Blue Red Blue Red Green": [
+                "Leopard",
+                "Leopardess",
+                "Shark"
+            ],
+            "Blue Blue Red Blue Red Blue": [
+                "Lion",
+                "Lioness",
+                "Seal"
+            ],
+            "Red Green Green Green Green": [
+                "Black Mare",
+                "Black Stallion"
+            ],
+            "Red Green Green Green Blue": "Grey Squirrel",
+            "Red Green Green Green Red": "Brown Hare",
+            "Red Green Green Blue Green": "Calico Cat",
+            "Red Green Red Blue Green": "Hedgehog",
+            "Red Green Green Blue Red": "Salmon",
+            "Red Green Blue Green Green": "Kingfisher",
+            "Red Green Blue Green Blue": "Shrew",
+            "Red Green Blue Green Red": "Capuchin Monkey",
+            "Red Green Blue Blue Green": "Swallow",
+            "Red Green Blue Blue Blue": "Field Mouse",
+            "Red Green Blue Blue Red": "Brown Bear",
+            "Red Green Red Green Green": "Mink",
+            "Red Green Red Green Blue": "Aardvark",
+            "Red Green Red Green Red Green Green": "Unicorn",
+            "Red Green Red Green Red Green Blue": "Erumpent",
+            "Red Green Red Green Red Blue": "Orca",
+            "Red Green Red Blue Blue": "Rattlesnake",
+            "Red Green Red Blue Red Green Green": "Granian Winged Horse",
+            "Red Green Red Blue Red Green Blue": "Abraxan Winged Horse",
+            "Red Green Red Blue Red Blue": "Buffalo",
+            "Red Blue Green Green Green": "Fox Terrier",
+            "Red Blue Green Green Blue": "Polecat",
+            "Red Blue Green Green Red": "Grass Snake",
+            "Red Blue Green Blue Green": "Greyhound",
+            "Red Blue Green Blue Red": "Dragonfly",
+            "Red Blue Blue Green Green": "Sparrow",
+            "Red Blue Blue Green Blue": "Vole",
+            "Red Blue Blue Green Red": "Sphynx Cat",
+            "Red Blue Blue Blue Green": "Crow",
+            "Red Blue Blue Blue Blue": "Magpie",
+            "Red Blue Blue Blue Red": "Heron",
+            "Red Blue Red Green Green": "Mountain Hare",
+            "Red Blue Red Green Blue": "Orangutan",
+            "Red Blue Red Green Red Green Green": "Occamy",
+            "Red Blue Red Green Red Green Blue": "Runespoor",
+            "Red Blue Red Green Red Blue": "Peacock",
+            "Red Blue Red Blue Green": "Wood Mouse",
+            "Red Blue Red Blue Blue": "Black Mamba",
+            "Red Blue Red Blue Red Green Green": "Fire-dwelling Salamander",
+            "Red Blue Red Blue Red Green Blue": "Dragon",
+            "Red Blue Red Blue Red Blue": "King Cobra"
+        }
+    }
+}
