@@ -43,6 +43,7 @@ body {
 button[class~="audio"],
 .tab-button,
 .toggle-button,
+.quiz-answer,
 select {
     border-color: var(--primary-color);
 }
@@ -51,6 +52,7 @@ select {
 button[class~="audio"]:hover,
 .tab-button:hover,
 .toggle-button:hover,
+.quiz-answer:hover,
 select:focus {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -61,7 +63,8 @@ select:focus {
     background: var(--gradient);
 }
 
-#musicProgress {
+#musicProgress,
+#quiz-progress .bg-yellow-400 {
     background-color: var(--primary-color);
 }
 
@@ -161,9 +164,19 @@ button[class~="shuffle-active"] {
     transition: background-color 0.3s ease;
 }
 
+.quiz-answer {
+    font-size: 1rem;
+    cursor: var(--pointer-url) 4 4, pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quiz-answer:hover {
+    transform: translateY(-2px);
+}
+
 .category-content {
     transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: 1000px; /* Adjust based on content size */
+    max-height: 1000px;
     opacity: 1;
     overflow: hidden;
 }
@@ -228,6 +241,10 @@ button[class~="shuffle-active"] {
         width: 100%;
         padding: 0.5rem;
         font-size: 0.85rem;
+    }
+    .quiz-answer {
+        font-size: 0.9rem;
+        padding: 0.5rem;
     }
     .flex-wrap {
         flex-direction: column;

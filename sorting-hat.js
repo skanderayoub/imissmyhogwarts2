@@ -50,18 +50,35 @@ const houseDescriptions = {
     Gryffindor: {
         description: "You belong to Gryffindor, where dwell the brave at heart! Your courage, chivalry, and determination shine, making you a natural leader in the face of adversity.",
         crest: "./assets/crests/Gryffindor.png",
+        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10027.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10038.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10047.wav"
+        ],
+
     },
     Hufflepuff: {
         description: "You are a Hufflepuff, valued for your loyalty, patience, and hard work! Your kindness and dedication make you a true friend and a steadfast ally.",
         crest: "./assets/crests/Hufflepuff.png",
+        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10029.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10036.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10049.wav"
+        ],
     },
     Ravenclaw: {
         description: "Welcome to Ravenclaw, home of wit and learning! Your intelligence, creativity, and curiosity drive you to seek knowledge and embrace new ideas.",
         crest: "./assets/crests/Ravenclaw.png",
+        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10028.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10037.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10048.wav"
+        ],
     },
     Slytherin: {
         description: "Slytherin is your home, where ambition and cunning reign! Your resourcefulness and determination ensure you achieve your goals with strategic flair.",
         crest: "./assets/crests/Slytherin.png",
+        sound: ["https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10030.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10035.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Sorting%20Hat.rar/Sorting%20Hat%2Fsortinghat_10050.wav"
+        ],
     },
 };
 
@@ -94,14 +111,14 @@ function renderQuiz() {
         <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">${questionData.question}</h3>
         <div class="grid grid-cols-1 gap-2">
             ${questionData.answers
-                .map(
-                    (answer, index) => `
+            .map(
+                (answer, index) => `
                     <button class="quiz-answer bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all p-3 text-left" data-index="${index}">
                         ${answer.text}
                     </button>
                 `
-                )
-                .join('')}
+            )
+            .join('')}
         </div>
     `;
 
@@ -155,6 +172,11 @@ function showResult() {
         <p class="text-lg text-yellow-200 mb-4">${houseInfo.description}</p>
         <button id="restart-quiz" class="bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
     `;
+    // Play random sound from the selected house
+    const audio = new Audio();
+    const randomSound = houseInfo.sound[Math.floor(Math.random() * houseInfo.sound.length)];
+    audio.src = randomSound;
+    audio.play();
 
     document.getElementById('restart-quiz').addEventListener('click', startQuiz);
 }

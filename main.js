@@ -17,6 +17,7 @@ import {
     playMusicTrack,
 } from './audio.js';
 import { setupMouseEffects, updateCursorStyle } from './ui.js';
+import { startQuiz } from './sorting-hat.js';
 
 window.jsonData = null;
 window.musicData = null;
@@ -89,8 +90,7 @@ function filterSpells(category, searchQuery) {
     if (searchQuery) {
         const query = searchQuery.toLowerCase();
         filtered = filtered.filter(spell =>
-            spell.attributes.name.toLowerCase().includes(query) ||
-            (spell.attributes.incantation && spell.attributes.incantation.toLowerCase().includes(query))
+            spell.attributes.name.toLowerCase().includes(query)
         );
     }
 
@@ -215,7 +215,6 @@ function renderSpellList(page, category, searchQuery) {
           <p class="mb-2"><span class="font-bold">Spell:</span> ${spell.attributes.name}</p>
           <p class="mb-2"><span class="font-bold">Category:</span> ${spell.attributes.category || 'Unknown'}</p>
           <p class="mb-2"><span class="font-bold">Effect:</span> ${spell.attributes.effect || 'No effect available'}</p>
-          ${spell.attributes.incantation && spell.attributes.incantation.trim() !== '' ? `<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>` : ''}
           <p class="mb-2"><span class="font-bold">Creator:</span> ${spell.attributes.creator || 'Unknown'}</p>
           <p class="mb-2"><span class="font-bold">Light:</span> ${spell.attributes.light || 'Unknown'}</p>
         </div>
@@ -294,10 +293,13 @@ function toggleCategory(category) {
     const content = document.getElementById(`${category}-content`);
     const button = document.querySelector(`.toggle-button[data-category="${category}"]`);
     const isCollapsed = content.classList.contains('collapsed');
-
+    
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
+        if (category === 'games') {
+            startQuiz(); // Restart quiz when games section is expanded
+        }
     } else {
         content.classList.add('collapsed');
         button.textContent = 'Expand';
@@ -391,6 +393,7 @@ async function initialize() {
                     renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
                     renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
                     renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
+                    startQuiz(); // Initialize quiz when Lore & Games tab is opened
                 }
             } else {
                 console.error(`Tab content not found for: ${button.dataset.tab}`);
