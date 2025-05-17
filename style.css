@@ -335,7 +335,7 @@ button[class~="shuffle-active"] {
         align-items: center;
     }
     #characterDetails, #spellDetails, #potionDetails {
-        max-height: 200px;
+        max-height: 300px;
     }
     #characterDetails ul,
     #spellDetails ul,
