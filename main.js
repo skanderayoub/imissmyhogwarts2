@@ -297,9 +297,6 @@ function toggleCategory(category) {
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
-        if (category === 'games') {
-            startQuiz(); // Restart quiz when games section is expanded
-        }
     } else {
         content.classList.add('collapsed');
         button.textContent = 'Expand';
@@ -374,6 +371,21 @@ async function initialize() {
         cursorSelect.style.display = 'none';
     }
 
+    // Set initial background image based on screen width
+    const defaultBackground = window.screenWidth < 600
+        ? 'assets/phone/dark.png'
+        : 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
+    const bgImg = new Image();
+    bgImg.src = defaultBackground;
+    bgImg.onload = () => {
+        document.body.style.backgroundImage = `url('${defaultBackground}')`;
+        document.body.style.display = 'block';
+    };
+    bgImg.onerror = () => {
+        console.error(`Failed to load background image: ${defaultBackground}`);
+        document.body.style.display = 'block'; // Show page even if image fails
+    };
+
     const tabButtons = document.querySelectorAll('.tab-button');
     tabButtons.forEach((button) => {
         button.addEventListener('click', (e) => {
@@ -389,11 +401,13 @@ async function initialize() {
                 targetTab.classList.remove('hidden');
                 console.log(`Switched to tab: ${button.dataset.tab}`);
                 if (button.dataset.tab === 'lore-games') {
-                    renderTypings();
                     renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
                     renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
                     renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
-                    startQuiz(); // Initialize quiz when Lore & Games tab is opened
+                    const gamesContent = document.getElementById('games-content');
+                    if (!gamesContent.classList.contains('collapsed')) {
+                        startQuiz();
+                    }
                 }
             } else {
                 console.error(`Tab content not found for: ${button.dataset.tab}`);
@@ -421,15 +435,6 @@ async function initialize() {
         option.text = difficulty;
         potionFilter.appendChild(option);
     });
-
-    const bgImg = new Image();
-    bgImg.src =
-        window.screenWidth < 600
-            ? 'assets/phone/dark.png'
-            : 'https://images.unsplash.com/photo-1543351611-58f69d7c1781?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80';
-    bgImg.onload = () => {
-        document.body.style.display = 'block';
-    };
 
     window.wallpaperData.forEach((wallpaper, index) => {
         const option = document.createElement('option');
@@ -711,6 +716,16 @@ async function initialize() {
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
     renderSpellList(window.currentSpellPage, 'all', '');
     renderPotionList(window.currentPotionPage, 'all', '');
+
+    // Check if Lore & Games tab is active on load (unlikely, but for robustness)
+    const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');
+    if (loreGamesTab.classList.contains('active')) {
+        document.getElementById('lore-games').classList.remove('hidden');
+        const gamesContent = document.getElementById('games-content');
+        if (!gamesContent.classList.contains('collapsed')) {
+            startQuiz();
+        }
+    }
 }
 
 initialize();
