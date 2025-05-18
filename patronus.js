@@ -123,7 +123,7 @@ export function startPatronusQuiz(patronusData) {
                 <ul class="list-disc list-inside text-yellow-200 mb-4">
                     ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
                 </ul>
-                <button id="restartPatronusQuiz" class="mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                <button id="restartPatronusQuiz" class="btn-normal mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
                     Try Again
                 </button>
             `;

@@ -179,7 +179,7 @@ function showResult() {
         <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">The Sorting Hat Has Spoken!</h3>
         <img src="${houseInfo.crest}" alt="${selectedHouse} crest" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
         <p class="text-lg text-yellow-200 mb-4">${houseInfo.description}</p>
-        <button id="restart-quiz" class="bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
+        <button id="restart-quiz" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
     `;
 
     // Play random sound from the selected house
