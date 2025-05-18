@@ -718,7 +718,7 @@ function startQuiz() {
         wandAudio.Greetings["Pleasure to meet you"],
         wandAudio.Greetings["Let's get started"],
     ];
-    playAudioSequence(greetingUrls, "Greetings from Ollivander", () => {
+    playAudioSequence(greetingUrls, "Greetings from Gerbold Ollivander", () => {
         loadQuizData().then(() => {
             renderQuiz();
         });
@@ -741,7 +741,7 @@ function renderQuiz() {
         ];
         playAudioSequence(
             foundUrls,
-            "Ollivander is looking for the perfect wand...",
+            "Mr. Ollivander is looking for the perfect wand...",
             () => {
                 quizContainer.innerHTML = `
                 <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">The Wand is Ready!</h3>

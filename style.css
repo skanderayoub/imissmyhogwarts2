@@ -17,9 +17,9 @@ body {
 }
 
 .theme-hufflepuff {
-    --primary-color: #eee117;
+    --primary-color: #c9c04b;
     --secondary-color: #000000;
-    --gradient: linear-gradient(145deg, rgba(238, 225, 23, 0.7), rgba(0, 0, 0, 0.7));
+    --gradient: linear-gradient(145deg, #c9c04b, rgba(0, 0, 0, 0.7));
 }
 
 .theme-ravenclaw {

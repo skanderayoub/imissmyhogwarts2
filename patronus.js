@@ -4,10 +4,25 @@ export function startPatronusQuiz(patronusData) {
     const resultContainer = document.getElementById('patronus-result');
     resultContainer.classList.add('hidden');
     progressContainer.classList.remove('hidden');
-    
+
     let currentSet = 1;
     let colorSequence = [];
     let selectedAnswers = [];
+    let patronusImages = {};
+
+    // Function to load the JSON file
+    async function loadPatronusImages() {
+        try {
+            const response = await fetch('patronus_images.json');
+            patronusImages = await response.json();
+            console.log('Patronus images loaded successfully');
+        } catch (error) {
+            console.error('Error loading patronus images:', error);
+        }
+    }
+
+    // Call this when your page loads (e.g., in your initialization code)
+    loadPatronusImages();
 
     function getAnswerOptions(setNumber) {
         const setData = patronusData.Questions[setNumber.toString()];
@@ -102,7 +117,7 @@ export function startPatronusQuiz(patronusData) {
                 if (currentSet <= 7) {
                     renderQuestion(currentSet);
                 } else {
-                    showFinalResult(matches.length > 0 ? matches : null);                    
+                    showFinalResult(matches.length > 0 ? matches : null);
                 }
             });
         });
@@ -115,43 +130,60 @@ export function startPatronusQuiz(patronusData) {
         quizContainer.classList.add('hidden');
         resultContainer.classList.remove('hidden');
 
+        let patronusName = Array.isArray(patronus) ? patronus[0] : patronus;
+        let imageUrl = patronus ? patronusImages[patronusName] : null;
+
         if (patronus) {
             resultContainer.innerHTML = `
-                <p class="text-lg text-yellow-200 font-harry-potter">
-                    Your Patronus is:
-                </p>
-                <p class="text-3xl text-yellow-200 font-harry-potter font-bold mt-4">
-                    ${Array.isArray(patronus) ? patronus[0] : patronus}
-                </p>
-                <p class="text-yellow-200 mt-2">Based on answers:</p>
-                <ul class="list-disc list-inside text-yellow-200 mb-4">
-                    ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
-                </ul>
-                <button id="restartPatronusQuiz" class="btn-normal mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                    Try Again
-                </button>
-            `;
+            ${imageUrl ? `
+            <div class="flex justify-center mb-6">
+                <img src="${imageUrl}" alt="${patronusName}" 
+                     class="max-h-48 rounded-lg shadow-lg">
+            </div>
+            ` : ''}
+            <p class="text-lg text-yellow-200 font-harry-potter">
+                Your Patronus is:
+            </p>
+            <p class="text-3xl text-yellow-200 font-harry-potter font-bold mt-4">
+                ${patronusName}
+            </p>
+            <p class="text-yellow-200 mt-2">Based on answers:</p>
+            <ul class="list-disc list-inside text-yellow-200 mb-4">
+                ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
+            </ul>
+            <button id="restartPatronusQuiz" class="btn-normal mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                Try Again
+            </button>
+        `;
         } else {
             resultContainer.innerHTML = `
-                <p class="text-lg text-yellow-200 font-harry-potter">
-                    No unique Patronus matches these words. The magic is elusive!
-                </p>
-                <p class="text-yellow-200 mt-2">Your answers:</p>
-                <ul class="list-disc list-inside text-yellow-200 mb-4">
-                    ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
-                </ul>
-                <button id="restartPatronusQuiz" class="mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                    Try Again
-                </button>
-            `;
+            <p class="text-lg text-yellow-200 font-harry-potter">
+                No unique Patronus matches these words. The magic is elusive!
+            </p>
+            <p class="text-yellow-200 mt-2">Your answers:</p>
+            <ul class="list-disc list-inside text-yellow-200 mb-4">
+                ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
+            </ul>
+            <button id="restartPatronusQuiz" class="mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                Try Again
+            </button>
+        `;
+        }
+
+        // Make the image clickable to view full size if it exists
+        if (imageUrl) {
+            const img = resultContainer.querySelector('img');
+            img.addEventListener('click', () => {
+                window.open(imageUrl, '_blank');
+            });
         }
 
         document.getElementById('restartPatronusQuiz').addEventListener('click', () => {
             currentSet = 1;
             colorSequence = [];
             selectedAnswers = [];
-            resultContainer.classList.add('hidden');   
-            progressContainer.classList.remove('hidden');         
+            resultContainer.classList.add('hidden');
+            progressContainer.classList.remove('hidden');
             renderQuestion(1);
         });
     }
