@@ -1,0 +1,36 @@
+{
+    "Greetings": {
+        "Ollivander presentation": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10033.wav",
+        "Pleasure to meet you": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10034.wav",
+        "Let's get started": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10036.wav"
+    },
+    "Selection": {
+        "Hesiation": [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10037.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10043.wav"
+        ],
+        "Try this": [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10038.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10044.wav"
+        ],
+        "Swish it!": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10039.wav",
+        "Oh dear": [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10041.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10045.wav"
+        ],
+        "This isn't a good match": [
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10040.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10047.wav"
+        ],
+        "Dont't worry": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10042.wav"
+    },
+    "Found": {
+        "There you are": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10057.wav",
+        "You might be the one": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10054.wav"
+    },
+    "Characteristics": {
+        "Phoenix": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10408.wav",
+        "Unicorn": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10409.wav",
+        "Dragon": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10407.wav"
+    }
+}

@@ -167,3 +167,16 @@ export async function fetchPatronusData() {
         return { Questions: {}, Answers: {} };
     }
 }
+
+export async function fetchWandAudio() {
+    try {
+        const response = await fetch(
+            "./wand_audio.json"
+        );
+        if (!response.ok) throw new Error("Network response was not ok");
+        return await response.json();
+    } catch (error) {
+        console.error("Error fetching wand audio data:", error);
+        return null;
+    }
+}

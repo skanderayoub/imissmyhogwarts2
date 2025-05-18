@@ -410,7 +410,7 @@ function toggleCategory(category) {
             // Start the specific quiz when expanding
             if (category === 'sorting-hat') startQuiz();
             else if (category === 'patronus') startPatronusQuiz(window.patronusData);
-            else if (category === 'wand') startWandQuiz();
+            //else if (category === 'wand') startWandQuiz();
         }
     } else {
         content.classList.add('collapsed');
@@ -606,7 +606,7 @@ async function initialize() {
                         startPatronusQuiz(window.patronusData);
                     }
                     if (!document.getElementById('wand-content').classList.contains('collapsed')) {
-                        startWandQuiz();
+                        //startWandQuiz();
                     }
                 } else if (button.dataset.tab === 'voices') {
                     renderVoiceList(window.voiceSearchQuery);
@@ -879,6 +879,9 @@ async function initialize() {
         themeSelect.value = savedTheme;
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${savedTheme}`;
     }
+
+    
+    document.getElementById('start-wand-quiz').addEventListener('click', startWandQuiz);
 
     setupMouseEffects();
     updateCursorStyle(cursorSelect.value);
