@@ -224,8 +224,8 @@ function playAudioSequence(audioUrls, message, callback) {
     const resultContainer = document.getElementById('wand-result');
 
     // Disable interaction and show message
-    quizContainer.classList.add('pointer-events-none', 'opacity-50');
-    progressContainer.innerHTML = `<p class="text-yellow-200">${message}</p>`;
+    //quizContainer.classList.add('pointer-events-none', 'opacity-50');
+    quizContainer.innerHTML = `<p class="text-yellow-200">${message}</p>`;
     resultContainer.innerHTML = '';
 
     let current = 0;
@@ -302,6 +302,7 @@ async function loadQuizData() {
 }
 
 function startQuiz() {
+    document.getElementById('start-wand-quiz').classList.add('hidden');
     const quizContainer = document.getElementById('wand-quiz');
     quizContainer.classList.remove('hidden');
     currentQuestionIndex = 0;
@@ -353,6 +354,7 @@ function renderQuiz() {
             getRandomAudio(wandAudio.Selection.Hesiation),
             getRandomAudio(wandAudio.Selection["Try this"]),
             wandAudio.Selection["Swish it!"],
+            getRandomAudio(wandAudio.Selection["Sound"]),
             getRandomAudio(wandAudio.Selection["Oh dear"]),
             getRandomAudio(wandAudio.Selection["This isn't a good match"]),
             wandAudio.Selection["Dont't worry"]
