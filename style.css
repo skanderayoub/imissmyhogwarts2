@@ -1,3 +1,10 @@
+@font-face {
+    font-family: "HARRY P__";
+    src: url("./assets/HARRYP__.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     font-family: "Cinzel", serif;
     --cursor-url: url("assets/cursors/Dobby/cursor.cur");
@@ -610,6 +617,15 @@ select#musicSelect option {
 
 select#musicSelect:focus::-webkit-listbox {
     width: 100% !important;
+}
+
+/* Apply HARRY P__ font to numbers in wand description */
+#wand-quiz .text-2xl.font-harry-potter {
+    font-family: "Harry Potter", sans-serif;
+}
+
+#wand-quiz .text-2xl.font-harry-potter span.number {
+    font-family: "HARRY P__", sans-serif;
 }
 
 /* Animation keyframes */

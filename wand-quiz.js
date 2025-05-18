@@ -928,9 +928,9 @@ function showResult() {
 
     console.log("Wand attributes:", { core, length, flexibility, wood });
 
-    // Construct wand description
+    // Construct wand description with numbers wrapped in span
     const wandDescription = `
-    <p class="text-2xl font-harry-potter text-yellow-400 font-bold mb-4 italic">${wood} wood with a ${core} core, ${length} and ${flexibility} flexibility.</p>
+    <p class="text-2xl font-harry-potter text-yellow-400 font-bold mb-4 italic">${wood} wood with a ${core} core, <span class="number">${length}</span> and ${flexibility} flexibility.</p>
     <div class="text-sm text-yellow-200 space-y-2">
         <p><strong>Wood:</strong> ${wandDescriptions.woods[wood.replace(/\s/g, "")] ||
         "A fine wood, suited to a unique wizard."
