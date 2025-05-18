@@ -343,10 +343,9 @@ function renderQuiz() {
     if (currentQuestionIndex >= quizData.length) {
         // Play Found audio and show Reveal Wand button
         const foundUrls = [
-            getRandomAudio([
-                wandAudio.Found["There you are"],
-                wandAudio.Found["You might be the one"]
-            ])
+            wandAudio.Found["Searching"],
+            getRandomAudio([wandAudio.Found["There you are"],
+            wandAudio.Found["You might be the one"]])
         ];
         playAudioSequence(foundUrls, "The wand is choosing...", () => {
             quizContainer.innerHTML = `
@@ -390,14 +389,14 @@ function displayQuestion() {
         <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">${questionData.question}</h3>
         <div class="grid grid-cols-1 gap-2">
             ${questionData.answers
-                .map(
-                    (answer, index) => `
+            .map(
+                (answer, index) => `
                     <button class="wand-quiz-answer bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all p-3" data-index="${index}">
                         ${answer.text}
                     </button>
                 `
-                )
-                .join('')}
+            )
+            .join('')}
         </div>
     `;
 

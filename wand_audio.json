@@ -17,15 +17,11 @@
         "Sound": [
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Avada Kedavra 1.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Avada Kedavra 2.wav",
-            "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Expeliarmus 1.wav",
-            "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Expulso 1.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Ignitium 1.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Ignitium 2.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Incendio 1.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Incendio 2.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Incendio 3 [BassBoosted].wav",
-            "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Stupefix + Contre 1.wav",
-            "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Stupefix + Contre 2.wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Stupefix 5 (Impact).wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Stupefix 6 (Impact Verre).wav",
             "https://github.com/skanderayoub/imissmyhogwarts2/raw/refs/heads/main/assets/spells_audio/Stupefix 7 (Impact).wav",
@@ -37,11 +33,13 @@
         ],
         "This isn't a good match": [
             "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10040.wav",
-            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10047.wav"
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10047.wav",
+            "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10051.wav"
         ],
         "Dont't worry": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10042.wav"
     },
     "Found": {
+        "Searching": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10055.wav",
         "There you are": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10057.wav",
         "You might be the one": "https://archive.org/download/hogwarts-legacy-voice-files/Gerbold%20Ollivander.rar/Gerbold%20Ollivander%2Fgerboldollivander_10054.wav"
     },
