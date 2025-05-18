@@ -573,6 +573,10 @@ async function initialize() {
     bgImg.onload = () => {
         document.body.style.backgroundImage = `url('${defaultBackground}')`;
         document.body.style.display = 'block';
+        // Add these lines to ensure proper mobile behavior
+        document.body.style.height = '100%';
+        document.body.style.width = '100%';
+        document.body.style.position = 'fixed';
     };
     bgImg.onerror = () => {
         console.error(`Failed to load background image: ${defaultBackground}`);
