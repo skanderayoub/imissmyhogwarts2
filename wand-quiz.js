@@ -231,6 +231,12 @@ function playAudioSequence(audioUrls, message, callback) {
     let current = 0;
     const audio = new Audio();
 
+    // Preload all audio files to minimize delays
+    audioUrls.forEach(url => {
+        const tempAudio = new Audio(url);
+        tempAudio.preload = 'auto';
+    });
+
     function playNext() {
         if (current >= audioUrls.length) {
             // Re-enable interaction
@@ -335,7 +341,7 @@ function renderQuiz() {
     const resultContainer = document.getElementById('wand-result');
 
     if (currentQuestionIndex >= quizData.length) {
-        // Play Found audio before showing result
+        // Play Found audio and show Reveal Wand button
         const foundUrls = [
             getRandomAudio([
                 wandAudio.Found["There you are"],
@@ -343,7 +349,14 @@ function renderQuiz() {
             ])
         ];
         playAudioSequence(foundUrls, "The wand is choosing...", () => {
-            showResult();
+            quizContainer.innerHTML = `
+                <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">The Wand is Ready!</h3>
+                <button id="reveal-wand" class="bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2 font-harry-potter text-lg">
+                    Reveal Wand
+                </button>
+            `;
+            progressContainer.innerHTML = '';
+            document.getElementById('reveal-wand').addEventListener('click', showResult);
         });
         return;
     }
@@ -467,15 +480,14 @@ function showResult() {
         <strong>Flexibility:</strong> ${wandDescriptions.flexibilities[flexibility] || "A balanced flexibility for varied spellcasting."}
     `;
 
-    quizContainer.innerHTML = '';
-    quizContainer.classList.add('hidden');
-    progressContainer.innerHTML = '';
-
     // Play Characteristics audio based on core
     const coreAudio = wandAudio.Characteristics[core];
     playAudioSequence([coreAudio], `Discovering your wand's core: ${core}`, () => {
+        quizContainer.innerHTML = '';
+        quizContainer.classList.add('hidden');
+        progressContainer.innerHTML = '';
         resultContainer.innerHTML = `
-            <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">The Wand Chooses You!</h3>
+            <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">The Wand Has Chosen You!</h3>
             <img src="./assets/wand.png" alt="Wand" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
             <p class="text-lg text-yellow-200 mb-4">${wandDescription}</p>
             <button id="restart-wand-quiz" class="bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
