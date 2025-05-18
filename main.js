@@ -96,7 +96,7 @@ function setEqualCardHeights(containerId) {
 function formatAsList(items, label) {
     if (!isNonEmpty(items) || (Array.isArray(items) && items.length === 0)) return '';
     const listItems = Array.isArray(items) ? items : items.split(',').map(item => item.trim());
-    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}</span> ${listItems[0]}</p>`;
+    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}: </span> ${listItems[0]}</p>`;
     return `
         <p class="mb-2"><span class="font-bold">${label}:</span></p>
         <ul class="list-disc list-inside ml-4">

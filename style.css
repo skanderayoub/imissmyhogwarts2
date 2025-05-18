@@ -262,9 +262,6 @@ select:focus,
 #characterDetails ul li,
 #spellDetails ul li,
 #potionDetails ul li {
-    background: rgba(255, 255, 0.1);
-    border: 1px solid var(--primary-color);
-    border-radius: 4px;
     padding: 0.25rem 0.5rem;
     color: #f4e4bc;
     font-size: 0.85rem;
