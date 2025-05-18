@@ -187,40 +187,142 @@ select:focus,
     scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
 }
 
-#sorting-hat-quiz, #patronus-quiz, #wand-quiz{
+/* Updated games section styles */
+#sorting-hat-quiz, #patronus-quiz, #wand-quiz {
     height: fit-content;
     overflow-y: auto;
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid var(--primary-color);
-    border-radius: 8px;
-    padding: 1rem;
+    background: var(--gradient);
+    border: 3px solid var(--primary-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in;
+    position: relative;
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb, 255, 215, 0), 0.3);
 }
 
 #sorting-hat-quiz::-webkit-scrollbar,
 #patronus-quiz::-webkit-scrollbar,
 #wand-quiz::-webkit-scrollbar {
-    width: 8px;
+    width: 10px;
 }
 
 #sorting-hat-quiz::-webkit-scrollbar-track,
 #patronus-quiz::-webkit-scrollbar-track,
 #wand-quiz::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 #sorting-hat-quiz::-webkit-scrollbar-thumb,
 #patronus-quiz::-webkit-scrollbar-thumb,
 #wand-quiz::-webkit-scrollbar-thumb {
     background: var(--primary-color);
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 #sorting-hat-quiz::-webkit-scrollbar-thumb:hover,
 #patronus-quiz::-webkit-scrollbar-thumb:hover,
 #wand-quiz::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
+}
+
+/* Progress bar styles */
+#quiz-progress, #patronus-progress, #wand-progress {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    border: 1px solid var(--primary-color);
+    animation: slideIn 0.5s ease-out;
+}
+
+#quiz-progress .bg-yellow-400,
+#patronus-progress .bg-yellow-400,
+#wand-progress .bg-yellow-400 {
+    background-color: var(--primary-color);
+    transition: width 0.5s ease;
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Result container styles */
+#quiz-result, #patronus-result, #wand-result {
+    margin-top: 1rem;
+    padding: 1.5rem;
+    background: var(--gradient);
+    border: 3px solid var(--secondary-color);
+    border-radius: 12px;
+    text-align: center;
+    animation: fadeIn 0.7s ease-in;
+    box-shadow: 0 0 20px rgba(var(--secondary-color-rgb, 255, 215, 0), 0.4);
+}
+
+/* Quiz answer buttons */
+.quiz-answer, .wand-quiz-answer, .answer-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    margin: 0.25rem 0;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    color: #f4e4bc;
+    cursor: var(--pointer-url) 4 4, pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-family: "Harry Potter", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.quiz-answer:hover, .wand-quiz-answer:hover, .answer-btn:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb, 255, 215, 0), 0.5);
+}
+
+/* Sparkle effect on hover */
+.quiz-answer::before, .wand-quiz-answer::before, .answer-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 215, 0, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.quiz-answer:hover::before, .wand-quiz-answer:hover::before, .answer-btn:hover::before {
+    left: 100%;
+}
+
+/* Restart buttons */
+#restart-quiz, #restartPatronusQuiz, #restart-wand-quiz, #start-wand-quiz, #try-wand, #continue-quiz, #reveal-wand {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--secondary-color);
+    border-radius: 8px;
+    color: #f4e4bc;
+    cursor: var(--pointer-url) 4 4, pointer;
+    transition: all 0.3s ease;
+    font-family: "Harry Potter", sans-serif;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#restart-quiz:hover, #restartPatronusQuiz:hover, #restart-wand-quiz:hover, #start-wand-quiz:hover, #try-wand:hover, #continue-quiz:hover, #reveal-wand:hover {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(var(--secondary-color-rgb, 255, 215, 0), 0.5);
 }
 
 #characterDetails::-webkit-scrollbar,
@@ -237,7 +339,7 @@ select:focus,
 
 #characterDetails::-webkit-scrollbar-thumb,
 #spellDetails::-webkit-scrollbar-thumb,
-#potionDetails::-webkit-thumb {
+#potionDetails::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
@@ -342,26 +444,22 @@ button[class~="shuffle-active"] {
     transition: background-color 0.3s ease;
 }
 
-.quiz-answer, .wand-quiz-answer, .answer-btn, .btn-normal {
-    font-size: 1rem;
-    cursor: var(--pointer-url) 4 4, pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.quiz-answer:hover, .wand-quiz-answer:hover, .answer-btn:hover, .btn-normal:hover {
-    transform: translateY(-2px);
-}
-
 .category-content {
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    max-height: none; /* Remove restrictive max-height */
+    transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+    transform-origin: top;
+    max-height: none;
     opacity: 1;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto;
+    padding: 1rem;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .category-content.collapsed {
     max-height: 0;
     opacity: 0;
+    transform: scaleY(0);
     overflow: hidden;
 }
 
@@ -407,16 +505,88 @@ button[class~="shuffle-active"] {
     100% { transform: translateY(-100px); opacity: 0; }
 }
 
+/* Floating candle effect for quiz containers */
+#sorting-hat-quiz::after, #patronus-quiz::after, #wand-quiz::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    background: linear-gradient(to bottom, #ffd700, #ffa500);
+    border-radius: 2px;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+    animation: floatCandle 5s ease-in-out infinite;
+    top: -30px;
+    right: 20px;
+    pointer-events: none;
+}
+
+/* Enhance quiz titles */
+#sorting-hat-quiz h3, #patronus-quiz h3, #wand-quiz h3 {
+    font-size: 1.5rem;
+    color: #f4e4bc;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-bottom: 1.5rem;
+    animation: fadeIn 0.7s ease-in;
+}
+
+/* Progress text */
+#quiz-progress p, #patronus-progress p, #wand-progress p {
+    font-size: 0.9rem;
+    color: #f4e4bc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+/* Result text and images */
+#quiz-result p, #patronus-result p, #wand-result p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #f4e4bc;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#quiz-result img, #patronus-result img, #wand-result img {
+    transition: transform 0.3s ease;
+}
+
+#quiz-result img:hover, #patronus-result img:hover, #wand-result img:hover {
+    transform: scale(1.1);
+}
+
+/* Add subtle background sparkle effect to games section */
+#lore-games {
+    position: relative;
+    overflow: hidden;
+}
+
+#lore-games::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("assets/particles.png") repeat;
+    opacity: 0.1;
+    animation: sparkle 30s linear infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#lore-games > * {
+    position: relative;
+    z-index: 1;
+}
+
 /* Ensure select dropdown matches element width */
 select#musicSelect {
     width: 100%;
-    max-width: 28rem; /* Matches max-w-md (448px) from Tailwind */
+    max-width: 28rem;
     position: relative;
 }
 
-/* Style for the dropdown menu (browser-specific) */
 select#musicSelect::-ms-expand {
-    display: none; /* Hide default arrow in IE/Edge */
+    display: none;
 }
 
 select#musicSelect {
@@ -427,23 +597,33 @@ select#musicSelect {
     background-repeat: no-repeat;
     background-position: right 0.75rem center;
     background-size: 12px;
-    padding-right: 2rem; /* Space for custom arrow */
+    padding-right: 2rem;
 }
 
-/* Ensure optgroup and option elements are styled consistently */
 select#musicSelect optgroup,
 select#musicSelect option {
-    background: #1f2937; /* Matches bg-gray-800 */
-    color: #f4e4bc; /* Matches text-yellow-200 */
+    background: #1f2937;
+    color: #f4e4bc;
     font-family: "Cinzel", serif;
-    padding: 0.5rem; /* Consistent padding */
+    padding: 0.5rem;
 }
 
-/* Webkit-specific dropdown menu width adjustment */
 select#musicSelect:focus::-webkit-listbox {
-    width: 100% !important; /* Attempt to force dropdown width */
+    width: 100% !important;
 }
 
+/* Animation keyframes */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateX(-20px); }
+    100% { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive adjustments */
 @media (max-width: 640px) {
     .character-card span {
         font-size: 0.65rem;
@@ -460,7 +640,7 @@ select#musicSelect:focus::-webkit-listbox {
     }
     .quiz-answer, .wand-quiz-answer, .answer-btn, .btn-normal {
         font-size: 0.9rem;
-        padding: 0.5rem;
+        padding: 0.5rem 1rem;
     }
     .flex-wrap {
         flex-direction: column;
@@ -487,6 +667,20 @@ select#musicSelect:focus::-webkit-listbox {
         left: -0.65rem;
     }
     select#musicSelect {
-        max-width: 100%; /* Full width on mobile */
+        max-width: 100%;
+    }
+    #sorting-hat-quiz, #patronus-quiz, #wand-quiz {
+        padding: 1rem;
+        margin: 0.5rem 0;
+    }
+    #restart-quiz, #restartPatronusQuiz, #restart-wand-quiz, #start-wand-quiz, #try-wand, #continue-quiz, #reveal-wand {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+    #sorting-hat-quiz h3, #patronus-quiz h3, #wand-quiz h3 {
+        font-size: 1.25rem;
+    }
+    #quiz-progress p, #patronus-progress p, #wand-progress p {
+        font-size: 0.8rem;
     }
 }

@@ -406,12 +406,6 @@ function toggleCategory(category) {
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
-        if (category === 'sorting-hat' || category === 'patronus' || category === 'wand') {
-            // Start the specific quiz when expanding
-            if (category === 'sorting-hat') startQuiz();
-            else if (category === 'patronus') startPatronusQuiz(window.patronusData);
-            //else if (category === 'wand') startWandQuiz();
-        }
     } else {
         content.classList.add('collapsed');
         button.textContent = 'Expand';
@@ -599,15 +593,8 @@ async function initialize() {
                     renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
                     renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
                     // Start quizzes only if their respective sections are not collapsed
-                    if (!document.getElementById('sorting-hat-content').classList.contains('collapsed')) {
-                        startQuiz();
-                    }
-                    if (!document.getElementById('patronus-content').classList.contains('collapsed')) {
-                        startPatronusQuiz(window.patronusData);
-                    }
-                    if (!document.getElementById('wand-content').classList.contains('collapsed')) {
-                        //startWandQuiz();
-                    }
+                    startQuiz();
+                    startPatronusQuiz(window.patronusData);
                 } else if (button.dataset.tab === 'voices') {
                     renderVoiceList(window.voiceSearchQuery);
                 }
@@ -880,11 +867,11 @@ async function initialize() {
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${savedTheme}`;
     }
 
-    
+
     document.getElementById('start-wand-quiz').addEventListener('click', startWandQuiz);
 
     toggleButtons.forEach(button => {
-            toggleCategory(button.dataset.category);
+        toggleCategory(button.dataset.category);
     });
 
     setupMouseEffects();

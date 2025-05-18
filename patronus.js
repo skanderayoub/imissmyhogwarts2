@@ -2,6 +2,8 @@ export function startPatronusQuiz(patronusData) {
     const quizContainer = document.getElementById('patronus-quiz');
     const progressContainer = document.getElementById('patronus-progress');
     const resultContainer = document.getElementById('patronus-result');
+    resultContainer.classList.add('hidden');
+    progressContainer.classList.remove('hidden');
     
     let currentSet = 1;
     let colorSequence = [];
@@ -109,7 +111,9 @@ export function startPatronusQuiz(patronusData) {
     function showFinalResult(patronus = null) {
         quizContainer.innerHTML = '';
         progressContainer.innerHTML = '';
+        progressContainer.classList.add('hidden');
         quizContainer.classList.add('hidden');
+        resultContainer.classList.remove('hidden');
 
         if (patronus) {
             resultContainer.innerHTML = `
@@ -146,6 +150,8 @@ export function startPatronusQuiz(patronusData) {
             currentSet = 1;
             colorSequence = [];
             selectedAnswers = [];
+            resultContainer.classList.add('hidden');   
+            progressContainer.classList.remove('hidden');         
             renderQuestion(1);
         });
     }

@@ -694,10 +694,13 @@ async function loadQuizData() {
     }
 }
 
-function startQuiz() {
-    document.getElementById("start-wand-quiz").classList.add("hidden");
+function startQuiz() {    
     const quizContainer = document.getElementById("wand-quiz");
     quizContainer.classList.remove("hidden");
+    const resultContainer = document.getElementById("wand-result");    
+    resultContainer.classList.add("hidden");
+    const startButton = document.getElementById("start-wand-quiz");
+    startButton.classList.add("hidden");
     currentQuestionIndex = 0;
     userAnswers = {
         height: null,
@@ -940,33 +943,23 @@ function showResult() {
     </div>
 `;
 
-    // Play Characteristics audio based on core
-    const coreAudio = wandAudio.Characteristics[core];
-    playAudioSequence(
-        [coreAudio],
-        `Discovering your wand's core: ${core}`,
-        () => {
-            quizContainer.innerHTML = `
-            <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">Incredible! The Wand Has Chosen You!</h3>
-            <img src="./assets/wand.png" alt="Wand" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
-            <p class="text-lg text-yellow-200 mb-4">${wandDescription}</p>
-            <button id="restart-wand-quiz" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
-        `;
-            //quizContainer.classList.add("hidden");
-            progressContainer.innerHTML = "";
-            /*resultContainer.innerHTML = `<div id="wand-result"
-                                    class="gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg">
-            <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">Incredible! The Wand Has Chosen You!</h3>
-            <img src="./assets/wand.png" alt="Wand" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
-            <p class="text-lg text-yellow-200 mb-4">${wandDescription}</p>
-            <button id="restart-wand-quiz" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
-            <div>
-        `;*/
-            document
-                .getElementById("restart-wand-quiz")
-                .addEventListener("click", startQuiz);
-        }
-    );
+    // Play core audio in the background
+    const coreAudioUrl = wandAudio.Characteristics[core];
+    if (coreAudioUrl) {
+        const audio = new Audio(coreAudioUrl);
+        audio.play().catch(error => console.error("Audio playback failed:", error));
+    }
+
+    // Directly display the result
+    quizContainer.innerHTML = `
+        <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">Incredible! The Wand Has Chosen You!</h3>
+        <img src="./assets/wand.png" alt="Wand" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
+        <p class="text-lg text-yellow-200 mb-4">${wandDescription}</p>
+        <button id="restart-wand-quiz" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
+    `;
+    document
+        .getElementById("restart-wand-quiz")
+        .addEventListener("click", startQuiz);
 }
 
 export { startQuiz };

@@ -92,6 +92,10 @@ function startQuiz() {
     // Set quiz container to visible
     const quizContainer = document.getElementById('sorting-hat-quiz');
     quizContainer.classList.remove('hidden');
+    const resultContainer = document.getElementById('quiz-result');
+    resultContainer.classList.add('hidden');
+    const progressContainer = document.getElementById('quiz-progress');
+    progressContainer.classList.remove('hidden');
     currentQuestionIndex = 0;
     scores = { Gryffindor: 0, Hufflepuff: 0, Ravenclaw: 0, Slytherin: 0 };
     loadQuizData().then(() => {
@@ -156,6 +160,8 @@ function showResult() {
     const quizContainer = document.getElementById('sorting-hat-quiz');
     const progressContainer = document.getElementById('quiz-progress');
     const resultContainer = document.getElementById('quiz-result');
+    resultContainer.classList.remove('hidden');
+    progressContainer.classList.add('hidden');
 
     // Determine the house with the highest score
     let maxScore = 0;
