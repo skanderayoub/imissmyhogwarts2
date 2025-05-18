@@ -883,6 +883,10 @@ async function initialize() {
     
     document.getElementById('start-wand-quiz').addEventListener('click', startWandQuiz);
 
+    toggleButtons.forEach(button => {
+            toggleCategory(button.dataset.category);
+    });
+
     setupMouseEffects();
     updateCursorStyle(cursorSelect.value);
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
