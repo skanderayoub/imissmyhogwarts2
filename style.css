@@ -7,9 +7,6 @@
 
 body {
     font-family: "Cinzel", serif;
-    --cursor-url: url("assets/cursors/Dobby/cursor.cur");
-    --pointer-url: url("assets/cursors/Dobby/pointer.cur");
-    cursor: var(--cursor-url) 0 0, auto;
     transition: background-color 0.5s ease, background-image 0.5s ease, color 0.5s ease;
 }
 
@@ -103,7 +100,6 @@ select:focus,
     border-radius: 8px;
     padding: 0.5rem;
     text-align: center;
-    cursor: var(--pointer-url) 4 4, pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -132,6 +128,7 @@ select:focus,
 }
 
 #characterList .character-card span,
+#selectedCharacterList .character-card span,
 #spellList .character-card span,
 #potionList .character-card span {
     font-size: 0.65rem;
@@ -145,31 +142,37 @@ select:focus,
 }
 
 #voiceCharacterList {
-    max-height: 300px;
-    overflow-y: auto;
     background: rgba(0, 0, 0, 0.6);
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     padding: 1rem;
     margin-bottom: 1rem;
+}
+
+#characterList, #selectedCharacterList {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+    max-height: 250px;
+    overflow-y: auto;
     scrollbar-width: thin;
     scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
 }
 
-#voiceCharacterList::-webkit-scrollbar {
+#characterList::-webkit-scrollbar, #selectedCharacterList::-webkit-scrollbar {
     width: 8px;
 }
 
-#voiceCharacterList::-webkit-scrollbar-track {
+#characterList::-webkit-scrollbar-track, #selectedCharacterList::-webkit-scrollbar-track {
     background: rgba(0, 0, 0, 0.3);
 }
 
-#voiceCharacterList::-webkit-scrollbar-thumb {
+#characterList::-webkit-scrollbar-thumb, #selectedCharacterList::-webkit-scrollbar-thumb {
     background: var(--primary-color);
     border-radius: 4px;
 }
 
-#voiceCharacterList::-webkit-scrollbar-thumb:hover {
+#characterList::-webkit-scrollbar-thumb:hover, #selectedCharacterList::-webkit-scrollbar-thumb:hover {
     background: var(--secondary-color);
 }
 
@@ -207,7 +210,7 @@ select:focus,
     scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);
     animation: fadeIn 0.5s ease-in;
     position: relative;
-    box-shadow: 0 0 15px rgba(var(--primary-color-rgb, 255, 215, 0), 0.3);
+    box-shadow: 0 0 15px rgba(var(--primary-color-rgb, 255OLUMN 215, 0), 0.3);
 }
 
 #sorting-hat-quiz::-webkit-scrollbar,
@@ -275,7 +278,6 @@ select:focus,
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     color: #f4e4bc;
-    cursor: var(--pointer-url) 4 4, pointer;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -319,7 +321,6 @@ select:focus,
     border: 2px solid var(--secondary-color);
     border-radius: 8px;
     color: #f4e4bc;
-    cursor: var(--pointer-url) 4 4, pointer;
     transition: all 0.3s ease;
     font-family: "Harry Potter", sans-serif;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -396,7 +397,6 @@ button[class~="audio"] {
     background-position: center;
     background-repeat: no-repeat;
     border: 2px solid;
-    cursor: var(--pointer-url) 4 4, pointer;
 }
 
 button[class~="paused"] {
@@ -441,13 +441,11 @@ button[class~="shuffle-active"] {
 
 .toggle-button {
     font-size: 0.9rem;
-    cursor: var(--pointer-url) 4 4, pointer;
     transition: background-color 0.3s ease;
 }
 
 .audio-controls-button {
     font-size: 0.9rem;
-    cursor: var(--pointer-url) 4 4, pointer;
     transition: background-color 0.3s ease;
 }
 
@@ -645,6 +643,7 @@ select#musicSelect:focus::-webkit-listbox {
         font-size: 0.65rem;
     }
     #characterList .character-card span,
+    #selectedCharacterList .character-card span,
     #spellList .character-card span,
     #potionList .character-card span {
         font-size: 0.6rem;

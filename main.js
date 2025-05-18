@@ -19,7 +19,7 @@ import {
     playNewSound,
     playMusicTrack,
 } from './audio.js';
-import { setupMouseEffects, updateCursorStyle } from './ui.js';
+import { setupMouseEffects } from './ui.js';
 import { startQuiz } from './sorting-hat.js';
 import { startPatronusQuiz } from './patronus.js';
 import { startQuiz as startWandQuiz } from './wand-quiz.js';
@@ -175,13 +175,70 @@ function filterVoices(searchQuery) {
 
 function renderVoiceList(searchQuery) {
     const characterList = document.getElementById('characterList');
+    const voiceCharacterList = document.getElementById('voiceCharacterList');
+    
+    // Clear existing content
     characterList.innerHTML = '';
+    
+    // Remove existing selectedCharacterList and selectedCharactersHeader if they exist
+    const existingSelectedList = document.getElementById('selectedCharacterList');
+    if (existingSelectedList) {
+        existingSelectedList.remove();
+    }
+    const existingHeader = document.getElementById('selectedCharactersHeader');
+    if (existingHeader) {
+        existingHeader.remove();
+    }
+
     const filteredCharacters = filterVoices(searchQuery);
 
-    filteredCharacters.forEach((key) => {
+    // Render unselected characters in characterList
+    filteredCharacters.forEach(key => {
+        if (!window.selectedCharacters.includes(key)) {
+            renderCharacterCard(key, characterList, false);
+        }
+    });
+
+    // Create selected characters section if there are selected characters
+    if (window.selectedCharacters.length > 0) {
+        // Create header container
+        const headerContainer = document.createElement('div');
+        headerContainer.id = 'selectedCharactersHeader';
+        headerContainer.className = 'mt-4';
+
+        // Add divider
+        const divider = document.createElement('div');
+        divider.className = 'border-t border-yellow-400 my-2 mx-2';
+        headerContainer.appendChild(divider);
+
+        // Add selected characters header
+        const selectedHeader = document.createElement('div');
+        selectedHeader.className = 'text-yellow-200 font-harry-potter text-sm mb-2 px-2';
+        selectedHeader.textContent = 'Selected Characters';
+        headerContainer.appendChild(selectedHeader);
+
+        // Append header container to voiceCharacterList
+        voiceCharacterList.appendChild(headerContainer);
+
+        // Create selectedCharacterList container
+        const selectedCharacterList = document.createElement('div');
+        selectedCharacterList.id = 'selectedCharacterList';
+        selectedCharacterList.className = 'grid grid-cols-3 gap-1';
+        voiceCharacterList.appendChild(selectedCharacterList);
+
+        // Render selected characters
+        window.selectedCharacters.forEach(key => {
+            if (filteredCharacters.includes(key)) {
+                renderCharacterCard(key, selectedCharacterList, true);
+            }
+        });
+    }
+
+    // Helper function to render a character card
+    function renderCharacterCard(key, container, isSelected) {
         const character = window.characterLoreData.find(c => c.attributes.name === key);
         const card = document.createElement('div');
-        card.className = `character-card cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 transition-all p-2 rounded-lg ${window.selectedCharacters.includes(key) ? 'selected' : ''}`;
+        card.className = `character-card cursor-pointer hover:bg-gray-700 hover:bg-opacity-50 transition-all p-2 rounded-lg ${isSelected ? 'selected' : ''}`;
         card.dataset.character = key;
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
@@ -209,11 +266,14 @@ function renderVoiceList(searchQuery) {
                 window.newData = window.jsonData;
             }
             document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> ${window.selectedCharacters.join(', ') || 'Select a character'}`;
+            // Re-render to update lists
+            renderVoiceList(searchQuery);
         });
-        characterList.appendChild(card);
-    });
+        container.appendChild(card);
+    }
 
     setEqualCardHeights('characterList');
+    setEqualCardHeights('selectedCharacterList');
 }
 
 function renderCharacterLoreList(page, filterValue, searchQuery) {
@@ -413,11 +473,10 @@ function toggleCategory(category) {
 }
 
 async function initialize() {
-    const [audioData, { musicData, trackList }, wallpaperData, cursorData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio, patronusData] = await Promise.all([
+    const [audioData, { musicData, trackList }, wallpaperData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio, patronusData] = await Promise.all([
         fetchAudioData(),
         fetchMusicData(),
         fetchWallpaperData(window.screenWidth),
-        fetchCursorData(),
         fetchCharacterLoreData(),
         fetchSpellsData(),
         fetchSpellCategories(),
@@ -431,7 +490,6 @@ async function initialize() {
     window.musicData = musicData;
     window.trackList = trackList;
     window.wallpaperData = wallpaperData;
-    window.cursorData = cursorData;
     window.characterLoreData = characterLoreData;
     window.spellsData = spellsData;
     window.potionsData = potionsData;
@@ -439,12 +497,11 @@ async function initialize() {
     window.newData = audioData;
     window.patronusData = patronusData;
 
-    if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.cursorData || !window.patronusData) {
+    if (!window.wallpaperData || !window.jsonData || !window.musicData  || !window.patronusData) {
         console.error("Failed to load required data:", {
             wallpaperData: window.wallpaperData,
             jsonData: window.jsonData,
             musicData: window.musicData,
-            cursorData: window.cursorData,
             patronusData: window.patronusData,
         });
         return;
@@ -469,7 +526,6 @@ async function initialize() {
     const backgroundSelect = document.getElementById('backgroundSelect');
     const characterList = document.getElementById('characterList');
     const themeSelect = document.getElementById('themeSelect');
-    const cursorSelect = document.getElementById('cursorSelect');
     const loreFilter = document.getElementById('loreFilter');
     const spellFilter = document.getElementById('spellFilter');
     const potionFilter = document.getElementById('potionFilter');
@@ -485,10 +541,6 @@ async function initialize() {
     const nextPotionPage = document.getElementById('nextPotionPage');
     const toggleButtons = document.querySelectorAll('.toggle-button');
     const clearSelectionButton = document.getElementById('clearSelection');
-
-    if (window.screenWidth < 600) {
-        cursorSelect.style.display = 'none';
-    }
 
     // Populate musicSelect with trackList
     musicSelect.innerHTML = '<option value="">Choose a Track</option>'; // Reset options
@@ -604,13 +656,6 @@ async function initialize() {
         });
     });
 
-    window.cursorData.forEach((cursor) => {
-        const option = document.createElement('option');
-        option.value = cursor;
-        option.text = cursor.charAt(0).toUpperCase() + cursor.slice(1);
-        cursorSelect.appendChild(option);
-    });
-
     spellCategories.forEach((category) => {
         const option = document.createElement('option');
         option.value = category;
@@ -721,11 +766,6 @@ async function initialize() {
         button.addEventListener('click', () => {
             toggleCategory(button.dataset.category);
         });
-    });
-
-    cursorSelect.addEventListener('change', () => {
-        console.log(`Cursor selected: ${cursorSelect.value}`);
-        updateCursorStyle(cursorSelect.value);
     });
 
     musicSelect.addEventListener('change', () => {
@@ -875,7 +915,6 @@ async function initialize() {
     });
 
     setupMouseEffects();
-    updateCursorStyle(cursorSelect.value);
     renderCharacterLoreList(window.currentCharacterPage, 'all', '');
     renderSpellList(window.currentSpellPage, 'all', '');
     renderPotionList(window.currentPotionPage, 'all', '');
