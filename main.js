@@ -22,6 +22,7 @@ import {
 import { setupMouseEffects, updateCursorStyle } from './ui.js';
 import { startQuiz } from './sorting-hat.js';
 import { startPatronusQuiz } from './patronus.js';
+import { startQuiz as startWandQuiz } from './wand-quiz.js';
 
 window.jsonData = null;
 window.musicData = null;
@@ -405,9 +406,11 @@ function toggleCategory(category) {
     if (isCollapsed) {
         content.classList.remove('collapsed');
         button.textContent = 'Collapse';
-        if (category === 'games') {
-            startQuiz();
-            startPatronusQuiz(window.patronusData);
+        if (category === 'sorting-hat' || category === 'patronus' || category === 'wand') {
+            // Start the specific quiz when expanding
+            if (category === 'sorting-hat') startQuiz();
+            else if (category === 'patronus') startPatronusQuiz(window.patronusData);
+            else if (category === 'wand') startWandQuiz();
         }
     } else {
         content.classList.add('collapsed');
@@ -595,10 +598,15 @@ async function initialize() {
                     renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
                     renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
                     renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
-                    const gamesContent = document.getElementById('games-content');
-                    if (!gamesContent.classList.contains('collapsed')) {
+                    // Start quizzes only if their respective sections are not collapsed
+                    if (!document.getElementById('sorting-hat-content').classList.contains('collapsed')) {
                         startQuiz();
+                    }
+                    if (!document.getElementById('patronus-content').classList.contains('collapsed')) {
                         startPatronusQuiz(window.patronusData);
+                    }
+                    if (!document.getElementById('wand-content').classList.contains('collapsed')) {
+                        startWandQuiz();
                     }
                 } else if (button.dataset.tab === 'voices') {
                     renderVoiceList(window.voiceSearchQuery);

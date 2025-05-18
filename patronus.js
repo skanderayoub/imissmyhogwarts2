@@ -62,15 +62,15 @@ export function startPatronusQuiz(patronusData) {
 
         // Display the question and answer options
         quizContainer.innerHTML = `
-            <p class="text-lg text-yellow-200 mb-4 font-harry-potter">Choose a mystical word
+            <p class="text-lg text-yellow-300 mb-4 font-harry-potter">Choose a mystical word
             </p>
-            <div id="answerOptions" class="flex flex-wrap gap-4 mb-4 justify-center">
+            <div class="grid grid-cols-1 gap-2">
             ${options.map(option => `
                 <button class="answer-btn px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all" data-answer="${option.answer}" data-color="${option.color}">
                 ${option.answer}
                 </button>
             `).join('')}
-            </div>
+        </div>
             <p class="text-yellow-200 mb-4">Chosen answers so far:</p>
             <ul class="list-disc list-inside text-yellow-200 mb-4">
             ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}

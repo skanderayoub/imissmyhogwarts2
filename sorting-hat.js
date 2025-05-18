@@ -111,12 +111,12 @@ function renderQuiz() {
 
     const questionData = quizData[currentQuestionIndex];
     quizContainer.innerHTML = `
-        <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">${questionData.question}</h3>
+        <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">${questionData.question}</h3>
         <div class="grid grid-cols-1 gap-2">
             ${questionData.answers
                 .map(
                     (answer, index) => `
-                    <button class="quiz-answer bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all p-3 text-left" data-index="${index}">
+                    <button class="quiz-answer bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all p-3" data-index="${index}">
                         ${answer.text}
                     </button>
                 `

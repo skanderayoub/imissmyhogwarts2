@@ -1,0 +1,73 @@
+{
+    "1": {
+        "Question": "To ensure we find the perfect wand for you, it's very important that you answer the following questions honestly. First of all, would you describe yourself as...",
+        "Answers": [
+            "Short",
+            "Average",
+            "Tall"
+        ]
+    },
+    "2": {
+        "Question": "And your eyes...",
+        "Answers": [
+            "Dark brown / Black",
+            "Brown",
+            "Hazel",
+            "Blue",
+            "Blue / Grey",
+            "Blue / Green",
+            "Green",
+            "Grey",
+            "Other"
+        ]
+    },
+    "3": {
+        "Question": "Was the day on which you were born...",
+        "Answers": [
+            "an even number",
+            "an odd number"
+        ]
+    },
+    "4": {
+        "Question": "Do you most pride yourself on your...",
+        "Answers": [
+            "Kindness",
+            "Optimism",
+            "Determination",
+            "Resilience",
+            "Imagination",
+            "Intelligence",
+            "Originality"
+        ]
+    },
+    "5": {
+        "Question": "Travelling alone down a deserted road, you reach a crossroads. Do you continue...",
+        "Answers": [
+            "left towards the sea",
+            "ahead towards the forest",
+            "right towards the castle"
+        ]
+    },
+    "6": {
+        "Question": "Do you most fear...",
+        "Answers": [
+            "Fire",
+            "Darkness",
+            "Isolation",
+            "Small spaces",
+            "Heights"
+        ]
+    },
+    "7": {
+        "Question": "In a chest of magical artefacts, which would you choose...",
+        "Answers": [
+            "Ornate mirror",
+            "Dusty bottle",
+            "Golden key",
+            "Silver dagger",
+            "Bound scroll",
+            "Glittering jewel",
+            "Black glove"
+        ]
+    }
+}
