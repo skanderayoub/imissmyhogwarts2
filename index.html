@@ -380,6 +380,30 @@
                         <div>
                             <div class="flex items-center justify-between">
                                 <h3 class="text-xl font-harry-potter text-yellow-300">
+                                    Trivia Quiz
+                                </h3>
+                                <button
+                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                                    data-category="trivia">
+                                    Collapse
+                                </button>
+                            </div>
+                            <div id="trivia-content" class="category-content mt-4">
+                                <p id="trivia-title" class="text-lg text-yellow-200 mb-4">
+                                    <span class="font-bold">Ultimate Harry Potter Trivia Challenge:</span> Test your knowledge of the Harry Potter universe with 30 questions across Easy, Moderate, and Hard difficulties!
+                                </p>
+                                <button id="start-trivia-quiz"
+                                    class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2 font-harry-potter text-lg mb-4">
+                                    Start Trivia Quiz
+                                </button>
+                                <div id="trivia-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg hidden"></div>
+                                <div id="trivia-progress" class="mt-4"></div>
+                                <div id="trivia-result" class="mt-4 hidden"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-xl font-harry-potter text-yellow-300">
                                     More Games
                                 </h3>
                                 <button

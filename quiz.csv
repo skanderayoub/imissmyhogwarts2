@@ -1,0 +1,301 @@
+,question,A,B,C,D,correct_answer
+0,What is the gender of Harry Potter?,Female,Male,Unknown,None of above,B
+1,What is the gender of Lily J. Potter?,Female,Male,Unknown,None of above,A
+2,What is the gender of James Potter I?,Female,Male,Unknown,None of above,B
+3,What is the gender of Ron Weasley?,Female,Male,Unknown,None of above,B
+4,What is the gender of Hermione Granger?,Female,Male,Unknown,None of above,A
+5,What is the gender of Cho Chang?,Female,Male,Unknown,None of above,A
+6,What is the gender of Albus Potter?,Female,Male,Unknown,None of above,B
+7,What is the gender of Petunia Dursley?,Female,Male,Unknown,None of above,A
+8,What is the gender of Dudley Dursley?,Female,Male,Unknown,None of above,B
+9,What is the gender of William Weasley?,Female,Male,Unknown,None of above,B
+10,What is the gender of Charles Weasley?,Female,Male,Unknown,None of above,B
+11,What is the gender of Arthur Weasley?,Female,Male,Unknown,None of above,B
+12,What is the gender of Cedric Diggory ?,Female,Male,Unknown,None of above,B
+13,What is the gender of Roger Davies ?,Female,Male,Unknown,None of above,A
+14,What is the gender of Aberforth Dumbledore?,Female,Male,Unknown,None of above,B
+15,What is the gender of Ariana Dumbledore?,Female,Male,Unknown,None of above,A
+16,What is the gender of Percival Dumbledore?,Female,Male,Unknown,None of above,B
+17,What is the gender of Kendra Dumbledore?,Female,Male,Unknown,None of above,A
+18,What is the gender of Draco Malfoy?,Female,Male,Unknown,None of above,B
+19,What is the gender of Lucius Malfoy?,Female,Male,Unknown,None of above,B
+20,What is the gender of Narcissa Malfoy?,Female,Male,Unknown,None of above,A
+21,What is the gender of Scorpius Malfoy?,Female,Male,Unknown,None of above,B
+22,What is the gender of Astoria Malfoy?,Female,Male,Unknown,None of above,A
+23,What is the hair color of Harry Potter?,Blonde,Brown,Black,Dark,C
+24,What is the hair color of Lily J. Potter?,Black,Dark,Brown,Red,D
+25,What is the hair color of James Potter I?,Silver,Brown,Black,Dark,C
+26,What is the hair color of Ron Weasley?,Red,Brown,Blonde,Black,A
+27,What is the hair color of Hermione Granger?,Red,Silver,Blonde,Brown,D
+28,What is the hair color of Cho Chang?,Blonde,Black,Brown,Dark,B
+29,What is the hair color of Albus Potter?,Red,Black,Blonde,Brown,B
+30,What is the hair color of Petunia Dursley?,Dark,Silver,Blonde,Brown,C
+31,What is the hair color of Dudley Dursley?,Dark,Brown,Blonde,Red,C
+32,What is the hair color of William Weasley?,Blonde,Red,Dark,Silver,B
+33,What is the hair color of Charles Weasley?,Dark,Silver,Red,Black,C
+34,What is the hair color of Arthur Weasley?,Red,Black,Dark,Blonde,A
+35,What is the hair color of Cedric Diggory ?,Silver,Dark,Brown,Blonde,B
+36,What is the hair color of Roger Davies ?,Dark,Silver,Brown,Black,C
+37,What is the hair color of Aberforth Dumbledore?,Dark,Blonde,Silver,Red,C
+38,What is the hair color of Ariana Dumbledore?,Black,Blonde,Dark,Red,B
+39,What is the hair color of Kendra Dumbledore?,Silver,Red,Brown,Black,D
+40,What is the hair color of Draco Malfoy?,Red,Silver,Dark,Blonde,D
+41,What is the hair color of Lucius Malfoy?,Brown,Black,Red,Blonde,D
+42,What is the hair color of Narcissa Malfoy?,Brown,Blonde,Red,Dark,B
+43,What is the hair color of Scorpius Malfoy?,Silver,Dark,Black,Blonde,D
+44,Which house is Harry Potter belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+45,Which house is James Potter I belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+46,Which house is Ron Weasley belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+47,Which house is Hermione Granger belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+48,Which house is Cho Chang belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,A
+49,Which house is Albus Potter belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,B
+50,Which house is Charles Weasley belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+51,Which house is Arthur Weasley belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+52,Which house is Cedric Diggory  belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,D
+53,Which house is Roger Davies  belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,A
+54,Which house is Aberforth Dumbledore belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,C
+55,Which house is Draco Malfoy belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,B
+56,Which house is Lucius Malfoy belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,B
+57,Which house is Narcissa Malfoy belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,B
+58,Which house is Scorpius Malfoy belong to?,Ravenclaw,Slytherin,Gryffindor,Hufflepuff,B
+59,What is the relationship of James Potter I to Harry Potter?,Son,Grandson,Father,Sister,C
+60,Who is the father of Harry Potter?,Petunia Dursley,Euphemia Potter,Astoria Malfoy,James Potter I,D
+61,What is the relationship of Lily J. Potter to Harry Potter?,Friend,Mother,Husband,Nephew,B
+62,Who is the mother of Harry Potter?,Harry Potter,Aberforth Dumbledore,Ron Weasley,Lily J. Potter,D
+63,What is the relationship of Ron Weasley to Harry Potter?,Father,Grandson,Friend,Sister,C
+64,Who is the friend of Harry Potter?,Petunia Dursley,Astoria Malfoy,Ron Weasley,Charles Weasley,C
+65,What is the relationship of Hermione Granger to Harry Potter?,Friend,Aunt,Daughter,Wife,A
+66,Who is the friend of Harry Potter?,Lucius Malfoy,Lily J. Potter,Hermione Granger,Harry Potter,C
+67,What is the relationship of James Potter to Lily J. Potter?,Brother,Nephew,Mother,Husband,D
+68,What is the relationship of Harry Potter to Lily J. Potter?,Mother,Nephew,Son,Friend,C
+69,Who is the son of Lily J. Potter?,Albus Potter,Harry Potter,Percival Dumbledore,Charles Weasley,B
+70,What is the relationship of Albus Potter to Lily J. Potter?,Grandson,Brother,Husband,Daughter,A
+71,Who is the grandson of Lily J. Potter?,Albus Potter,Lucius Malfoy,Draco Malfoy,Percival Dumbledore,A
+72,What is the relationship of Petunia Dursley to Lily J. Potter?,Aunt,Daughter,Husband,Sister,D
+73,Who is the sister of Lily J. Potter?,Aberforth Dumbledore,Fleamont Potter,Petunia Dursley,Ariana Dumbledore,C
+74,What is the relationship of Dudley Dursley to Lily J. Potter?,Grandson,Nephew,Husband,Mother,B
+75,Who is the nephew of Lily J. Potter?,James Potter I,Harry Potter,Charles Weasley,Dudley Dursley,D
+76,What is the relationship of Harry Potter to James Potter I?,Nephew,Grandson,Sister,Son,D
+77,Who is the son of James Potter I?,Arthur Weasley,Astoria Malfoy,Harry Potter,Albus Potter,C
+78,What is the relationship of Lily J. Potter to James Potter I?,Aunt,Grandmother,Nephew,Wife,D
+79,Who is the wife of James Potter I?,James Potter I,William Weasley,Lily J. Potter,Arthur Weasley,C
+80,What is the relationship of Fleamont Potter to James Potter I?,Nephew,Wife,Mother,Father,D
+81,Who is the father of James Potter I?,Albus Potter,Ron Weasley,Fleamont Potter,Aberforth Dumbledore,C
+82,What is the relationship of Euphemia Potter to James Potter I?,Sister,Friend,Grandmother,Mother,D
+83,Who is the mother of James Potter I?,Ron Weasley,Euphemia Potter,Lucius Malfoy,Ariana Dumbledore,B
+84,What is the relationship of Albus Potter to James Potter I?,Aunt,Grandson,Brother,Friend,B
+85,Who is the grandson of James Potter I?,Albus Potter,Cho Chang,Hermione Granger,Percival Dumbledore,A
+86,What is the relationship of William Weasley to Ron Weasley?,Son,Brother,Grandmother,Wife,B
+87,Who is the brother of Ron Weasley?,Dudley Dursley,James Potter I,Kendra Dumbledore,William Weasley,D
+88,What is the relationship of Charles Weasley to Ron Weasley?,Grandson,Grandmother,Brother,Wife,C
+89,Who is the brother of Ron Weasley?,Charles Weasley,Cedric Diggory,William Weasley,Astoria Malfoy,A
+90,What is the relationship of Hermione Granger to Ron Weasley?,Son,Brother,Father,Wife,D
+91,Who is the wife of Ron Weasley?,Percival Dumbledore,Scorpius Malfoy,Hermione Granger,Lucius Malfoy,C
+92,What is the relationship of Arthur Weasley to Ron Weasley?,Grandmother,Father,Daughter,Grandson,B
+93,Who is the father of Ron Weasley?,Arthur Weasley,Cho Chang,Draco Malfoy,Hermione Granger,A
+94,What is the relationship of Rose Granger-Weasley to Ron Weasley?,Nephew,Wife,Sister,Daughter,D
+95,What is the relationship of Hugo Granger-Weasley to Ron Weasley?,Wife,Nephew,Sister,Son,D
+96,What is the relationship of Ron Weasley to Hermione Granger?,Husband,Son,Wife,Grandmother,A
+97,Who is the husband of Hermione Granger?,Petunia Dursley,Lucius Malfoy,Dudley Dursley,Ron Weasley,D
+98,What is the relationship of Monica Wilkins to Hermione Granger?,Grandson,Mother,Sister,Nephew,B
+99,What is the relationship of Hugo Granger-Weasley to Hermione Granger?,Nephew,Son,Aunt,Grandmother,B
+100,What is the relationship of Rose Granger-Weasley to Hermione Granger?,Son,Daughter,Mother,Grandfather,B
+101,What is the relationship of Percival Dumbledore to Albus Dumbledore?,Grandfather,Father,Grandson,Sister,B
+102,Who is the father of Albus Dumbledore?,Astoria Malfoy,Harry Potter,Arthur Weasley,Percival Dumbledore,D
+103,What is the relationship of Kendra Dumbledore to Albus Dumbledore?,Aunt,Mother,Son,Father,B
+104,Who is the mother of Albus Dumbledore?,Lucius Malfoy,Ariana Dumbledore,Cho Chang,Kendra Dumbledore,D
+105,What is the relationship of Aberforth Dumbledore to Albus Dumbledore?,Husband,Brother,Mother,Sister,B
+106,Who is the brother of Albus Dumbledore?,Aberforth Dumbledore,Dudley Dursley,Percival Dumbledore,Harry Potter,A
+107,What is the relationship of Ariana Dumbledore to Albus Dumbledore?,Sister,Father,Wife,Friend,A
+108,Who is the sister of Albus Dumbledore?,Petunia Dursley,Percival Dumbledore,Hermione Granger,Ariana Dumbledore,D
+109,What is the relationship of Lucius Malfoy to Draco Malfoy?,Brother,Grandmother,Wife,Son,D
+110,Who is the son of Draco Malfoy?,Cedric Diggory,Lucius Malfoy,Fleamont Potter,Hermione Granger,B
+111,What is the relationship of Narcissa Malfoy to Draco Malfoy?,Mother,Aunt,Son,Brother,C
+112,Who is the son of Draco Malfoy?,Narcissa Malfoy,Petunia Dursley,Percival Dumbledore,Dudley Dursley,A
+113,What is the relationship of Astoria Malfoy to Draco Malfoy?,Friend,Wife,Grandfather,Son,B
+114,Who is the wife of Draco Malfoy?,Astoria Malfoy,Fleamont Potter,Narcissa Malfoy,William Weasley,A
+115,What is the relationship of Scorpius Malfoy to Draco Malfoy?,Grandfather,Son,Daughter,Aunt,B
+116,Who is the son of Draco Malfoy?,Draco Malfoy,Scorpius Malfoy,Arthur Weasley,Percival Dumbledore,B
+117,What is the relationship of James Potter I to Fleamont Potter?,Aunt,Wife,Brother,Son,D
+118,Who is the son of Fleamont Potter?,James Potter I,Ron Weasley,Draco Malfoy,Arthur Weasley,A
+119,What is the relationship of James Potter I to Euphemia Potter?,Husband,Son,Mother,Grandson,B
+120,Who is the son of Euphemia Potter?,Percival Dumbledore,William Weasley,James Potter I,Lily J. Potter,C
+121,What is the relationship of James Potter I to Albus Potter?,Mother,Wife,Grandfather,Son,C
+122,Who is the grandfather of Albus Potter?,Albus Potter,Harry Potter,Aberforth Dumbledore,James Potter I,D
+123,What is the relationship of Lily J. Potter to Albus Potter?,Grandmother,Brother,Son,Mother,A
+124,Who is the grandmother of Albus Potter?,Scorpius Malfoy,Harry Potter,Roger Davies,Lily J. Potter,D
+125,What is the relationship of Lily J. Potter to Petunia Dursley?,Mother,Grandmother,Sister,Father,C
+126,Who is the sister of Petunia Dursley?,Lily J. Potter,Lucius Malfoy,James Potter I,Scorpius Malfoy,A
+127,What is the relationship of Lily J. Potter to Dudley Dursley?,Aunt,Father,Husband,Brother,A
+128,Who is the aunt of Dudley Dursley?,Fleamont Potter,Lily J. Potter,Astoria Malfoy,Albus Potter,B
+129,What is the relationship of Ron Weasley to William Weasley?,Sister,Brother,Son,Wife,B
+130,Who is the brother of William Weasley?,Lily J. Potter,Charles Weasley,Ron Weasley,James Potter I,C
+131,What is the relationship of Ron Weasley to Charles Weasley?,Friend,Grandson,Brother,Grandfather,C
+132,Who is the brother of Charles Weasley?,Cho Chang,Scorpius Malfoy,Ron Weasley,Ariana Dumbledore,C
+133,What is the relationship of Ron Weasley to Rose Granger-Weasley?,Grandfather,Father,Aunt,Grandson,B
+134,Who is the father of Rose Granger-Weasley?,Ariana Dumbledore,Draco Malfoy,Arthur Weasley,Ron Weasley,D
+135,What is the relationship of Ron Weasley to Hugo Granger-Weasley?,Father,Grandfather,Husband,Nephew,A
+136,Who is the father of Hugo Granger-Weasley?,Fleamont Potter,Ron Weasley,Kendra Dumbledore,Petunia Dursley,B
+137,What is the relationship of Ron Weasley to Arthur Weasley?,Husband,Aunt,Wife,Son,D
+138,Who is the son of Arthur Weasley?,Ariana Dumbledore,Ron Weasley,Fleamont Potter,Percival Dumbledore,B
+139,What is the relationship of Hermione Granger to Rose Granger-Weasley?,Brother,Mother,Grandson,Nephew,B
+140,Who is the mother of Rose Granger-Weasley?,Roger Davies,Hermione Granger,Arthur Weasley,Lily J. Potter,B
+141,What is the relationship of Hermione Granger to Hugo Granger-Weasley?,Aunt,Nephew,Mother,Wife,C
+142,Who is the mother of Hugo Granger-Weasley?,Ariana Dumbledore,Hermione Granger,Euphemia Potter,Charles Weasley,B
+143,What is the relationship of Hermione Granger to Monica Wilkins?,Nephew,Grandson,Husband,Daughter,D
+144,Who is the daughter of Monica Wilkins?,Roger Davies,Lily J. Potter,Euphemia Potter,Hermione Granger,D
+145,What is the relationship of Albus Dumbledore to Aberforth Dumbledore?,Nephew,Sister,Brother,Mother,C
+146,What is the relationship of Albus Dumbledore to Ariana Dumbledore?,Brother,Son,Friend,Husband,A
+147,What is the relationship of Albus Dumbledore to Percival Dumbledore?,Grandfather,Father,Grandmother,Son,D
+148,What is the relationship of Albus Dumbledore to Kendra Dumbledore?,Son,Friend,Nephew,Brother,A
+149,What is the relationship of Draco Malfoy to Lucius Malfoy?,Aunt,Mother,Daughter,Father,D
+150,Who is the father of Lucius Malfoy?,Lucius Malfoy,Draco Malfoy,Euphemia Potter,Cho Chang,B
+151,What is the relationship of Draco Malfoy to Narcissa Malfoy?,Mother,Father,Nephew,Brother,A
+152,Who is the mother of Narcissa Malfoy?,Lily J. Potter,Percival Dumbledore,Draco Malfoy,Cedric Diggory,C
+153,What is the relationship of Draco Malfoy to Scorpius Malfoy?,Husband,Sister,Aunt,Friend,A
+154,Who is the husband of Scorpius Malfoy?,Draco Malfoy,Arthur Weasley,Scorpius Malfoy,Cho Chang,A
+155,What is the relationship of Draco Malfoy to Astoria Malfoy?,Father,Grandson,Brother,Husband,A
+156,Who is the father of Astoria Malfoy?,Lily J. Potter,Draco Malfoy,Hermione Granger,Harry Potter,B
+157,What is the type of the spell named Aberto?,Counter-Spell,Counter-Charm,Charm,Transfiguration,C
+158,What is the type of the spell named Accio?,Counter-Spell,Untransfiguration,Counter-Charm,Charm,D
+159,What is the type of the spell named Age Line?,Transfiguration,Jinx,Spell,Charm,D
+160,What is the type of the spell named Alarte Ascendare?,Counter-Spell,Counter-Charm,Charm,Jinx,C
+161,What is the type of the spell named Alohomora?,Transportation,Conjuration,Counter-Jinx,Charm,D
+162,What is the type of the spell named Anti-Cheating Spell?,Transportation,Charm,Untransfiguration,Counter-charm,B
+163,What is the type of the spell named Anti-Apparition Charm?,Charm,Hex,Curse,Counter-charm,A
+164,What is the type of the spell named Anti-Disapparition Jinx?,Counter-Jinx,Jinx,Transfiguration,Counter-Charm,B
+165,What is the type of the spell named Anti-intruder jinx?,Jinx,Vanishment,Charm,Hex,A
+166,What is the type of the spell named Aparecium?,Conjuration,Spell,Counter-Charm,Charm,D
+167,What is the type of the spell named Appare Vestigium?,Transportation,Curse,Charm,Counter-Jinx,C
+168,What is the type of the spell named Apparition?,Curse,Unknown,Transportation,Counter-Spell,C
+169,What is the type of the spell named Aqua Eructo?,Counter-charm,Charm,Counter-Spell,Spell,B
+170,What is the type of the spell named Arania Exumai?,Counter-Spell,Untransfiguration,Charm,Conjuration,C
+171,What is the type of the spell named Arresto Momentum?,Charm,Vanishment,Transportation,Hex,A
+172,What is the type of the spell named Arrow-shooting spell?,Counter-Jinx,Transfiguration,Conjuration,Curse,C
+173,What is the type of the spell named Ascendio?,Spell,Hex,Charm,Transportation,C
+174,What is the type of the spell named Avada Kedavra?,Vanishment,Hex,Curse,Counter-Spell,C
+175,What is the type of the spell named Avifors?,Transfiguration,Untransfiguration,Counter-Charm,Spell,A
+176,What is the type of the spell named Avenseguim?,Vanishment,Hex,Charm,Conjuration,C
+177,What is the type of the spell named Babbling Curse?,Jinx,Unknown,Charm,Curse,D
+178,What is the type of the spell named Badgering?,Counter-Spell,Transfiguration,Untransfiguration,Counter-Jinx,B
+179,What is the type of the spell named Bat-Bogey Hex?,Conjuration,Hex,Jinx,Unknown,B
+180,What is the type of the spell named Bedazzling Hex?,Hex,Counter-Spell,Charm,Counter-Charm,A
+181,What is the type of the spell named Bewitched Snowballs?,Hex,Transportation,Charm,Untransfiguration,C
+182,What is the type of the spell named Bluebell Flames?,Untransfiguration,Jinx,Counter-Jinx,Charm,D
+183,What is the type of the spell named Blue sparks?,Counter-Spell,Jinx,Charm,Curse,C
+184,What is the type of the spell named Bombarda?,Jinx,Counter-Jinx,Untransfiguration,Charm,D
+185,What is the type of the spell named Bombarda Maxima?,Vanishment,Charm,Unknown,Transfiguration,B
+186,What is the type of the spell named Bravery Charm?,Spell,Transfiguration,Vanishment,Charm,D
+187,What is the type of the spell named Bridge-conjuring spell?,Counter-Jinx,Jinx,Charm,Curse,C
+188,What is the type of the spell named Broom jinx?,Untransfiguration,Transportation,Jinx,Curse,C
+189,What is the type of the spell named Bubble-Head Charm?,Charm,Hex,Counter-Charm,Transportation,A
+190,What is the type of the spell named Bubble Spell?,Transfiguration,Charm,Counter-charm,Spell,B
+191,What is the type of the spell named Calvorio?,Transfiguration,Charm,Counter-Charm,Curse,D
+192,What is the type of the spell named Cantis?,Vanishment,Curse,Charm,Transfiguration,C
+193,What is the type of the spell named Capacious extremis?,Unknown,Charm,Counter-Spell,Transportation,B
+194,What is the type of the spell named Carpe Retractum?,Vanishment,Counter-Charm,Charm,Conjuration,C
+195,What is the type of the spell named Cascading Jinx?,Hex,Counter-Jinx,Spell,Jinx,D
+196,What is the type of the spell named Caterwauling Charm?,Counter-charm,Unknown,Hex,Charm,D
+197,What is the type of the spell named Cave inimicum?,Transfiguration,Counter-Charm,Charm,Hex,C
+198,What is the type of the spell named Celescere?,Jinx,Charm,Unknown,Spell,B
+199,What is the type of the spell named Cheering Charm?,Unknown,Spell,Transportation,Charm,D
+200,What is the type of the spell named Circumrota?,Transfiguration,Counter-Spell,Jinx,Charm,D
+201,What is the type of the spell named Cistem Aperio?,Hex,Untransfiguration,Charm,Unknown,C
+202,What is the type of the spell named Colloportus?,Transfiguration,Vanishment,Charm,Untransfiguration,C
+203,What is the type of the spell named Colloshoo?,Hex,Vanishment,Transportation,Counter-Jinx,A
+204,What is the type of the spell named Colovaria?,Counter-Charm,Counter-Jinx,Charm,Jinx,C
+205,What is the type of the spell named Confringo?,Transfiguration,Transportation,Spell,Curse,D
+206,What is the type of the spell named Confundo?,Unknown,Conjuration,Charm,Transfiguration,C
+207,What is the type of the spell named Conjunctivitis Curse?,Untransfiguration,Conjuration,Charm,Curse,D
+208,What is the type of the spell named Cracker Jinx?,Vanishment,Jinx,Charm,Hex,B
+209,What is the type of the spell named Cribbing Spell?,Hex,Spell,Conjuration,Charm,B
+210,What is the type of the spell named Crinus Muto?,Transfiguration,Counter-Charm,Counter-charm,Counter-Spell,A
+211,What is the type of the spell named Crucio?,Counter-Spell,Curse,Untransfiguration,Transportation,B
+212,What is the type of the spell named Defodio?,Transfiguration,Unknown,Conjuration,Charm,D
+213,What is the type of the spell named Deletrius?,Jinx,Untransfiguration,Charm,Transportation,C
+214,What is the type of the spell named Densaugeo?,Hex,Counter-charm,Transportation,Untransfiguration,A
+215,What is the type of the spell named Deprimo?,Counter-Spell,Conjuration,Counter-Jinx,Charm,D
+216,What is the type of the spell named Depulso?,Vanishment,Untransfiguration,Charm,Counter-Spell,C
+217,What is the type of the spell named Descendo?,Untransfiguration,Charm,Counter-Charm,Jinx,B
+218,What is the type of the spell named Deterioration Hex?,Hex,Counter-Charm,Spell,Counter-charm,A
+219,What is the type of the spell named Diffindo?,Vanishment,Transportation,Curse,Charm,D
+220,What is the type of the spell named Diminuendo?,Transportation,Transfiguration,Curse,Charm,D
+221,What is the type of the spell named Dissendium?,Charm,Counter-Spell,Transportation,Untransfiguration,A
+222,What is the type of the spell named Disillusionment Charm?,Vanishment,Charm,Transfiguration,Jinx,B
+223,What is the type of the spell named Draconifors?,Counter-charm,Transfiguration,Conjuration,Curse,B
+224,What is the type of the spell named Drought Charm?,Transportation,Counter-charm,Transfiguration,Charm,D
+225,What is the type of the spell named Duro?,Counter-Spell,Charm,Spell,Counter-charm,B
+226,What is the type of the spell named Ear-shrivelling Curse?,Spell,Curse,Untransfiguration,Vanishment,B
+227,What is the type of the spell named Ebublio?,Vanishment,Jinx,Untransfiguration,Counter-Charm,B
+228,What is the type of the spell named Engorgio?,Untransfiguration,Counter-Jinx,Transportation,Charm,D
+229,What is the type of the spell named Entrail-Expelling Curse?,Curse,Spell,Unknown,Vanishment,A
+230,What is the type of the spell named Epoximise?,Spell,Counter-Jinx,Transfiguration,Curse,C
+231,What is the type of the spell named Erecto?,Transportation,Counter-charm,Hex,Charm,D
+232,What is the type of the spell named Evanesce?,Counter-Spell,Hex,Transfiguration,Jinx,C
+233,What is the type of the spell named Evanesco?,Vanishment,Untransfiguration,Transfiguration,Transportation,C
+234,What is the type of the spell named Everte Statum?,Counter-charm,Spell,Conjuration,Hex,B
+235,What is the type of the spell named Expecto Patronum?,Vanishment,Charm,Conjuration,Hex,B
+236,What is the type of the spell named Expelliarmus?,Charm,Hex,Transfiguration,Counter-Charm,A
+237,What is the type of the spell named Expulso?,Curse,Charm,Vanishment,Counter-Spell,A
+238,What is the type of the spell named Extinguishing Spell?,Charm,Counter-Spell,Counter-Charm,Curse,A
+239,What is the type of the spell named Feather-light charm?,Charm,Counter-Spell,Hex,Counter-charm,A
+240,What is the type of the spell named Fianto Duri?,Charm,Jinx,Untransfiguration,Spell,A
+241,What is the type of the spell named Fidelius Charm?,Charm,Vanishment,Counter-Charm,Counter-Spell,A
+242,What is the type of the spell named Fiendfyre?,Transfiguration,Curse,Hex,Jinx,B
+243,What is the type of the spell named Finestra?,Charm,Conjuration,Hex,Counter-Jinx,A
+244,What is the type of the spell named Finite Incantatem?,Unknown,Counter-Spell,Spell,Jinx,B
+245,What is the type of the spell named Finger-removing jinx?,Counter-Spell,Transportation,Jinx,Charm,C
+246,What is the type of the spell named Firestorm?,Spell,Transportation,Charm,Counter-Spell,C
+247,What is the type of the spell named Flagrante Curse?,Unknown,Spell,Transfiguration,Curse,D
+248,What is the type of the spell named Flagrate?,Charm,Conjuration,Counter-Spell,Vanishment,A
+249,What is the type of the spell named Flame-Freezing Charm?,Spell,Charm,Hex,Unknown,B
+250,What is the type of the spell named Flask-conjuring spell?,Counter-Jinx,Curse,Vanishment,Conjuration,D
+251,What is the type of the spell named Flintifors?,Untransfiguration,Counter-Jinx,Transfiguration,Counter-Charm,C
+252,What is the type of the spell named Flipendo?,Curse,Vanishment,Jinx,Charm,C
+253,What is the type of the spell named Flipendo Duo?,Jinx,Counter-Spell,Conjuration,Counter-charm,A
+254,What is the type of the spell named Flipendo Maxima?,Jinx,Unknown,Vanishment,Curse,A
+255,What is the type of the spell named Flipendo Tria?,Jinx,Counter-Jinx,Transportation,Unknown,A
+256,What is the type of the spell named Flying charm?,Charm,Jinx,Unknown,Counter-Jinx,A
+257,What is the type of the spell named Fracto Strata?,Spell,Counter-Charm,Transportation,Charm,A
+258,What is the type of the spell named Fumos?,Counter-charm,Vanishment,Jinx,Charm,D
+259,What is the type of the spell named Fumos Duo?,Counter-Charm,Charm,Hex,Spell,B
+260,What is the type of the spell named Furnunculus?,Hex,Jinx,Charm,Counter-charm,B
+261,What is the type of the spell named Fur spell?,Spell,Charm,Curse,Hex,B
+262,What is the type of the spell named Geminio?,Vanishment,Charm,Curse,Counter-Jinx,B
+263,What is the type of the spell named Glacius?,Transportation,Charm,Counter-charm,Counter-Jinx,B
+264,What is the type of the spell named Glacius Duo?,Spell,Charm,Unknown,Transportation,B
+265,What is the type of the spell named Glacius Tria?,Hex,Charm,Counter-charm,Counter-Spell,B
+266,What is the type of the spell named Glisseo?,Vanishment,Charm,Unknown,Curse,B
+267,What is the type of the spell named Gripping Charm?,Hex,Vanishment,Conjuration,Charm,D
+268,What is the type of the spell named Hair-thickening Charm?,Curse,Unknown,Charm,Untransfiguration,C
+269,What is the type of the spell named Herbifors?,Transfiguration,Counter-charm,Hex,Spell,A
+270,What is the type of the spell named Herbivicus?,Charm,Hex,Counter-Jinx,Vanishment,A
+271,What is the type of the spell named Homenum Revelio?,Unknown,Transfiguration,Curse,Charm,D
+272,What is the type of the spell named Homonculous Charm?,Counter-Spell,Counter-Jinx,Transfiguration,Charm,D
+273,What is the type of the spell named Hurling Hex?,Conjuration,Transfiguration,Hex,Curse,C
+274,What is the type of the spell named Impedimenta?,Jinx,Counter-Spell,Charm,Unknown,A
+275,What is the type of the spell named Imperio?,Counter-charm,Counter-Jinx,Untransfiguration,Curse,D
+276,What is the type of the spell named Inanimatus Conjurus?,Transfiguration,Charm,Vanishment,Conjuration,A
+277,What is the type of the spell named Incarcerous?,Hex,Spell,Counter-Charm,Conjuration,D
+278,What is the type of the spell named Inflatus?,Charm,Jinx,Counter-Jinx,Counter-Charm,B
+279,What is the type of the spell named Jelly-Brain Jinx?,Jinx,Counter-Jinx,Transfiguration,Conjuration,A
+280,What is the type of the spell named Jelly-Fingers Curse?,Charm,Counter-Spell,Curse,Counter-charm,C
+281,What is the type of the spell named Knee-reversal hex?,Hex,Unknown,Curse,Charm,A
+282,What is the type of the spell named Langlock?,Jinx,Hex,Untransfiguration,Counter-Charm,A
+283,What is the type of the spell named Lapifors?,Transfiguration,Counter-Jinx,Conjuration,Vanishment,A
+284,What is the type of the spell named Leek Jinx?,Conjuration,Jinx,Curse,Counter-Charm,B
+285,What is the type of the spell named Levicorpus?,Charm,Jinx,Curse,Vanishment,B
+286,What is the type of the spell named Liberacorpus?,Conjuration,Counter-Jinx,Unknown,Counter-Spell,B
+287,What is the type of the spell named Locomotor Mortis?,Counter-charm,Unknown,Curse,Untransfiguration,C
+288,What is the type of the spell named Melofors?,Jinx,Counter-Jinx,Counter-charm,Transportation,A
+289,What is the type of the spell named Meteolojinx recanto?,Transfiguration,Jinx,Spell,Counter-Charm,D
+290,What is the type of the spell named Mimblewimble?,Curse,Counter-Jinx,Jinx,Unknown,A
+291,What is the type of the spell named Multicorfors?,Counter-Spell,Counter-Charm,Transfiguration,Unknown,C
+292,What is the type of the spell named Obscuro?,Conjuration,Spell,Hex,Transportation,A
+293,What is the type of the spell named Oppugno?,Jinx,Hex,Unknown,Counter-charm,A
+294,What is the type of the spell named Orbis?,Spell,Jinx,Charm,Transportation,B
+295,What is the type of the spell named Orchideous?,Counter-Jinx,Jinx,Conjuration,Counter-Charm,C
+296,What is the type of the spell named Pepper Breath?,Counter-Charm,Transportation,Hex,Unknown,C
+297,What is the type of the spell named Petrificus Totalus?,Spell,Curse,Counter-charm,Transportation,B
+298,What is the type of the spell named Piscifors?,Counter-Charm,Untransfiguration,Transfiguration,Jinx,C
+299,What is the type of the spell named Point Me?,Spell,Counter-Charm,Transportation,Jinx,A

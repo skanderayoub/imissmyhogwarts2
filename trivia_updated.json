@@ -1,0 +1,5946 @@
+{
+  "title": "Ultimate Harry Potter Trivia Challenge",
+  "description": "Test your knowledge of the Harry Potter universe, including characters, spells, potions, and Hogwarts Legacy. With 160 questions across Easy, Moderate, and Hard difficulties, this quiz is perfect for fans of all levels!",
+  "questions": [
+    {
+      "id": 1,
+      "question": "What is the name of Harry Potter's owl?",
+      "options": [
+        "Hedwig",
+        "Errol",
+        "Pigwidgeon"
+      ],
+      "correct_answer": "Hedwig",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 2,
+      "question": "Which spell is used to unlock doors?",
+      "options": [
+        "Alohomora",
+        "Lumos",
+        "Accio"
+      ],
+      "correct_answer": "Alohomora",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 3,
+      "question": "What potion allows the drinker to transform into another person?",
+      "options": [
+        "Polyjuice Potion",
+        "Amortentia",
+        "Felix Felicis"
+      ],
+      "correct_answer": "Polyjuice Potion",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 4,
+      "question": "What is the name of Ron Weasley's pet rat?",
+      "options": [
+        "Scabbers",
+        "Crookshanks",
+        "Mrs. Norris"
+      ],
+      "correct_answer": "Scabbers",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 5,
+      "question": "Which Hogwarts house values bravery and courage?",
+      "options": [
+        "Gryffindor",
+        "Hufflepuff",
+        "Ravenclaw"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 6,
+      "question": "What spell lights up the tip of a wand?",
+      "options": [
+        "Lumos",
+        "Nox",
+        "Incendio"
+      ],
+      "correct_answer": "Lumos",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 7,
+      "question": "What is the love potion in the Harry Potter series?",
+      "options": [
+        "Amortentia",
+        "Veritaserum",
+        "Draught of Peace"
+      ],
+      "correct_answer": "Amortentia",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 8,
+      "question": "Who is the headmaster of Hogwarts in Harry's first year?",
+      "options": [
+        "Albus Dumbledore",
+        "Minerva McGonagall",
+        "Severus Snape"
+      ],
+      "correct_answer": "Albus Dumbledore",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 9,
+      "question": "What spell disarms an opponent?",
+      "options": [
+        "Expelliarmus",
+        "Stupefy",
+        "Protego"
+      ],
+      "correct_answer": "Expelliarmus",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 10,
+      "question": "What potion is known as 'Liquid Luck'?",
+      "options": [
+        "Felix Felicis",
+        "Veritaserum",
+        "Polyjuice Potion"
+      ],
+      "correct_answer": "Felix Felicis",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 11,
+      "question": "In *Hogwarts Legacy*, what is the name of the protagonist's mentor?",
+      "options": [
+        "Professor Fig",
+        "Professor Sharp",
+        "Professor Ronen"
+      ],
+      "correct_answer": "Professor Fig",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 12,
+      "question": "What spell summons objects to the caster?",
+      "options": [
+        "Accio",
+        "Wingardium Leviosa",
+        "Alohomora"
+      ],
+      "correct_answer": "Accio",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 13,
+      "question": "What is the name of the Weasley family home?",
+      "options": [
+        "The Burrow",
+        "The Leaky Cauldron",
+        "Grimmauld Place"
+      ],
+      "correct_answer": "The Burrow",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 14,
+      "question": "What spell extinguishes the light from Lumos?",
+      "options": [
+        "Nox",
+        "Aguamenti",
+        "Finite"
+      ],
+      "correct_answer": "Nox",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 15,
+      "question": "What potion forces the drinker to tell the truth?",
+      "options": [
+        "Veritaserum",
+        "Pepperup Potion",
+        "Amortentia"
+      ],
+      "correct_answer": "Veritaserum",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 16,
+      "question": "In *Hogwarts Legacy*, what potion restores health during combat?",
+      "options": [
+        "Wiggenweld Potion",
+        "Maxima Potion",
+        "Edurus Potion"
+      ],
+      "correct_answer": "Wiggenweld Potion",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 17,
+      "question": "What spell levitates objects?",
+      "options": [
+        "Wingardium Leviosa",
+        "Accio",
+        "Reparo"
+      ],
+      "correct_answer": "Wingardium Leviosa",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 18,
+      "question": "What is the name of the house-elf who serves the Malfoy family?",
+      "options": [
+        "Dobby",
+        "Kreacher",
+        "Winky"
+      ],
+      "correct_answer": "Dobby",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 19,
+      "question": "What spell repairs broken objects?",
+      "options": [
+        "Reparo",
+        "Episkey",
+        "Alohomora"
+      ],
+      "correct_answer": "Reparo",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 20,
+      "question": "What potion heals minor injuries?",
+      "options": [
+        "Essence of Dittany",
+        "Skele-Gro",
+        "Pepperup Potion"
+      ],
+      "correct_answer": "Essence of Dittany",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 21,
+      "question": "What is Hagrid's first name?",
+      "options": [
+        "Rubeus",
+        "Cornelius",
+        "Horace"
+      ],
+      "correct_answer": "Rubeus",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 22,
+      "question": "What spell conjures water?",
+      "options": [
+        "Aguamenti",
+        "Incendio",
+        "Lumos"
+      ],
+      "correct_answer": "Aguamenti",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 23,
+      "question": "What potion regrows bones?",
+      "options": [
+        "Skele-Gro",
+        "Draught of Peace",
+        "Felix Felicis"
+      ],
+      "correct_answer": "Skele-Gro",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 24,
+      "question": "In *Hogwarts Legacy*, which house can the player choose to join?",
+      "options": [
+        "Any of the four houses",
+        "Only Gryffindor",
+        "Only Slytherin"
+      ],
+      "correct_answer": "Any of the four houses",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 25,
+      "question": "What spell creates a protective shield?",
+      "options": [
+        "Protego",
+        "Riddikulus",
+        "Stupefy"
+      ],
+      "correct_answer": "Protego",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 26,
+      "question": "What is the name of Hermione Granger\u2019s cat?",
+      "options": [
+        "Crookshanks",
+        "Mrs. Norris",
+        "Scabbers"
+      ],
+      "correct_answer": "Crookshanks",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 27,
+      "question": "What potion calms anxiety and agitation?",
+      "options": [
+        "Draught of Peace",
+        "Amortentia",
+        "Veritaserum"
+      ],
+      "correct_answer": "Draught of Peace",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 28,
+      "question": "What is the name of Draco Malfoy\u2019s father?",
+      "options": [
+        "Lucius Malfoy",
+        "Severus Snape",
+        "Cornelius Fudge"
+      ],
+      "correct_answer": "Lucius Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 29,
+      "question": "What spell banishes a Boggart?",
+      "options": [
+        "Riddikulus",
+        "Expecto Patronum",
+        "Protego"
+      ],
+      "correct_answer": "Riddikulus",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 30,
+      "question": "In *Hogwarts Legacy*, what is the name of the village near Hogwarts?",
+      "options": [
+        "Hogsmeade",
+        "Godric\u2019s Hollow",
+        "Diagon Alley"
+      ],
+      "correct_answer": "Hogsmeade",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 31,
+      "question": "What potion cures colds?",
+      "options": [
+        "Pepperup Potion",
+        "Wit-Sharpening Potion",
+        "Skele-Gro"
+      ],
+      "correct_answer": "Pepperup Potion",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 32,
+      "question": "Who is the Gryffindor house ghost?",
+      "options": [
+        "Nearly Headless Nick",
+        "The Fat Friar",
+        "The Grey Lady"
+      ],
+      "correct_answer": "Nearly Headless Nick",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 33,
+      "question": "What spell conjures a Patronus?",
+      "options": [
+        "Expecto Patronum",
+        "Protego",
+        "Accio"
+      ],
+      "correct_answer": "Expecto Patronum",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 34,
+      "question": "What is the name of the Weasley twins?",
+      "options": [
+        "Fred and George",
+        "Bill and Charlie",
+        "Percy and Ron"
+      ],
+      "correct_answer": "Fred and George",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 35,
+      "question": "What spell stuns an opponent?",
+      "options": [
+        "Stupefy",
+        "Petrificus Totalus",
+        "Expelliarmus"
+      ],
+      "correct_answer": "Stupefy",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 36,
+      "question": "In *Hogwarts Legacy*, what creature can the player befriend to help with tasks?",
+      "options": [
+        "Puffskein",
+        "Troll",
+        "Basilisk"
+      ],
+      "correct_answer": "Puffskein",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 37,
+      "question": "What potion enhances the drinker\u2019s strength?",
+      "options": [
+        "Strengthening Solution",
+        "Invigoration Draught",
+        "Edurus Potion"
+      ],
+      "correct_answer": "Strengthening Solution",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 38,
+      "question": "Who is the caretaker of Hogwarts?",
+      "options": [
+        "Argus Filch",
+        "Filius Flitwick",
+        "Pomona Sprout"
+      ],
+      "correct_answer": "Argus Filch",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 39,
+      "question": "What spell creates fire?",
+      "options": [
+        "Incendio",
+        "Confringo",
+        "Aguamenti"
+      ],
+      "correct_answer": "Incendio",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 40,
+      "question": "In *Hogwarts Legacy*, what is the name of the shop where players can buy potions?",
+      "options": [
+        "J. Pippin\u2019s Potions",
+        "Zonko\u2019s Joke Shop",
+        "Honeydukes"
+      ],
+      "correct_answer": "J. Pippin\u2019s Potions",
+      "category": "Potions",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 41,
+      "question": "What is the name of the Hufflepuff house ghost?",
+      "options": [
+        "The Fat Friar",
+        "The Grey Lady",
+        "The Bloody Baron",
+        "Moaning Myrtle"
+      ],
+      "correct_answer": "The Fat Friar",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 42,
+      "question": "What spell reveals hidden objects or passages?",
+      "options": [
+        "Revelio",
+        "Aparecium",
+        "Specialis Revelio",
+        "Homenum Revelio"
+      ],
+      "correct_answer": "Revelio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 43,
+      "question": "What is a key ingredient in Polyjuice Potion?",
+      "options": [
+        "Lacewing Flies",
+        "Mandrake Root",
+        "Dragon Blood",
+        "Bezoar"
+      ],
+      "correct_answer": "Lacewing Flies",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 44,
+      "question": "In *Hogwarts Legacy*, who is the Slytherin student who explores dark magic?",
+      "options": [
+        "Sebastian Sallow",
+        "Ominis Gaunt",
+        "Natty Onai",
+        "Poppy Sweeting"
+      ],
+      "correct_answer": "Sebastian Sallow",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 45,
+      "question": "What spell causes the target to become confused?",
+      "options": [
+        "Confundo",
+        "Obscuro",
+        "Silencio",
+        "Rictusempra"
+      ],
+      "correct_answer": "Confundo",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 46,
+      "question": "What potion requires Boomslang Skin as an ingredient?",
+      "options": [
+        "Polyjuice Potion",
+        "Amortentia",
+        "Felix Felicis",
+        "Veritaserum"
+      ],
+      "correct_answer": "Polyjuice Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 47,
+      "question": "Who is the Ravenclaw house ghost?",
+      "options": [
+        "The Grey Lady",
+        "Moaning Myrtle",
+        "The Fat Friar",
+        "The Bloody Baron"
+      ],
+      "correct_answer": "The Grey Lady",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 48,
+      "question": "What spell causes objects to shrink?",
+      "options": [
+        "Reducio",
+        "Engorgio",
+        "Diminuendo",
+        "Evanesco"
+      ],
+      "correct_answer": "Reducio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 49,
+      "question": "What potion restores someone who has been petrified?",
+      "options": [
+        "Mandrake Restorative Draught",
+        "Skele-Gro",
+        "Wit-Sharpening Potion",
+        "Draught of Peace"
+      ],
+      "correct_answer": "Mandrake Restorative Draught",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 50,
+      "question": "In *Hogwarts Legacy*, who is the Hufflepuff student who loves magical creatures?",
+      "options": [
+        "Poppy Sweeting",
+        "Natty Onai",
+        "Sebastian Sallow",
+        "Ominis Gaunt"
+      ],
+      "correct_answer": "Poppy Sweeting",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 51,
+      "question": "What spell silences the target?",
+      "options": [
+        "Silencio",
+        "Muffliato",
+        "Quietis",
+        "Sonorus"
+      ],
+      "correct_answer": "Silencio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 52,
+      "question": "What potion causes the drinker to fall into a deep sleep?",
+      "options": [
+        "Draught of Living Death",
+        "Sleeping Draught",
+        "Elixir to Induce Euphoria",
+        "Amortentia"
+      ],
+      "correct_answer": "Draught of Living Death",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 53,
+      "question": "Who is the Defense Against the Dark Arts teacher in Harry\u2019s second year?",
+      "options": [
+        "Gilderoy Lockhart",
+        "Remus Lupin",
+        "Alastor Moody",
+        "Quirinius Quirrell"
+      ],
+      "correct_answer": "Gilderoy Lockhart",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 54,
+      "question": "What spell creates a barrier that repels physical objects?",
+      "options": [
+        "Protego",
+        "Impedimenta",
+        "Repello",
+        "Colloportus"
+      ],
+      "correct_answer": "Protego",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 55,
+      "question": "In *Hogwarts Legacy*, what potion temporarily increases magical power?",
+      "options": [
+        "Maxima Potion",
+        "Focus Potion",
+        "Thunderbrew",
+        "Wiggenweld Potion"
+      ],
+      "correct_answer": "Maxima Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 56,
+      "question": "Who is the founder of Hufflepuff house?",
+      "options": [
+        "Helga Hufflepuff",
+        "Rowena Ravenclaw",
+        "Salazar Slytherin",
+        "Godric Gryffindor"
+      ],
+      "correct_answer": "Helga Hufflepuff",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 57,
+      "question": "What spell causes the target to be lifted into the air?",
+      "options": [
+        "Levicorpus",
+        "Wingardium Leviosa",
+        "Ascendio",
+        "Locomotor"
+      ],
+      "correct_answer": "Levicorpus",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 58,
+      "question": "What ingredient is used in the Draught of Peace?",
+      "options": [
+        "Moonstone",
+        "Lacewing Flies",
+        "Fluxweed",
+        "Bezoar"
+      ],
+      "correct_answer": "Moonstone",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 59,
+      "question": "In *Hogwarts Legacy*, who teaches Charms?",
+      "options": [
+        "Professor Ronen",
+        "Professor Hecat",
+        "Professor Sharp",
+        "Professor Fig"
+      ],
+      "correct_answer": "Professor Ronen",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 60,
+      "question": "What spell makes objects invisible?",
+      "options": [
+        "Disillusionment Charm",
+        "Invisibility Charm",
+        "Obscuro",
+        "Evanesco"
+      ],
+      "correct_answer": "Disillusionment Charm",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 61,
+      "question": "What potion cures boils?",
+      "options": [
+        "Cure for Boils",
+        "Pepperup Potion",
+        "Wit-Sharpening Potion",
+        "Essence of Dittany"
+      ],
+      "correct_answer": "Cure for Boils",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 62,
+      "question": "Who is the leader of the Order of the Phoenix?",
+      "options": [
+        "Albus Dumbledore",
+        "Sirius Black",
+        "Mad-Eye Moody",
+        "Minerva McGonagall"
+      ],
+      "correct_answer": "Albus Dumbledore",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 63,
+      "question": "What spell causes objects to swell in size?",
+      "options": [
+        "Engorgio",
+        "Reducio",
+        "Amplificus",
+        "Diminuendo"
+      ],
+      "correct_answer": "Engorgio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 64,
+      "question": "What potion creates a powerful explosion in *Hogwarts Legacy*?",
+      "options": [
+        "Thunderbrew",
+        "Explosive Potion",
+        "Volubilis Potion",
+        "Maxima Potion"
+      ],
+      "correct_answer": "Thunderbrew",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 65,
+      "question": "Who is the half-giant groundskeeper at Hogwarts?",
+      "options": [
+        "Rubeus Hagrid",
+        "Olympe Maxime",
+        "Gilderoy Lockhart",
+        "Filius Flitwick"
+      ],
+      "correct_answer": "Rubeus Hagrid",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 66,
+      "question": "What spell protects against Dementors?",
+      "options": [
+        "Expecto Patronum",
+        "Protego",
+        "Riddikulus",
+        "Stupefy"
+      ],
+      "correct_answer": "Expecto Patronum",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 67,
+      "question": "What ingredient is essential for Felix Felicis?",
+      "options": [
+        "Ashwinder Egg",
+        "Knotgrass",
+        "Peppermint",
+        "Moonstone"
+      ],
+      "correct_answer": "Ashwinder Egg",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 68,
+      "question": "In *Hogwarts Legacy*, what spell is used to push enemies away?",
+      "options": [
+        "Depulso",
+        "Expelliarmus",
+        "Accio",
+        "Protego"
+      ],
+      "correct_answer": "Depulso",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 69,
+      "question": "Who is the author of 'Fantastic Beasts and Where to Find Them' in the wizarding world?",
+      "options": [
+        "Newt Scamander",
+        "Gilderoy Lockhart",
+        "Bathilda Bagshot",
+        "Rita Skeeter"
+      ],
+      "correct_answer": "Newt Scamander",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 70,
+      "question": "What spell causes the target to sneeze uncontrollably?",
+      "options": [
+        "Rictusempra",
+        "Ebullio",
+        "Tarantallegra",
+        "Confundo"
+      ],
+      "correct_answer": "Rictusempra",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 71,
+      "question": "What potion allows the drinker to breathe underwater?",
+      "options": [
+        "Gillyweed Potion",
+        "Bubble-Head Charm",
+        "Aqua Vitae",
+        "No such potion"
+      ],
+      "correct_answer": "Gillyweed Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 72,
+      "question": "Who is the head of Ravenclaw house?",
+      "options": [
+        "Filius Flitwick",
+        "Pomona Sprout",
+        "Severus Snape",
+        "Sybill Trelawney"
+      ],
+      "correct_answer": "Filius Flitwick",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 73,
+      "question": "What spell causes the target to dance uncontrollably?",
+      "options": [
+        "Tarantallegra",
+        "Rictusempra",
+        "Locomotor",
+        "Confundo"
+      ],
+      "correct_answer": "Tarantallegra",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 74,
+      "question": "In *Hogwarts Legacy*, what potion causes enemies to take more damage?",
+      "options": [
+        "Focus Potion",
+        "Edurus Potion",
+        "Thunderbrew",
+        "Maxima Potion"
+      ],
+      "correct_answer": "Focus Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 75,
+      "question": "Who is the ghost in the girls\u2019 bathroom at Hogwarts?",
+      "options": [
+        "Moaning Myrtle",
+        "The Grey Lady",
+        "The Fat Friar",
+        "The Bloody Baron"
+      ],
+      "correct_answer": "Moaning Myrtle",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 76,
+      "question": "What spell reveals hidden magical properties?",
+      "options": [
+        "Specialis Revelio",
+        "Revelio",
+        "Aparecium",
+        "Homenum Revelio"
+      ],
+      "correct_answer": "Specialis Revelio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 77,
+      "question": "What potion temporarily toughens the drinker\u2019s skin in *Hogwarts Legacy*?",
+      "options": [
+        "Edurus Potion",
+        "Strengthening Solution",
+        "Invigoration Draught",
+        "Maxima Potion"
+      ],
+      "correct_answer": "Edurus Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 78,
+      "question": "Who is the centaur who teaches Divination at Hogwarts?",
+      "options": [
+        "Firenze",
+        "Bane",
+        "Ronan",
+        "Magorian"
+      ],
+      "correct_answer": "Firenze",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 79,
+      "question": "What spell fills an area with an unidentifiable buzzing sound?",
+      "options": [
+        "Muffliato",
+        "Silencio",
+        "Sonorus",
+        "Quietus"
+      ],
+      "correct_answer": "Muffliato",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 80,
+      "question": "What ingredient is key in the Draught of Living Death?",
+      "options": [
+        "Sopophorous Bean",
+        "Moonstone",
+        "Ashwinder Egg",
+        "Fluxweed"
+      ],
+      "correct_answer": "Sopophorous Bean",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 81,
+      "question": "In *Hogwarts Legacy*, who teaches Potions?",
+      "options": [
+        "Professor Sharp",
+        "Professor Fig",
+        "Professor Ronen",
+        "Professor Hecat"
+      ],
+      "correct_answer": "Professor Sharp",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 82,
+      "question": "What spell locks doors?",
+      "options": [
+        "Colloportus",
+        "Alohomora",
+        "Protego",
+        "Reparo"
+      ],
+      "correct_answer": "Colloportus",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 83,
+      "question": "What potion treats burns?",
+      "options": [
+        "Burn-Healing Paste",
+        "Essence of Dittany",
+        "Cure for Boils",
+        "Pepperup Potion"
+      ],
+      "correct_answer": "Burn-Healing Paste",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 84,
+      "question": "Who is the editor of The Quibbler?",
+      "options": [
+        "Xenophilius Lovegood",
+        "Rita Skeeter",
+        "Barnabas Cuffe",
+        "Luna Lovegood"
+      ],
+      "correct_answer": "Xenophilius Lovegood",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 85,
+      "question": "What spell amplifies the caster\u2019s voice?",
+      "options": [
+        "Sonorus",
+        "Muffliato",
+        "Quietus",
+        "Silencio"
+      ],
+      "correct_answer": "Sonorus",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 86,
+      "question": "What potion enhances endurance in *Hogwarts Legacy*?",
+      "options": [
+        "Invigoration Draught",
+        "Strengthening Solution",
+        "Edurus Potion",
+        "Maxima Potion"
+      ],
+      "correct_answer": "Invigoration Draught",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 87,
+      "question": "Who is the Gryffindor student who becomes a werewolf?",
+      "options": [
+        "Remus Lupin",
+        "Sirius Black",
+        "James Potter",
+        "Peter Pettigrew"
+      ],
+      "correct_answer": "Remus Lupin",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 88,
+      "question": "What spell reverses the effects of Sonorus?",
+      "options": [
+        "Quietus",
+        "Silencio",
+        "Muffliato",
+        "Sonorus"
+      ],
+      "correct_answer": "Quietus",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 89,
+      "question": "In *Hogwarts Legacy*, what spell pulls enemies closer?",
+      "options": [
+        "Accio",
+        "Depulso",
+        "Descendo",
+        "Arresto Momentum"
+      ],
+      "correct_answer": "Accio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 90,
+      "question": "What is the name of the Slytherin house ghost?",
+      "options": [
+        "The Bloody Baron",
+        "Nearly Headless Nick",
+        "The Grey Lady",
+        "Moaning Myrtle"
+      ],
+      "correct_answer": "The Bloody Baron",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 91,
+      "question": "What potion causes uncontrollable laughter?",
+      "options": [
+        "Elixir to Induce Euphoria",
+        "Laughing Potion",
+        "Amortentia",
+        "Confusing Concoction"
+      ],
+      "correct_answer": "Elixir to Induce Euphoria",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 92,
+      "question": "Who is the Divination professor at Hogwarts?",
+      "options": [
+        "Sybill Trelawney",
+        "Pomona Sprout",
+        "Minerva McGonagall",
+        "Aurora Sinistra"
+      ],
+      "correct_answer": "Sybill Trelawney",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 93,
+      "question": "What spell repels water?",
+      "options": [
+        "Impervius",
+        "Aguamenti",
+        "Protego",
+        "Repello"
+      ],
+      "correct_answer": "Impervius",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 94,
+      "question": "In *Hogwarts Legacy*, what creature can players care for in the Room of Requirement?",
+      "options": [
+        "Niffler",
+        "Troll",
+        "Basilisk",
+        "Doxy"
+      ],
+      "correct_answer": "Niffler",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 95,
+      "question": "What potion improves focus?",
+      "options": [
+        "Wit-Sharpening Potion",
+        "Memory Potion",
+        "Draught of Peace",
+        "Felix Felicis"
+      ],
+      "correct_answer": "Wit-Sharpening Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 96,
+      "question": "Who is Harry\u2019s godfather?",
+      "options": [
+        "Sirius Black",
+        "Remus Lupin",
+        "James Potter",
+        "Albus Dumbledore"
+      ],
+      "correct_answer": "Sirius Black",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 97,
+      "question": "What spell causes objects to explode?",
+      "options": [
+        "Confringo",
+        "Reducto",
+        "Bombarda",
+        "Expulso"
+      ],
+      "correct_answer": "Confringo",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 98,
+      "question": "What potion reverses poisoning?",
+      "options": [
+        "Antidote to Common Poisons",
+        "Mandrake Restorative Draught",
+        "Essence of Dittany",
+        "Skele-Gro"
+      ],
+      "correct_answer": "Antidote to Common Poisons",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 99,
+      "question": "In *Hogwarts Legacy*, who is the Ravenclaw student who helps the protagonist?",
+      "options": [
+        "Natty Onai",
+        "Sebastian Sallow",
+        "Poppy Sweeting",
+        "Ominis Gaunt"
+      ],
+      "correct_answer": "Natty Onai",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 100,
+      "question": "What spell immobilizes the target?",
+      "options": [
+        "Petrificus Totalus",
+        "Impedimenta",
+        "Stupefy",
+        "Levicorpus"
+      ],
+      "correct_answer": "Petrificus Totalus",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 101,
+      "question": "Who is the head of Slytherin house during Harry\u2019s time at Hogwarts?",
+      "options": [
+        "Severus Snape",
+        "Horace Slughorn",
+        "Dolores Umbridge",
+        "Lucius Malfoy"
+      ],
+      "correct_answer": "Severus Snape",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 102,
+      "question": "What potion temporarily makes the drinker invisible in *Hogwarts Legacy*?",
+      "options": [
+        "Invisibility Potion",
+        "Disillusionment Draught",
+        "Edurus Potion",
+        "Maxima Potion"
+      ],
+      "correct_answer": "Invisibility Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 103,
+      "question": "Who is the Herbology professor at Hogwarts?",
+      "options": [
+        "Pomona Sprout",
+        "Minerva McGonagall",
+        "Filius Flitwick",
+        "Sybill Trelawney"
+      ],
+      "correct_answer": "Pomona Sprout",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 104,
+      "question": "In *Hogwarts Legacy*, what spell slows down enemies or objects?",
+      "options": [
+        "Arresto Momentum",
+        "Depulso",
+        "Accio",
+        "Confringo"
+      ],
+      "correct_answer": "Arresto Momentum",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 105,
+      "question": "What potion causes the drinker\u2019s voice to change?",
+      "options": [
+        "Volubilis Potion",
+        "Polyjuice Potion",
+        "Amortentia",
+        "No such potion"
+      ],
+      "correct_answer": "Volubilis Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 106,
+      "question": "Who is the captain of the Gryffindor Quidditch team in Harry\u2019s first year?",
+      "options": [
+        "Oliver Wood",
+        "Angelina Johnson",
+        "Katie Bell",
+        "Harry Potter"
+      ],
+      "correct_answer": "Oliver Wood",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 107,
+      "question": "What spell causes objects to break apart?",
+      "options": [
+        "Reducto",
+        "Confringo",
+        "Diffindo",
+        "Bombarda"
+      ],
+      "correct_answer": "Reducto",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 108,
+      "question": "In *Hogwarts Legacy*, what potion ingredient is harvested from Mandrakes?",
+      "options": [
+        "Mandrake Root",
+        "Boomslang Skin",
+        "Ashwinder Egg",
+        "Fluxweed"
+      ],
+      "correct_answer": "Mandrake Root",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 109,
+      "question": "What potion helps the drinker recover from exhaustion?",
+      "options": [
+        "Invigoration Draught",
+        "Pepperup Potion",
+        "Wit-Sharpening Potion",
+        "Draught of Peace"
+      ],
+      "correct_answer": "Invigoration Draught",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 110,
+      "question": "In *Hogwarts Legacy*, what spell is used to lift objects or enemies into the air?",
+      "options": [
+        "Levioso",
+        "Wingardium Leviosa",
+        "Levicorpus",
+        "Ascendio"
+      ],
+      "correct_answer": "Levioso",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 111,
+      "question": "Who is the keeper of keys at Hogwarts?",
+      "options": [
+        "Rubeus Hagrid",
+        "Argus Filch",
+        "Filius Flitwick",
+        "Pomona Sprout"
+      ],
+      "correct_answer": "Rubeus Hagrid",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 112,
+      "question": "What spell reveals the presence of humans nearby?",
+      "options": [
+        "Homenum Revelio",
+        "Specialis Revelio",
+        "Revelio",
+        "Aparecium"
+      ],
+      "correct_answer": "Homenum Revelio",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 113,
+      "question": "What potion ingredient is used in the Cure for Boils?",
+      "options": [
+        "Pufferfish Eyes",
+        "Moonstone",
+        "Knotgrass",
+        "Ashwinder Egg"
+      ],
+      "correct_answer": "Pufferfish Eyes",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 114,
+      "question": "In *Hogwarts Legacy*, who is the professor who teaches Defense Against the Dark Arts?",
+      "options": [
+        "Professor Hecat",
+        "Professor Sharp",
+        "Professor Ronen",
+        "Professor Fig"
+      ],
+      "correct_answer": "Professor Hecat",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 115,
+      "question": "What spell causes objects to move downward?",
+      "options": [
+        "Descendo",
+        "Levicorpus",
+        "Reducio",
+        "Depulso"
+      ],
+      "correct_answer": "Descendo",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 116,
+      "question": "What potion is used to confuse the drinker?",
+      "options": [
+        "Confusing Concoction",
+        "Wit-Sharpening Potion",
+        "Elixir to Induce Euphoria",
+        "Draught of Peace"
+      ],
+      "correct_answer": "Confusing Concoction",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 117,
+      "question": "Who is the founder of Ravenclaw house?",
+      "options": [
+        "Rowena Ravenclaw",
+        "Helga Hufflepuff",
+        "Salazar Slytherin",
+        "Godric Gryffindor"
+      ],
+      "correct_answer": "Rowena Ravenclaw",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 118,
+      "question": "In *Hogwarts Legacy*, what spell transforms objects into other forms?",
+      "options": [
+        "Transformative Charm",
+        "Reparo",
+        "Evanesco",
+        "Reducto"
+      ],
+      "correct_answer": "Transformative Charm",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 119,
+      "question": "What potion ingredient is harvested at the full moon for Polyjuice Potion?",
+      "options": [
+        "Fluxweed",
+        "Knotgrass",
+        "Moonstone",
+        "Lacewing Flies"
+      ],
+      "correct_answer": "Fluxweed",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 120,
+      "question": "In *Hogwarts Legacy*, what creature is associated with the Graphorn Mount?",
+      "options": [
+        "Graphorn",
+        "Hippogriff",
+        "Thestral",
+        "Niffler"
+      ],
+      "correct_answer": "Graphorn",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 121,
+      "question": "What spell causes objects to be cut or torn apart?",
+      "options": [
+        "Diffindo",
+        "Sectumsempra",
+        "Reducto",
+        "Confringo"
+      ],
+      "correct_answer": "Diffindo",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 122,
+      "question": "What potion helps with memory retention?",
+      "options": [
+        "Memory Potion",
+        "Wit-Sharpening Potion",
+        "Confusing Concoction",
+        "Draught of Peace"
+      ],
+      "correct_answer": "Memory Potion",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 123,
+      "question": "Who is the Hogwarts nurse?",
+      "options": [
+        "Madam Pomfrey",
+        "Irma Pince",
+        "Sybill Trelawney",
+        "Aurora Sinistra"
+      ],
+      "correct_answer": "Madam Pomfrey",
+      "category": "Characters",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 124,
+      "question": "In *Hogwarts Legacy*, what spell is used to break objects or barriers?",
+      "options": [
+        "Bombarda",
+        "Confringo",
+        "Reducto",
+        "Depulso"
+      ],
+      "correct_answer": "Bombarda",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 125,
+      "question": "What potion requires a Bezoar as an ingredient?",
+      "options": [
+        "Antidote to Common Poisons",
+        "Draught of Living Death",
+        "Amortentia",
+        "Felix Felicis"
+      ],
+      "correct_answer": "Antidote to Common Poisons",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 126,
+      "question": "What spell conjures a flock of birds?",
+      "options": [
+        "Avis",
+        "Oppugno",
+        "Piertotum Locomotor",
+        "Serpensortia"
+      ],
+      "correct_answer": "Avis",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 127,
+      "question": "In *Hogwarts Legacy*, what is the name of the shop where players buy spellcrafts?",
+      "options": [
+        "Tomes and Scrolls",
+        "J. Pippin\u2019s Potions",
+        "Zonko\u2019s Joke Shop",
+        "Honeydukes"
+      ],
+      "correct_answer": "Tomes and Scrolls",
+      "category": "Spells",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 128,
+      "question": "What potion helps heal wounds caused by dark magic?",
+      "options": [
+        "Essence of Dittany",
+        "Burn-Healing Paste",
+        "Mandrake Restorative Draught",
+        "Skele-Gro"
+      ],
+      "correct_answer": "Essence of Dittany",
+      "category": "Potions",
+      "difficulty": "Moderate"
+    },
+    {
+      "id": 129,
+      "question": "What potion helps Severus Snape control Remus Lupin\u2019s werewolf transformations?",
+      "options": [
+        "Wolfsbane Potion",
+        "Moonstone Elixir",
+        "Lycanthropy Cure",
+        "Silverleaf Draught"
+      ],
+      "correct_answer": "Wolfsbane Potion",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 130,
+      "question": "What spell, invented by Severus Snape, causes deep cuts and wounds?",
+      "options": [
+        "Sectumsempra",
+        "Vulnera Sanentur",
+        "Diffindo",
+        "Incisio"
+      ],
+      "correct_answer": "Sectumsempra",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 131,
+      "question": "In *Hogwarts Legacy*, who is the goblin leader seeking ancient magic?",
+      "options": [
+        "Ranrok",
+        "Gornuk",
+        "Bogrod",
+        "Griphook"
+      ],
+      "correct_answer": "Ranrok",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 132,
+      "question": "What potion requires a Sopophorous Bean and counterclockwise stirring?",
+      "options": [
+        "Draught of Living Death",
+        "Amortentia",
+        "Felix Felicis",
+        "Veritaserum"
+      ],
+      "correct_answer": "Draught of Living Death",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 133,
+      "question": "What spell reverses the effects of Sectumsempra?",
+      "options": [
+        "Vulnera Sanentur",
+        "Episkey",
+        "Reparo",
+        "Anapneo"
+      ],
+      "correct_answer": "Vulnera Sanentur",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 134,
+      "question": "Who is the founder of Slytherin house?",
+      "options": [
+        "Salazar Slytherin",
+        "Godric Gryffindor",
+        "Rowena Ravenclaw",
+        "Helga Hufflepuff"
+      ],
+      "correct_answer": "Salazar Slytherin",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 135,
+      "question": "What potion disguises the taste of other potions?",
+      "options": [
+        "Volubilis Potion",
+        "Confounding Concoction",
+        "Elixir to Induce Euphoria",
+        "Wit-Sharpening Potion"
+      ],
+      "correct_answer": "Volubilis Potion",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 136,
+      "question": "In *Hogwarts Legacy*, who is the ancient magic keeper who aids the protagonist?",
+      "options": [
+        "Isidora Morganach",
+        "Victor Rookwood",
+        "Theophilus Harlow",
+        "Ranrok"
+      ],
+      "correct_answer": "Isidora Morganach",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 137,
+      "question": "What spell causes the target to be hoisted upside-down by their ankles?",
+      "options": [
+        "Levicorpus",
+        "Liberacorpus",
+        "Locomotor",
+        "Ascendio"
+      ],
+      "correct_answer": "Levicorpus",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 138,
+      "question": "What ingredient enhances the scent of Amortentia?",
+      "options": [
+        "Rose Thorns",
+        "Peppermint",
+        "Moonstone",
+        "Ashwinder Egg"
+      ],
+      "correct_answer": "Rose Thorns",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 139,
+      "question": "What spell clears the target\u2019s airway?",
+      "options": [
+        "Anapneo",
+        "Episkey",
+        "Vulnera Sanentur",
+        "Rennervate"
+      ],
+      "correct_answer": "Anapneo",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 140,
+      "question": "In *Hogwarts Legacy*, who is the leader of the poacher gang?",
+      "options": [
+        "Victor Rookwood",
+        "Ranrok",
+        "Theophilus Harlow",
+        "Isidora Morganach"
+      ],
+      "correct_answer": "Victor Rookwood",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 141,
+      "question": "Who is the Death Eater disguised as Mad-Eye Moody in *Goblet of Fire*?",
+      "options": [
+        "Barty Crouch Jr.",
+        "Igor Karkaroff",
+        "Lucius Malfoy",
+        "Peter Pettigrew"
+      ],
+      "correct_answer": "Barty Crouch Jr.",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 142,
+      "question": "What potion is used to cure the effects of a Dementor\u2019s presence?",
+      "options": [
+        "No potion, only chocolate",
+        "Elixir to Induce Euphoria",
+        "Draught of Peace",
+        "Chocolate Syrup"
+      ],
+      "correct_answer": "No potion, only chocolate",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 143,
+      "question": "In *Hogwarts Legacy*, what spell manipulates ancient magic repositories?",
+      "options": [
+        "Ancient Magic Surge",
+        "Depulso",
+        "Accio",
+        "Reparo"
+      ],
+      "correct_answer": "Ancient Magic Surge",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 144,
+      "question": "Who is the mother of Draco Malfoy?",
+      "options": [
+        "Narcissa Malfoy",
+        "Bellatrix Lestrange",
+        "Andromeda Tonks",
+        "Molly Weasley"
+      ],
+      "correct_answer": "Narcissa Malfoy",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 145,
+      "question": "What potion requires Knotgrass as an ingredient?",
+      "options": [
+        "Polyjuice Potion",
+        "Amortentia",
+        "Draught of Living Death",
+        "Felix Felicis"
+      ],
+      "correct_answer": "Polyjuice Potion",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 146,
+      "question": "What spell reverses the effects of Levicorpus?",
+      "options": [
+        "Liberacorpus",
+        "Descendo",
+        "Finite Incantatem",
+        "Reducio"
+      ],
+      "correct_answer": "Liberacorpus",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 147,
+      "question": "In *Hogwarts Legacy*, who is the blind Slytherin student who disapproves of dark magic?",
+      "options": [
+        "Ominis Gaunt",
+        "Sebastian Sallow",
+        "Natty Onai",
+        "Poppy Sweeting"
+      ],
+      "correct_answer": "Ominis Gaunt",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 148,
+      "question": "Who is the wandmaker in Diagon Alley?",
+      "options": [
+        "Garrick Ollivander",
+        "Gregorovitch",
+        "Antonin Dolohov",
+        "Xenophilius Lovegood"
+      ],
+      "correct_answer": "Garrick Ollivander",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 149,
+      "question": "What potion has a mother-of-pearl sheen and spiraling steam?",
+      "options": [
+        "Amortentia",
+        "Felix Felicis",
+        "Veritaserum",
+        "Draught of Living Death"
+      ],
+      "correct_answer": "Amortentia",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 150,
+      "question": "What spell causes temporary blindness?",
+      "options": [
+        "Obscuro",
+        "Confundo",
+        "Muffliato",
+        "Lumos"
+      ],
+      "correct_answer": "Obscuro",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 151,
+      "question": "In *Hogwarts Legacy*, what creature is used as a mount for faster travel?",
+      "options": [
+        "Hippogriff",
+        "Niffler",
+        "Puffskein",
+        "Doxy"
+      ],
+      "correct_answer": "Hippogriff",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 152,
+      "question": "What spell ends all spell effects in the vicinity?",
+      "options": [
+        "Finite Incantatem",
+        "Protego Maxima",
+        "Expecto Patronum",
+        "Evanesco"
+      ],
+      "correct_answer": "Finite Incantatem",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 153,
+      "question": "Who is the Muggle-born wizard killed by Voldemort at the Ministry of Magic?",
+      "options": [
+        "Dirk Cresswell",
+        "Ted Tonks",
+        "Colin Creevey",
+        "Justin Finch-Fletchley"
+      ],
+      "correct_answer": "Dirk Cresswell",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 154,
+      "question": "In *Hogwarts Legacy*, what potion ingredient is obtained from Graphorns?",
+      "options": [
+        "Graphorn Horn",
+        "Moonstone",
+        "Knotgrass",
+        "Pufferfish Eyes"
+      ],
+      "correct_answer": "Graphorn Horn",
+      "category": "Potions",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 155,
+      "question": "What spell animates statues and suits of armor?",
+      "options": [
+        "Piertotum Locomotor",
+        "Locomotor",
+        "Mobilicorpus",
+        "Avis"
+      ],
+      "correct_answer": "Piertotum Locomotor",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 156,
+      "question": "Who is the Hufflepuff student in the Triwizard Tournament?",
+      "options": [
+        "Cedric Diggory",
+        "Zacharias Smith",
+        "Justin Finch-Fletchley",
+        "Ernie Macmillan"
+      ],
+      "correct_answer": "Cedric Diggory",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 157,
+      "question": "What spell conjures a snake?",
+      "options": [
+        "Serpensortia",
+        "Avis",
+        "Oppugno",
+        "Vipera Evanesca"
+      ],
+      "correct_answer": "Serpensortia",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 158,
+      "question": "In *Hogwarts Legacy*, who is Victor Rookwood\u2019s deputy in the poacher gang?",
+      "options": [
+        "Theophilus Harlow",
+        "Ranrok",
+        "Isidora Morganach",
+        "Ominis Gaunt"
+      ],
+      "correct_answer": "Theophilus Harlow",
+      "category": "Characters",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 159,
+      "question": "What spell vanishes a conjured snake?",
+      "options": [
+        "Vipera Evanesca",
+        "Evanesco",
+        "Finite Incantatem",
+        "Reducto"
+      ],
+      "correct_answer": "Vipera Evanesca",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 160,
+      "question": "What spell hides an area from Muggle detection?",
+      "options": [
+        "Muggle-Repelling Charm",
+        "Salvio Hexia",
+        "Fidelius Charm",
+        "Protego Totalum"
+      ],
+      "correct_answer": "Muggle-Repelling Charm",
+      "category": "Spells",
+      "difficulty": "Hard"
+    },
+    {
+      "id": 161,
+      "question": "What is the gender of Harry Potter?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 162,
+      "question": "What is the gender of Lily J. Potter?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 163,
+      "question": "What is the gender of James Potter I?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 164,
+      "question": "What is the gender of Ron Weasley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 165,
+      "question": "What is the gender of Hermione Granger?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 166,
+      "question": "What is the gender of Cho Chang?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 167,
+      "question": "What is the gender of Albus Potter?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 168,
+      "question": "What is the gender of Petunia Dursley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 169,
+      "question": "What is the gender of Dudley Dursley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 170,
+      "question": "What is the gender of William Weasley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 171,
+      "question": "What is the gender of Charles Weasley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 172,
+      "question": "What is the gender of Arthur Weasley?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 173,
+      "question": "What is the gender of Cedric Diggory ?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 174,
+      "question": "What is the gender of Roger Davies ?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 175,
+      "question": "What is the gender of Aberforth Dumbledore?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 176,
+      "question": "What is the gender of Ariana Dumbledore?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 177,
+      "question": "What is the gender of Percival Dumbledore?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 178,
+      "question": "What is the gender of Kendra Dumbledore?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 179,
+      "question": "What is the gender of Draco Malfoy?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 180,
+      "question": "What is the gender of Lucius Malfoy?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 181,
+      "question": "What is the gender of Narcissa Malfoy?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 182,
+      "question": "What is the gender of Scorpius Malfoy?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Male",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 183,
+      "question": "What is the gender of Astoria Malfoy?",
+      "options": [
+        "Female",
+        "Male",
+        "Unknown",
+        "None of above"
+      ],
+      "correct_answer": "Female",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 184,
+      "question": "What is the hair color of Harry Potter?",
+      "options": [
+        "Blonde",
+        "Brown",
+        "Black",
+        "Dark"
+      ],
+      "correct_answer": "Black",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 185,
+      "question": "What is the hair color of Lily J. Potter?",
+      "options": [
+        "Black",
+        "Dark",
+        "Brown",
+        "Red"
+      ],
+      "correct_answer": "Red",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 186,
+      "question": "What is the hair color of James Potter I?",
+      "options": [
+        "Silver",
+        "Brown",
+        "Black",
+        "Dark"
+      ],
+      "correct_answer": "Black",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 187,
+      "question": "What is the hair color of Ron Weasley?",
+      "options": [
+        "Red",
+        "Brown",
+        "Blonde",
+        "Black"
+      ],
+      "correct_answer": "Red",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 188,
+      "question": "What is the hair color of Hermione Granger?",
+      "options": [
+        "Red",
+        "Silver",
+        "Blonde",
+        "Brown"
+      ],
+      "correct_answer": "Brown",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 189,
+      "question": "What is the hair color of Cho Chang?",
+      "options": [
+        "Blonde",
+        "Black",
+        "Brown",
+        "Dark"
+      ],
+      "correct_answer": "Black",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 190,
+      "question": "What is the hair color of Albus Potter?",
+      "options": [
+        "Red",
+        "Black",
+        "Blonde",
+        "Brown"
+      ],
+      "correct_answer": "Black",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 191,
+      "question": "What is the hair color of Petunia Dursley?",
+      "options": [
+        "Dark",
+        "Silver",
+        "Blonde",
+        "Brown"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 192,
+      "question": "What is the hair color of Dudley Dursley?",
+      "options": [
+        "Dark",
+        "Brown",
+        "Blonde",
+        "Red"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 193,
+      "question": "What is the hair color of William Weasley?",
+      "options": [
+        "Blonde",
+        "Red",
+        "Dark",
+        "Silver"
+      ],
+      "correct_answer": "Red",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 194,
+      "question": "What is the hair color of Charles Weasley?",
+      "options": [
+        "Dark",
+        "Silver",
+        "Red",
+        "Black"
+      ],
+      "correct_answer": "Red",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 195,
+      "question": "What is the hair color of Arthur Weasley?",
+      "options": [
+        "Red",
+        "Black",
+        "Dark",
+        "Blonde"
+      ],
+      "correct_answer": "Red",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 196,
+      "question": "What is the hair color of Cedric Diggory ?",
+      "options": [
+        "Silver",
+        "Dark",
+        "Brown",
+        "Blonde"
+      ],
+      "correct_answer": "Dark",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 197,
+      "question": "What is the hair color of Roger Davies ?",
+      "options": [
+        "Dark",
+        "Silver",
+        "Brown",
+        "Black"
+      ],
+      "correct_answer": "Brown",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 198,
+      "question": "What is the hair color of Aberforth Dumbledore?",
+      "options": [
+        "Dark",
+        "Blonde",
+        "Silver",
+        "Red"
+      ],
+      "correct_answer": "Silver",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 199,
+      "question": "What is the hair color of Ariana Dumbledore?",
+      "options": [
+        "Black",
+        "Blonde",
+        "Dark",
+        "Red"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 200,
+      "question": "What is the hair color of Kendra Dumbledore?",
+      "options": [
+        "Silver",
+        "Red",
+        "Brown",
+        "Black"
+      ],
+      "correct_answer": "Black",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 201,
+      "question": "What is the hair color of Draco Malfoy?",
+      "options": [
+        "Red",
+        "Silver",
+        "Dark",
+        "Blonde"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 202,
+      "question": "What is the hair color of Lucius Malfoy?",
+      "options": [
+        "Brown",
+        "Black",
+        "Red",
+        "Blonde"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 203,
+      "question": "What is the hair color of Narcissa Malfoy?",
+      "options": [
+        "Brown",
+        "Blonde",
+        "Red",
+        "Dark"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 204,
+      "question": "What is the hair color of Scorpius Malfoy?",
+      "options": [
+        "Silver",
+        "Dark",
+        "Black",
+        "Blonde"
+      ],
+      "correct_answer": "Blonde",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 205,
+      "question": "Which house is Harry Potter belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 206,
+      "question": "Which house is James Potter I belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 207,
+      "question": "Which house is Ron Weasley belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 208,
+      "question": "Which house is Hermione Granger belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 209,
+      "question": "Which house is Cho Chang belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Ravenclaw",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 210,
+      "question": "Which house is Albus Potter belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Slytherin",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 211,
+      "question": "Which house is Charles Weasley belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 212,
+      "question": "Which house is Arthur Weasley belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 213,
+      "question": "Which house is Cedric Diggory  belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Hufflepuff",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 214,
+      "question": "Which house is Roger Davies  belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Ravenclaw",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 215,
+      "question": "Which house is Aberforth Dumbledore belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Gryffindor",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 216,
+      "question": "Which house is Draco Malfoy belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Slytherin",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 217,
+      "question": "Which house is Lucius Malfoy belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Slytherin",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 218,
+      "question": "Which house is Narcissa Malfoy belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Slytherin",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 219,
+      "question": "Which house is Scorpius Malfoy belong to?",
+      "options": [
+        "Ravenclaw",
+        "Slytherin",
+        "Gryffindor",
+        "Hufflepuff"
+      ],
+      "correct_answer": "Slytherin",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 220,
+      "question": "What is the relationship of James Potter I to Harry Potter?",
+      "options": [
+        "Son",
+        "Grandson",
+        "Father",
+        "Sister"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 221,
+      "question": "Who is the father of Harry Potter?",
+      "options": [
+        "Petunia Dursley",
+        "Euphemia Potter",
+        "Astoria Malfoy",
+        "James Potter I"
+      ],
+      "correct_answer": "James Potter I",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 222,
+      "question": "What is the relationship of Lily J. Potter to Harry Potter?",
+      "options": [
+        "Friend",
+        "Mother",
+        "Husband",
+        "Nephew"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 223,
+      "question": "Who is the mother of Harry Potter?",
+      "options": [
+        "Harry Potter",
+        "Aberforth Dumbledore",
+        "Ron Weasley",
+        "Lily J. Potter"
+      ],
+      "correct_answer": "Lily J. Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 224,
+      "question": "What is the relationship of Ron Weasley to Harry Potter?",
+      "options": [
+        "Father",
+        "Grandson",
+        "Friend",
+        "Sister"
+      ],
+      "correct_answer": "Friend",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 225,
+      "question": "Who is the friend of Harry Potter?",
+      "options": [
+        "Petunia Dursley",
+        "Astoria Malfoy",
+        "Ron Weasley",
+        "Charles Weasley"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 226,
+      "question": "What is the relationship of Hermione Granger to Harry Potter?",
+      "options": [
+        "Friend",
+        "Aunt",
+        "Daughter",
+        "Wife"
+      ],
+      "correct_answer": "Friend",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 227,
+      "question": "Who is the friend of Harry Potter?",
+      "options": [
+        "Lucius Malfoy",
+        "Lily J. Potter",
+        "Hermione Granger",
+        "Harry Potter"
+      ],
+      "correct_answer": "Hermione Granger",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 228,
+      "question": "What is the relationship of James Potter to Lily J. Potter?",
+      "options": [
+        "Brother",
+        "Nephew",
+        "Mother",
+        "Husband"
+      ],
+      "correct_answer": "Husband",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 229,
+      "question": "What is the relationship of Harry Potter to Lily J. Potter?",
+      "options": [
+        "Mother",
+        "Nephew",
+        "Son",
+        "Friend"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 230,
+      "question": "Who is the son of Lily J. Potter?",
+      "options": [
+        "Albus Potter",
+        "Harry Potter",
+        "Percival Dumbledore",
+        "Charles Weasley"
+      ],
+      "correct_answer": "Harry Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 231,
+      "question": "What is the relationship of Albus Potter to Lily J. Potter?",
+      "options": [
+        "Grandson",
+        "Brother",
+        "Husband",
+        "Daughter"
+      ],
+      "correct_answer": "Grandson",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 232,
+      "question": "Who is the grandson of Lily J. Potter?",
+      "options": [
+        "Albus Potter",
+        "Lucius Malfoy",
+        "Draco Malfoy",
+        "Percival Dumbledore"
+      ],
+      "correct_answer": "Albus Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 233,
+      "question": "What is the relationship of Petunia Dursley to Lily J. Potter?",
+      "options": [
+        "Aunt",
+        "Daughter",
+        "Husband",
+        "Sister"
+      ],
+      "correct_answer": "Sister",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 234,
+      "question": "Who is the sister of Lily J. Potter?",
+      "options": [
+        "Aberforth Dumbledore",
+        "Fleamont Potter",
+        "Petunia Dursley",
+        "Ariana Dumbledore"
+      ],
+      "correct_answer": "Petunia Dursley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 235,
+      "question": "What is the relationship of Dudley Dursley to Lily J. Potter?",
+      "options": [
+        "Grandson",
+        "Nephew",
+        "Husband",
+        "Mother"
+      ],
+      "correct_answer": "Nephew",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 236,
+      "question": "Who is the nephew of Lily J. Potter?",
+      "options": [
+        "James Potter I",
+        "Harry Potter",
+        "Charles Weasley",
+        "Dudley Dursley"
+      ],
+      "correct_answer": "Dudley Dursley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 237,
+      "question": "What is the relationship of Harry Potter to James Potter I?",
+      "options": [
+        "Nephew",
+        "Grandson",
+        "Sister",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 238,
+      "question": "Who is the son of James Potter I?",
+      "options": [
+        "Arthur Weasley",
+        "Astoria Malfoy",
+        "Harry Potter",
+        "Albus Potter"
+      ],
+      "correct_answer": "Harry Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 239,
+      "question": "What is the relationship of Lily J. Potter to James Potter I?",
+      "options": [
+        "Aunt",
+        "Grandmother",
+        "Nephew",
+        "Wife"
+      ],
+      "correct_answer": "Wife",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 240,
+      "question": "Who is the wife of James Potter I?",
+      "options": [
+        "James Potter I",
+        "William Weasley",
+        "Lily J. Potter",
+        "Arthur Weasley"
+      ],
+      "correct_answer": "Lily J. Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 241,
+      "question": "What is the relationship of Fleamont Potter to James Potter I?",
+      "options": [
+        "Nephew",
+        "Wife",
+        "Mother",
+        "Father"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 242,
+      "question": "Who is the father of James Potter I?",
+      "options": [
+        "Albus Potter",
+        "Ron Weasley",
+        "Fleamont Potter",
+        "Aberforth Dumbledore"
+      ],
+      "correct_answer": "Fleamont Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 243,
+      "question": "What is the relationship of Euphemia Potter to James Potter I?",
+      "options": [
+        "Sister",
+        "Friend",
+        "Grandmother",
+        "Mother"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 244,
+      "question": "Who is the mother of James Potter I?",
+      "options": [
+        "Ron Weasley",
+        "Euphemia Potter",
+        "Lucius Malfoy",
+        "Ariana Dumbledore"
+      ],
+      "correct_answer": "Euphemia Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 245,
+      "question": "What is the relationship of Albus Potter to James Potter I?",
+      "options": [
+        "Aunt",
+        "Grandson",
+        "Brother",
+        "Friend"
+      ],
+      "correct_answer": "Grandson",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 246,
+      "question": "Who is the grandson of James Potter I?",
+      "options": [
+        "Albus Potter",
+        "Cho Chang",
+        "Hermione Granger",
+        "Percival Dumbledore"
+      ],
+      "correct_answer": "Albus Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 247,
+      "question": "What is the relationship of William Weasley to Ron Weasley?",
+      "options": [
+        "Son",
+        "Brother",
+        "Grandmother",
+        "Wife"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 248,
+      "question": "Who is the brother of Ron Weasley?",
+      "options": [
+        "Dudley Dursley",
+        "James Potter I",
+        "Kendra Dumbledore",
+        "William Weasley"
+      ],
+      "correct_answer": "William Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 249,
+      "question": "What is the relationship of Charles Weasley to Ron Weasley?",
+      "options": [
+        "Grandson",
+        "Grandmother",
+        "Brother",
+        "Wife"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 250,
+      "question": "Who is the brother of Ron Weasley?",
+      "options": [
+        "Charles Weasley",
+        "Cedric Diggory",
+        "William Weasley",
+        "Astoria Malfoy"
+      ],
+      "correct_answer": "Charles Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 251,
+      "question": "What is the relationship of Hermione Granger to Ron Weasley?",
+      "options": [
+        "Son",
+        "Brother",
+        "Father",
+        "Wife"
+      ],
+      "correct_answer": "Wife",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 252,
+      "question": "Who is the wife of Ron Weasley?",
+      "options": [
+        "Percival Dumbledore",
+        "Scorpius Malfoy",
+        "Hermione Granger",
+        "Lucius Malfoy"
+      ],
+      "correct_answer": "Hermione Granger",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 253,
+      "question": "What is the relationship of Arthur Weasley to Ron Weasley?",
+      "options": [
+        "Grandmother",
+        "Father",
+        "Daughter",
+        "Grandson"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 254,
+      "question": "Who is the father of Ron Weasley?",
+      "options": [
+        "Arthur Weasley",
+        "Cho Chang",
+        "Draco Malfoy",
+        "Hermione Granger"
+      ],
+      "correct_answer": "Arthur Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 255,
+      "question": "What is the relationship of Rose Granger-Weasley to Ron Weasley?",
+      "options": [
+        "Nephew",
+        "Wife",
+        "Sister",
+        "Daughter"
+      ],
+      "correct_answer": "Daughter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 256,
+      "question": "What is the relationship of Hugo Granger-Weasley to Ron Weasley?",
+      "options": [
+        "Wife",
+        "Nephew",
+        "Sister",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 257,
+      "question": "What is the relationship of Ron Weasley to Hermione Granger?",
+      "options": [
+        "Husband",
+        "Son",
+        "Wife",
+        "Grandmother"
+      ],
+      "correct_answer": "Husband",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 258,
+      "question": "Who is the husband of Hermione Granger?",
+      "options": [
+        "Petunia Dursley",
+        "Lucius Malfoy",
+        "Dudley Dursley",
+        "Ron Weasley"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 259,
+      "question": "What is the relationship of Monica Wilkins to Hermione Granger?",
+      "options": [
+        "Grandson",
+        "Mother",
+        "Sister",
+        "Nephew"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 260,
+      "question": "What is the relationship of Hugo Granger-Weasley to Hermione Granger?",
+      "options": [
+        "Nephew",
+        "Son",
+        "Aunt",
+        "Grandmother"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 261,
+      "question": "What is the relationship of Rose Granger-Weasley to Hermione Granger?",
+      "options": [
+        "Son",
+        "Daughter",
+        "Mother",
+        "Grandfather"
+      ],
+      "correct_answer": "Daughter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 262,
+      "question": "What is the relationship of Percival Dumbledore to Albus Dumbledore?",
+      "options": [
+        "Grandfather",
+        "Father",
+        "Grandson",
+        "Sister"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 263,
+      "question": "Who is the father of Albus Dumbledore?",
+      "options": [
+        "Astoria Malfoy",
+        "Harry Potter",
+        "Arthur Weasley",
+        "Percival Dumbledore"
+      ],
+      "correct_answer": "Percival Dumbledore",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 264,
+      "question": "What is the relationship of Kendra Dumbledore to Albus Dumbledore?",
+      "options": [
+        "Aunt",
+        "Mother",
+        "Son",
+        "Father"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 265,
+      "question": "Who is the mother of Albus Dumbledore?",
+      "options": [
+        "Lucius Malfoy",
+        "Ariana Dumbledore",
+        "Cho Chang",
+        "Kendra Dumbledore"
+      ],
+      "correct_answer": "Kendra Dumbledore",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 266,
+      "question": "What is the relationship of Aberforth Dumbledore to Albus Dumbledore?",
+      "options": [
+        "Husband",
+        "Brother",
+        "Mother",
+        "Sister"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 267,
+      "question": "Who is the brother of Albus Dumbledore?",
+      "options": [
+        "Aberforth Dumbledore",
+        "Dudley Dursley",
+        "Percival Dumbledore",
+        "Harry Potter"
+      ],
+      "correct_answer": "Aberforth Dumbledore",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 268,
+      "question": "What is the relationship of Ariana Dumbledore to Albus Dumbledore?",
+      "options": [
+        "Sister",
+        "Father",
+        "Wife",
+        "Friend"
+      ],
+      "correct_answer": "Sister",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 269,
+      "question": "Who is the sister of Albus Dumbledore?",
+      "options": [
+        "Petunia Dursley",
+        "Percival Dumbledore",
+        "Hermione Granger",
+        "Ariana Dumbledore"
+      ],
+      "correct_answer": "Ariana Dumbledore",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 270,
+      "question": "What is the relationship of Lucius Malfoy to Draco Malfoy?",
+      "options": [
+        "Brother",
+        "Grandmother",
+        "Wife",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 271,
+      "question": "Who is the son of Draco Malfoy?",
+      "options": [
+        "Cedric Diggory",
+        "Lucius Malfoy",
+        "Fleamont Potter",
+        "Hermione Granger"
+      ],
+      "correct_answer": "Lucius Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 272,
+      "question": "What is the relationship of Narcissa Malfoy to Draco Malfoy?",
+      "options": [
+        "Mother",
+        "Aunt",
+        "Son",
+        "Brother"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 273,
+      "question": "Who is the son of Draco Malfoy?",
+      "options": [
+        "Narcissa Malfoy",
+        "Petunia Dursley",
+        "Percival Dumbledore",
+        "Dudley Dursley"
+      ],
+      "correct_answer": "Narcissa Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 274,
+      "question": "What is the relationship of Astoria Malfoy to Draco Malfoy?",
+      "options": [
+        "Friend",
+        "Wife",
+        "Grandfather",
+        "Son"
+      ],
+      "correct_answer": "Wife",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 275,
+      "question": "Who is the wife of Draco Malfoy?",
+      "options": [
+        "Astoria Malfoy",
+        "Fleamont Potter",
+        "Narcissa Malfoy",
+        "William Weasley"
+      ],
+      "correct_answer": "Astoria Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 276,
+      "question": "What is the relationship of Scorpius Malfoy to Draco Malfoy?",
+      "options": [
+        "Grandfather",
+        "Son",
+        "Daughter",
+        "Aunt"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 277,
+      "question": "Who is the son of Draco Malfoy?",
+      "options": [
+        "Draco Malfoy",
+        "Scorpius Malfoy",
+        "Arthur Weasley",
+        "Percival Dumbledore"
+      ],
+      "correct_answer": "Scorpius Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 278,
+      "question": "What is the relationship of James Potter I to Fleamont Potter?",
+      "options": [
+        "Aunt",
+        "Wife",
+        "Brother",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 279,
+      "question": "Who is the son of Fleamont Potter?",
+      "options": [
+        "James Potter I",
+        "Ron Weasley",
+        "Draco Malfoy",
+        "Arthur Weasley"
+      ],
+      "correct_answer": "James Potter I",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 280,
+      "question": "What is the relationship of James Potter I to Euphemia Potter?",
+      "options": [
+        "Husband",
+        "Son",
+        "Mother",
+        "Grandson"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 281,
+      "question": "Who is the son of Euphemia Potter?",
+      "options": [
+        "Percival Dumbledore",
+        "William Weasley",
+        "James Potter I",
+        "Lily J. Potter"
+      ],
+      "correct_answer": "James Potter I",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 282,
+      "question": "What is the relationship of James Potter I to Albus Potter?",
+      "options": [
+        "Mother",
+        "Wife",
+        "Grandfather",
+        "Son"
+      ],
+      "correct_answer": "Grandfather",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 283,
+      "question": "Who is the grandfather of Albus Potter?",
+      "options": [
+        "Albus Potter",
+        "Harry Potter",
+        "Aberforth Dumbledore",
+        "James Potter I"
+      ],
+      "correct_answer": "James Potter I",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 284,
+      "question": "What is the relationship of Lily J. Potter to Albus Potter?",
+      "options": [
+        "Grandmother",
+        "Brother",
+        "Son",
+        "Mother"
+      ],
+      "correct_answer": "Grandmother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 285,
+      "question": "Who is the grandmother of Albus Potter?",
+      "options": [
+        "Scorpius Malfoy",
+        "Harry Potter",
+        "Roger Davies",
+        "Lily J. Potter"
+      ],
+      "correct_answer": "Lily J. Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 286,
+      "question": "What is the relationship of Lily J. Potter to Petunia Dursley?",
+      "options": [
+        "Mother",
+        "Grandmother",
+        "Sister",
+        "Father"
+      ],
+      "correct_answer": "Sister",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 287,
+      "question": "Who is the sister of Petunia Dursley?",
+      "options": [
+        "Lily J. Potter",
+        "Lucius Malfoy",
+        "James Potter I",
+        "Scorpius Malfoy"
+      ],
+      "correct_answer": "Lily J. Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 288,
+      "question": "What is the relationship of Lily J. Potter to Dudley Dursley?",
+      "options": [
+        "Aunt",
+        "Father",
+        "Husband",
+        "Brother"
+      ],
+      "correct_answer": "Aunt",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 289,
+      "question": "Who is the aunt of Dudley Dursley?",
+      "options": [
+        "Fleamont Potter",
+        "Lily J. Potter",
+        "Astoria Malfoy",
+        "Albus Potter"
+      ],
+      "correct_answer": "Lily J. Potter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 290,
+      "question": "What is the relationship of Ron Weasley to William Weasley?",
+      "options": [
+        "Sister",
+        "Brother",
+        "Son",
+        "Wife"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 291,
+      "question": "Who is the brother of William Weasley?",
+      "options": [
+        "Lily J. Potter",
+        "Charles Weasley",
+        "Ron Weasley",
+        "James Potter I"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 292,
+      "question": "What is the relationship of Ron Weasley to Charles Weasley?",
+      "options": [
+        "Friend",
+        "Grandson",
+        "Brother",
+        "Grandfather"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 293,
+      "question": "Who is the brother of Charles Weasley?",
+      "options": [
+        "Cho Chang",
+        "Scorpius Malfoy",
+        "Ron Weasley",
+        "Ariana Dumbledore"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 294,
+      "question": "What is the relationship of Ron Weasley to Rose Granger-Weasley?",
+      "options": [
+        "Grandfather",
+        "Father",
+        "Aunt",
+        "Grandson"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 295,
+      "question": "Who is the father of Rose Granger-Weasley?",
+      "options": [
+        "Ariana Dumbledore",
+        "Draco Malfoy",
+        "Arthur Weasley",
+        "Ron Weasley"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 296,
+      "question": "What is the relationship of Ron Weasley to Hugo Granger-Weasley?",
+      "options": [
+        "Father",
+        "Grandfather",
+        "Husband",
+        "Nephew"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 297,
+      "question": "Who is the father of Hugo Granger-Weasley?",
+      "options": [
+        "Fleamont Potter",
+        "Ron Weasley",
+        "Kendra Dumbledore",
+        "Petunia Dursley"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 298,
+      "question": "What is the relationship of Ron Weasley to Arthur Weasley?",
+      "options": [
+        "Husband",
+        "Aunt",
+        "Wife",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 299,
+      "question": "Who is the son of Arthur Weasley?",
+      "options": [
+        "Ariana Dumbledore",
+        "Ron Weasley",
+        "Fleamont Potter",
+        "Percival Dumbledore"
+      ],
+      "correct_answer": "Ron Weasley",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 300,
+      "question": "What is the relationship of Hermione Granger to Rose Granger-Weasley?",
+      "options": [
+        "Brother",
+        "Mother",
+        "Grandson",
+        "Nephew"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 301,
+      "question": "Who is the mother of Rose Granger-Weasley?",
+      "options": [
+        "Roger Davies",
+        "Hermione Granger",
+        "Arthur Weasley",
+        "Lily J. Potter"
+      ],
+      "correct_answer": "Hermione Granger",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 302,
+      "question": "What is the relationship of Hermione Granger to Hugo Granger-Weasley?",
+      "options": [
+        "Aunt",
+        "Nephew",
+        "Mother",
+        "Wife"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 303,
+      "question": "Who is the mother of Hugo Granger-Weasley?",
+      "options": [
+        "Ariana Dumbledore",
+        "Hermione Granger",
+        "Euphemia Potter",
+        "Charles Weasley"
+      ],
+      "correct_answer": "Hermione Granger",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 304,
+      "question": "What is the relationship of Hermione Granger to Monica Wilkins?",
+      "options": [
+        "Nephew",
+        "Grandson",
+        "Husband",
+        "Daughter"
+      ],
+      "correct_answer": "Daughter",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 305,
+      "question": "Who is the daughter of Monica Wilkins?",
+      "options": [
+        "Roger Davies",
+        "Lily J. Potter",
+        "Euphemia Potter",
+        "Hermione Granger"
+      ],
+      "correct_answer": "Hermione Granger",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 306,
+      "question": "What is the relationship of Albus Dumbledore to Aberforth Dumbledore?",
+      "options": [
+        "Nephew",
+        "Sister",
+        "Brother",
+        "Mother"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 307,
+      "question": "What is the relationship of Albus Dumbledore to Ariana Dumbledore?",
+      "options": [
+        "Brother",
+        "Son",
+        "Friend",
+        "Husband"
+      ],
+      "correct_answer": "Brother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 308,
+      "question": "What is the relationship of Albus Dumbledore to Percival Dumbledore?",
+      "options": [
+        "Grandfather",
+        "Father",
+        "Grandmother",
+        "Son"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 309,
+      "question": "What is the relationship of Albus Dumbledore to Kendra Dumbledore?",
+      "options": [
+        "Son",
+        "Friend",
+        "Nephew",
+        "Brother"
+      ],
+      "correct_answer": "Son",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 310,
+      "question": "What is the relationship of Draco Malfoy to Lucius Malfoy?",
+      "options": [
+        "Aunt",
+        "Mother",
+        "Daughter",
+        "Father"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 311,
+      "question": "Who is the father of Lucius Malfoy?",
+      "options": [
+        "Lucius Malfoy",
+        "Draco Malfoy",
+        "Euphemia Potter",
+        "Cho Chang"
+      ],
+      "correct_answer": "Draco Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 312,
+      "question": "What is the relationship of Draco Malfoy to Narcissa Malfoy?",
+      "options": [
+        "Mother",
+        "Father",
+        "Nephew",
+        "Brother"
+      ],
+      "correct_answer": "Mother",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 313,
+      "question": "Who is the mother of Narcissa Malfoy?",
+      "options": [
+        "Lily J. Potter",
+        "Percival Dumbledore",
+        "Draco Malfoy",
+        "Cedric Diggory"
+      ],
+      "correct_answer": "Draco Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 314,
+      "question": "What is the relationship of Draco Malfoy to Scorpius Malfoy?",
+      "options": [
+        "Husband",
+        "Sister",
+        "Aunt",
+        "Friend"
+      ],
+      "correct_answer": "Husband",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 315,
+      "question": "Who is the husband of Scorpius Malfoy?",
+      "options": [
+        "Draco Malfoy",
+        "Arthur Weasley",
+        "Scorpius Malfoy",
+        "Cho Chang"
+      ],
+      "correct_answer": "Draco Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 316,
+      "question": "What is the relationship of Draco Malfoy to Astoria Malfoy?",
+      "options": [
+        "Father",
+        "Grandson",
+        "Brother",
+        "Husband"
+      ],
+      "correct_answer": "Father",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 317,
+      "question": "Who is the father of Astoria Malfoy?",
+      "options": [
+        "Lily J. Potter",
+        "Draco Malfoy",
+        "Hermione Granger",
+        "Harry Potter"
+      ],
+      "correct_answer": "Draco Malfoy",
+      "category": "Characters",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 318,
+      "question": "What is the type of the spell named Aberto?",
+      "options": [
+        "Counter-Spell",
+        "Counter-Charm",
+        "Charm",
+        "Transfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 319,
+      "question": "What is the type of the spell named Accio?",
+      "options": [
+        "Counter-Spell",
+        "Untransfiguration",
+        "Counter-Charm",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 320,
+      "question": "What is the type of the spell named Age Line?",
+      "options": [
+        "Transfiguration",
+        "Jinx",
+        "Spell",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 321,
+      "question": "What is the type of the spell named Alarte Ascendare?",
+      "options": [
+        "Counter-Spell",
+        "Counter-Charm",
+        "Charm",
+        "Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 322,
+      "question": "What is the type of the spell named Alohomora?",
+      "options": [
+        "Transportation",
+        "Conjuration",
+        "Counter-Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 323,
+      "question": "What is the type of the spell named Anti-Cheating Spell?",
+      "options": [
+        "Transportation",
+        "Charm",
+        "Untransfiguration",
+        "Counter-charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 324,
+      "question": "What is the type of the spell named Anti-Apparition Charm?",
+      "options": [
+        "Charm",
+        "Hex",
+        "Curse",
+        "Counter-charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 325,
+      "question": "What is the type of the spell named Anti-Disapparition Jinx?",
+      "options": [
+        "Counter-Jinx",
+        "Jinx",
+        "Transfiguration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 326,
+      "question": "What is the type of the spell named Anti-intruder jinx?",
+      "options": [
+        "Jinx",
+        "Vanishment",
+        "Charm",
+        "Hex"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 327,
+      "question": "What is the type of the spell named Aparecium?",
+      "options": [
+        "Conjuration",
+        "Spell",
+        "Counter-Charm",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 328,
+      "question": "What is the type of the spell named Appare Vestigium?",
+      "options": [
+        "Transportation",
+        "Curse",
+        "Charm",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 329,
+      "question": "What is the type of the spell named Apparition?",
+      "options": [
+        "Curse",
+        "Unknown",
+        "Transportation",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Transportation",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 330,
+      "question": "What is the type of the spell named Aqua Eructo?",
+      "options": [
+        "Counter-charm",
+        "Charm",
+        "Counter-Spell",
+        "Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 331,
+      "question": "What is the type of the spell named Arania Exumai?",
+      "options": [
+        "Counter-Spell",
+        "Untransfiguration",
+        "Charm",
+        "Conjuration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 332,
+      "question": "What is the type of the spell named Arresto Momentum?",
+      "options": [
+        "Charm",
+        "Vanishment",
+        "Transportation",
+        "Hex"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 333,
+      "question": "What is the type of the spell named Arrow-shooting spell?",
+      "options": [
+        "Counter-Jinx",
+        "Transfiguration",
+        "Conjuration",
+        "Curse"
+      ],
+      "correct_answer": "Conjuration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 334,
+      "question": "What is the type of the spell named Ascendio?",
+      "options": [
+        "Spell",
+        "Hex",
+        "Charm",
+        "Transportation"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 335,
+      "question": "What is the type of the spell named Avada Kedavra?",
+      "options": [
+        "Vanishment",
+        "Hex",
+        "Curse",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 336,
+      "question": "What is the type of the spell named Avifors?",
+      "options": [
+        "Transfiguration",
+        "Untransfiguration",
+        "Counter-Charm",
+        "Spell"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 337,
+      "question": "What is the type of the spell named Avenseguim?",
+      "options": [
+        "Vanishment",
+        "Hex",
+        "Charm",
+        "Conjuration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 338,
+      "question": "What is the type of the spell named Babbling Curse?",
+      "options": [
+        "Jinx",
+        "Unknown",
+        "Charm",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 339,
+      "question": "What is the type of the spell named Badgering?",
+      "options": [
+        "Counter-Spell",
+        "Transfiguration",
+        "Untransfiguration",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 340,
+      "question": "What is the type of the spell named Bat-Bogey Hex?",
+      "options": [
+        "Conjuration",
+        "Hex",
+        "Jinx",
+        "Unknown"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 341,
+      "question": "What is the type of the spell named Bedazzling Hex?",
+      "options": [
+        "Hex",
+        "Counter-Spell",
+        "Charm",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 342,
+      "question": "What is the type of the spell named Bewitched Snowballs?",
+      "options": [
+        "Hex",
+        "Transportation",
+        "Charm",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 343,
+      "question": "What is the type of the spell named Bluebell Flames?",
+      "options": [
+        "Untransfiguration",
+        "Jinx",
+        "Counter-Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 344,
+      "question": "What is the type of the spell named Blue sparks?",
+      "options": [
+        "Counter-Spell",
+        "Jinx",
+        "Charm",
+        "Curse"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 345,
+      "question": "What is the type of the spell named Bombarda?",
+      "options": [
+        "Jinx",
+        "Counter-Jinx",
+        "Untransfiguration",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 346,
+      "question": "What is the type of the spell named Bombarda Maxima?",
+      "options": [
+        "Vanishment",
+        "Charm",
+        "Unknown",
+        "Transfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 347,
+      "question": "What is the type of the spell named Bravery Charm?",
+      "options": [
+        "Spell",
+        "Transfiguration",
+        "Vanishment",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 348,
+      "question": "What is the type of the spell named Bridge-conjuring spell?",
+      "options": [
+        "Counter-Jinx",
+        "Jinx",
+        "Charm",
+        "Curse"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 349,
+      "question": "What is the type of the spell named Broom jinx?",
+      "options": [
+        "Untransfiguration",
+        "Transportation",
+        "Jinx",
+        "Curse"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 350,
+      "question": "What is the type of the spell named Bubble-Head Charm?",
+      "options": [
+        "Charm",
+        "Hex",
+        "Counter-Charm",
+        "Transportation"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 351,
+      "question": "What is the type of the spell named Bubble Spell?",
+      "options": [
+        "Transfiguration",
+        "Charm",
+        "Counter-charm",
+        "Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 352,
+      "question": "What is the type of the spell named Calvorio?",
+      "options": [
+        "Transfiguration",
+        "Charm",
+        "Counter-Charm",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 353,
+      "question": "What is the type of the spell named Cantis?",
+      "options": [
+        "Vanishment",
+        "Curse",
+        "Charm",
+        "Transfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 354,
+      "question": "What is the type of the spell named Capacious extremis?",
+      "options": [
+        "Unknown",
+        "Charm",
+        "Counter-Spell",
+        "Transportation"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 355,
+      "question": "What is the type of the spell named Carpe Retractum?",
+      "options": [
+        "Vanishment",
+        "Counter-Charm",
+        "Charm",
+        "Conjuration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 356,
+      "question": "What is the type of the spell named Cascading Jinx?",
+      "options": [
+        "Hex",
+        "Counter-Jinx",
+        "Spell",
+        "Jinx"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 357,
+      "question": "What is the type of the spell named Caterwauling Charm?",
+      "options": [
+        "Counter-charm",
+        "Unknown",
+        "Hex",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 358,
+      "question": "What is the type of the spell named Cave inimicum?",
+      "options": [
+        "Transfiguration",
+        "Counter-Charm",
+        "Charm",
+        "Hex"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 359,
+      "question": "What is the type of the spell named Celescere?",
+      "options": [
+        "Jinx",
+        "Charm",
+        "Unknown",
+        "Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 360,
+      "question": "What is the type of the spell named Cheering Charm?",
+      "options": [
+        "Unknown",
+        "Spell",
+        "Transportation",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 361,
+      "question": "What is the type of the spell named Circumrota?",
+      "options": [
+        "Transfiguration",
+        "Counter-Spell",
+        "Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 362,
+      "question": "What is the type of the spell named Cistem Aperio?",
+      "options": [
+        "Hex",
+        "Untransfiguration",
+        "Charm",
+        "Unknown"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 363,
+      "question": "What is the type of the spell named Colloportus?",
+      "options": [
+        "Transfiguration",
+        "Vanishment",
+        "Charm",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 364,
+      "question": "What is the type of the spell named Colloshoo?",
+      "options": [
+        "Hex",
+        "Vanishment",
+        "Transportation",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 365,
+      "question": "What is the type of the spell named Colovaria?",
+      "options": [
+        "Counter-Charm",
+        "Counter-Jinx",
+        "Charm",
+        "Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 366,
+      "question": "What is the type of the spell named Confringo?",
+      "options": [
+        "Transfiguration",
+        "Transportation",
+        "Spell",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 367,
+      "question": "What is the type of the spell named Confundo?",
+      "options": [
+        "Unknown",
+        "Conjuration",
+        "Charm",
+        "Transfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 368,
+      "question": "What is the type of the spell named Conjunctivitis Curse?",
+      "options": [
+        "Untransfiguration",
+        "Conjuration",
+        "Charm",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 369,
+      "question": "What is the type of the spell named Cracker Jinx?",
+      "options": [
+        "Vanishment",
+        "Jinx",
+        "Charm",
+        "Hex"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 370,
+      "question": "What is the type of the spell named Cribbing Spell?",
+      "options": [
+        "Hex",
+        "Spell",
+        "Conjuration",
+        "Charm"
+      ],
+      "correct_answer": "Spell",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 371,
+      "question": "What is the type of the spell named Crinus Muto?",
+      "options": [
+        "Transfiguration",
+        "Counter-Charm",
+        "Counter-charm",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 372,
+      "question": "What is the type of the spell named Crucio?",
+      "options": [
+        "Counter-Spell",
+        "Curse",
+        "Untransfiguration",
+        "Transportation"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 373,
+      "question": "What is the type of the spell named Defodio?",
+      "options": [
+        "Transfiguration",
+        "Unknown",
+        "Conjuration",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 374,
+      "question": "What is the type of the spell named Deletrius?",
+      "options": [
+        "Jinx",
+        "Untransfiguration",
+        "Charm",
+        "Transportation"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 375,
+      "question": "What is the type of the spell named Densaugeo?",
+      "options": [
+        "Hex",
+        "Counter-charm",
+        "Transportation",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 376,
+      "question": "What is the type of the spell named Deprimo?",
+      "options": [
+        "Counter-Spell",
+        "Conjuration",
+        "Counter-Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 377,
+      "question": "What is the type of the spell named Depulso?",
+      "options": [
+        "Vanishment",
+        "Untransfiguration",
+        "Charm",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 378,
+      "question": "What is the type of the spell named Descendo?",
+      "options": [
+        "Untransfiguration",
+        "Charm",
+        "Counter-Charm",
+        "Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 379,
+      "question": "What is the type of the spell named Deterioration Hex?",
+      "options": [
+        "Hex",
+        "Counter-Charm",
+        "Spell",
+        "Counter-charm"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 380,
+      "question": "What is the type of the spell named Diffindo?",
+      "options": [
+        "Vanishment",
+        "Transportation",
+        "Curse",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 381,
+      "question": "What is the type of the spell named Diminuendo?",
+      "options": [
+        "Transportation",
+        "Transfiguration",
+        "Curse",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 382,
+      "question": "What is the type of the spell named Dissendium?",
+      "options": [
+        "Charm",
+        "Counter-Spell",
+        "Transportation",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 383,
+      "question": "What is the type of the spell named Disillusionment Charm?",
+      "options": [
+        "Vanishment",
+        "Charm",
+        "Transfiguration",
+        "Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 384,
+      "question": "What is the type of the spell named Draconifors?",
+      "options": [
+        "Counter-charm",
+        "Transfiguration",
+        "Conjuration",
+        "Curse"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 385,
+      "question": "What is the type of the spell named Drought Charm?",
+      "options": [
+        "Transportation",
+        "Counter-charm",
+        "Transfiguration",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 386,
+      "question": "What is the type of the spell named Duro?",
+      "options": [
+        "Counter-Spell",
+        "Charm",
+        "Spell",
+        "Counter-charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 387,
+      "question": "What is the type of the spell named Ear-shrivelling Curse?",
+      "options": [
+        "Spell",
+        "Curse",
+        "Untransfiguration",
+        "Vanishment"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 388,
+      "question": "What is the type of the spell named Ebublio?",
+      "options": [
+        "Vanishment",
+        "Jinx",
+        "Untransfiguration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 389,
+      "question": "What is the type of the spell named Engorgio?",
+      "options": [
+        "Untransfiguration",
+        "Counter-Jinx",
+        "Transportation",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 390,
+      "question": "What is the type of the spell named Entrail-Expelling Curse?",
+      "options": [
+        "Curse",
+        "Spell",
+        "Unknown",
+        "Vanishment"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 391,
+      "question": "What is the type of the spell named Epoximise?",
+      "options": [
+        "Spell",
+        "Counter-Jinx",
+        "Transfiguration",
+        "Curse"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 392,
+      "question": "What is the type of the spell named Erecto?",
+      "options": [
+        "Transportation",
+        "Counter-charm",
+        "Hex",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 393,
+      "question": "What is the type of the spell named Evanesce?",
+      "options": [
+        "Counter-Spell",
+        "Hex",
+        "Transfiguration",
+        "Jinx"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 394,
+      "question": "What is the type of the spell named Evanesco?",
+      "options": [
+        "Vanishment",
+        "Untransfiguration",
+        "Transfiguration",
+        "Transportation"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 395,
+      "question": "What is the type of the spell named Everte Statum?",
+      "options": [
+        "Counter-charm",
+        "Spell",
+        "Conjuration",
+        "Hex"
+      ],
+      "correct_answer": "Spell",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 396,
+      "question": "What is the type of the spell named Expecto Patronum?",
+      "options": [
+        "Vanishment",
+        "Charm",
+        "Conjuration",
+        "Hex"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 397,
+      "question": "What is the type of the spell named Expelliarmus?",
+      "options": [
+        "Charm",
+        "Hex",
+        "Transfiguration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 398,
+      "question": "What is the type of the spell named Expulso?",
+      "options": [
+        "Curse",
+        "Charm",
+        "Vanishment",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 399,
+      "question": "What is the type of the spell named Extinguishing Spell?",
+      "options": [
+        "Charm",
+        "Counter-Spell",
+        "Counter-Charm",
+        "Curse"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 400,
+      "question": "What is the type of the spell named Feather-light charm?",
+      "options": [
+        "Charm",
+        "Counter-Spell",
+        "Hex",
+        "Counter-charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 401,
+      "question": "What is the type of the spell named Fianto Duri?",
+      "options": [
+        "Charm",
+        "Jinx",
+        "Untransfiguration",
+        "Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 402,
+      "question": "What is the type of the spell named Fidelius Charm?",
+      "options": [
+        "Charm",
+        "Vanishment",
+        "Counter-Charm",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 403,
+      "question": "What is the type of the spell named Fiendfyre?",
+      "options": [
+        "Transfiguration",
+        "Curse",
+        "Hex",
+        "Jinx"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 404,
+      "question": "What is the type of the spell named Finestra?",
+      "options": [
+        "Charm",
+        "Conjuration",
+        "Hex",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 405,
+      "question": "What is the type of the spell named Finite Incantatem?",
+      "options": [
+        "Unknown",
+        "Counter-Spell",
+        "Spell",
+        "Jinx"
+      ],
+      "correct_answer": "Counter-Spell",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 406,
+      "question": "What is the type of the spell named Finger-removing jinx?",
+      "options": [
+        "Counter-Spell",
+        "Transportation",
+        "Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 407,
+      "question": "What is the type of the spell named Firestorm?",
+      "options": [
+        "Spell",
+        "Transportation",
+        "Charm",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 408,
+      "question": "What is the type of the spell named Flagrante Curse?",
+      "options": [
+        "Unknown",
+        "Spell",
+        "Transfiguration",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 409,
+      "question": "What is the type of the spell named Flagrate?",
+      "options": [
+        "Charm",
+        "Conjuration",
+        "Counter-Spell",
+        "Vanishment"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 410,
+      "question": "What is the type of the spell named Flame-Freezing Charm?",
+      "options": [
+        "Spell",
+        "Charm",
+        "Hex",
+        "Unknown"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 411,
+      "question": "What is the type of the spell named Flask-conjuring spell?",
+      "options": [
+        "Counter-Jinx",
+        "Curse",
+        "Vanishment",
+        "Conjuration"
+      ],
+      "correct_answer": "Conjuration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 412,
+      "question": "What is the type of the spell named Flintifors?",
+      "options": [
+        "Untransfiguration",
+        "Counter-Jinx",
+        "Transfiguration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 413,
+      "question": "What is the type of the spell named Flipendo?",
+      "options": [
+        "Curse",
+        "Vanishment",
+        "Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 414,
+      "question": "What is the type of the spell named Flipendo Duo?",
+      "options": [
+        "Jinx",
+        "Counter-Spell",
+        "Conjuration",
+        "Counter-charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 415,
+      "question": "What is the type of the spell named Flipendo Maxima?",
+      "options": [
+        "Jinx",
+        "Unknown",
+        "Vanishment",
+        "Curse"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 416,
+      "question": "What is the type of the spell named Flipendo Tria?",
+      "options": [
+        "Jinx",
+        "Counter-Jinx",
+        "Transportation",
+        "Unknown"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 417,
+      "question": "What is the type of the spell named Flying charm?",
+      "options": [
+        "Charm",
+        "Jinx",
+        "Unknown",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 418,
+      "question": "What is the type of the spell named Fracto Strata?",
+      "options": [
+        "Spell",
+        "Counter-Charm",
+        "Transportation",
+        "Charm"
+      ],
+      "correct_answer": "Spell",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 419,
+      "question": "What is the type of the spell named Fumos?",
+      "options": [
+        "Counter-charm",
+        "Vanishment",
+        "Jinx",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 420,
+      "question": "What is the type of the spell named Fumos Duo?",
+      "options": [
+        "Counter-Charm",
+        "Charm",
+        "Hex",
+        "Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 421,
+      "question": "What is the type of the spell named Furnunculus?",
+      "options": [
+        "Hex",
+        "Jinx",
+        "Charm",
+        "Counter-charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 422,
+      "question": "What is the type of the spell named Fur spell?",
+      "options": [
+        "Spell",
+        "Charm",
+        "Curse",
+        "Hex"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 423,
+      "question": "What is the type of the spell named Geminio?",
+      "options": [
+        "Vanishment",
+        "Charm",
+        "Curse",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 424,
+      "question": "What is the type of the spell named Glacius?",
+      "options": [
+        "Transportation",
+        "Charm",
+        "Counter-charm",
+        "Counter-Jinx"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 425,
+      "question": "What is the type of the spell named Glacius Duo?",
+      "options": [
+        "Spell",
+        "Charm",
+        "Unknown",
+        "Transportation"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 426,
+      "question": "What is the type of the spell named Glacius Tria?",
+      "options": [
+        "Hex",
+        "Charm",
+        "Counter-charm",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 427,
+      "question": "What is the type of the spell named Glisseo?",
+      "options": [
+        "Vanishment",
+        "Charm",
+        "Unknown",
+        "Curse"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 428,
+      "question": "What is the type of the spell named Gripping Charm?",
+      "options": [
+        "Hex",
+        "Vanishment",
+        "Conjuration",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 429,
+      "question": "What is the type of the spell named Hair-thickening Charm?",
+      "options": [
+        "Curse",
+        "Unknown",
+        "Charm",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 430,
+      "question": "What is the type of the spell named Herbifors?",
+      "options": [
+        "Transfiguration",
+        "Counter-charm",
+        "Hex",
+        "Spell"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 431,
+      "question": "What is the type of the spell named Herbivicus?",
+      "options": [
+        "Charm",
+        "Hex",
+        "Counter-Jinx",
+        "Vanishment"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 432,
+      "question": "What is the type of the spell named Homenum Revelio?",
+      "options": [
+        "Unknown",
+        "Transfiguration",
+        "Curse",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 433,
+      "question": "What is the type of the spell named Homonculous Charm?",
+      "options": [
+        "Counter-Spell",
+        "Counter-Jinx",
+        "Transfiguration",
+        "Charm"
+      ],
+      "correct_answer": "Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 434,
+      "question": "What is the type of the spell named Hurling Hex?",
+      "options": [
+        "Conjuration",
+        "Transfiguration",
+        "Hex",
+        "Curse"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 435,
+      "question": "What is the type of the spell named Impedimenta?",
+      "options": [
+        "Jinx",
+        "Counter-Spell",
+        "Charm",
+        "Unknown"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 436,
+      "question": "What is the type of the spell named Imperio?",
+      "options": [
+        "Counter-charm",
+        "Counter-Jinx",
+        "Untransfiguration",
+        "Curse"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 437,
+      "question": "What is the type of the spell named Inanimatus Conjurus?",
+      "options": [
+        "Transfiguration",
+        "Charm",
+        "Vanishment",
+        "Conjuration"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 438,
+      "question": "What is the type of the spell named Incarcerous?",
+      "options": [
+        "Hex",
+        "Spell",
+        "Counter-Charm",
+        "Conjuration"
+      ],
+      "correct_answer": "Conjuration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 439,
+      "question": "What is the type of the spell named Inflatus?",
+      "options": [
+        "Charm",
+        "Jinx",
+        "Counter-Jinx",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 440,
+      "question": "What is the type of the spell named Jelly-Brain Jinx?",
+      "options": [
+        "Jinx",
+        "Counter-Jinx",
+        "Transfiguration",
+        "Conjuration"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 441,
+      "question": "What is the type of the spell named Jelly-Fingers Curse?",
+      "options": [
+        "Charm",
+        "Counter-Spell",
+        "Curse",
+        "Counter-charm"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 442,
+      "question": "What is the type of the spell named Knee-reversal hex?",
+      "options": [
+        "Hex",
+        "Unknown",
+        "Curse",
+        "Charm"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 443,
+      "question": "What is the type of the spell named Langlock?",
+      "options": [
+        "Jinx",
+        "Hex",
+        "Untransfiguration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 444,
+      "question": "What is the type of the spell named Lapifors?",
+      "options": [
+        "Transfiguration",
+        "Counter-Jinx",
+        "Conjuration",
+        "Vanishment"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 445,
+      "question": "What is the type of the spell named Leek Jinx?",
+      "options": [
+        "Conjuration",
+        "Jinx",
+        "Curse",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 446,
+      "question": "What is the type of the spell named Levicorpus?",
+      "options": [
+        "Charm",
+        "Jinx",
+        "Curse",
+        "Vanishment"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 447,
+      "question": "What is the type of the spell named Liberacorpus?",
+      "options": [
+        "Conjuration",
+        "Counter-Jinx",
+        "Unknown",
+        "Counter-Spell"
+      ],
+      "correct_answer": "Counter-Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 448,
+      "question": "What is the type of the spell named Locomotor Mortis?",
+      "options": [
+        "Counter-charm",
+        "Unknown",
+        "Curse",
+        "Untransfiguration"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 449,
+      "question": "What is the type of the spell named Melofors?",
+      "options": [
+        "Jinx",
+        "Counter-Jinx",
+        "Counter-charm",
+        "Transportation"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 450,
+      "question": "What is the type of the spell named Meteolojinx recanto?",
+      "options": [
+        "Transfiguration",
+        "Jinx",
+        "Spell",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Counter-Charm",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 451,
+      "question": "What is the type of the spell named Mimblewimble?",
+      "options": [
+        "Curse",
+        "Counter-Jinx",
+        "Jinx",
+        "Unknown"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 452,
+      "question": "What is the type of the spell named Multicorfors?",
+      "options": [
+        "Counter-Spell",
+        "Counter-Charm",
+        "Transfiguration",
+        "Unknown"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 453,
+      "question": "What is the type of the spell named Obscuro?",
+      "options": [
+        "Conjuration",
+        "Spell",
+        "Hex",
+        "Transportation"
+      ],
+      "correct_answer": "Conjuration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 454,
+      "question": "What is the type of the spell named Oppugno?",
+      "options": [
+        "Jinx",
+        "Hex",
+        "Unknown",
+        "Counter-charm"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 455,
+      "question": "What is the type of the spell named Orbis?",
+      "options": [
+        "Spell",
+        "Jinx",
+        "Charm",
+        "Transportation"
+      ],
+      "correct_answer": "Jinx",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 456,
+      "question": "What is the type of the spell named Orchideous?",
+      "options": [
+        "Counter-Jinx",
+        "Jinx",
+        "Conjuration",
+        "Counter-Charm"
+      ],
+      "correct_answer": "Conjuration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 457,
+      "question": "What is the type of the spell named Pepper Breath?",
+      "options": [
+        "Counter-Charm",
+        "Transportation",
+        "Hex",
+        "Unknown"
+      ],
+      "correct_answer": "Hex",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 458,
+      "question": "What is the type of the spell named Petrificus Totalus?",
+      "options": [
+        "Spell",
+        "Curse",
+        "Counter-charm",
+        "Transportation"
+      ],
+      "correct_answer": "Curse",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 459,
+      "question": "What is the type of the spell named Piscifors?",
+      "options": [
+        "Counter-Charm",
+        "Untransfiguration",
+        "Transfiguration",
+        "Jinx"
+      ],
+      "correct_answer": "Transfiguration",
+      "category": "Spells",
+      "difficulty": "Easy"
+    },
+    {
+      "id": 460,
+      "question": "What is the type of the spell named Point Me?",
+      "options": [
+        "Spell",
+        "Counter-Charm",
+        "Transportation",
+        "Jinx"
+      ],
+      "correct_answer": "Spell",
+      "category": "Spells",
+      "difficulty": "Easy"
+    }
+  ]
+}

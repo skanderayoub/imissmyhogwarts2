@@ -23,6 +23,7 @@ import { setupMouseEffects } from './ui.js';
 import { startQuiz } from './sorting-hat.js';
 import { startPatronusQuiz } from './patronus.js';
 import { startQuiz as startWandQuiz } from './wand-quiz.js';
+import { startQuiz as startTriviaQuiz } from './trivia-quiz.js';
 
 window.jsonData = null;
 window.musicData = null;
@@ -913,6 +914,7 @@ async function initialize() {
 
 
     document.getElementById('start-wand-quiz').addEventListener('click', startWandQuiz);
+    document.getElementById('start-trivia-quiz').addEventListener('click', startTriviaQuiz);
 
     toggleButtons.forEach(button => {
         toggleCategory(button.dataset.category);

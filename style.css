@@ -557,6 +557,14 @@ button[class~="shuffle-active"] {
     margin-bottom: 0.5rem;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fadeIn {
+    animation: fadeIn 0.7s ease-in;
+}
+
 /* Result text and images */
 #quiz-result p, #patronus-result p, #wand-result p {
     font-size: 1.1rem;

@@ -96,6 +96,7 @@ function startQuiz() {
     resultContainer.classList.add('hidden');
     const progressContainer = document.getElementById('quiz-progress');
     progressContainer.classList.remove('hidden');
+    
     currentQuestionIndex = 0;
     scores = { Gryffindor: 0, Hufflepuff: 0, Ravenclaw: 0, Slytherin: 0 };
     loadQuizData().then(() => {
