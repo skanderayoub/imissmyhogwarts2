@@ -729,6 +729,7 @@ function renderQuiz() {
     const quizContainer = document.getElementById("wand-quiz");
     const progressContainer = document.getElementById("wand-progress");
     const resultContainer = document.getElementById("wand-result");
+    progressContainer.classList.remove('hidden');
 
     if (currentQuestionIndex >= quizData.length) {
         // Play Found audio and show Reveal Wand button
@@ -743,8 +744,11 @@ function renderQuiz() {
             foundUrls,
             "Mr. Ollivander is looking for the perfect wand...",
             () => {
+                progressContainer.classList.add('hidden');
                 quizContainer.innerHTML = `
+                <div class="flex justify-center">
                 <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">The Wand is Ready!</h3>
+                </div>
                 <div class="flex justify-center">
                     <button id="reveal-wand" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2 font-harry-potter text-lg">
                         Reveal Wand
@@ -908,6 +912,7 @@ function showResult() {
     const quizContainer = document.getElementById("wand-quiz");
     const progressContainer = document.getElementById("wand-progress");
     const resultContainer = document.getElementById("wand-result");
+    progressContainer.classList.add('hidden');
 
     // Determine wand attributes
     const artefact = userAnswers.artefact || "Ornate mirror";
@@ -955,7 +960,9 @@ function showResult() {
         <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">Incredible! The Wand Has Chosen You!</h3>
         <img src="./assets/wand.png" alt="Wand" class="w-32 h-32 object-contain rounded-lg mb-4 mx-auto" />
         <p class="text-lg text-yellow-200 mb-4">${wandDescription}</p>
+        <div class="flex justify-center">
         <button id="restart-wand-quiz" class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2">Try Again</button>
+        </div>
     `;
     document
         .getElementById("restart-wand-quiz")

@@ -79,30 +79,43 @@ function setEqualCardHeights(containerId) {
     const cards = document.querySelectorAll(`#${containerId} .character-card`);
     if (cards.length === 0) return;
 
-    // Reset heights to auto to calculate natural height
     cards.forEach(card => card.style.height = 'auto');
 
-    // Wait for reflow to ensure accurate height calculations
     setTimeout(() => {
-        // Find the maximum height
         const maxHeight = Array.from(cards).reduce((max, card) => {
             return Math.max(max, card.offsetHeight);
         }, 0);
-
-        // Apply the maximum height to all cards
         cards.forEach(card => card.style.height = `${maxHeight}px`);
     }, 0);
 }
 
-function formatAsList(items, label) {
-    if (!isNonEmpty(items) || (Array.isArray(items) && items.length === 0)) return '';
-    const listItems = Array.isArray(items) ? items : items.split(',').map(item => item.trim());
-    if (listItems.length === 1) return `<p class="mb-2"><span class="font-bold">${label}: </span> ${listItems[0]}</p>`;
+function formatAsList(items, label, type) {
+    let itemClass = type === 'potion' ? 'potion-detail-item' : 'character-detail-item';
+
+    if (!isNonEmpty(items)) return '';
+
+    let listItems;
+    if (type === 'potion') {
+        // Potion lists are comma-separated strings
+        listItems = typeof items === 'string' && items.trim() !== ''
+            ? items.split(',').map(item => item.trim()).filter(item => item !== '')
+            : [];
+    } else {
+        // Character lists are arrays
+        listItems = Array.isArray(items) ? items.filter(item => isNonEmpty(item)) : [];
+    }
+
+    if (listItems.length === 0) return '';
+    if (listItems.length === 1) {
+        return `<li class="${itemClass}"><span class="font-bold text-secondary">${label}:</span> ${listItems[0]}</li>`;
+    }
     return `
-        <p class="mb-2"><span class="font-bold">${label}:</span></p>
-        <ul class="list-disc list-inside ml-4">
-            ${listItems.map(item => `<li>${item}</li>`).join('')}
-        </ul>
+        <li class="${itemClass}">
+            <span class="font-bold text-secondary">${label}:</span>
+            <ul class="list-disc list-inside ml-4 mt-1">
+                ${listItems.map(item => `<li class="text-yellow-200 text-sm animate-slideIn">${item}</li>`).join('')}
+            </ul>
+        </li>
     `;
 }
 
@@ -177,11 +190,9 @@ function filterVoices(searchQuery) {
 function renderVoiceList(searchQuery) {
     const characterList = document.getElementById('characterList');
     const voiceCharacterList = document.getElementById('voiceCharacterList');
-    
-    // Clear existing content
+
     characterList.innerHTML = '';
-    
-    // Remove existing selectedCharacterList and selectedCharactersHeader if they exist
+
     const existingSelectedList = document.getElementById('selectedCharacterList');
     if (existingSelectedList) {
         existingSelectedList.remove();
@@ -193,41 +204,33 @@ function renderVoiceList(searchQuery) {
 
     const filteredCharacters = filterVoices(searchQuery);
 
-    // Render unselected characters in characterList
     filteredCharacters.forEach(key => {
         if (!window.selectedCharacters.includes(key)) {
             renderCharacterCard(key, characterList, false);
         }
     });
 
-    // Create selected characters section if there are selected characters
     if (window.selectedCharacters.length > 0) {
-        // Create header container
         const headerContainer = document.createElement('div');
         headerContainer.id = 'selectedCharactersHeader';
         headerContainer.className = 'mt-4';
 
-        // Add divider
         const divider = document.createElement('div');
         divider.className = 'border-t border-yellow-400 my-2 mx-2';
         headerContainer.appendChild(divider);
 
-        // Add selected characters header
         const selectedHeader = document.createElement('div');
         selectedHeader.className = 'text-yellow-200 font-harry-potter text-sm mb-2 px-2';
         selectedHeader.textContent = 'Selected Characters';
         headerContainer.appendChild(selectedHeader);
 
-        // Append header container to voiceCharacterList
         voiceCharacterList.appendChild(headerContainer);
 
-        // Create selectedCharacterList container
         const selectedCharacterList = document.createElement('div');
         selectedCharacterList.id = 'selectedCharacterList';
         selectedCharacterList.className = 'grid grid-cols-3 gap-1';
         voiceCharacterList.appendChild(selectedCharacterList);
 
-        // Render selected characters
         window.selectedCharacters.forEach(key => {
             if (filteredCharacters.includes(key)) {
                 renderCharacterCard(key, selectedCharacterList, true);
@@ -235,7 +238,6 @@ function renderVoiceList(searchQuery) {
         });
     }
 
-    // Helper function to render a character card
     function renderCharacterCard(key, container, isSelected) {
         const character = window.characterLoreData.find(c => c.attributes.name === key);
         const card = document.createElement('div');
@@ -267,7 +269,6 @@ function renderVoiceList(searchQuery) {
                 window.newData = window.jsonData;
             }
             document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> ${window.selectedCharacters.join(', ') || 'Select a character'}`;
-            // Re-render to update lists
             renderVoiceList(searchQuery);
         });
         container.appendChild(card);
@@ -303,40 +304,60 @@ function renderCharacterLoreList(page, filterValue, searchQuery) {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
             card.classList.add('selected');
             characterDetails.classList.remove('hidden');
-            const wandsInfo = character.attributes.wands && character.attributes.wands.length > 0
-                ? character.attributes.wands.map(wand =>
-                    `${wand.wood || 'Unknown'} wood | ${wand.core || 'Unknown'} core${wand.length ? ` | ${wand.length} inches` : ''}`
-                ).join(', ')
-                : 'Unknown';
             const details = [];
-            if (isNonEmpty(character.attributes.name))
-                details.push(`<p class="mb-2"><span class="font-bold">Name:</span> ${character.attributes.name}</p>`);
-            if (isNonEmpty(character.attributes.alias_names))
-                details.push(formatAsList(character.attributes.alias_names, 'Alternate Names'));
-            if (isNonEmpty(character.attributes.house))
-                details.push(`<p class="mb-2"><span class="font-bold">House:</span> ${character.attributes.house}</p>`);
-            if (isNonEmpty(character.attributes.species))
-                details.push(`<p class="mb-2"><span class="font-bold">Species:</span> ${character.attributes.species}</p>`);
-            if (isNonEmpty(character.attributes.patronus))
-                details.push(`<p class="mb-2"><span class="font-bold">Patronus:</span> ${character.attributes.patronus}</p>`);
-            if (isNonEmpty(character.attributes.wands))
-                details.push(formatAsList(character.attributes.wands, 'Wands'));
-            if (isNonEmpty(character.attributes.born))
-                details.push(`<p class="mb-2"><span class="font-bold">Born:</span> ${character.attributes.born}</p>`);
-            if (isNonEmpty(character.attributes.romances))
-                details.push(formatAsList(character.attributes.romances, 'Romances'));
-            if (isNonEmpty(character.attributes.titles))
-                details.push(formatAsList(character.attributes.titles, 'Titles'));
-            if (isNonEmpty(character.attributes.jobs))
-                details.push(formatAsList(character.attributes.jobs, 'Jobs'));
-            if (isNonEmpty(character.attributes.family_members))
-                details.push(formatAsList(character.attributes.family_members, 'Family Members'));
+            // Non-null and non-empty attributes in logical order
+            if (isNonEmpty(character.attributes.species)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Species:</span> ${character.attributes.species}</li>`);
+            }
+            if (isNonEmpty(character.attributes.gender)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Gender:</span> ${character.attributes.gender}</li>`);
+            }
+            if (isNonEmpty(character.attributes.nationality)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Nationality:</span> ${character.attributes.nationality}</li>`);
+            }
+            if (isNonEmpty(character.attributes.house)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">House:</span> ${character.attributes.house}</li>`);
+            }
+            if (isNonEmpty(character.attributes.patronus)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Patronus:</span> ${character.attributes.patronus}</li>`);
+            }
+            if (isNonEmpty(character.attributes.born)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Born:</span> ${character.attributes.born}</li>`);
+            }
+            if (isNonEmpty(character.attributes.died)) {
+                details.push(`<li class="character-detail-item"><span class="font-bold text-secondary">Died:</span> ${character.attributes.died}</li>`);
+            }
+            if (isNonEmpty(character.attributes.alias_names)) {
+                details.push(formatAsList(character.attributes.alias_names, 'Alternate Names', 'character'));
+            }
+            if (isNonEmpty(character.attributes.wands)) {
+                details.push(formatAsList(character.attributes.wands, 'Wands', 'character'));
+            }
+            if (isNonEmpty(character.attributes.romances)) {
+                details.push(formatAsList(character.attributes.romances, 'Romances', 'character'));
+            }
+            if (isNonEmpty(character.attributes.titles)) {
+                details.push(formatAsList(character.attributes.titles, 'Titles', 'character'));
+            }
+            if (isNonEmpty(character.attributes.jobs)) {
+                details.push(formatAsList(character.attributes.jobs, 'Jobs', 'character'));
+            }
+            if (isNonEmpty(character.attributes.family_members)) {
+                details.push(formatAsList(character.attributes.family_members, 'Family Members', 'character'));
+            }
+
+            // Render character details
             characterDetails.innerHTML = `
-                <div class="flex flex-col items-center p-4">
-                    <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-24 h-24 object-contain rounded-lg mb-4" />
-                    ${details.join('')}
-                </div>
-            `;
+    <div class="character-details-container flex flex-col items-center p-4 animate-fadeIn">
+        <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-24 h-24 object-contain rounded-lg mb-4" />
+        ${isNonEmpty(character.attributes.name) ? `<h3 class="character-name font-harry-potter text-2xl text-yellow-300 text-shadow-lg text-center mb-4">Character: ${character.attributes.name}</h3>` : ''}
+        ${details.length > 0 ? `
+            <ul class="character-details-list grid grid-cols-1 gap-2 w-full max-w-md">
+                ${details.join('')}
+            </ul>
+        ` : '<p class="text-yellow-200 text-center">No additional details available.</p>'}
+    </div>
+`;
         });
         characterLoreList.appendChild(card);
     });
@@ -374,19 +395,39 @@ function renderSpellList(page, category, searchQuery) {
             spellDetails.classList.remove('hidden');
             const imageHtml = spell.attributes.image ? `<img src="${spell.attributes.image}" alt="${spell.attributes.name}" class="w-64 h-64 object-contain rounded-lg mb-4" />` : '';
             const details = [];
-            details.push(`<p class="mb-2"><span class="font-bold">Spell:</span> ${spell.attributes.name}</p>`);
-            details.push(`<p class="mb-2"><span class="font-bold">Category:</span> ${spell.attributes.category || 'Unknown'}</p>`);
-            details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${spell.attributes.effect || 'No effect available'}</p>`);
-            if (spell.attributes.incantation && spell.attributes.incantation.trim() !== '')
-                details.push(`<p class="mb-2"><span class="font-bold">Incantation:</span> ${spell.attributes.incantation}</p>`);
-            details.push(`<p class="mb-2"><span class="font-bold">Creator:</span> ${spell.attributes.creator || 'Unknown'}</p>`);
-            details.push(`<p class="mb-2"><span class="font-bold">Light:</span> ${spell.attributes.light || 'Unknown'}</p>`);
+            // Effect first
+            if (isNonEmpty(spell.attributes.effect)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Effect:</span> ${spell.attributes.effect}</li>`);
+            }
+            if (isNonEmpty(spell.attributes.incantation)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Incantation:</span> ${spell.attributes.incantation}</li>`);
+            }
+            // Other non-null attributes
+            if (isNonEmpty(spell.attributes.category)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Category:</span> ${spell.attributes.category}</li>`);
+            }
+            if (isNonEmpty(spell.attributes.creator)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Creator:</span> ${spell.attributes.creator}</li>`);
+            }
+            if (isNonEmpty(spell.attributes.light)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Light:</span> ${spell.attributes.light}</li>`);
+            }
+            if (isNonEmpty(spell.attributes.hand)) {
+                details.push(`<li class="spell-detail-item"><span class="font-bold text-secondary">Hand:</span> ${spell.attributes.hand}</li>`);
+            }
+
+            // Render spell details
             spellDetails.innerHTML = `
-                <div class="flex flex-col items-center p-4">
-                    ${imageHtml}
-                    ${details.join('')}
-                </div>
-            `;
+    <div class="spell-details-container flex flex-col items-center p-4 animate-fadeIn">
+        ${imageHtml}
+        ${isNonEmpty(spell.attributes.name) ? `<h3 class="spell-name font-harry-potter text-2xl text-yellow-300 text-shadow-lg text-center mb-4">${spell.attributes.name}</h3>` : ''}
+        ${details.length > 0 ? `
+            <ul class="spell-details-list grid grid-cols-1 gap-2 w-full max-w-md">
+                ${details.join('')}
+            </ul>
+        ` : '<p class="text-yellow-200 text-center">No additional details available.</p>'}
+    </div>
+`;
         });
         spellList.appendChild(card);
     });
@@ -424,30 +465,45 @@ function renderPotionList(page, difficulty, searchQuery) {
             potionDetails.classList.remove('hidden');
             const imageHtml = potion.attributes.image ? `<img src="${potion.attributes.image}" alt="${potion.attributes.name}" class="w-64 h-64 object-contain rounded-lg mb-4" />` : '';
             const details = [];
-            if (isNonEmpty(potion.attributes.name))
-                details.push(`<p class="mb-2"><span class="font-bold">Potion:</span> ${potion.attributes.name}</p>`);
-            if (isNonEmpty(potion.attributes.characteristics))
-                details.push(`<p class="mb-2"><span class="font-bold">Characteristics:</span> ${potion.attributes.characteristics}</p>`);
-            if (isNonEmpty(potion.attributes.difficulty))
-                details.push(`<p class="mb-2"><span class="font-bold">Difficulty:</span> ${potion.attributes.difficulty}</p>`);
-            if (isNonEmpty(potion.attributes.effect))
-                details.push(`<p class="mb-2"><span class="font-bold">Effect:</span> ${potion.attributes.effect}</p>`);
-            if (isNonEmpty(potion.attributes.inventors))
-                details.push(formatAsList(potion.attributes.inventors, 'Inventors'));
-            if (isNonEmpty(potion.attributes.ingredients))
-                details.push(formatAsList(potion.attributes.ingredients, 'Ingredients'));
-            if (isNonEmpty(potion.attributes.manufacturers))
-                details.push(formatAsList(potion.attributes.manufacturers, 'Manufacturers'));
-            if (isNonEmpty(potion.attributes.side_effects))
-                details.push(`<p class="mb-2"><span class="font-bold">Side Effects:</span> ${potion.attributes.side_effects}</p>`);
-            if (isNonEmpty(potion.attributes.time))
-                details.push(`<p class="mb-2"><span class="font-bold">Time:</span> ${potion.attributes.time}</p>`);
+            // Effect first
+            if (isNonEmpty(potion.attributes.effect)) {
+                details.push(`<li class="potion-detail-item"><span class="font-bold text-secondary">Effect:</span> ${potion.attributes.effect}</li>`);
+            }
+            // Other attributes
+            if (isNonEmpty(potion.attributes.characteristics)) {
+                details.push(`<li class="potion-detail-item"><span class="font-bold text-secondary">Characteristics:</span> ${potion.attributes.characteristics}</li>`);
+            }
+            if (isNonEmpty(potion.attributes.difficulty)) {
+                details.push(`<li class="potion-detail-item"><span class="font-bold text-secondary">Difficulty:</span> ${potion.attributes.difficulty}</li>`);
+            }
+            if (isNonEmpty(potion.attributes.inventors)) {
+                details.push(`${formatAsList(potion.attributes.inventors, 'Inventors', 'potion')}`);
+            }
+            if (isNonEmpty(potion.attributes.ingredients)) {
+                details.push(`${formatAsList(potion.attributes.ingredients, 'Ingredients', 'potion')}`);
+            }
+            if (isNonEmpty(potion.attributes.manufacturers)) {
+                details.push(`${formatAsList(potion.attributes.manufacturers, 'Manufacturers', 'potion')}`);
+            }
+            if (isNonEmpty(potion.attributes.side_effects)) {
+                details.push(`<li class="potion-detail-item"><span class="font-bold text-secondary">Side Effects:</span> ${potion.attributes.side_effects}</li>`);
+            }
+            if (isNonEmpty(potion.attributes.time)) {
+                details.push(`<li class="potion-detail-item"><span class="font-bold text-secondary">Time:</span> ${potion.attributes.time}</li>`);
+            }
+
+            // Render potion details
             potionDetails.innerHTML = `
-                <div class="flex flex-col items-center p-4">
-                    ${imageHtml}
-                    ${details.join('')}
-                </div>
-            `;
+    <div class="potion-details-container flex flex-col items-center p-4 animate-fadeIn">
+        ${imageHtml}
+        ${isNonEmpty(potion.attributes.name) ? `<h3 class="potion-name font-harry-potter text-2xl text-yellow-300 text-shadow-lg text-center mb-4">${potion.attributes.name}</h3>` : ''}
+        ${details.length > 0 ? `
+            <ul class="potion-details-list grid grid-cols-1 gap-2 w-full max-w-md">
+                ${details.join('')}
+            </ul>
+        ` : '<p class="text-yellow-200 text-center">No additional details available.</p>'}
+    </div>
+`;
         });
         potionList.appendChild(card);
     });
@@ -457,20 +513,6 @@ function renderPotionList(page, difficulty, searchQuery) {
     prevPotionPage.disabled = page === 0;
     nextPotionPage.disabled = end >= filteredPotions.length;
     setEqualCardHeights('potionList');
-}
-
-function toggleCategory(category) {
-    const content = document.getElementById(`${category}-content`);
-    const button = document.querySelector(`.toggle-button[data-category="${category}"]`);
-    const isCollapsed = content.classList.contains('collapsed');
-
-    if (isCollapsed) {
-        content.classList.remove('collapsed');
-        button.textContent = 'Collapse';
-    } else {
-        content.classList.add('collapsed');
-        button.textContent = 'Expand';
-    }
 }
 
 async function initialize() {
@@ -498,7 +540,7 @@ async function initialize() {
     window.newData = audioData;
     window.patronusData = patronusData;
 
-    if (!window.wallpaperData || !window.jsonData || !window.musicData  || !window.patronusData) {
+    if (!window.wallpaperData || !window.jsonData || !window.musicData || !window.patronusData) {
         console.error("Failed to load required data:", {
             wallpaperData: window.wallpaperData,
             jsonData: window.jsonData,
@@ -540,27 +582,23 @@ async function initialize() {
     const nextSpellPage = document.getElementById('nextSpellPage');
     const prevPotionPage = document.getElementById('prevPotionPage');
     const nextPotionPage = document.getElementById('nextPotionPage');
-    const toggleButtons = document.querySelectorAll('.toggle-button');
     const clearSelectionButton = document.getElementById('clearSelection');
 
-    // Populate musicSelect with trackList
-    musicSelect.innerHTML = '<option value="">Choose a Track</option>'; // Reset options
-    const albums = [...new Set(window.trackList.map(track => track.album))]; // Get unique albums
+    musicSelect.innerHTML = '<option value="">Choose a Track</option>';
+    const albums = [...new Set(window.trackList.map(track => track.album))];
     albums.forEach(album => {
-        // Create optgroup for each album
         const optgroup = document.createElement('optgroup');
         optgroup.label = album;
-        // Add tracks for this album
         window.trackList
             .filter(track => track.album === album)
             .forEach((track, index) => {
                 const option = document.createElement('option');
-                option.value = window.trackList.indexOf(track); // Use global index in trackList
+                option.value = window.trackList.indexOf(track);
                 const trackName = track.url
                     .substring(track.url.lastIndexOf('/') + 1)
                     .replace(/\.(mp3)/, '')
-                    .replace(/^\d+\.\s*/, ''); // Remove track number prefix
-                option.text = decodeURIComponent(trackName); // Display only track name
+                    .replace(/^\d+\.\s*/, '');
+                option.text = decodeURIComponent(trackName);
                 optgroup.appendChild(option);
             });
         musicSelect.appendChild(optgroup);
@@ -574,7 +612,6 @@ async function initialize() {
     bgImg.onload = () => {
         document.body.style.backgroundImage = `url('${defaultBackground}')`;
         document.body.style.display = 'block';
-        // Add these lines to ensure proper mobile behavior
         document.body.style.height = '100%';
         document.body.style.width = '100%';
         document.body.style.position = 'fixed';
@@ -632,32 +669,88 @@ async function initialize() {
     });
 
     const tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach((button) => {
+    const loreSubTabButtons = document.querySelectorAll('.lore-sub-tab-button');
+    const gamesSubTabButtons = document.querySelectorAll('.games-sub-tab-button');
+
+    function switchMainTab(tabId) {
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.add('hidden'));
+        const targetTab = document.getElementById(tabId);
+        if (targetTab) {
+            targetTab.classList.remove('hidden');
+            document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
+            console.log(`Switched to main tab: ${tabId}`);
+            if (tabId === 'lore-games') {
+                switchLoreSubTab('characters');
+                switchGamesSubTab('sorting-hat');
+            } else if (tabId === 'voices') {
+                renderVoiceList(window.voiceSearchQuery);
+            }
+        } else {
+            console.error(`Tab content not found for: ${tabId}`);
+        }
+    }
+
+    function switchLoreSubTab(loreTabId) {
+        loreSubTabButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.lore-sub-tab-content').forEach(content => content.classList.add('hidden'));
+        const targetLoreTab = document.getElementById(loreTabId);
+        if (targetLoreTab) {
+            targetLoreTab.classList.remove('hidden');
+            document.querySelector(`.lore-sub-tab-button[data-lore-tab="${loreTabId}"]`).classList.add('active');
+            console.log(`Switched to lore sub-tab: ${loreTabId}`);
+            if (loreTabId === 'characters') {
+                renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
+            } else if (loreTabId === 'spells') {
+                renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
+            } else if (loreTabId === 'potions') {
+                renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
+            }
+        } else {
+            console.error(`Lore sub-tab content not found for: ${loreTabId}`);
+        }
+    }
+
+    function switchGamesSubTab(gamesTabId) {
+        gamesSubTabButtons.forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.games-sub-tab-content').forEach(content => content.classList.add('hidden'));
+        const targetGamesTab = document.getElementById(gamesTabId);
+        if (targetGamesTab) {
+            targetGamesTab.classList.remove('hidden');
+            document.querySelector(`.games-sub-tab-button[data-games-tab="${gamesTabId}"]`).classList.add('active');
+            console.log(`Switched to games sub-tab: ${gamesTabId}`);
+            if (gamesTabId === 'sorting-hat') {
+                startQuiz();
+            } else if (gamesTabId === 'patronus') {
+                startPatronusQuiz(window.patronusData);
+            } else if (gamesTabId === 'wand') {
+                // Wand quiz is started via button click
+            } else if (gamesTabId === 'trivia') {
+                // Trivia quiz is started via button click
+            }
+        } else {
+            console.error(`Games sub-tab content not found for: ${gamesTabId}`);
+        }
+    }
+
+    tabButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log(`Tab button clicked: ${button.dataset.tab}`);
-            tabButtons.forEach((btn) => btn.classList.remove('active'));
-            button.classList.add('active');
-            document
-                .querySelectorAll('.tab-content')
-                .forEach((content) => content.classList.add('hidden'));
-            const targetTab = document.getElementById(button.dataset.tab);
-            if (targetTab) {
-                targetTab.classList.remove('hidden');
-                console.log(`Switched to tab: ${button.dataset.tab}`);
-                if (button.dataset.tab === 'lore-games') {
-                    renderCharacterLoreList(window.currentCharacterPage, loreFilter.value, window.characterSearchQuery);
-                    renderSpellList(window.currentSpellPage, spellFilter.value, window.spellSearchQuery);
-                    renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
-                    // Start quizzes only if their respective sections are not collapsed
-                    startQuiz();
-                    startPatronusQuiz(window.patronusData);
-                } else if (button.dataset.tab === 'voices') {
-                    renderVoiceList(window.voiceSearchQuery);
-                }
-            } else {
-                console.error(`Tab content not found for: ${button.dataset.tab}`);
-            }
+            switchMainTab(button.dataset.tab);
+        });
+    });
+
+    loreSubTabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchLoreSubTab(button.dataset.loreTab);
+        });
+    });
+
+    gamesSubTabButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchGamesSubTab(button.dataset.gamesTab);
         });
     });
 
@@ -765,12 +858,6 @@ async function initialize() {
             window.currentPotionPage++;
             renderPotionList(window.currentPotionPage, potionFilter.value, window.potionSearchQuery);
         }
-    });
-
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            toggleCategory(button.dataset.category);
-        });
     });
 
     musicSelect.addEventListener('change', () => {
@@ -897,14 +984,12 @@ async function initialize() {
         localStorage.setItem('hogwartsTheme', themeSelect.value);
     });
 
-    // Resets voice selection
-    clearSelection.addEventListener('click', () => {
+    clearSelectionButton.addEventListener('click', () => {
         window.selectedCharacters = [];
         window.newData = window.jsonData;
         renderVoiceList(window.voiceSearchQuery);
         document.getElementById('p').innerHTML = `<span class="font-bold">Personnage:</span> Select a character`;
     });
-
 
     const savedTheme = localStorage.getItem('hogwartsTheme');
     if (savedTheme) {
@@ -912,27 +997,21 @@ async function initialize() {
         document.body.className = `min-h-screen bg-cover bg-center bg-fixed text-yellow-200 font-cinzel theme-${savedTheme}`;
     }
 
-
-    document.getElementById('start-wand-quiz').addEventListener('click', startWandQuiz);
-    document.getElementById('start-trivia-quiz').addEventListener('click', startTriviaQuiz);
-
-    toggleButtons.forEach(button => {
-        toggleCategory(button.dataset.category);
+    document.getElementById('start-wand-quiz').addEventListener('click', () => {
+        switchGamesSubTab('wand');
+        startWandQuiz();
+    });
+    document.getElementById('start-trivia-quiz').addEventListener('click', () => {
+        switchGamesSubTab('trivia');
+        startTriviaQuiz();
     });
 
     setupMouseEffects();
-    renderCharacterLoreList(window.currentCharacterPage, 'all', '');
-    renderSpellList(window.currentSpellPage, 'all', '');
-    renderPotionList(window.currentPotionPage, 'all', '');
     renderVoiceList('');
 
     const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');
     if (loreGamesTab.classList.contains('active')) {
-        document.getElementById('lore-games').classList.remove('hidden');
-        const gamesContent = document.getElementById('games-content');
-        if (!gamesContent.classList.contains('collapsed')) {
-            startQuiz();
-        }
+        switchMainTab('lore-games');
     }
 }
 

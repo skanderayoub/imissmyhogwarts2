@@ -52,71 +52,66 @@
             </div>
         </div>
         <div id="voices" class="tab-content bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-    <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
-        Voices of Hogwarts
-    </h2>
-    <div class="flex flex-col lg:flex-row gap-8">
-        <!-- Left Column - Character Selection -->
-        <div class="flex-1">
-            <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                <input id="voiceSearch" type="text" placeholder="Search characters..."
-                    class="flex-1 px-3 py-2 border-2 rounded-lg bg-gray-800 bg-opacity-50 text-yellow-200 font-harry-potter text-sm sm:text-base focus:outline-none" />
-                <button
-                    class="audio-controls-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                    id="clearSelection">
-                    Clear Selection
-                </button>
-            </div>
-            <div id="voiceCharacterList"
-                class="max-h-[300px] overflow-y-auto bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
-                <div id="characterList" class="grid grid-cols-3 gap-1"></div>
+            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                Voices of Hogwarts
+            </h2>
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="flex-1">
+                    <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                        <input id="voiceSearch" type="text" placeholder="Search characters..."
+                            class="flex-1 px-3 py-2 border-2 rounded-lg bg-gray-800 bg-opacity-50 text-yellow-200 font-harry-potter text-sm sm:text-base focus:outline-none" />
+                        <button
+                            class="audio-controls-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
+                            id="clearSelection">
+                            Clear Selection
+                        </button>
+                    </div>
+                    <div id="voiceCharacterList"
+                        class="max-h-[300px] overflow-y-auto bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+                        <div id="characterList" class="grid grid-cols-3 gap-1"></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 space-y-6">
+                    <div
+                        class="audio-controls text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+                        <p id="p" class="text-lg text-yellow-200 mb-2">
+                            <span class="font-bold">Character:</span> Select a character
+                        </p>
+                        <p id="a" class="text-lg text-yellow-200 mb-4">
+                            <span class="font-bold">Audio:</span> None
+                        </p>
+                        <div class="flex justify-center items-center space-x-4">
+                            <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1"
+                                class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Voice Volume" />
+                            <button id="voiceMute"
+                                class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Mute/Unmute Voice"></button>
+                            <button id="playButton"
+                                class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Play/Pause Voice"></button>
+                        </div>
+                        <audio id="audio"></audio>
+                    </div>
+                    <div
+                        class="funny-voices-controls text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
+                        <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">
+                            Funny Voices Tracking
+                        </h3>
+                        <div class="flex justify-center items-center space-x-4">
+                            <input type="range" id="funnyVoiceVolume" min="0" max="1" step="0.01" value="1"
+                                class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Funny Voices Volume" />
+                            <button id="funnyVoiceMute"
+                                class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Mute/Unmute Funny Voices"></button>
+                            <button id="playAllVoices"
+                                class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Play/Pause Funny Voices"></button>
+                        </div>
+                        <audio id="funnyVoicesAudio"></audio>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <!-- Right Column - Audio Controls -->
-        <div class="lg:w-1/3 space-y-6">
-            <!-- Main Voice Player -->
-            <div class="audio-controls text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
-                <p id="p" class="text-lg text-yellow-200 mb-2">
-                    <span class="font-bold">Character:</span> Select a character
-                </p>
-                <p id="a" class="text-lg text-yellow-200 mb-4">
-                    <span class="font-bold">Audio:</span> None
-                </p>
-                <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1"
-                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Voice Volume" />
-                    <button id="voiceMute"
-                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Mute/Unmute Voice"></button>
-                    <button id="playButton"
-                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Play/Pause Voice"></button>
-                </div>
-                <audio id="audio"></audio>
-            </div>
-
-            <!-- Funny Voices Tracking -->
-            <div class="funny-voices-controls text-center bg-black bg-opacity-60 border-2 border-[var(--primary-color)] rounded-lg p-4">
-                <h3 class="text-xl font-harry-potter text-yellow-400 mb-4">
-                    Funny Voices Tracking
-                </h3>
-                <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="funnyVoiceVolume" min="0" max="1" step="0.01" value="1"
-                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Funny Voices Volume" />
-                    <button id="funnyVoiceMute"
-                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Mute/Unmute Funny Voices"></button>
-                    <button id="playAllVoices"
-                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Play/Pause Funny Voices"></button>
-                </div>
-                <audio id="funnyVoicesAudio"></audio>
-            </div>
-        </div>
-    </div>
-</div>
-
         <div id="music" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
             <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
                 Music of the Wizarding World
@@ -167,257 +162,222 @@
             </select>
         </div>
         <div id="lore-games" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
+            <div class="flex flex-col lg:grid lg:grid-cols-2 gap-6">
+                <!-- Lore Section -->
+                <div id="lore" class="bg-gray-800 bg-opacity-70 rounded-lg p-6">
                     <h2 class="text-3xl font-harry-potter text-yellow-400 mb-4">
                         Lore
                     </h2>
                     <p class="text-yellow-200 mb-4 text-center">
                         Explore the magical world of Hogwarts through its iconic characters, spells, and potions.
                     </p>
-                    <div class="flex flex-col gap-4">
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Characters
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="characters">
-                                    Collapse
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <button
+                            class="lore-sub-tab-button active px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-lore-tab="characters">
+                            Characters
+                        </button>
+                        <button
+                            class="lore-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-lore-tab="spells">
+                            Spells
+                        </button>
+                        <button
+                            class="lore-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-lore-tab="potions">
+                            Potions
+                        </button>
+                    </div>
+                    <div id="characters" class="lore-sub-tab-content">
+                        <div class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="characterSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search characters..." />
+                                <select id="loreFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Characters</option>
+                                    <option value="Gryffindor">Gryffindor</option>
+                                    <option value="Hufflepuff">Hufflepuff</option>
+                                    <option value="Ravenclaw">Ravenclaw</option>
+                                    <option value="Slytherin">Slytherin</option>
+                                </select>
+                            </div>
+                            <div id="characterLoreList"
+                                class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
                                 </button>
                             </div>
-                            <div id="characters-content" class="category-content mt-4">
-                                <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                    <input type="text" id="characterSearch"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
-                                        placeholder="Search characters..." />
-                                    <select id="loreFilter"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                        <option value="all">All Characters</option>
-                                        <option value="Gryffindor">Gryffindor</option>
-                                        <option value="Hufflepuff">Hufflepuff</option>
-                                        <option value="Ravenclaw">Ravenclaw</option>
-                                        <option value="Slytherin">Slytherin</option>
-                                    </select>
-                                </div>
-                                <div id="characterLoreList"
-                                    class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                                <div class="flex justify-center space-x-4 mt-4">
-                                    <button id="prevPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Previous
-                                    </button>
-                                    <button id="nextPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Next
-                                    </button>
-                                </div>
-                                <div id="characterDetails"
-                                    class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
-                                </div>
+                            <div id="characterDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
                             </div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Spells
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="spells">
-                                    Collapse
+                    </div>
+                    <div id="spells" class="lore-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="spellSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search spells..." />
+                                <select id="spellFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Spells</option>
+                                </select>
+                            </div>
+                            <div id="spellList" class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg">
+                            </div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevSpellPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextSpellPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
                                 </button>
                             </div>
-                            <div id="spells-content" class="category-content mt-4">
-                                <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                    <input type="text" id="spellSearch"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
-                                        placeholder="Search spells..." />
-                                    <select id="spellFilter"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                        <option value="all">All Spells</option>
-                                        <!-- Categories populated by JS -->
-                                    </select>
-                                </div>
-                                <div id="spellList"
-                                    class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg">
-                                </div>
-                                <div class="flex justify-center space-x-4 mt-4">
-                                    <button id="prevSpellPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Previous
-                                    </button>
-                                    <button id="nextSpellPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Next
-                                    </button>
-                                </div>
-                                <div id="spellDetails"
-                                    class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
-                                </div>
+                            <div id="spellDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
                             </div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Potions
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="potions">
-                                    Collapse
+                    </div>
+                    <div id="potions" class="lore-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <div class="flex flex-col sm:flex-row gap-2 mb-4">
+                                <input type="text" id="potionSearch"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
+                                    placeholder="Search potions..." />
+                                <select id="potionFilter"
+                                    class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                                    <option value="all">All Potions</option>
+                                </select>
+                            </div>
+                            <div id="potionList"
+                                class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div class="flex justify-center space-x-4 mt-4">
+                                <button id="prevPotionPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Previous
+                                </button>
+                                <button id="nextPotionPage"
+                                    class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
+                                    Next
                                 </button>
                             </div>
-                            <div id="potions-content" class="category-content mt-4">
-                                <div class="flex flex-col sm:flex-row gap-2 mb-4">
-                                    <input type="text" id="potionSearch"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none"
-                                        placeholder="Search potions..." />
-                                    <select id="potionFilter"
-                                        class="w-full sm:w-1/2 bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                                        <option value="all">All Potions</option>
-                                        <!-- Categories populated by JS -->
-                                    </select>
-                                </div>
-                                <div id="potionList"
-                                    class="grid grid-cols-3 gap-1 p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                                <div class="flex justify-center space-x-4 mt-4">
-                                    <button id="prevPotionPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Previous
-                                    </button>
-                                    <button id="nextPotionPage"
-                                        class="btn-normal px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
-                                        Next
-                                    </button>
-                                </div>
-                                <div id="potionDetails"
-                                    class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
-                                </div>
+                            <div id="potionDetails"
+                                class="hidden mt-4 p-4 bg-gray-800 bg-opacity-50 rounded-lg text-yellow-200 text-lg">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div>
+                <!-- Games Section -->
+                <div id="games" class="bg-gray-800 bg-opacity-70 rounded-lg p-6">
                     <h2 class="text-3xl font-harry-potter text-yellow-400 mb-4">
                         Games
                     </h2>
                     <p class="text-yellow-200 mb-4 text-center">
                         Test your wizarding knowledge and discover your magical destiny with these enchanting games!
                     </p>
-                    <div class="flex flex-col gap-4">
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Sorting Hat Quiz
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="sorting-hat">
-                                    Collapse
-                                </button>
-                            </div>
-                            <div id="sorting-hat-content" class="category-content mt-4">
-                                <p class="text-lg text-yellow-200 mb-4">
-                                    <span class="font-bold">Sorting Hat Quiz:</span> Answer the
-                                    Sorting Hat's questions to discover your Hogwarts house with
-                                    not less than 9720 questions combinations!
-                                </p>
-                                <div id="sorting-hat-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                                <div id="quiz-progress" class="mt-4"></div>
-                                <div id="quiz-result" class="mt-4"></div>
-                            </div>
+                    <div class="flex flex-wrap justify-center gap-2 mb-4">
+                        <button
+                            class="games-sub-tab-button active px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-games-tab="sorting-hat">
+                            Sorting Hat Quiz
+                        </button>
+                        <button
+                            class="games-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-games-tab="patronus">
+                            Patronus Quiz
+                        </button>
+                        <button
+                            class="games-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-games-tab="wand">
+                            Wand Quiz
+                        </button>
+                        <button
+                            class="games-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-games-tab="trivia">
+                            Trivia Quiz
+                        </button>
+                        <button
+                            class="games-sub-tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
+                            data-games-tab="more-games">
+                            More Games
+                        </button>
+                    </div>
+                    <div id="sorting-hat" class="games-sub-tab-content">
+                        <div class="category-content mt-4">
+                            <p class="text-lg text-yellow-200 mb-4">
+                                <span class="font-bold">Sorting Hat Quiz:</span> Answer the
+                                Sorting Hat's questions to discover your Hogwarts house with
+                                not less than 9720 questions combinations!
+                            </p>
+                            <div id="sorting-hat-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div id="quiz-progress" class="mt-4"></div>
+                            <div id="quiz-result" class="mt-4"></div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Patronus Quiz
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="patronus">
-                                    Collapse
-                                </button>
-                            </div>
-                            <div id="patronus-content" class="category-content mt-4">
-                                <p class="text-lg text-yellow-200 mb-4">
-                                    <span class="font-bold">Patronus Quiz:</span> Answer mystical
-                                    questions to discover your Patronus, the magical guardian that
-                                    reflects your inner spirit!
-                                </p>
-                                <div id="patronus-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
-                                <div id="patronus-progress" class="mt-4"></div>
-                                <div id="patronus-result" class="mt-4"></div>
-                            </div>
+                    </div>
+                    <div id="patronus" class="games-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <p class="text-lg text-yellow-200 mb-4">
+                                <span class="font-bold">Patronus Quiz:</span> Answer mystical
+                                questions to discover your Patronus, the magical guardian that
+                                reflects your inner spirit!
+                            </p>
+                            <div id="patronus-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg"></div>
+                            <div id="patronus-progress" class="mt-4"></div>
+                            <div id="patronus-result" class="mt-4"></div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Wand Quiz
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="wand">
-                                    Collapse
-                                </button>
-                            </div>
-                            <div id="wand-content" class="category-content mt-4">
-                                <p class="text-lg text-yellow-200 mb-4">
-                                    <span class="font-bold">Wand Quiz:</span> Answer questions
-                                    to find the wand that chooses you, crafted to match your unique
-                                    magical essence!
-                                </p>
+                    </div>
+                    <div id="wand" class="games-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <p class="text-lg text-yellow-200 mb-4">
+                                <span class="font-bold">Wand Quiz:</span> Answer questions
+                                to find the wand that chooses you, crafted to match your unique
+                                magical essence!
+                            </p>
+                            <div class="flex justify-center">
                                 <button id="start-wand-quiz"
                                     class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2 font-harry-potter text-lg mb-4">
                                     Start Wand Quiz
                                 </button>
-                                <div id="wand-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg hidden"></div>
-                                <div id="wand-progress" class="mt-4"></div>
-                                <div id="wand-result" class="mt-4 hidden"></div>
                             </div>
+                            <div id="wand-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg hidden"></div>
+                            <div id="wand-progress" class="mt-4 hidden"></div>
+                            <div id="wand-result" class="mt-4 hidden"></div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    Trivia Quiz
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="trivia">
-                                    Collapse
-                                </button>
-                            </div>
-                            <div id="trivia-content" class="category-content mt-4">
-                                <p id="trivia-title" class="text-lg text-yellow-200 mb-4">
-                                    <span class="font-bold">Ultimate Harry Potter Trivia Challenge:</span> Test your knowledge of the Harry Potter universe with 30 questions across Easy, Moderate, and Hard difficulties!
-                                </p>
+                    </div>
+                    <div id="trivia" class="games-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <p id="trivia-title" class="text-lg text-yellow-200 mb-4">
+                                <span class="font-bold">Ultimate Harry Potter Trivia Challenge:</span> Test your
+                                knowledge of the Harry Potter universe with 30 questions across Easy, Moderate, and Hard
+                                difficulties!
+                            </p>
+                            <div class="flex justify-center">
                                 <button id="start-trivia-quiz"
                                     class="btn-normal bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-4 py-2 font-harry-potter text-lg mb-4">
                                     Start Trivia Quiz
                                 </button>
-                                <div id="trivia-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg hidden"></div>
-                                <div id="trivia-progress" class="mt-4"></div>
-                                <div id="trivia-result" class="mt-4 hidden"></div>
                             </div>
+                            <div id="trivia-quiz" class="p-4 bg-gray-800 bg-opacity-50 rounded-lg hidden"></div>
+                            <div id="trivia-progress" class="mt-4 hidden"></div>
+                            <div id="trivia-result" class="mt-4 hidden"></div>
                         </div>
-                        <div>
-                            <div class="flex items-center justify-between">
-                                <h3 class="text-xl font-harry-potter text-yellow-300">
-                                    More Games
-                                </h3>
-                                <button
-                                    class="toggle-button bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all px-3 py-1"
-                                    data-category="more-games">
-                                    Collapse
-                                </button>
-                            </div>
-                            <div id="more-games-content" class="category-content mt-4">
-                                <p class="text-lg text-yellow-200">
-                                    <span class="font-bold">More Games:</span> Coming soon:
-                                    Sorting Hat Quiz enhanced and more!
-                                </p>
-                            </div>
+                    </div>
+                    <div id="more-games" class="games-sub-tab-content hidden">
+                        <div class="category-content mt-4">
+                            <p class="text-lg text-yellow-200">
+                                <span class="font-bold">More Games:</span> Coming soon:
+                                Sorting Hat Quiz enhanced and more!
+                            </p>
                         </div>
                     </div>
                 </div>

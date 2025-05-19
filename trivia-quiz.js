@@ -69,10 +69,13 @@ function startQuiz() {
     const resultContainer = document.getElementById('trivia-result');
     const startButton = document.getElementById('start-trivia-quiz');
     const triviaTitle = document.getElementById('trivia-title');
+    const progressContainer = document.getElementById('trivia-progress');
     triviaTitle.classList.add('hidden');
     quizContainer.classList.remove('hidden');
     resultContainer.classList.add('hidden');
     startButton.classList.add('hidden');
+    progressContainer.classList.add('hidden');
+    progressContainer.classList.add('hidden');
     currentQuestionIndex = 0;
     userAnswers = [];
     score = 0;
@@ -114,6 +117,7 @@ function renderQuiz() {
     const quizContainer = document.getElementById('trivia-quiz');
     const progressContainer = document.getElementById('trivia-progress');
     const resultContainer = document.getElementById('trivia-result');
+    progressContainer.classList.remove('hidden');
 
     if (currentQuestionIndex >= quizData.length) {
         showResult();
@@ -177,6 +181,7 @@ function showResult() {
     const progressContainer = document.getElementById('trivia-progress');
     const resultContainer = document.getElementById('trivia-result');
     quizContainer.classList.add('hidden');
+    progressContainer.classList.add('hidden');
 
     const maxPossibleScore = quizData.reduce((total, q) => total + pointsPerDifficulty[q.difficulty], 0);
     const percentage = ((score / maxPossibleScore) * 100).toFixed(2);

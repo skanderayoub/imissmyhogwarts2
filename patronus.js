@@ -79,8 +79,8 @@ export function startPatronusQuiz(patronusData) {
 
         // Display the question and answer options
         quizContainer.innerHTML = `
-            <p class="text-lg text-yellow-300 mb-4 font-harry-potter">Choose a mystical word
-            </p>
+            <h3 class="text-xl font-harry-potter text-yellow-300 mb-4">Choose a mystical word
+            </h3>
             <div class="grid grid-cols-1 gap-2">
             ${options.map(option => `
                 <button class="answer-btn px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all" data-answer="${option.answer}" data-color="${option.color}">
@@ -88,10 +88,15 @@ export function startPatronusQuiz(patronusData) {
                 </button>
             `).join('')}
         </div>
+        <div class="flex justify-center">
             <p class="text-yellow-200 mb-4">Chosen answers so far:</p>
+            
+        </div>
+        <div class="flex justify-center">
             <ul class="list-disc list-inside text-yellow-200 mb-4">
-            ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
+            ${selectedAnswers.map((ans, idx) => `<li>${ans}</li>`).join('')}
             </ul>
+            </div>
         `;
 
         // Add event listeners to answer buttons
@@ -148,9 +153,11 @@ export function startPatronusQuiz(patronusData) {
                 ${patronusName}
             </p>
             <p class="text-yellow-200 mt-2">Based on answers:</p>
+            <div class="flex justify-center">
             <ul class="list-disc list-inside text-yellow-200 mb-4">
-                ${selectedAnswers.map((ans, idx) => `<li>Set ${idx + 1}: ${ans}</li>`).join('')}
+                ${selectedAnswers.map((ans, idx) => `<li>${ans}</li>`).join('')}
             </ul>
+            </div>
             <button id="restartPatronusQuiz" class="btn-normal mt-4 px-4 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover:bg-gray-700 transition-all">
                 Try Again
             </button>
