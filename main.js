@@ -612,7 +612,7 @@ async function initialize() {
 
     const defaultBackground = window.screenWidth < 600
         ? 'assets/phone/dark.png'
-        : './assets/1303125.jpg';
+        : './assets/legacy.jpeg';
     const bgImg = new Image();
     bgImg.src = defaultBackground;
     bgImg.onload = () => {
