@@ -350,7 +350,7 @@ function renderCharacterLoreList(page, filterValue, searchQuery) {
             characterDetails.innerHTML = `
     <div class="character-details-container flex flex-col items-center p-4 animate-fadeIn">
         <img src="${imageSrc}" alt="${character.attributes.name} crest" class="w-24 h-24 object-contain rounded-lg mb-4" />
-        ${isNonEmpty(character.attributes.name) ? `<h3 class="character-name font-harry-potter text-2xl text-yellow-300 text-shadow-lg text-center mb-4">Character: ${character.attributes.name}</h3>` : ''}
+        ${isNonEmpty(character.attributes.name) ? `<h3 class="character-name font-harry-potter text-2xl text-yellow-300 text-shadow-lg text-center mb-4">${character.attributes.name}</h3>` : ''}
         ${details.length > 0 ? `
             <ul class="character-details-list grid grid-cols-1 gap-2 w-full max-w-md">
                 ${details.join('')}
@@ -385,7 +385,10 @@ function renderSpellList(page, category, searchQuery) {
         card.dataset.spell = spell.attributes.name;
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
+        const imageHtml = spell.attributes.image ? `<img src="${spell.attributes.image}" alt="${spell.attributes.name}" class="w-12 h-12 object-contain rounded-lg mb-4" />` : '';
+
         content.innerHTML = `
+            ${imageHtml}
             <span class="text-center text-xs font-harry-potter text-yellow-200">${spell.attributes.name}</span>
         `;
         card.appendChild(content);
@@ -455,9 +458,12 @@ function renderPotionList(page, difficulty, searchQuery) {
         card.dataset.potion = potion.attributes.name;
         const content = document.createElement('div');
         content.className = 'flex flex-col items-center';
+        const imageHtml = potion.attributes.image ? `<img src="${potion.attributes.image}" alt="${potion.attributes.name}" class="w-12 h-12 object-contain rounded-lg mb-4" />` : '';
         content.innerHTML = `
+            ${imageHtml}
             <span class="text-center text-xs font-harry-potter text-yellow-200">${potion.attributes.name}</span>
         `;
+        
         card.appendChild(content);
         card.addEventListener('click', () => {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
