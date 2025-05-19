@@ -36,13 +36,8 @@
                 </button>
                 <button
                     class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
-                    data-tab="music">
-                    Music
-                </button>
-                <button
-                    class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
-                    data-tab="background">
-                    Ambiance
+                    data-tab="music-ambiance">
+                    Music & Ambiance
                 </button>
                 <button
                     class="tab-button px-3 py-2 bg-gray-800 bg-opacity-70 rounded-lg text-yellow-200 hover-transition transition-all text-sm md:text-base md:px-4"
@@ -112,51 +107,58 @@
                 </div>
             </div>
         </div>
-        <div id="music" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
-                Music of the Wizarding World
-            </h2>
-            <select id="musicSelect"
-                class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
-                <option value="">Choose a Track</option>
-            </select>
-            <div class="audio-controls text-center">
-                <p id="a2" class="text-lg text-yellow-200 mb-4">
-                    <span class="font-bold">Audio:</span> None
-                </p>
-                <div class="relative w-64 mx-auto h-2 bg-gray-700 rounded-full mb-4">
-                    <div id="musicProgress" class="absolute h-full rounded-full" style="width: 0%"></div>
+        
+        <div id="music-ambiance" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
+            <div class="flex flex-col lg:grid lg:grid-cols-2 gap-6">
+                <!-- Music Section -->
+                <div id="music" class="bg-gray-800 bg-opacity-70 rounded-lg p-6">
+                    <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                        Music of the Wizarding World
+                    </h2>
+                    <select id="musicSelect"
+                        class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 mb-4 focus:outline-none">
+                        <option value="">Choose a Track</option>
+                    </select>
+                    <div class="audio-controls text-center">
+                        <p id="a2" class="text-lg text-yellow-200 mb-4">
+                            <span class="font-bold">Audio:</span> None
+                        </p>
+                        <div class="relative w-64 mx-auto h-2 bg-gray-700 rounded-full mb-4">
+                            <div id="musicProgress" class="absolute h-full rounded-full" style="width: 0%"></div>
+                        </div>
+                        <div class="flex justify-center items-center space-x-4">
+                            <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1"
+                                class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Music Volume" />
+                            <button id="musicMute"
+                                class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Mute/Unmute Music"></button>
+                            <button id="prevMusic"
+                                class="audio prev w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Previous Track"></button>
+                            <button id="playButton2"
+                                class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Play/Pause Music"></button>
+                            <button id="nextMusic"
+                                class="audio next w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Next Track"></button>
+                            <button id="shuffleMusic"
+                                class="audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
+                                title="Toggle Shuffle"></button>
+                        </div>
+                        <audio id="audio2"></audio>
+                    </div>
                 </div>
-                <div class="flex justify-center items-center space-x-4">
-                    <input type="range" id="musicVolume" min="0" max="1" step="0.01" value="1"
-                        class="w-24 h-2 bg-gray-700 rounded-lg accent-yellow-400" title="Music Volume" />
-                    <button id="musicMute"
-                        class="audio mute w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Mute/Unmute Music"></button>
-                    <button id="prevMusic"
-                        class="audio prev w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Previous Track"></button>
-                    <button id="playButton2"
-                        class="audio paused w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Play/Pause Music"></button>
-                    <button id="nextMusic"
-                        class="audio next w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Next Track"></button>
-                    <button id="shuffleMusic"
-                        class="audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all"
-                        title="Toggle Shuffle"></button>
+                <!-- Games Section -->
+                <div id="background" class="bg-gray-800 bg-opacity-70 rounded-lg p-6">
+                    <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
+                        Hogwarts Ambiance
+                    </h2>
+                    <select id="backgroundSelect"
+                        class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
+                        <option value="">Choose a Background</option>
+                    </select>
                 </div>
-                <audio id="audio2"></audio>
             </div>
-        </div>
-        <div id="background" class="tab-content hidden bg-gray-900 bg-opacity-80 rounded-xl p-6 shadow-lg">
-            <h2 class="text-2xl font-harry-potter text-yellow-400 mb-4">
-                Hogwarts Ambiance
-            </h2>
-            <select id="backgroundSelect"
-                class="w-full max-w-md mx-auto block bg-gray-800 text-yellow-200 rounded-lg p-2 focus:outline-none">
-                <option value="">Choose a Background</option>
-            </select>
         </div>
         <div id="lore-games" class="tab-content hidden rounded-xl">
             <div class="flex flex-col lg:grid lg:grid-cols-2 gap-6">

@@ -127,8 +127,8 @@ select#musicSelect:focus::-webkit-listbox {
 
 .character-card,
 .tab-content,
-#lore,
-#games {
+#music,
+#background, #lore, #games {
     background: var(--gradient);
 }
 
@@ -242,12 +242,12 @@ select#musicSelect:focus::-webkit-listbox {
 }
 
 /* Background sparkle effect for lore-games section */
-#lore-games {
+#music-games {
     position: relative;
     overflow: hidden;
 }
 
-#lore-games::before {
+#music-games::before {
     content: '';
     position: absolute;
     top: 0;
@@ -570,7 +570,7 @@ select#musicSelect:focus::-webkit-listbox {
     font-size: 0.65rem;
 }
 
-#lore-games > * {
+#music-games > * {
     position: relative;
     z-index: 1;
 }
@@ -654,8 +654,8 @@ select#musicSelect:focus::-webkit-listbox {
     gap: 4px;
 }
 
-#lore,
-#games {
+#music,
+#background, #lore, #games {
     border: 2px solid var(--primary-color);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
@@ -703,11 +703,8 @@ button[class~="shuffle"] {
     background-size: 16px;
 }
 
-@media (min-width: 1024px) {
-    #lore,
-    #games {
-        min-height: 600px;
-    }
+.shuffle-active {
+    background-color: var(--primary-color);
 }
 
 /* Table styles for trivia detailed stats */

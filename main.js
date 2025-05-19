@@ -964,6 +964,7 @@ async function initialize() {
         shuffleMusicButton.className = window.shuffleMode
             ? 'audio shuffle shuffle-active w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all'
             : 'audio shuffle w-10 h-10 bg-gray-800 rounded-full hover-transition transition-all';
+        console.log(window.shuffleMode);
     });
 
     audioMusic.addEventListener('ended', () => {
@@ -1017,11 +1018,6 @@ async function initialize() {
 
     setupMouseEffects();
     renderVoiceList('');
-
-    const loreGamesTab = document.querySelector('.tab-button[data-tab="lore-games"]');
-    if (loreGamesTab.classList.contains('active')) {
-        switchMainTab('lore-games');
-    }
 }
 
 initialize();
