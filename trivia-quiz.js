@@ -224,7 +224,7 @@ function showDetailedStats() {
     progressContainer.innerHTML = '';
     resultContainer.innerHTML = `
         <h3 class="text-2xl font-harry-potter text-yellow-400 mb-4">Detailed Trivia Results</h3>
-        <div class="overflow-x-auto">
+        <div style="overflow-x: auto; overflow-y: auto; max-height: 400px; scrollbar-width: thin; scrollbar-color: var(--primary-color) rgba(0, 0, 0, 0.3);">
             <table class="w-full text-yellow-200 text-sm">
                 <thead>
                     <tr class="bg-gray-800 bg-opacity-70">

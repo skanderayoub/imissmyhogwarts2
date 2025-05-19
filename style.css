@@ -92,7 +92,8 @@ select:focus,
 #musicProgress,
 #quiz-progress .bg-yellow-400,
 #patronus-progress .bg-yellow-400,
-#wand-progress .bg-yellow-400 {
+#wand-progress .bg-yellow-400,
+#trivia-progress .bg-yellow-400 {
     background-color: var(--primary-color);
 }
 
@@ -255,7 +256,7 @@ select:focus,
 }
 
 /* Progress bar styles */
-#quiz-progress, #patronus-progress, #wand-progress {
+#quiz-progress, #patronus-progress, #wand-progress, #trivia-progress {
     margin-top: 1rem;
     padding: 0.5rem;
     background: rgba(0, 0, 0, 0.6);
@@ -266,7 +267,8 @@ select:focus,
 
 #quiz-progress .bg-yellow-400,
 #patronus-progress .bg-yellow-400,
-#wand-progress .bg-yellow-400 {
+#wand-progress .bg-yellow-400,
+#trivia-progress .bg-yellow-400 {
     background-color: var(--primary-color);
     transition: width 0.5s ease;
     box-shadow: 0 0 10px var(--primary-color);
@@ -550,7 +552,7 @@ button[class~="shuffle-active"] {
 }
 
 /* Progress text */
-#quiz-progress p, #patronus-progress p, #wand-progress p {
+#quiz-progress p, #patronus-progress p, #wand-progress p, #trivia-progress p {
     font-size: 0.9rem;
     color: #f4e4bc;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
