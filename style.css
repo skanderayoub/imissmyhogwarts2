@@ -32,7 +32,7 @@ html {
 
 .theme-hufflepuff {
     --primary-color: #eed800;
-    --secondary-color: #000000;
+    --secondary-color: #646464;
     --gradient: linear-gradient(145deg, #515151, rgba(238, 216, 0, 0.7));
 }
 
