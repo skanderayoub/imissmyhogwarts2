@@ -19,11 +19,7 @@ export async function fetchMusicData() {
         if (!response.ok) throw new Error("Network response was not ok");
         const musicData = await response.json();
         console.log(musicData);
-        const tempTrackList = [];
-        musicData.forEach(track => {
-            tempTrackList.push({ album: track.name, url: track.url });
-        });
-        return { musicData, trackList: tempTrackList.map(({ album, url }) => ({ album, url })) };
+        return musicData;
     } catch (error) {
         console.error("Error fetching music data:", error);
         return { musicData: null, trackList: [] };

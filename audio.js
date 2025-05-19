@@ -57,8 +57,8 @@ export function playNewSound(data, audio, type) {
 
 export function playMusicTrack(index, audio, btn, trackList, setCurrentTrackIndex) {
     setCurrentTrackIndex(index);
-    const track = trackList[index];
-    setKeyAndAudio(track.album, track.url, "music");
+    const track = trackList[index-1];
+    setKeyAndAudio(track.name, track.url, "music");
     audio.src = track.url;
     audio.play();
     btn.className =
@@ -86,11 +86,7 @@ function setCharacterAndAudio(key, value) {
 }
 
 function setAlbumAndAudio(album, url) {
-    const albumText = document.getElementById("p2");
     const audioText = document.getElementById("a2");
-    const trackNumber = window.currentTrackIndex + 1;
-    const totalTracks = window.trackList.length;
-    albumText.innerHTML = `<span class="font-bold">Musique:</span> ${album} (${trackNumber}/${totalTracks})`;
     const regex = /\/([^\/]+)\.mp3$/;
     const match = url.match(regex);
     if (match && match[1]) {

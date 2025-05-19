@@ -463,7 +463,7 @@ function renderPotionList(page, difficulty, searchQuery) {
             ${imageHtml}
             <span class="text-center text-xs font-harry-potter text-yellow-200">${potion.attributes.name}</span>
         `;
-        
+
         card.appendChild(content);
         card.addEventListener('click', () => {
             document.querySelectorAll('.character-card').forEach(c => c.classList.remove('selected'));
@@ -522,7 +522,7 @@ function renderPotionList(page, difficulty, searchQuery) {
 }
 
 async function initialize() {
-    const [audioData, { musicData, trackList }, wallpaperData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio, patronusData] = await Promise.all([
+    const [audioData, musicData, wallpaperData, characterLoreData, spellsData, spellCategories, potionsData, potionDifficulties, funnyAudio, patronusData] = await Promise.all([
         fetchAudioData(),
         fetchMusicData(),
         fetchWallpaperData(window.screenWidth),
@@ -537,7 +537,6 @@ async function initialize() {
 
     window.jsonData = audioData;
     window.musicData = musicData;
-    window.trackList = trackList;
     window.wallpaperData = wallpaperData;
     window.characterLoreData = characterLoreData;
     window.spellsData = spellsData;
@@ -591,24 +590,21 @@ async function initialize() {
     const clearSelectionButton = document.getElementById('clearSelection');
 
     musicSelect.innerHTML = '<option value="">Choose a Track</option>';
-    const albums = [...new Set(window.trackList.map(track => track.album))];
+    const albums = [...new Set(window.musicData.map(track => track.album))];
     albums.forEach(album => {
         const optgroup = document.createElement('optgroup');
         optgroup.label = album;
-        window.trackList
-            .filter(track => track.album === album)
+        window.musicData
             .forEach((track, index) => {
                 const option = document.createElement('option');
-                option.value = window.trackList.indexOf(track);
-                const trackName = track.url
-                    .substring(track.url.lastIndexOf('/') + 1)
-                    .replace(/\.(mp3)/, '')
-                    .replace(/^\d+\.\s*/, '');
+                option.value = index+1;
+                const trackName = track.name
+                    .replace(/\.(mp3)/, '');
                 option.text = decodeURIComponent(trackName);
-                optgroup.appendChild(option);
+                musicSelect.appendChild(option);
             });
-        musicSelect.appendChild(optgroup);
     });
+    console.log(musicSelect);
 
     const defaultBackground = window.screenWidth < 600
         ? 'assets/phone/dark.png'
@@ -782,7 +778,6 @@ async function initialize() {
         option.value = index;
         backgroundSelect.appendChild(option);
     });
-    console.log(window.wallpaperData);
 
     voiceSearch.addEventListener('input', () => {
         window.voiceSearchQuery = voiceSearch.value.trim();
@@ -868,13 +863,20 @@ async function initialize() {
     });
 
     musicSelect.addEventListener('change', () => {
-        const index = parseInt(musicSelect.value);
-        if (!isNaN(index)) {
-            playMusicTrack(index, audioMusic, playMusicButton, window.trackList, (i) => (window.currentTrackIndex = i));
-            window.firstClickMusic = false;
-            nextMusicButton.style.display = 'inline-block';
-            prevMusicButton.style.display = 'inline-block';
-            shuffleMusicButton.style.display = 'inline-block';
+        try {
+            const index = parseInt(musicSelect.value);
+            if (index) {
+                console.log(index);
+                playMusicTrack(index, audioMusic, playMusicButton, window.musicData, (i) => (window.currentTrackIndex = i));
+                window.firstClickMusic = false;
+                nextMusicButton.style.display = 'inline-block';
+                prevMusicButton.style.display = 'inline-block';
+                shuffleMusicButton.style.display = 'inline-block';
+            } else {
+                console.error('No URL selected');
+            }
+        } catch (error) {
+            console.error('Error playing music:', error);
         }
     });
 
@@ -927,8 +929,8 @@ async function initialize() {
 
     playMusicButton.addEventListener('click', () => {
         if (!audioMusic.src) {
-            const { index, track } = getNextTrack(window.currentTrackIndex, window.trackList, window.shuffleMode);
-            playMusicTrack(index, audioMusic, playMusicButton, window.trackList, (i) => (window.currentTrackIndex = i));
+            const { index, track } = getNextTrack(window.currentTrackIndex, window.musicData, window.shuffleMode);
+            playMusicTrack(index, audioMusic, playMusicButton, window.musicData, (i) => (window.currentTrackIndex = i));
             musicSelect.value = index;
         } else if (!audioMusic.paused) {
             audioMusic.pause();
@@ -946,14 +948,14 @@ async function initialize() {
     });
 
     prevMusicButton.addEventListener('click', () => {
-        const { index, track } = getPreviousTrack(window.currentTrackIndex, window.trackList, window.shuffleMode);
-        playMusicTrack(index, audioMusic, playMusicButton, window.trackList, (i) => (window.currentTrackIndex = i));
+        const { index, track } = getPreviousTrack(window.currentTrackIndex, window.musicData, window.shuffleMode);
+        playMusicTrack(index, audioMusic, playMusicButton, window.musicData, (i) => (window.currentTrackIndex = i));
         musicSelect.value = index;
     });
 
     nextMusicButton.addEventListener('click', () => {
-        const { index, track } = getNextTrack(window.currentTrackIndex, window.trackList, window.shuffleMode);
-        playMusicTrack(index, audioMusic, playMusicButton, window.trackList, (i) => (window.currentTrackIndex = i));
+        const { index, track } = getNextTrack(window.currentTrackIndex, window.musicData, window.shuffleMode);
+        playMusicTrack(index, audioMusic, playMusicButton, window.musicData, (i) => (window.currentTrackIndex = i));
         musicSelect.value = index;
     });
 
@@ -965,8 +967,8 @@ async function initialize() {
     });
 
     audioMusic.addEventListener('ended', () => {
-        const { index, track } = getNextTrack(window.currentTrackIndex, window.trackList, window.shuffleMode);
-        playMusicTrack(index, audioMusic, playMusicButton, window.trackList, (i) => (window.currentTrackIndex = i));
+        const { index, track } = getNextTrack(window.currentTrackIndex, window.musicData, window.shuffleMode);
+        playMusicTrack(index, audioMusic, playMusicButton, window.musicData, (i) => (window.currentTrackIndex = i));
         musicSelect.value = index;
     });
 
