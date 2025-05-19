@@ -776,12 +776,13 @@ async function initialize() {
 
     window.wallpaperData.forEach((wallpaper, index) => {
         const option = document.createElement('option');
-        option.text = wallpaper
-            .substring(wallpaper.lastIndexOf('/') + 1)
-            .replace(/\.(png|jpg)/, '');
+        // Extract the file name without extension
+        const fileName = wallpaper.split('/').pop().replace(/\.[^/.]+$/, '');
+        option.text = fileName || `Wallpaper ${index + 1}`; // Fallback if fileName is empty
         option.value = index;
         backgroundSelect.appendChild(option);
     });
+    console.log(window.wallpaperData);
 
     voiceSearch.addEventListener('input', () => {
         window.voiceSearchQuery = voiceSearch.value.trim();
