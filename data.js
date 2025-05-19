@@ -18,22 +18,10 @@ export async function fetchMusicData() {
         );
         if (!response.ok) throw new Error("Network response was not ok");
         const musicData = await response.json();
+        console.log(musicData);
         const tempTrackList = [];
-        Object.entries(musicData).forEach(([album, tracks]) => {
-            tracks.forEach((url) => {
-                const regex = /\/(\d+)\.\s*([^\/]+)\.mp3$/;
-                const match = url.match(regex);
-                const trackNumber = match ? parseInt(match[1]) : Infinity;
-                const trackName = match
-                    ? decodeURIComponent(match[2])
-                    : url.split("/").pop();
-                tempTrackList.push({ album, url, trackNumber, trackName });
-            });
-        });
-        tempTrackList.sort((a, b) => {
-            if (a.album < b.album) return -1;
-            if (a.album > b.album) return 1;
-            return a.trackNumber - b.trackNumber;
+        musicData.forEach(track => {
+            tempTrackList.push({ album: track.name, url: track.url });
         });
         return { musicData, trackList: tempTrackList.map(({ album, url }) => ({ album, url })) };
     } catch (error) {
